@@ -8,13 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QueriesAndContracts
+
+namespace ApplicationsAndContracts
 {
     public partial class MainForm : Form
     {
         public MainForm()
         {
             InitializeComponent();
+
         }
     }
 }

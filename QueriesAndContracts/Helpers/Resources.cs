@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QueriesAndContracts.Helpers
+namespace ApplicationsAndContracts.Helpers
 {
     class Resources
     {

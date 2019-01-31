@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ApplicationsAndContracts.Helpers;
 
-namespace QueriesAndContracts
+
+namespace ApplicationsAndContracts
 {
     static class Program
     {
@@ -14,10 +16,11 @@ namespace QueriesAndContracts
         [STAThread]
         static void Main()
         {
-            //Application.CurrentInputLanguage=Methods
+            Application.CurrentInputLanguage = Methods.SetRussianLanguage();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
+
         }
     }
 }

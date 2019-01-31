@@ -8,7 +8,7 @@ using System.Globalization;
  
 
 
-namespace QueriesAndContracts.Helpers
+namespace ApplicationsAndContracts.Helpers
 {
     class Methods
     {
@@ -18,7 +18,7 @@ namespace QueriesAndContracts.Helpers
         /// <returns></returns>
        public static InputLanguage SetRussianLanguage()
         {
-            return InputLanguage.FromCulture(CultureInfo.CurrentCulture);
+            return InputLanguage.FromCulture(new CultureInfo("ru-RU"));
         }
         
         //public static void AllowPressKeys(KeyEventArgs e)
@@ -107,7 +107,7 @@ namespace QueriesAndContracts.Helpers
         /// Show dialog messagebox "query is out of range"
         /// </summary>
         /// <returns></returns>
-        public static string QueryIsOutOfRangeMessasge()
+        public static string QueryIsOutOfRangeMessage()
         {
             var sb = new StringBuilder();
             sb.AppendLine(Resources.QueryIsOutOfRangeText);

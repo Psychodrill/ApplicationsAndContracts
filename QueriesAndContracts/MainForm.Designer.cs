@@ -1,4 +1,4 @@
-﻿namespace QueriesAndContracts
+﻿namespace ApplicationsAndContracts
 {
     partial class MainForm
     {
