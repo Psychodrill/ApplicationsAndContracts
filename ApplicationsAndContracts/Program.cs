@@ -10,6 +10,7 @@ namespace ApplicationsAndContracts
 {
     static class Program
     {
+        //public static SDS SDS { get; private set}
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
