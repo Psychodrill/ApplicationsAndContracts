@@ -19,6 +19,16 @@ namespace ApplicationsAndContracts
 
         }
 
+        //private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        //{
+
+        //}
+
+        //private void orderTextBox_TextChanged(object sender, EventArgs e)
+        //{
+
+        //}
+
         //private void textBox3_TextChanged(object sender, EventArgs e)
         //{
 
