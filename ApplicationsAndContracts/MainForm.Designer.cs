@@ -48,7 +48,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.applicationNumberTextBox = new System.Windows.Forms.TextBox();
-            this.applicationDateTextBox = new System.Windows.Forms.TextBox();
             this.orderGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.gkLabel = new System.Windows.Forms.Label();
@@ -76,6 +75,7 @@
             this.dceAliasLabel = new System.Windows.Forms.Label();
             this.dceNameLabel = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.applicationDateTextBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.supplyGroupBox.SuspendLayout();
@@ -107,10 +107,10 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 72.4138F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.58621F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(845, 473);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 130F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68.42105F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.57895F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(819, 517);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -118,9 +118,9 @@
             this.flowLayoutPanel1.Controls.Add(this.button1);
             this.flowLayoutPanel1.Controls.Add(this.button2);
             this.flowLayoutPanel1.Controls.Add(this.button3);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(560, 400);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(543, 397);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(278, 63);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(273, 63);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
             // button1
@@ -152,31 +152,30 @@
             // 
             // supplyGroupBox
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.supplyGroupBox, 2);
+            this.tableLayoutPanel1.SetColumnSpan(this.supplyGroupBox, 3);
             this.supplyGroupBox.Controls.Add(this.tableLayoutPanel5);
-            this.supplyGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.supplyGroupBox.Location = new System.Drawing.Point(3, 3);
             this.supplyGroupBox.Name = "supplyGroupBox";
-            this.supplyGroupBox.Size = new System.Drawing.Size(551, 192);
+            this.supplyGroupBox.Size = new System.Drawing.Size(608, 124);
             this.supplyGroupBox.TabIndex = 6;
             this.supplyGroupBox.TabStop = false;
             // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.BackColor = System.Drawing.SystemColors.Control;
-            this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel5.ColumnCount = 3;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 290F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 367F));
             this.tableLayoutPanel5.Controls.Add(this.supplierGroupBox, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.applicationGroupBox, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.orderGroupBox, 1, 1);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Controls.Add(this.orderGroupBox, 2, 0);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(545, 173);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(601, 105);
             this.tableLayoutPanel5.TabIndex = 1;
             // 
             // supplierGroupBox
@@ -186,7 +185,7 @@
             this.supplierGroupBox.Location = new System.Drawing.Point(3, 3);
             this.supplierGroupBox.Name = "supplierGroupBox";
             this.tableLayoutPanel5.SetRowSpan(this.supplierGroupBox, 2);
-            this.supplierGroupBox.Size = new System.Drawing.Size(266, 167);
+            this.supplierGroupBox.Size = new System.Drawing.Size(284, 99);
             this.supplierGroupBox.TabIndex = 0;
             this.supplierGroupBox.TabStop = false;
             this.supplierGroupBox.Text = "Поставщик";
@@ -210,15 +209,15 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(260, 148);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(278, 80);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // contractDateTextBox
             // 
             this.contractDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contractDateTextBox.Location = new System.Drawing.Point(133, 55);
+            this.contractDateTextBox.Location = new System.Drawing.Point(142, 55);
             this.contractDateTextBox.Name = "contractDateTextBox";
-            this.contractDateTextBox.Size = new System.Drawing.Size(124, 20);
+            this.contractDateTextBox.Size = new System.Drawing.Size(133, 20);
             this.contractDateTextBox.TabIndex = 1;
             // 
             // supplierNameTextBox
@@ -227,7 +226,7 @@
             this.supplierNameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.supplierNameTextBox.Location = new System.Drawing.Point(3, 16);
             this.supplierNameTextBox.Name = "supplierNameTextBox";
-            this.supplierNameTextBox.Size = new System.Drawing.Size(254, 20);
+            this.supplierNameTextBox.Size = new System.Drawing.Size(272, 20);
             this.supplierNameTextBox.TabIndex = 0;
             // 
             // contractNumberTextBox
@@ -235,7 +234,7 @@
             this.contractNumberTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contractNumberTextBox.Location = new System.Drawing.Point(3, 55);
             this.contractNumberTextBox.Name = "contractNumberTextBox";
-            this.contractNumberTextBox.Size = new System.Drawing.Size(124, 20);
+            this.contractNumberTextBox.Size = new System.Drawing.Size(133, 20);
             this.contractNumberTextBox.TabIndex = 2;
             // 
             // supplierNameLabel
@@ -263,7 +262,7 @@
             // 
             this.contractDateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.contractDateLabel.AutoSize = true;
-            this.contractDateLabel.Location = new System.Drawing.Point(133, 39);
+            this.contractDateLabel.Location = new System.Drawing.Point(142, 39);
             this.contractDateLabel.Name = "contractDateLabel";
             this.contractDateLabel.Size = new System.Drawing.Size(86, 13);
             this.contractDateLabel.TabIndex = 5;
@@ -273,36 +272,38 @@
             // 
             this.applicationGroupBox.Controls.Add(this.tableLayoutPanel6);
             this.applicationGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.applicationGroupBox.Location = new System.Drawing.Point(275, 3);
+            this.applicationGroupBox.Location = new System.Drawing.Point(293, 3);
             this.applicationGroupBox.Name = "applicationGroupBox";
-            this.applicationGroupBox.Size = new System.Drawing.Size(267, 80);
+            this.tableLayoutPanel5.SetRowSpan(this.applicationGroupBox, 2);
+            this.applicationGroupBox.Size = new System.Drawing.Size(144, 99);
             this.applicationGroupBox.TabIndex = 2;
             this.applicationGroupBox.TabStop = false;
             this.applicationGroupBox.Text = "Заявка";
             // 
             // tableLayoutPanel6
             // 
-            this.tableLayoutPanel6.ColumnCount = 2;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.ColumnCount = 1;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel6.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel6.Controls.Add(this.applicationNumberTextBox, 1, 0);
-            this.tableLayoutPanel6.Controls.Add(this.applicationDateTextBox, 1, 1);
+            this.tableLayoutPanel6.Controls.Add(this.label2, 0, 2);
+            this.tableLayoutPanel6.Controls.Add(this.applicationDateTextBox, 0, 3);
+            this.tableLayoutPanel6.Controls.Add(this.applicationNumberTextBox, 0, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 2;
+            this.tableLayoutPanel6.RowCount = 4;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(261, 61);
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(138, 80);
             this.tableLayoutPanel6.TabIndex = 5;
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 6);
+            this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 5;
@@ -310,9 +311,9 @@
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 37);
+            this.label2.Location = new System.Drawing.Point(3, 39);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 13);
             this.label2.TabIndex = 6;
@@ -320,55 +321,46 @@
             // 
             // applicationNumberTextBox
             // 
-            this.applicationNumberTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.applicationNumberTextBox.Location = new System.Drawing.Point(133, 3);
+            this.applicationNumberTextBox.Location = new System.Drawing.Point(3, 16);
             this.applicationNumberTextBox.Name = "applicationNumberTextBox";
-            this.applicationNumberTextBox.Size = new System.Drawing.Size(125, 20);
+            this.applicationNumberTextBox.Size = new System.Drawing.Size(132, 20);
             this.applicationNumberTextBox.TabIndex = 4;
-            // 
-            // applicationDateTextBox
-            // 
-            this.applicationDateTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.applicationDateTextBox.Location = new System.Drawing.Point(133, 33);
-            this.applicationDateTextBox.Name = "applicationDateTextBox";
-            this.applicationDateTextBox.Size = new System.Drawing.Size(125, 20);
-            this.applicationDateTextBox.TabIndex = 3;
             // 
             // orderGroupBox
             // 
             this.orderGroupBox.BackColor = System.Drawing.SystemColors.Control;
             this.orderGroupBox.Controls.Add(this.tableLayoutPanel4);
-            this.orderGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.orderGroupBox.Location = new System.Drawing.Point(275, 89);
+            this.orderGroupBox.Location = new System.Drawing.Point(443, 3);
             this.orderGroupBox.Name = "orderGroupBox";
-            this.orderGroupBox.Size = new System.Drawing.Size(267, 81);
+            this.tableLayoutPanel5.SetRowSpan(this.orderGroupBox, 2);
+            this.orderGroupBox.Size = new System.Drawing.Size(156, 99);
             this.orderGroupBox.TabIndex = 2;
             this.orderGroupBox.TabStop = false;
             this.orderGroupBox.Text = "Заказ";
             // 
             // tableLayoutPanel4
             // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Controls.Add(this.gkLabel, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.orderLabel, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.gkTextBox, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.orderTextBox, 1, 1);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Controls.Add(this.gkTextBox, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.orderTextBox, 0, 3);
+            this.tableLayoutPanel4.Controls.Add(this.orderLabel, 0, 2);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowCount = 4;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(261, 62);
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(153, 80);
             this.tableLayoutPanel4.TabIndex = 3;
             // 
             // gkLabel
             // 
             this.gkLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.gkLabel.AutoSize = true;
-            this.gkLabel.Location = new System.Drawing.Point(3, 6);
+            this.gkLabel.Location = new System.Drawing.Point(3, 0);
             this.gkLabel.Name = "gkLabel";
             this.gkLabel.Size = new System.Drawing.Size(20, 13);
             this.gkLabel.TabIndex = 3;
@@ -378,7 +370,7 @@
             // 
             this.orderLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.orderLabel.AutoSize = true;
-            this.orderLabel.Location = new System.Drawing.Point(3, 37);
+            this.orderLabel.Location = new System.Drawing.Point(3, 39);
             this.orderLabel.Name = "orderLabel";
             this.orderLabel.Size = new System.Drawing.Size(38, 13);
             this.orderLabel.TabIndex = 4;
@@ -386,18 +378,16 @@
             // 
             // gkTextBox
             // 
-            this.gkTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.gkTextBox.Location = new System.Drawing.Point(133, 3);
+            this.gkTextBox.Location = new System.Drawing.Point(3, 16);
             this.gkTextBox.Name = "gkTextBox";
-            this.gkTextBox.Size = new System.Drawing.Size(125, 20);
+            this.gkTextBox.Size = new System.Drawing.Size(147, 20);
             this.gkTextBox.TabIndex = 1;
             // 
             // orderTextBox
             // 
-            this.orderTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.orderTextBox.Location = new System.Drawing.Point(133, 34);
+            this.orderTextBox.Location = new System.Drawing.Point(3, 55);
             this.orderTextBox.Name = "orderTextBox";
-            this.orderTextBox.Size = new System.Drawing.Size(125, 20);
+            this.orderTextBox.Size = new System.Drawing.Size(147, 20);
             this.orderTextBox.TabIndex = 2;
             // 
             // productionGroupBox
@@ -405,9 +395,9 @@
             this.tableLayoutPanel1.SetColumnSpan(this.productionGroupBox, 2);
             this.productionGroupBox.Controls.Add(this.tableLayoutPanel8);
             this.productionGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.productionGroupBox.Location = new System.Drawing.Point(3, 201);
+            this.productionGroupBox.Location = new System.Drawing.Point(3, 133);
             this.productionGroupBox.Name = "productionGroupBox";
-            this.productionGroupBox.Size = new System.Drawing.Size(551, 193);
+            this.productionGroupBox.Size = new System.Drawing.Size(534, 258);
             this.productionGroupBox.TabIndex = 7;
             this.productionGroupBox.TabStop = false;
             // 
@@ -424,7 +414,7 @@
             this.tableLayoutPanel8.RowCount = 2;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(545, 174);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(528, 239);
             this.tableLayoutPanel8.TabIndex = 0;
             // 
             // productGroupBox
@@ -434,7 +424,7 @@
             this.productGroupBox.Location = new System.Drawing.Point(3, 3);
             this.productGroupBox.Name = "productGroupBox";
             this.tableLayoutPanel8.SetRowSpan(this.productGroupBox, 2);
-            this.productGroupBox.Size = new System.Drawing.Size(266, 168);
+            this.productGroupBox.Size = new System.Drawing.Size(258, 233);
             this.productGroupBox.TabIndex = 3;
             this.productGroupBox.TabStop = false;
             this.productGroupBox.Text = "Изделие";
@@ -465,23 +455,23 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(260, 149);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(252, 214);
             this.tableLayoutPanel3.TabIndex = 6;
             // 
             // productNumberComboBox
             // 
             this.productNumberComboBox.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.productNumberComboBox.FormattingEnabled = true;
-            this.productNumberComboBox.Location = new System.Drawing.Point(3, 27);
+            this.productNumberComboBox.Location = new System.Drawing.Point(3, 46);
             this.productNumberComboBox.Name = "productNumberComboBox";
-            this.productNumberComboBox.Size = new System.Drawing.Size(124, 21);
+            this.productNumberComboBox.Size = new System.Drawing.Size(120, 21);
             this.productNumberComboBox.TabIndex = 4;
             // 
             // productNumberLabel
             // 
             this.productNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.productNumberLabel.AutoSize = true;
-            this.productNumberLabel.Location = new System.Drawing.Point(3, 11);
+            this.productNumberLabel.Location = new System.Drawing.Point(3, 22);
             this.productNumberLabel.Name = "productNumberLabel";
             this.productNumberLabel.Size = new System.Drawing.Size(86, 13);
             this.productNumberLabel.TabIndex = 6;
@@ -491,7 +481,7 @@
             // 
             this.productIndexLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.productIndexLabel.AutoSize = true;
-            this.productIndexLabel.Location = new System.Drawing.Point(133, 11);
+            this.productIndexLabel.Location = new System.Drawing.Point(129, 22);
             this.productIndexLabel.Name = "productIndexLabel";
             this.productIndexLabel.Size = new System.Drawing.Size(90, 13);
             this.productIndexLabel.TabIndex = 7;
@@ -501,18 +491,18 @@
             // 
             this.tableLayoutPanel3.SetColumnSpan(this.productNameTextBox, 2);
             this.productNameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.productNameTextBox.Location = new System.Drawing.Point(3, 123);
+            this.productNameTextBox.Location = new System.Drawing.Point(3, 178);
             this.productNameTextBox.Name = "productNameTextBox";
-            this.productNameTextBox.Size = new System.Drawing.Size(254, 20);
+            this.productNameTextBox.Size = new System.Drawing.Size(246, 20);
             this.productNameTextBox.TabIndex = 3;
             // 
             // productAliasTextBox
             // 
             this.tableLayoutPanel3.SetColumnSpan(this.productAliasTextBox, 2);
             this.productAliasTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.productAliasTextBox.Location = new System.Drawing.Point(3, 75);
+            this.productAliasTextBox.Location = new System.Drawing.Point(3, 108);
             this.productAliasTextBox.Name = "productAliasTextBox";
-            this.productAliasTextBox.Size = new System.Drawing.Size(254, 20);
+            this.productAliasTextBox.Size = new System.Drawing.Size(246, 20);
             this.productAliasTextBox.TabIndex = 2;
             // 
             // productNameLabel
@@ -520,7 +510,7 @@
             this.productNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.productNameLabel.AutoSize = true;
             this.tableLayoutPanel3.SetColumnSpan(this.productNameLabel, 2);
-            this.productNameLabel.Location = new System.Drawing.Point(3, 107);
+            this.productNameLabel.Location = new System.Drawing.Point(3, 162);
             this.productNameLabel.Name = "productNameLabel";
             this.productNameLabel.Size = new System.Drawing.Size(128, 13);
             this.productNameLabel.TabIndex = 9;
@@ -530,16 +520,16 @@
             // 
             this.productIndexComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.productIndexComboBox.FormattingEnabled = true;
-            this.productIndexComboBox.Location = new System.Drawing.Point(133, 27);
+            this.productIndexComboBox.Location = new System.Drawing.Point(129, 38);
             this.productIndexComboBox.Name = "productIndexComboBox";
-            this.productIndexComboBox.Size = new System.Drawing.Size(124, 21);
+            this.productIndexComboBox.Size = new System.Drawing.Size(120, 21);
             this.productIndexComboBox.TabIndex = 5;
             // 
             // productAliasLabel
             // 
             this.productAliasLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.productAliasLabel.AutoSize = true;
-            this.productAliasLabel.Location = new System.Drawing.Point(3, 59);
+            this.productAliasLabel.Location = new System.Drawing.Point(3, 92);
             this.productAliasLabel.Name = "productAliasLabel";
             this.productAliasLabel.Size = new System.Drawing.Size(119, 13);
             this.productAliasLabel.TabIndex = 8;
@@ -549,10 +539,10 @@
             // 
             this.dceGroupBox.Controls.Add(this.tableLayoutPanel7);
             this.dceGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dceGroupBox.Location = new System.Drawing.Point(275, 3);
+            this.dceGroupBox.Location = new System.Drawing.Point(267, 3);
             this.dceGroupBox.Name = "dceGroupBox";
             this.tableLayoutPanel8.SetRowSpan(this.dceGroupBox, 2);
-            this.dceGroupBox.Size = new System.Drawing.Size(267, 168);
+            this.dceGroupBox.Size = new System.Drawing.Size(258, 233);
             this.dceGroupBox.TabIndex = 4;
             this.dceGroupBox.TabStop = false;
             this.dceGroupBox.Text = "ДСЕ";
@@ -579,40 +569,40 @@
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(261, 149);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(252, 214);
             this.tableLayoutPanel7.TabIndex = 4;
             // 
             // dceNameTextBox
             // 
             this.dceNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.tableLayoutPanel7.SetColumnSpan(this.dceNameTextBox, 3);
-            this.dceNameTextBox.Location = new System.Drawing.Point(3, 126);
+            this.dceNameTextBox.Location = new System.Drawing.Point(3, 191);
             this.dceNameTextBox.Name = "dceNameTextBox";
-            this.dceNameTextBox.Size = new System.Drawing.Size(255, 20);
+            this.dceNameTextBox.Size = new System.Drawing.Size(246, 20);
             this.dceNameTextBox.TabIndex = 2;
             // 
             // dceAliasTextBox
             // 
             this.dceAliasTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.tableLayoutPanel7.SetColumnSpan(this.dceAliasTextBox, 3);
-            this.dceAliasTextBox.Location = new System.Drawing.Point(3, 75);
+            this.dceAliasTextBox.Location = new System.Drawing.Point(3, 117);
             this.dceAliasTextBox.Name = "dceAliasTextBox";
-            this.dceAliasTextBox.Size = new System.Drawing.Size(255, 20);
+            this.dceAliasTextBox.Size = new System.Drawing.Size(246, 20);
             this.dceAliasTextBox.TabIndex = 3;
             // 
             // dceNumberTextBox
             // 
             this.dceNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.dceNumberTextBox.Location = new System.Drawing.Point(3, 27);
+            this.dceNumberTextBox.Location = new System.Drawing.Point(3, 47);
             this.dceNumberTextBox.Name = "dceNumberTextBox";
-            this.dceNumberTextBox.Size = new System.Drawing.Size(81, 20);
+            this.dceNumberTextBox.Size = new System.Drawing.Size(78, 20);
             this.dceNumberTextBox.TabIndex = 1;
             // 
             // dceNumberLabel
             // 
             this.dceNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dceNumberLabel.AutoSize = true;
-            this.dceNumberLabel.Location = new System.Drawing.Point(3, 11);
+            this.dceNumberLabel.Location = new System.Drawing.Point(3, 22);
             this.dceNumberLabel.Name = "dceNumberLabel";
             this.dceNumberLabel.Size = new System.Drawing.Size(67, 13);
             this.dceNumberLabel.TabIndex = 4;
@@ -623,7 +613,7 @@
             this.dceAliasLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dceAliasLabel.AutoSize = true;
             this.tableLayoutPanel7.SetColumnSpan(this.dceAliasLabel, 2);
-            this.dceAliasLabel.Location = new System.Drawing.Point(3, 59);
+            this.dceAliasLabel.Location = new System.Drawing.Point(3, 92);
             this.dceAliasLabel.Name = "dceAliasLabel";
             this.dceAliasLabel.Size = new System.Drawing.Size(100, 13);
             this.dceAliasLabel.TabIndex = 5;
@@ -634,7 +624,7 @@
             this.dceNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dceNameLabel.AutoSize = true;
             this.tableLayoutPanel7.SetColumnSpan(this.dceNameLabel, 2);
-            this.dceNameLabel.Location = new System.Drawing.Point(3, 107);
+            this.dceNameLabel.Location = new System.Drawing.Point(3, 162);
             this.dceNameLabel.Name = "dceNameLabel";
             this.dceNameLabel.Size = new System.Drawing.Size(109, 13);
             this.dceNameLabel.TabIndex = 6;
@@ -642,17 +632,24 @@
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 451);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 495);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(845, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(819, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // applicationDateTextBox
+            // 
+            this.applicationDateTextBox.Location = new System.Drawing.Point(3, 55);
+            this.applicationDateTextBox.Name = "applicationDateTextBox";
+            this.applicationDateTextBox.Size = new System.Drawing.Size(132, 20);
+            this.applicationDateTextBox.TabIndex = 3;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(845, 473);
+            this.ClientSize = new System.Drawing.Size(819, 517);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "MainForm";
@@ -730,9 +727,9 @@
         private System.Windows.Forms.Label dceAliasLabel;
         private System.Windows.Forms.Label dceNameLabel;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox applicationDateTextBox;
         private System.Windows.Forms.GroupBox productionGroupBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
+        private System.Windows.Forms.TextBox applicationDateTextBox;
     }
 }
 
