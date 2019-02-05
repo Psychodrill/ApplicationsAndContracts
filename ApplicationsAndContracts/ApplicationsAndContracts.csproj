@@ -79,15 +79,24 @@
     <Compile Include="DataAccess\SqlHelper.cs" />
     <Compile Include="Helpers\Methods.cs" />
     <Compile Include="Helpers\Resources.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="Views\ApplicationsAndContractsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Views\ApplicationsAndContractsForm.Designer.cs">
+      <DependentUpon>ApplicationsAndContractsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Views\ApplicationsAndContractsForm.resx">
+      <DependentUpon>ApplicationsAndContractsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

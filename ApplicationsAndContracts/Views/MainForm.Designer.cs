@@ -37,12 +37,14 @@
             this.contractNumberTextBox = new System.Windows.Forms.TextBox();
             this.supplierNameLabel = new System.Windows.Forms.Label();
             this.contractNumberLabel = new System.Windows.Forms.Label();
+            this.contractDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.contractDateLabel = new System.Windows.Forms.Label();
             this.applicationGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.applicationsNumberLabel = new System.Windows.Forms.Label();
+            this.applicationNumberLabel = new System.Windows.Forms.Label();
             this.applicationsDateLabel = new System.Windows.Forms.Label();
             this.applicationNumberTextBox = new System.Windows.Forms.TextBox();
+            this.applicationDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.orderGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.gkLabel = new System.Windows.Forms.Label();
@@ -73,13 +75,11 @@
             this.applyButton = new System.Windows.Forms.Button();
             this.clearButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.departmentGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.departmentComboBox = new System.Windows.Forms.ComboBox();
             this.departmentLabel = new System.Windows.Forms.Label();
-            this.applicationDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.contractDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.userModifyToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.dateModifyToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.tableLayoutPanel1.SuspendLayout();
@@ -98,13 +98,14 @@
             this.dceGroupBox.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
             this.departmentGroupBox.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -223,6 +224,14 @@
             this.contractNumberLabel.TabIndex = 4;
             this.contractNumberLabel.Text = "№ договора:";
             // 
+            // contractDateTimePicker
+            // 
+            this.contractDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.contractDateTimePicker.Location = new System.Drawing.Point(142, 55);
+            this.contractDateTimePicker.Name = "contractDateTimePicker";
+            this.contractDateTimePicker.Size = new System.Drawing.Size(133, 20);
+            this.contractDateTimePicker.TabIndex = 10;
+            // 
             // contractDateLabel
             // 
             this.contractDateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -249,7 +258,7 @@
             // 
             this.tableLayoutPanel6.ColumnCount = 1;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Controls.Add(this.applicationsNumberLabel, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.applicationNumberLabel, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.applicationsDateLabel, 0, 2);
             this.tableLayoutPanel6.Controls.Add(this.applicationNumberTextBox, 0, 1);
             this.tableLayoutPanel6.Controls.Add(this.applicationDateTimePicker, 0, 3);
@@ -264,15 +273,15 @@
             this.tableLayoutPanel6.Size = new System.Drawing.Size(138, 80);
             this.tableLayoutPanel6.TabIndex = 5;
             // 
-            // applicationsNumberLabel
+            // applicationNumberLabel
             // 
-            this.applicationsNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.applicationsNumberLabel.AutoSize = true;
-            this.applicationsNumberLabel.Location = new System.Drawing.Point(3, 0);
-            this.applicationsNumberLabel.Name = "applicationsNumberLabel";
-            this.applicationsNumberLabel.Size = new System.Drawing.Size(57, 13);
-            this.applicationsNumberLabel.TabIndex = 5;
-            this.applicationsNumberLabel.Text = "№ заявки";
+            this.applicationNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.applicationNumberLabel.AutoSize = true;
+            this.applicationNumberLabel.Location = new System.Drawing.Point(3, 0);
+            this.applicationNumberLabel.Name = "applicationNumberLabel";
+            this.applicationNumberLabel.Size = new System.Drawing.Size(57, 13);
+            this.applicationNumberLabel.TabIndex = 5;
+            this.applicationNumberLabel.Text = "№ заявки";
             // 
             // applicationsDateLabel
             // 
@@ -290,6 +299,14 @@
             this.applicationNumberTextBox.Name = "applicationNumberTextBox";
             this.applicationNumberTextBox.Size = new System.Drawing.Size(132, 20);
             this.applicationNumberTextBox.TabIndex = 4;
+            // 
+            // applicationDateTimePicker
+            // 
+            this.applicationDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.applicationDateTimePicker.Location = new System.Drawing.Point(3, 55);
+            this.applicationDateTimePicker.Name = "applicationDateTimePicker";
+            this.applicationDateTimePicker.Size = new System.Drawing.Size(132, 20);
+            this.applicationDateTimePicker.TabIndex = 9;
             // 
             // orderGroupBox
             // 
@@ -630,17 +647,6 @@
             this.cancelButton.Text = "Отменить";
             this.cancelButton.UseVisualStyleBackColor = true;
             // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.userModifyToolStripStatusLabel,
-            this.dateModifyToolStripStatusLabel});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 421);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(615, 22);
-            this.statusStrip1.TabIndex = 1;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
             // departmentGroupBox
             // 
             this.departmentGroupBox.Controls.Add(this.tableLayoutPanel9);
@@ -683,32 +689,28 @@
             this.departmentLabel.TabIndex = 1;
             this.departmentLabel.Text = "Отдел";
             // 
-            // applicationDateTimePicker
+            // statusStrip1
             // 
-            this.applicationDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.applicationDateTimePicker.Location = new System.Drawing.Point(3, 55);
-            this.applicationDateTimePicker.Name = "applicationDateTimePicker";
-            this.applicationDateTimePicker.Size = new System.Drawing.Size(132, 20);
-            this.applicationDateTimePicker.TabIndex = 9;
-            // 
-            // contractDateTimePicker
-            // 
-            this.contractDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.contractDateTimePicker.Location = new System.Drawing.Point(142, 55);
-            this.contractDateTimePicker.Name = "contractDateTimePicker";
-            this.contractDateTimePicker.Size = new System.Drawing.Size(133, 20);
-            this.contractDateTimePicker.TabIndex = 10;
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.userModifyToolStripStatusLabel,
+            this.dateModifyToolStripStatusLabel});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 419);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(615, 24);
+            this.statusStrip1.TabIndex = 1;
+            this.statusStrip1.Text = "statusStrip1";
             // 
             // userModifyToolStripStatusLabel
             // 
+            this.userModifyToolStripStatusLabel.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
             this.userModifyToolStripStatusLabel.Name = "userModifyToolStripStatusLabel";
-            this.userModifyToolStripStatusLabel.Size = new System.Drawing.Size(112, 17);
+            this.userModifyToolStripStatusLabel.Size = new System.Drawing.Size(116, 19);
             this.userModifyToolStripStatusLabel.Text = "####_Surname A.A.";
             // 
             // dateModifyToolStripStatusLabel
             // 
             this.dateModifyToolStripStatusLabel.Name = "dateModifyToolStripStatusLabel";
-            this.dateModifyToolStripStatusLabel.Size = new System.Drawing.Size(69, 17);
+            this.dateModifyToolStripStatusLabel.Size = new System.Drawing.Size(69, 19);
             this.dateModifyToolStripStatusLabel.Text = "##.##.####";
             // 
             // MainForm
@@ -742,11 +744,11 @@
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             this.departmentGroupBox.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel9.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -784,7 +786,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.GroupBox applicationGroupBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.Label applicationsNumberLabel;
+        private System.Windows.Forms.Label applicationNumberLabel;
         private System.Windows.Forms.TextBox applicationNumberTextBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.ComboBox productNumberComboBox;
