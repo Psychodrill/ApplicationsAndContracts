@@ -80,6 +80,8 @@
             this.departmentLabel = new System.Windows.Forms.Label();
             this.applicationDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.contractDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.userModifyToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.dateModifyToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.tableLayoutPanel1.SuspendLayout();
             this.supplyGroupBox.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -96,6 +98,7 @@
             this.dceGroupBox.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.departmentGroupBox.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             this.SuspendLayout();
@@ -629,6 +632,9 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.userModifyToolStripStatusLabel,
+            this.dateModifyToolStripStatusLabel});
             this.statusStrip1.Location = new System.Drawing.Point(0, 421);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(615, 22);
@@ -693,6 +699,18 @@
             this.contractDateTimePicker.Size = new System.Drawing.Size(133, 20);
             this.contractDateTimePicker.TabIndex = 10;
             // 
+            // userModifyToolStripStatusLabel
+            // 
+            this.userModifyToolStripStatusLabel.Name = "userModifyToolStripStatusLabel";
+            this.userModifyToolStripStatusLabel.Size = new System.Drawing.Size(112, 17);
+            this.userModifyToolStripStatusLabel.Text = "####_Surname A.A.";
+            // 
+            // dateModifyToolStripStatusLabel
+            // 
+            this.dateModifyToolStripStatusLabel.Name = "dateModifyToolStripStatusLabel";
+            this.dateModifyToolStripStatusLabel.Size = new System.Drawing.Size(69, 17);
+            this.dateModifyToolStripStatusLabel.Text = "##.##.####";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -701,6 +719,7 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Заявки и договоры";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.supplyGroupBox.ResumeLayout(false);
@@ -723,6 +742,8 @@
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.departmentGroupBox.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel9.PerformLayout();
@@ -785,6 +806,8 @@
         private System.Windows.Forms.Label departmentLabel;
         private System.Windows.Forms.DateTimePicker contractDateTimePicker;
         private System.Windows.Forms.DateTimePicker applicationDateTimePicker;
+        private System.Windows.Forms.ToolStripStatusLabel userModifyToolStripStatusLabel;
+        private System.Windows.Forms.ToolStripStatusLabel dateModifyToolStripStatusLabel;
     }
 }
 
