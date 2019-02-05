@@ -29,15 +29,10 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.supplyGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.supplierGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.contractDateTextBox = new System.Windows.Forms.TextBox();
             this.supplierNameTextBox = new System.Windows.Forms.TextBox();
             this.contractNumberTextBox = new System.Windows.Forms.TextBox();
             this.supplierNameLabel = new System.Windows.Forms.Label();
@@ -45,15 +40,15 @@
             this.contractDateLabel = new System.Windows.Forms.Label();
             this.applicationGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.applicationsNumberLabel = new System.Windows.Forms.Label();
+            this.applicationsDateLabel = new System.Windows.Forms.Label();
             this.applicationNumberTextBox = new System.Windows.Forms.TextBox();
             this.orderGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.gkLabel = new System.Windows.Forms.Label();
-            this.orderLabel = new System.Windows.Forms.Label();
             this.gkTextBox = new System.Windows.Forms.TextBox();
             this.orderTextBox = new System.Windows.Forms.TextBox();
+            this.orderLabel = new System.Windows.Forms.Label();
             this.productionGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.productGroupBox = new System.Windows.Forms.GroupBox();
@@ -74,10 +69,18 @@
             this.dceNumberLabel = new System.Windows.Forms.Label();
             this.dceAliasLabel = new System.Windows.Forms.Label();
             this.dceNameLabel = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.applyButton = new System.Windows.Forms.Button();
+            this.clearButton = new System.Windows.Forms.Button();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.applicationDateTextBox = new System.Windows.Forms.TextBox();
+            this.departmentGroupBox = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.departmentComboBox = new System.Windows.Forms.ComboBox();
+            this.departmentLabel = new System.Windows.Forms.Label();
+            this.applicationDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.contractDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.supplyGroupBox.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.supplierGroupBox.SuspendLayout();
@@ -92,67 +95,34 @@
             this.tableLayoutPanel3.SuspendLayout();
             this.dceGroupBox.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.departmentGroupBox.SuspendLayout();
+            this.tableLayoutPanel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34F));
-            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 2, 2);
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.supplyGroupBox, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.productionGroupBox, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.departmentGroupBox, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 130F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68.42105F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.57895F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(819, 517);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 170F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(615, 443);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.button1);
-            this.flowLayoutPanel1.Controls.Add(this.button2);
-            this.flowLayoutPanel1.Controls.Add(this.button3);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(543, 397);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(273, 63);
-            this.flowLayoutPanel1.TabIndex = 5;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(84, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(165, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // supplyGroupBox
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.supplyGroupBox, 3);
+            this.tableLayoutPanel1.SetColumnSpan(this.supplyGroupBox, 2);
             this.supplyGroupBox.Controls.Add(this.tableLayoutPanel5);
             this.supplyGroupBox.Location = new System.Drawing.Point(3, 3);
             this.supplyGroupBox.Name = "supplyGroupBox";
@@ -195,11 +165,11 @@
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.contractDateTextBox, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.supplierNameTextBox, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.contractNumberTextBox, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.supplierNameLabel, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.contractNumberLabel, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.contractDateTimePicker, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.contractDateLabel, 1, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 16);
@@ -211,14 +181,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.Size = new System.Drawing.Size(278, 80);
             this.tableLayoutPanel2.TabIndex = 3;
-            // 
-            // contractDateTextBox
-            // 
-            this.contractDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contractDateTextBox.Location = new System.Drawing.Point(142, 55);
-            this.contractDateTextBox.Name = "contractDateTextBox";
-            this.contractDateTextBox.Size = new System.Drawing.Size(133, 20);
-            this.contractDateTextBox.TabIndex = 1;
             // 
             // supplierNameTextBox
             // 
@@ -284,10 +246,10 @@
             // 
             this.tableLayoutPanel6.ColumnCount = 1;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.label2, 0, 2);
-            this.tableLayoutPanel6.Controls.Add(this.applicationDateTextBox, 0, 3);
+            this.tableLayoutPanel6.Controls.Add(this.applicationsNumberLabel, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.applicationsDateLabel, 0, 2);
             this.tableLayoutPanel6.Controls.Add(this.applicationNumberTextBox, 0, 1);
+            this.tableLayoutPanel6.Controls.Add(this.applicationDateTimePicker, 0, 3);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
@@ -299,25 +261,25 @@
             this.tableLayoutPanel6.Size = new System.Drawing.Size(138, 80);
             this.tableLayoutPanel6.TabIndex = 5;
             // 
-            // label1
+            // applicationsNumberLabel
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "№ заявки";
+            this.applicationsNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.applicationsNumberLabel.AutoSize = true;
+            this.applicationsNumberLabel.Location = new System.Drawing.Point(3, 0);
+            this.applicationsNumberLabel.Name = "applicationsNumberLabel";
+            this.applicationsNumberLabel.Size = new System.Drawing.Size(57, 13);
+            this.applicationsNumberLabel.TabIndex = 5;
+            this.applicationsNumberLabel.Text = "№ заявки";
             // 
-            // label2
+            // applicationsDateLabel
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Дата заявки";
+            this.applicationsDateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.applicationsDateLabel.AutoSize = true;
+            this.applicationsDateLabel.Location = new System.Drawing.Point(3, 39);
+            this.applicationsDateLabel.Name = "applicationsDateLabel";
+            this.applicationsDateLabel.Size = new System.Drawing.Size(72, 13);
+            this.applicationsDateLabel.TabIndex = 6;
+            this.applicationsDateLabel.Text = "Дата заявки";
             // 
             // applicationNumberTextBox
             // 
@@ -346,6 +308,7 @@
             this.tableLayoutPanel4.Controls.Add(this.gkTextBox, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.orderTextBox, 0, 3);
             this.tableLayoutPanel4.Controls.Add(this.orderLabel, 0, 2);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 4;
@@ -353,7 +316,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(153, 80);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(150, 80);
             this.tableLayoutPanel4.TabIndex = 3;
             // 
             // gkLabel
@@ -366,6 +329,20 @@
             this.gkLabel.TabIndex = 3;
             this.gkLabel.Text = "ГК";
             // 
+            // gkTextBox
+            // 
+            this.gkTextBox.Location = new System.Drawing.Point(3, 16);
+            this.gkTextBox.Name = "gkTextBox";
+            this.gkTextBox.Size = new System.Drawing.Size(144, 20);
+            this.gkTextBox.TabIndex = 1;
+            // 
+            // orderTextBox
+            // 
+            this.orderTextBox.Location = new System.Drawing.Point(3, 55);
+            this.orderTextBox.Name = "orderTextBox";
+            this.orderTextBox.Size = new System.Drawing.Size(144, 20);
+            this.orderTextBox.TabIndex = 2;
+            // 
             // orderLabel
             // 
             this.orderLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -376,20 +353,6 @@
             this.orderLabel.TabIndex = 4;
             this.orderLabel.Text = "Заказ";
             // 
-            // gkTextBox
-            // 
-            this.gkTextBox.Location = new System.Drawing.Point(3, 16);
-            this.gkTextBox.Name = "gkTextBox";
-            this.gkTextBox.Size = new System.Drawing.Size(147, 20);
-            this.gkTextBox.TabIndex = 1;
-            // 
-            // orderTextBox
-            // 
-            this.orderTextBox.Location = new System.Drawing.Point(3, 55);
-            this.orderTextBox.Name = "orderTextBox";
-            this.orderTextBox.Size = new System.Drawing.Size(147, 20);
-            this.orderTextBox.TabIndex = 2;
-            // 
             // productionGroupBox
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.productionGroupBox, 2);
@@ -397,7 +360,7 @@
             this.productionGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.productionGroupBox.Location = new System.Drawing.Point(3, 133);
             this.productionGroupBox.Name = "productionGroupBox";
-            this.productionGroupBox.Size = new System.Drawing.Size(534, 258);
+            this.productionGroupBox.Size = new System.Drawing.Size(609, 164);
             this.productionGroupBox.TabIndex = 7;
             this.productionGroupBox.TabStop = false;
             // 
@@ -414,7 +377,7 @@
             this.tableLayoutPanel8.RowCount = 2;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(528, 239);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(603, 145);
             this.tableLayoutPanel8.TabIndex = 0;
             // 
             // productGroupBox
@@ -424,7 +387,7 @@
             this.productGroupBox.Location = new System.Drawing.Point(3, 3);
             this.productGroupBox.Name = "productGroupBox";
             this.tableLayoutPanel8.SetRowSpan(this.productGroupBox, 2);
-            this.productGroupBox.Size = new System.Drawing.Size(258, 233);
+            this.productGroupBox.Size = new System.Drawing.Size(295, 139);
             this.productGroupBox.TabIndex = 3;
             this.productGroupBox.TabStop = false;
             this.productGroupBox.Text = "Изделие";
@@ -447,31 +410,29 @@
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 6;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(252, 214);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(289, 120);
             this.tableLayoutPanel3.TabIndex = 6;
             // 
             // productNumberComboBox
             // 
             this.productNumberComboBox.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.productNumberComboBox.FormattingEnabled = true;
-            this.productNumberComboBox.Location = new System.Drawing.Point(3, 46);
+            this.productNumberComboBox.Location = new System.Drawing.Point(3, 16);
             this.productNumberComboBox.Name = "productNumberComboBox";
-            this.productNumberComboBox.Size = new System.Drawing.Size(120, 21);
+            this.productNumberComboBox.Size = new System.Drawing.Size(138, 21);
             this.productNumberComboBox.TabIndex = 4;
             // 
             // productNumberLabel
             // 
             this.productNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.productNumberLabel.AutoSize = true;
-            this.productNumberLabel.Location = new System.Drawing.Point(3, 22);
+            this.productNumberLabel.Location = new System.Drawing.Point(3, 0);
             this.productNumberLabel.Name = "productNumberLabel";
             this.productNumberLabel.Size = new System.Drawing.Size(86, 13);
             this.productNumberLabel.TabIndex = 6;
@@ -481,7 +442,7 @@
             // 
             this.productIndexLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.productIndexLabel.AutoSize = true;
-            this.productIndexLabel.Location = new System.Drawing.Point(129, 22);
+            this.productIndexLabel.Location = new System.Drawing.Point(147, 0);
             this.productIndexLabel.Name = "productIndexLabel";
             this.productIndexLabel.Size = new System.Drawing.Size(90, 13);
             this.productIndexLabel.TabIndex = 7;
@@ -491,18 +452,18 @@
             // 
             this.tableLayoutPanel3.SetColumnSpan(this.productNameTextBox, 2);
             this.productNameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.productNameTextBox.Location = new System.Drawing.Point(3, 178);
+            this.productNameTextBox.Location = new System.Drawing.Point(3, 95);
             this.productNameTextBox.Name = "productNameTextBox";
-            this.productNameTextBox.Size = new System.Drawing.Size(246, 20);
+            this.productNameTextBox.Size = new System.Drawing.Size(283, 20);
             this.productNameTextBox.TabIndex = 3;
             // 
             // productAliasTextBox
             // 
             this.tableLayoutPanel3.SetColumnSpan(this.productAliasTextBox, 2);
             this.productAliasTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.productAliasTextBox.Location = new System.Drawing.Point(3, 108);
+            this.productAliasTextBox.Location = new System.Drawing.Point(3, 56);
             this.productAliasTextBox.Name = "productAliasTextBox";
-            this.productAliasTextBox.Size = new System.Drawing.Size(246, 20);
+            this.productAliasTextBox.Size = new System.Drawing.Size(283, 20);
             this.productAliasTextBox.TabIndex = 2;
             // 
             // productNameLabel
@@ -510,7 +471,7 @@
             this.productNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.productNameLabel.AutoSize = true;
             this.tableLayoutPanel3.SetColumnSpan(this.productNameLabel, 2);
-            this.productNameLabel.Location = new System.Drawing.Point(3, 162);
+            this.productNameLabel.Location = new System.Drawing.Point(3, 79);
             this.productNameLabel.Name = "productNameLabel";
             this.productNameLabel.Size = new System.Drawing.Size(128, 13);
             this.productNameLabel.TabIndex = 9;
@@ -520,16 +481,16 @@
             // 
             this.productIndexComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.productIndexComboBox.FormattingEnabled = true;
-            this.productIndexComboBox.Location = new System.Drawing.Point(129, 38);
+            this.productIndexComboBox.Location = new System.Drawing.Point(147, 16);
             this.productIndexComboBox.Name = "productIndexComboBox";
-            this.productIndexComboBox.Size = new System.Drawing.Size(120, 21);
+            this.productIndexComboBox.Size = new System.Drawing.Size(139, 21);
             this.productIndexComboBox.TabIndex = 5;
             // 
             // productAliasLabel
             // 
             this.productAliasLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.productAliasLabel.AutoSize = true;
-            this.productAliasLabel.Location = new System.Drawing.Point(3, 92);
+            this.productAliasLabel.Location = new System.Drawing.Point(3, 40);
             this.productAliasLabel.Name = "productAliasLabel";
             this.productAliasLabel.Size = new System.Drawing.Size(119, 13);
             this.productAliasLabel.TabIndex = 8;
@@ -539,10 +500,10 @@
             // 
             this.dceGroupBox.Controls.Add(this.tableLayoutPanel7);
             this.dceGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dceGroupBox.Location = new System.Drawing.Point(267, 3);
+            this.dceGroupBox.Location = new System.Drawing.Point(304, 3);
             this.dceGroupBox.Name = "dceGroupBox";
             this.tableLayoutPanel8.SetRowSpan(this.dceGroupBox, 2);
-            this.dceGroupBox.Size = new System.Drawing.Size(258, 233);
+            this.dceGroupBox.Size = new System.Drawing.Size(296, 139);
             this.dceGroupBox.TabIndex = 4;
             this.dceGroupBox.TabStop = false;
             this.dceGroupBox.Text = "ДСЕ";
@@ -559,50 +520,48 @@
             this.tableLayoutPanel7.Controls.Add(this.dceNumberLabel, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.dceAliasLabel, 0, 2);
             this.tableLayoutPanel7.Controls.Add(this.dceNameLabel, 0, 4);
-            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 6;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(252, 214);
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(289, 120);
             this.tableLayoutPanel7.TabIndex = 4;
             // 
             // dceNameTextBox
             // 
-            this.dceNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.tableLayoutPanel7.SetColumnSpan(this.dceNameTextBox, 3);
-            this.dceNameTextBox.Location = new System.Drawing.Point(3, 191);
+            this.dceNameTextBox.Location = new System.Drawing.Point(3, 94);
             this.dceNameTextBox.Name = "dceNameTextBox";
-            this.dceNameTextBox.Size = new System.Drawing.Size(246, 20);
+            this.dceNameTextBox.Size = new System.Drawing.Size(283, 20);
             this.dceNameTextBox.TabIndex = 2;
             // 
             // dceAliasTextBox
             // 
             this.dceAliasTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.tableLayoutPanel7.SetColumnSpan(this.dceAliasTextBox, 3);
-            this.dceAliasTextBox.Location = new System.Drawing.Point(3, 117);
+            this.dceAliasTextBox.Location = new System.Drawing.Point(3, 55);
             this.dceAliasTextBox.Name = "dceAliasTextBox";
-            this.dceAliasTextBox.Size = new System.Drawing.Size(246, 20);
+            this.dceAliasTextBox.Size = new System.Drawing.Size(283, 20);
             this.dceAliasTextBox.TabIndex = 3;
             // 
             // dceNumberTextBox
             // 
             this.dceNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.dceNumberTextBox.Location = new System.Drawing.Point(3, 47);
+            this.dceNumberTextBox.Location = new System.Drawing.Point(3, 16);
             this.dceNumberTextBox.Name = "dceNumberTextBox";
-            this.dceNumberTextBox.Size = new System.Drawing.Size(78, 20);
+            this.dceNumberTextBox.Size = new System.Drawing.Size(90, 20);
             this.dceNumberTextBox.TabIndex = 1;
             // 
             // dceNumberLabel
             // 
             this.dceNumberLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dceNumberLabel.AutoSize = true;
-            this.dceNumberLabel.Location = new System.Drawing.Point(3, 22);
+            this.dceNumberLabel.Location = new System.Drawing.Point(3, 0);
             this.dceNumberLabel.Name = "dceNumberLabel";
             this.dceNumberLabel.Size = new System.Drawing.Size(67, 13);
             this.dceNumberLabel.TabIndex = 4;
@@ -613,7 +572,7 @@
             this.dceAliasLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dceAliasLabel.AutoSize = true;
             this.tableLayoutPanel7.SetColumnSpan(this.dceAliasLabel, 2);
-            this.dceAliasLabel.Location = new System.Drawing.Point(3, 92);
+            this.dceAliasLabel.Location = new System.Drawing.Point(3, 39);
             this.dceAliasLabel.Name = "dceAliasLabel";
             this.dceAliasLabel.Size = new System.Drawing.Size(100, 13);
             this.dceAliasLabel.TabIndex = 5;
@@ -624,38 +583,126 @@
             this.dceNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dceNameLabel.AutoSize = true;
             this.tableLayoutPanel7.SetColumnSpan(this.dceNameLabel, 2);
-            this.dceNameLabel.Location = new System.Drawing.Point(3, 162);
+            this.dceNameLabel.Location = new System.Drawing.Point(3, 78);
             this.dceNameLabel.Name = "dceNameLabel";
             this.dceNameLabel.Size = new System.Drawing.Size(109, 13);
             this.dceNameLabel.TabIndex = 6;
             this.dceNameLabel.Text = "Наименование ДСЕ";
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel1.Controls.Add(this.applyButton);
+            this.flowLayoutPanel1.Controls.Add(this.clearButton);
+            this.flowLayoutPanel1.Controls.Add(this.cancelButton);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(353, 383);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(259, 35);
+            this.flowLayoutPanel1.TabIndex = 5;
+            // 
+            // applyButton
+            // 
+            this.applyButton.Location = new System.Drawing.Point(3, 3);
+            this.applyButton.Name = "applyButton";
+            this.applyButton.Size = new System.Drawing.Size(75, 23);
+            this.applyButton.TabIndex = 0;
+            this.applyButton.Text = "Применить";
+            this.applyButton.UseVisualStyleBackColor = true;
+            // 
+            // clearButton
+            // 
+            this.clearButton.Location = new System.Drawing.Point(84, 3);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(75, 23);
+            this.clearButton.TabIndex = 1;
+            this.clearButton.Text = "Очистить";
+            this.clearButton.UseVisualStyleBackColor = true;
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.Location = new System.Drawing.Point(165, 3);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(75, 23);
+            this.cancelButton.TabIndex = 2;
+            this.cancelButton.Text = "Отменить";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            // 
             // statusStrip1
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 495);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 421);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(819, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(615, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // applicationDateTextBox
+            // departmentGroupBox
             // 
-            this.applicationDateTextBox.Location = new System.Drawing.Point(3, 55);
-            this.applicationDateTextBox.Name = "applicationDateTextBox";
-            this.applicationDateTextBox.Size = new System.Drawing.Size(132, 20);
-            this.applicationDateTextBox.TabIndex = 3;
+            this.departmentGroupBox.Controls.Add(this.tableLayoutPanel9);
+            this.departmentGroupBox.Location = new System.Drawing.Point(3, 303);
+            this.departmentGroupBox.Name = "departmentGroupBox";
+            this.departmentGroupBox.Size = new System.Drawing.Size(98, 61);
+            this.departmentGroupBox.TabIndex = 8;
+            this.departmentGroupBox.TabStop = false;
+            // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.ColumnCount = 1;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel9.Controls.Add(this.departmentComboBox, 0, 1);
+            this.tableLayoutPanel9.Controls.Add(this.departmentLabel, 0, 0);
+            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 2;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(92, 42);
+            this.tableLayoutPanel9.TabIndex = 0;
+            // 
+            // departmentComboBox
+            // 
+            this.departmentComboBox.FormattingEnabled = true;
+            this.departmentComboBox.Location = new System.Drawing.Point(3, 16);
+            this.departmentComboBox.Name = "departmentComboBox";
+            this.departmentComboBox.Size = new System.Drawing.Size(86, 21);
+            this.departmentComboBox.TabIndex = 0;
+            // 
+            // departmentLabel
+            // 
+            this.departmentLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.departmentLabel.AutoSize = true;
+            this.departmentLabel.Location = new System.Drawing.Point(3, 0);
+            this.departmentLabel.Name = "departmentLabel";
+            this.departmentLabel.Size = new System.Drawing.Size(38, 13);
+            this.departmentLabel.TabIndex = 1;
+            this.departmentLabel.Text = "Отдел";
+            // 
+            // applicationDateTimePicker
+            // 
+            this.applicationDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.applicationDateTimePicker.Location = new System.Drawing.Point(3, 55);
+            this.applicationDateTimePicker.Name = "applicationDateTimePicker";
+            this.applicationDateTimePicker.Size = new System.Drawing.Size(132, 20);
+            this.applicationDateTimePicker.TabIndex = 9;
+            // 
+            // contractDateTimePicker
+            // 
+            this.contractDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.contractDateTimePicker.Location = new System.Drawing.Point(142, 55);
+            this.contractDateTimePicker.Name = "contractDateTimePicker";
+            this.contractDateTimePicker.Size = new System.Drawing.Size(133, 20);
+            this.contractDateTimePicker.TabIndex = 10;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(819, 517);
+            this.ClientSize = new System.Drawing.Size(615, 443);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "MainForm";
             this.Text = "Заявки и договоры";
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.supplyGroupBox.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.supplierGroupBox.ResumeLayout(false);
@@ -675,6 +722,10 @@
             this.dceGroupBox.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.departmentGroupBox.ResumeLayout(false);
+            this.tableLayoutPanel9.ResumeLayout(false);
+            this.tableLayoutPanel9.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -696,13 +747,12 @@
         private System.Windows.Forms.TextBox dceNameTextBox;
         private System.Windows.Forms.TextBox dceNumberTextBox;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button applyButton;
+        private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TextBox supplierNameTextBox;
         private System.Windows.Forms.TextBox contractNumberTextBox;
-        private System.Windows.Forms.TextBox contractDateTextBox;
         private System.Windows.Forms.Label supplierNameLabel;
         private System.Windows.Forms.Label contractNumberLabel;
         private System.Windows.Forms.Label contractDateLabel;
@@ -713,7 +763,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.GroupBox applicationGroupBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label applicationsNumberLabel;
         private System.Windows.Forms.TextBox applicationNumberTextBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.ComboBox productNumberComboBox;
@@ -726,10 +776,15 @@
         private System.Windows.Forms.Label dceNumberLabel;
         private System.Windows.Forms.Label dceAliasLabel;
         private System.Windows.Forms.Label dceNameLabel;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label applicationsDateLabel;
         private System.Windows.Forms.GroupBox productionGroupBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.TextBox applicationDateTextBox;
+        private System.Windows.Forms.GroupBox departmentGroupBox;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
+        private System.Windows.Forms.ComboBox departmentComboBox;
+        private System.Windows.Forms.Label departmentLabel;
+        private System.Windows.Forms.DateTimePicker contractDateTimePicker;
+        private System.Windows.Forms.DateTimePicker applicationDateTimePicker;
     }
 }
 
