@@ -71,14 +71,19 @@
             this.dceNumberLabel = new System.Windows.Forms.Label();
             this.dceAliasLabel = new System.Windows.Forms.Label();
             this.dceNameLabel = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.applyButton = new System.Windows.Forms.Button();
-            this.clearButton = new System.Windows.Forms.Button();
-            this.cancelButton = new System.Windows.Forms.Button();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.departmentGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.departmentComboBox = new System.Windows.Forms.ComboBox();
             this.departmentLabel = new System.Windows.Forms.Label();
+            this.applicationStatusGroupBox = new System.Windows.Forms.GroupBox();
+            this.notPerformedApplicationsRadioButton = new System.Windows.Forms.RadioButton();
+            this.performedApplicationsRadioButton = new System.Windows.Forms.RadioButton();
+            this.allApplicationsRadioButton = new System.Windows.Forms.RadioButton();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.clearButton = new System.Windows.Forms.Button();
+            this.applyButton = new System.Windows.Forms.Button();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.userModifyToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.dateModifyToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
@@ -97,9 +102,11 @@
             this.tableLayoutPanel3.SuspendLayout();
             this.dceGroupBox.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             this.departmentGroupBox.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
+            this.applicationStatusGroupBox.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -110,27 +117,28 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.supplyGroupBox, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.productionGroupBox, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.productionGroupBox, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.departmentGroupBox, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 130F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 170F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(615, 443);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(615, 462);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // supplyGroupBox
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.supplyGroupBox, 2);
             this.supplyGroupBox.Controls.Add(this.tableLayoutPanel5);
+            this.supplyGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.supplyGroupBox.Location = new System.Drawing.Point(3, 3);
             this.supplyGroupBox.Name = "supplyGroupBox";
-            this.supplyGroupBox.Size = new System.Drawing.Size(608, 124);
+            this.supplyGroupBox.Size = new System.Drawing.Size(609, 124);
             this.supplyGroupBox.TabIndex = 6;
             this.supplyGroupBox.TabStop = false;
             // 
@@ -138,18 +146,19 @@
             // 
             this.tableLayoutPanel5.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanel5.ColumnCount = 3;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 290F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 367F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel5.Controls.Add(this.supplierGroupBox, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.applicationGroupBox, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.orderGroupBox, 2, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(601, 105);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(603, 105);
             this.tableLayoutPanel5.TabIndex = 1;
             // 
             // supplierGroupBox
@@ -159,7 +168,7 @@
             this.supplierGroupBox.Location = new System.Drawing.Point(3, 3);
             this.supplierGroupBox.Name = "supplierGroupBox";
             this.tableLayoutPanel5.SetRowSpan(this.supplierGroupBox, 2);
-            this.supplierGroupBox.Size = new System.Drawing.Size(284, 99);
+            this.supplierGroupBox.Size = new System.Drawing.Size(295, 99);
             this.supplierGroupBox.TabIndex = 0;
             this.supplierGroupBox.TabStop = false;
             this.supplierGroupBox.Text = "Поставщик";
@@ -183,7 +192,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(278, 80);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(289, 80);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // supplierNameTextBox
@@ -192,7 +201,7 @@
             this.supplierNameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.supplierNameTextBox.Location = new System.Drawing.Point(3, 16);
             this.supplierNameTextBox.Name = "supplierNameTextBox";
-            this.supplierNameTextBox.Size = new System.Drawing.Size(272, 20);
+            this.supplierNameTextBox.Size = new System.Drawing.Size(283, 20);
             this.supplierNameTextBox.TabIndex = 0;
             // 
             // contractNumberTextBox
@@ -200,7 +209,7 @@
             this.contractNumberTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contractNumberTextBox.Location = new System.Drawing.Point(3, 55);
             this.contractNumberTextBox.Name = "contractNumberTextBox";
-            this.contractNumberTextBox.Size = new System.Drawing.Size(133, 20);
+            this.contractNumberTextBox.Size = new System.Drawing.Size(138, 20);
             this.contractNumberTextBox.TabIndex = 2;
             // 
             // supplierNameLabel
@@ -227,7 +236,7 @@
             // contractDateTimePicker
             // 
             this.contractDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.contractDateTimePicker.Location = new System.Drawing.Point(142, 55);
+            this.contractDateTimePicker.Location = new System.Drawing.Point(147, 55);
             this.contractDateTimePicker.Name = "contractDateTimePicker";
             this.contractDateTimePicker.Size = new System.Drawing.Size(133, 20);
             this.contractDateTimePicker.TabIndex = 10;
@@ -236,7 +245,7 @@
             // 
             this.contractDateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.contractDateLabel.AutoSize = true;
-            this.contractDateLabel.Location = new System.Drawing.Point(142, 39);
+            this.contractDateLabel.Location = new System.Drawing.Point(147, 39);
             this.contractDateLabel.Name = "contractDateLabel";
             this.contractDateLabel.Size = new System.Drawing.Size(86, 13);
             this.contractDateLabel.TabIndex = 5;
@@ -246,7 +255,7 @@
             // 
             this.applicationGroupBox.Controls.Add(this.tableLayoutPanel6);
             this.applicationGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.applicationGroupBox.Location = new System.Drawing.Point(293, 3);
+            this.applicationGroupBox.Location = new System.Drawing.Point(304, 3);
             this.applicationGroupBox.Name = "applicationGroupBox";
             this.tableLayoutPanel5.SetRowSpan(this.applicationGroupBox, 2);
             this.applicationGroupBox.Size = new System.Drawing.Size(144, 99);
@@ -312,10 +321,11 @@
             // 
             this.orderGroupBox.BackColor = System.Drawing.SystemColors.Control;
             this.orderGroupBox.Controls.Add(this.tableLayoutPanel4);
-            this.orderGroupBox.Location = new System.Drawing.Point(443, 3);
+            this.orderGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.orderGroupBox.Location = new System.Drawing.Point(454, 3);
             this.orderGroupBox.Name = "orderGroupBox";
             this.tableLayoutPanel5.SetRowSpan(this.orderGroupBox, 2);
-            this.orderGroupBox.Size = new System.Drawing.Size(156, 99);
+            this.orderGroupBox.Size = new System.Drawing.Size(146, 99);
             this.orderGroupBox.TabIndex = 2;
             this.orderGroupBox.TabStop = false;
             this.orderGroupBox.Text = "Заказ";
@@ -336,7 +346,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(150, 80);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(140, 80);
             this.tableLayoutPanel4.TabIndex = 3;
             // 
             // gkLabel
@@ -353,14 +363,14 @@
             // 
             this.gkTextBox.Location = new System.Drawing.Point(3, 16);
             this.gkTextBox.Name = "gkTextBox";
-            this.gkTextBox.Size = new System.Drawing.Size(144, 20);
+            this.gkTextBox.Size = new System.Drawing.Size(134, 20);
             this.gkTextBox.TabIndex = 1;
             // 
             // orderTextBox
             // 
             this.orderTextBox.Location = new System.Drawing.Point(3, 55);
             this.orderTextBox.Name = "orderTextBox";
-            this.orderTextBox.Size = new System.Drawing.Size(144, 20);
+            this.orderTextBox.Size = new System.Drawing.Size(134, 20);
             this.orderTextBox.TabIndex = 2;
             // 
             // orderLabel
@@ -378,7 +388,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.productionGroupBox, 2);
             this.productionGroupBox.Controls.Add(this.tableLayoutPanel8);
             this.productionGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.productionGroupBox.Location = new System.Drawing.Point(3, 133);
+            this.productionGroupBox.Location = new System.Drawing.Point(3, 203);
             this.productionGroupBox.Name = "productionGroupBox";
             this.productionGroupBox.Size = new System.Drawing.Size(609, 164);
             this.productionGroupBox.TabIndex = 7;
@@ -609,52 +619,25 @@
             this.dceNameLabel.TabIndex = 6;
             this.dceNameLabel.Text = "Наименование ДСЕ";
             // 
-            // flowLayoutPanel1
+            // flowLayoutPanel2
             // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.Controls.Add(this.applyButton);
-            this.flowLayoutPanel1.Controls.Add(this.clearButton);
-            this.flowLayoutPanel1.Controls.Add(this.cancelButton);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(353, 383);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(259, 35);
-            this.flowLayoutPanel1.TabIndex = 5;
-            // 
-            // applyButton
-            // 
-            this.applyButton.Location = new System.Drawing.Point(3, 3);
-            this.applyButton.Name = "applyButton";
-            this.applyButton.Size = new System.Drawing.Size(75, 23);
-            this.applyButton.TabIndex = 0;
-            this.applyButton.Text = "Применить";
-            this.applyButton.UseVisualStyleBackColor = true;
-            // 
-            // clearButton
-            // 
-            this.clearButton.Location = new System.Drawing.Point(84, 3);
-            this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(75, 23);
-            this.clearButton.TabIndex = 1;
-            this.clearButton.Text = "Очистить";
-            this.clearButton.UseVisualStyleBackColor = true;
-            // 
-            // cancelButton
-            // 
-            this.cancelButton.Location = new System.Drawing.Point(165, 3);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(75, 23);
-            this.cancelButton.TabIndex = 2;
-            this.cancelButton.Text = "Отменить";
-            this.cancelButton.UseVisualStyleBackColor = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.flowLayoutPanel2, 2);
+            this.flowLayoutPanel2.Controls.Add(this.departmentGroupBox);
+            this.flowLayoutPanel2.Controls.Add(this.applicationStatusGroupBox);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 133);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(609, 64);
+            this.flowLayoutPanel2.TabIndex = 9;
             // 
             // departmentGroupBox
             // 
             this.departmentGroupBox.Controls.Add(this.tableLayoutPanel9);
-            this.departmentGroupBox.Location = new System.Drawing.Point(3, 303);
+            this.departmentGroupBox.Location = new System.Drawing.Point(3, 3);
             this.departmentGroupBox.Name = "departmentGroupBox";
             this.departmentGroupBox.Size = new System.Drawing.Size(98, 61);
             this.departmentGroupBox.TabIndex = 8;
             this.departmentGroupBox.TabStop = false;
+            this.departmentGroupBox.Text = "Отдел";
             // 
             // tableLayoutPanel9
             // 
@@ -685,16 +668,102 @@
             this.departmentLabel.AutoSize = true;
             this.departmentLabel.Location = new System.Drawing.Point(3, 0);
             this.departmentLabel.Name = "departmentLabel";
-            this.departmentLabel.Size = new System.Drawing.Size(38, 13);
+            this.departmentLabel.Size = new System.Drawing.Size(10, 13);
             this.departmentLabel.TabIndex = 1;
-            this.departmentLabel.Text = "Отдел";
+            this.departmentLabel.Text = " ";
+            // 
+            // applicationStatusGroupBox
+            // 
+            this.applicationStatusGroupBox.Controls.Add(this.notPerformedApplicationsRadioButton);
+            this.applicationStatusGroupBox.Controls.Add(this.performedApplicationsRadioButton);
+            this.applicationStatusGroupBox.Controls.Add(this.allApplicationsRadioButton);
+            this.applicationStatusGroupBox.Location = new System.Drawing.Point(107, 3);
+            this.applicationStatusGroupBox.Name = "applicationStatusGroupBox";
+            this.applicationStatusGroupBox.Size = new System.Drawing.Size(216, 61);
+            this.applicationStatusGroupBox.TabIndex = 9;
+            this.applicationStatusGroupBox.TabStop = false;
+            this.applicationStatusGroupBox.Text = "Статус заявки";
+            // 
+            // notPerformedApplicationsRadioButton
+            // 
+            this.notPerformedApplicationsRadioButton.AutoSize = true;
+            this.notPerformedApplicationsRadioButton.Location = new System.Drawing.Point(103, 19);
+            this.notPerformedApplicationsRadioButton.Name = "notPerformedApplicationsRadioButton";
+            this.notPerformedApplicationsRadioButton.Size = new System.Drawing.Size(109, 17);
+            this.notPerformedApplicationsRadioButton.TabIndex = 2;
+            this.notPerformedApplicationsRadioButton.Text = "Невыполненные";
+            this.notPerformedApplicationsRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // performedApplicationsRadioButton
+            // 
+            this.performedApplicationsRadioButton.AutoSize = true;
+            this.performedApplicationsRadioButton.Location = new System.Drawing.Point(6, 38);
+            this.performedApplicationsRadioButton.Name = "performedApplicationsRadioButton";
+            this.performedApplicationsRadioButton.Size = new System.Drawing.Size(96, 17);
+            this.performedApplicationsRadioButton.TabIndex = 1;
+            this.performedApplicationsRadioButton.Text = "Выполненные";
+            this.performedApplicationsRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // allApplicationsRadioButton
+            // 
+            this.allApplicationsRadioButton.AutoSize = true;
+            this.allApplicationsRadioButton.Checked = true;
+            this.allApplicationsRadioButton.Location = new System.Drawing.Point(6, 19);
+            this.allApplicationsRadioButton.Name = "allApplicationsRadioButton";
+            this.allApplicationsRadioButton.Size = new System.Drawing.Size(83, 17);
+            this.allApplicationsRadioButton.TabIndex = 0;
+            this.allApplicationsRadioButton.TabStop = true;
+            this.allApplicationsRadioButton.Text = "Все заявки";
+            this.allApplicationsRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.flowLayoutPanel1.Controls.Add(this.cancelButton);
+            this.flowLayoutPanel1.Controls.Add(this.clearButton);
+            this.flowLayoutPanel1.Controls.Add(this.applyButton);
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(310, 397);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(302, 62);
+            this.flowLayoutPanel1.TabIndex = 5;
+            // 
+            // clearButton
+            // 
+            this.clearButton.Location = new System.Drawing.Point(137, 5);
+            this.clearButton.Margin = new System.Windows.Forms.Padding(5);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(75, 23);
+            this.clearButton.TabIndex = 1;
+            this.clearButton.Text = "Очистить";
+            this.clearButton.UseVisualStyleBackColor = true;
+            // 
+            // applyButton
+            // 
+            this.applyButton.Location = new System.Drawing.Point(52, 5);
+            this.applyButton.Margin = new System.Windows.Forms.Padding(5);
+            this.applyButton.Name = "applyButton";
+            this.applyButton.Size = new System.Drawing.Size(75, 23);
+            this.applyButton.TabIndex = 2;
+            this.applyButton.Text = "Применить";
+            this.applyButton.UseVisualStyleBackColor = true;
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.Location = new System.Drawing.Point(222, 5);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(5);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(75, 23);
+            this.cancelButton.TabIndex = 0;
+            this.cancelButton.Text = "Отменить";
+            this.cancelButton.UseVisualStyleBackColor = true;
             // 
             // statusStrip
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.userModifyToolStripStatusLabel,
             this.dateModifyToolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 419);
+            this.statusStrip.Location = new System.Drawing.Point(0, 438);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(615, 24);
             this.statusStrip.TabIndex = 1;
@@ -717,7 +786,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(615, 443);
+            this.ClientSize = new System.Drawing.Size(615, 462);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "MainForm";
@@ -743,10 +812,13 @@
             this.dceGroupBox.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
             this.departmentGroupBox.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel9.PerformLayout();
+            this.applicationStatusGroupBox.ResumeLayout(false);
+            this.applicationStatusGroupBox.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
             this.ResumeLayout(false);
@@ -769,10 +841,6 @@
         private System.Windows.Forms.TextBox dceAliasTextBox;
         private System.Windows.Forms.TextBox dceNameTextBox;
         private System.Windows.Forms.TextBox dceNumberTextBox;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button applyButton;
-        private System.Windows.Forms.Button clearButton;
-        private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TextBox supplierNameTextBox;
         private System.Windows.Forms.TextBox contractNumberTextBox;
@@ -805,11 +873,20 @@
         private System.Windows.Forms.GroupBox departmentGroupBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.ComboBox departmentComboBox;
-        private System.Windows.Forms.Label departmentLabel;
         private System.Windows.Forms.DateTimePicker contractDateTimePicker;
         private System.Windows.Forms.DateTimePicker applicationDateTimePicker;
         private System.Windows.Forms.ToolStripStatusLabel userModifyToolStripStatusLabel;
         private System.Windows.Forms.ToolStripStatusLabel dateModifyToolStripStatusLabel;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.GroupBox applicationStatusGroupBox;
+        private System.Windows.Forms.Label departmentLabel;
+        private System.Windows.Forms.RadioButton notPerformedApplicationsRadioButton;
+        private System.Windows.Forms.RadioButton performedApplicationsRadioButton;
+        private System.Windows.Forms.RadioButton allApplicationsRadioButton;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button applyButton;
+        private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.Button cancelButton;
     }
 }
 

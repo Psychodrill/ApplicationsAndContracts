@@ -36,13 +36,6 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.recordCountValueLabel = new System.Windows.Forms.Label();
             this.applicationsDataGridView = new System.Windows.Forms.DataGridView();
-            this.applicationNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.applicationDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.supplierColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contractNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contractDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gkColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.applicationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.colorPanel = new System.Windows.Forms.Panel();
             this.gkLabel = new System.Windows.Forms.Label();
@@ -52,10 +45,6 @@
             this.dceGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.dceListDataGridView = new System.Windows.Forms.DataGridView();
-            this.DceNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DceAliasColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DceNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrderedCountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dceListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.colorPanel1 = new System.Windows.Forms.Panel();
             this.gkLabel1 = new System.Windows.Forms.Label();
@@ -70,6 +59,28 @@
             this.detailedButton = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.userModifyStatusStrip = new System.Windows.Forms.StatusStrip();
+            this.userModifyToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.userModifyValueToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.userDepartmentToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.userDepartmentValueToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.phoneNumber1ToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.phoneNumber1ValueToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.phoneNumber2ToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.phoneNumber2ValueToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.faxNumberToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.faxNumberValueToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.DceNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DceAliasColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DceNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrderedCountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.applicationNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.applicationDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.supplierColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contractNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contractDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gkColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ApplicationsAndContractsTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -82,6 +93,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dceListDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dceListBindingSource)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            this.userModifyStatusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // ApplicationsAndContractsTabControl
@@ -179,6 +191,7 @@
             this.applicationsDataGridView.AutoGenerateColumns = false;
             this.applicationsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.applicationsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Status,
             this.applicationNumberColumn,
             this.applicationDateColumn,
             this.supplierColumn,
@@ -196,61 +209,6 @@
             this.applicationsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.applicationsDataGridView.Size = new System.Drawing.Size(977, 228);
             this.applicationsDataGridView.TabIndex = 0;
-            // 
-            // applicationNumberColumn
-            // 
-            this.applicationNumberColumn.DataPropertyName = "ApplicationNumber";
-            this.applicationNumberColumn.HeaderText = "№ заявки";
-            this.applicationNumberColumn.Name = "applicationNumberColumn";
-            this.applicationNumberColumn.ReadOnly = true;
-            this.applicationNumberColumn.Width = 90;
-            // 
-            // applicationDateColumn
-            // 
-            this.applicationDateColumn.DataPropertyName = "ApplicationDate";
-            this.applicationDateColumn.HeaderText = "Дата заявки";
-            this.applicationDateColumn.Name = "applicationDateColumn";
-            this.applicationDateColumn.ReadOnly = true;
-            // 
-            // supplierColumn
-            // 
-            this.supplierColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.supplierColumn.DataPropertyName = "Supplier";
-            this.supplierColumn.HeaderText = "Поставщик";
-            this.supplierColumn.Name = "supplierColumn";
-            this.supplierColumn.ReadOnly = true;
-            // 
-            // contractNumberColumn
-            // 
-            this.contractNumberColumn.DataPropertyName = "ContractNumber";
-            this.contractNumberColumn.HeaderText = "№ договора";
-            this.contractNumberColumn.Name = "contractNumberColumn";
-            this.contractNumberColumn.ReadOnly = true;
-            // 
-            // contractDateColumn
-            // 
-            this.contractDateColumn.DataPropertyName = "ContractDate";
-            this.contractDateColumn.HeaderText = "Дата договора";
-            this.contractDateColumn.Name = "contractDateColumn";
-            this.contractDateColumn.ReadOnly = true;
-            this.contractDateColumn.Width = 110;
-            // 
-            // gkColumn
-            // 
-            this.gkColumn.DataPropertyName = "GK";
-            this.gkColumn.HeaderText = "ГК";
-            this.gkColumn.Name = "gkColumn";
-            this.gkColumn.ReadOnly = true;
-            this.gkColumn.Width = 90;
-            // 
-            // statusColumn
-            // 
-            this.statusColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.statusColumn.DataPropertyName = "Status";
-            this.statusColumn.HeaderText = "Статус";
-            this.statusColumn.Name = "statusColumn";
-            this.statusColumn.ReadOnly = true;
-            this.statusColumn.Width = 66;
             // 
             // colorPanel
             // 
@@ -358,39 +316,6 @@
             this.dceListDataGridView.RowHeadersVisible = false;
             this.dceListDataGridView.Size = new System.Drawing.Size(977, 228);
             this.dceListDataGridView.TabIndex = 0;
-            // 
-            // DceNumberColumn
-            // 
-            this.DceNumberColumn.DataPropertyName = "DceNumber";
-            this.DceNumberColumn.HeaderText = "№ ДСЕ";
-            this.DceNumberColumn.Name = "DceNumberColumn";
-            this.DceNumberColumn.ReadOnly = true;
-            // 
-            // DceAliasColumn
-            // 
-            this.DceAliasColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DceAliasColumn.DataPropertyName = "DceAlias";
-            this.DceAliasColumn.FillWeight = 70F;
-            this.DceAliasColumn.HeaderText = "Обозначение ДСЕ";
-            this.DceAliasColumn.Name = "DceAliasColumn";
-            this.DceAliasColumn.ReadOnly = true;
-            // 
-            // DceNameColumn
-            // 
-            this.DceNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DceNameColumn.DataPropertyName = "DceName";
-            this.DceNameColumn.HeaderText = "Наименование ДСЕ";
-            this.DceNameColumn.Name = "DceNameColumn";
-            this.DceNameColumn.ReadOnly = true;
-            // 
-            // OrderedCountColumn
-            // 
-            this.OrderedCountColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.OrderedCountColumn.DataPropertyName = "OrderedCount";
-            this.OrderedCountColumn.HeaderText = "Количество заказано";
-            this.OrderedCountColumn.Name = "OrderedCountColumn";
-            this.OrderedCountColumn.ReadOnly = true;
-            this.OrderedCountColumn.Width = 130;
             // 
             // colorPanel1
             // 
@@ -514,11 +439,181 @@
             // 
             // userModifyStatusStrip
             // 
-            this.userModifyStatusStrip.Location = new System.Drawing.Point(0, 640);
+            this.userModifyStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.userModifyToolStripStatusLabel,
+            this.userModifyValueToolStripStatusLabel,
+            this.userDepartmentToolStripStatusLabel,
+            this.userDepartmentValueToolStripStatusLabel,
+            this.phoneNumber1ToolStripStatusLabel,
+            this.phoneNumber1ValueToolStripStatusLabel,
+            this.phoneNumber2ToolStripStatusLabel,
+            this.phoneNumber2ValueToolStripStatusLabel,
+            this.faxNumberToolStripStatusLabel,
+            this.faxNumberValueToolStripStatusLabel});
+            this.userModifyStatusStrip.Location = new System.Drawing.Point(0, 638);
             this.userModifyStatusStrip.Name = "userModifyStatusStrip";
-            this.userModifyStatusStrip.Size = new System.Drawing.Size(1008, 22);
+            this.userModifyStatusStrip.Size = new System.Drawing.Size(1008, 24);
             this.userModifyStatusStrip.TabIndex = 0;
             this.userModifyStatusStrip.Text = "statusStrip1";
+            // 
+            // userModifyToolStripStatusLabel
+            // 
+            this.userModifyToolStripStatusLabel.Name = "userModifyToolStripStatusLabel";
+            this.userModifyToolStripStatusLabel.Size = new System.Drawing.Size(130, 19);
+            this.userModifyToolStripStatusLabel.Text = "Автор корректировки:";
+            // 
+            // userModifyValueToolStripStatusLabel
+            // 
+            this.userModifyValueToolStripStatusLabel.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
+            this.userModifyValueToolStripStatusLabel.Name = "userModifyValueToolStripStatusLabel";
+            this.userModifyValueToolStripStatusLabel.Size = new System.Drawing.Size(116, 19);
+            this.userModifyValueToolStripStatusLabel.Text = "####_Surname A.A.";
+            // 
+            // userDepartmentToolStripStatusLabel
+            // 
+            this.userDepartmentToolStripStatusLabel.Name = "userDepartmentToolStripStatusLabel";
+            this.userDepartmentToolStripStatusLabel.Size = new System.Drawing.Size(43, 19);
+            this.userDepartmentToolStripStatusLabel.Text = "Отдел:";
+            // 
+            // userDepartmentValueToolStripStatusLabel
+            // 
+            this.userDepartmentValueToolStripStatusLabel.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
+            this.userDepartmentValueToolStripStatusLabel.Name = "userDepartmentValueToolStripStatusLabel";
+            this.userDepartmentValueToolStripStatusLabel.Size = new System.Drawing.Size(39, 19);
+            this.userDepartmentValueToolStripStatusLabel.Text = "####";
+            // 
+            // phoneNumber1ToolStripStatusLabel
+            // 
+            this.phoneNumber1ToolStripStatusLabel.Name = "phoneNumber1ToolStripStatusLabel";
+            this.phoneNumber1ToolStripStatusLabel.Size = new System.Drawing.Size(65, 19);
+            this.phoneNumber1ToolStripStatusLabel.Text = "Телефон1:";
+            // 
+            // phoneNumber1ValueToolStripStatusLabel
+            // 
+            this.phoneNumber1ValueToolStripStatusLabel.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
+            this.phoneNumber1ValueToolStripStatusLabel.Name = "phoneNumber1ValueToolStripStatusLabel";
+            this.phoneNumber1ValueToolStripStatusLabel.Size = new System.Drawing.Size(60, 19);
+            this.phoneNumber1ValueToolStripStatusLabel.Text = "#######";
+            // 
+            // phoneNumber2ToolStripStatusLabel
+            // 
+            this.phoneNumber2ToolStripStatusLabel.Name = "phoneNumber2ToolStripStatusLabel";
+            this.phoneNumber2ToolStripStatusLabel.Size = new System.Drawing.Size(65, 19);
+            this.phoneNumber2ToolStripStatusLabel.Text = "Телефон2:";
+            // 
+            // phoneNumber2ValueToolStripStatusLabel
+            // 
+            this.phoneNumber2ValueToolStripStatusLabel.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
+            this.phoneNumber2ValueToolStripStatusLabel.Name = "phoneNumber2ValueToolStripStatusLabel";
+            this.phoneNumber2ValueToolStripStatusLabel.Size = new System.Drawing.Size(60, 19);
+            this.phoneNumber2ValueToolStripStatusLabel.Text = "#######";
+            // 
+            // faxNumberToolStripStatusLabel
+            // 
+            this.faxNumberToolStripStatusLabel.Name = "faxNumberToolStripStatusLabel";
+            this.faxNumberToolStripStatusLabel.Size = new System.Drawing.Size(37, 19);
+            this.faxNumberToolStripStatusLabel.Text = "Факс:";
+            // 
+            // faxNumberValueToolStripStatusLabel
+            // 
+            this.faxNumberValueToolStripStatusLabel.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
+            this.faxNumberValueToolStripStatusLabel.Name = "faxNumberValueToolStripStatusLabel";
+            this.faxNumberValueToolStripStatusLabel.Size = new System.Drawing.Size(60, 19);
+            this.faxNumberValueToolStripStatusLabel.Text = "#######";
+            // 
+            // DceNumberColumn
+            // 
+            this.DceNumberColumn.DataPropertyName = "DceNumber";
+            this.DceNumberColumn.HeaderText = "№ ДСЕ";
+            this.DceNumberColumn.Name = "DceNumberColumn";
+            this.DceNumberColumn.ReadOnly = true;
+            // 
+            // DceAliasColumn
+            // 
+            this.DceAliasColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DceAliasColumn.DataPropertyName = "DceAlias";
+            this.DceAliasColumn.FillWeight = 70F;
+            this.DceAliasColumn.HeaderText = "Обозначение ДСЕ";
+            this.DceAliasColumn.Name = "DceAliasColumn";
+            this.DceAliasColumn.ReadOnly = true;
+            // 
+            // DceNameColumn
+            // 
+            this.DceNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DceNameColumn.DataPropertyName = "DceName";
+            this.DceNameColumn.HeaderText = "Наименование ДСЕ";
+            this.DceNameColumn.Name = "DceNameColumn";
+            this.DceNameColumn.ReadOnly = true;
+            // 
+            // OrderedCountColumn
+            // 
+            this.OrderedCountColumn.DataPropertyName = "OrderedCount";
+            this.OrderedCountColumn.HeaderText = "Количество заказано";
+            this.OrderedCountColumn.Name = "OrderedCountColumn";
+            this.OrderedCountColumn.ReadOnly = true;
+            this.OrderedCountColumn.Width = 140;
+            // 
+            // Status
+            // 
+            this.Status.HeaderText = "";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            this.Status.Width = 30;
+            // 
+            // applicationNumberColumn
+            // 
+            this.applicationNumberColumn.DataPropertyName = "ApplicationNumber";
+            this.applicationNumberColumn.HeaderText = "№ заявки";
+            this.applicationNumberColumn.Name = "applicationNumberColumn";
+            this.applicationNumberColumn.ReadOnly = true;
+            this.applicationNumberColumn.Width = 90;
+            // 
+            // applicationDateColumn
+            // 
+            this.applicationDateColumn.DataPropertyName = "ApplicationDate";
+            this.applicationDateColumn.HeaderText = "Дата заявки";
+            this.applicationDateColumn.Name = "applicationDateColumn";
+            this.applicationDateColumn.ReadOnly = true;
+            // 
+            // supplierColumn
+            // 
+            this.supplierColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.supplierColumn.DataPropertyName = "Supplier";
+            this.supplierColumn.HeaderText = "Поставщик";
+            this.supplierColumn.Name = "supplierColumn";
+            this.supplierColumn.ReadOnly = true;
+            // 
+            // contractNumberColumn
+            // 
+            this.contractNumberColumn.DataPropertyName = "ContractNumber";
+            this.contractNumberColumn.HeaderText = "№ договора";
+            this.contractNumberColumn.Name = "contractNumberColumn";
+            this.contractNumberColumn.ReadOnly = true;
+            // 
+            // contractDateColumn
+            // 
+            this.contractDateColumn.DataPropertyName = "ContractDate";
+            this.contractDateColumn.HeaderText = "Дата договора";
+            this.contractDateColumn.Name = "contractDateColumn";
+            this.contractDateColumn.ReadOnly = true;
+            this.contractDateColumn.Width = 110;
+            // 
+            // gkColumn
+            // 
+            this.gkColumn.DataPropertyName = "GK";
+            this.gkColumn.HeaderText = "ГК";
+            this.gkColumn.Name = "gkColumn";
+            this.gkColumn.ReadOnly = true;
+            this.gkColumn.Width = 90;
+            // 
+            // statusColumn
+            // 
+            this.statusColumn.DataPropertyName = "Status";
+            this.statusColumn.HeaderText = "Статус";
+            this.statusColumn.Name = "statusColumn";
+            this.statusColumn.ReadOnly = true;
+            this.statusColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.statusColumn.Width = 60;
             // 
             // ApplicationsAndContractsForm
             // 
@@ -543,6 +638,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dceListDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dceListBindingSource)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.userModifyStatusStrip.ResumeLayout(false);
+            this.userModifyStatusStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -578,18 +675,29 @@
         private System.Windows.Forms.Label recordCountLabel1;
         private System.Windows.Forms.Label currentRecordNumberLabel1;
         private System.Windows.Forms.Label currentRecordNumberValueLabel1;
+        private System.Windows.Forms.BindingSource dceListBindingSource;
+        private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.ToolStripStatusLabel userModifyToolStripStatusLabel;
+        private System.Windows.Forms.ToolStripStatusLabel userModifyValueToolStripStatusLabel;
+        private System.Windows.Forms.ToolStripStatusLabel userDepartmentToolStripStatusLabel;
+        private System.Windows.Forms.ToolStripStatusLabel userDepartmentValueToolStripStatusLabel;
+        private System.Windows.Forms.ToolStripStatusLabel phoneNumber1ToolStripStatusLabel;
+        private System.Windows.Forms.ToolStripStatusLabel phoneNumber1ValueToolStripStatusLabel;
+        private System.Windows.Forms.ToolStripStatusLabel phoneNumber2ToolStripStatusLabel;
+        private System.Windows.Forms.ToolStripStatusLabel phoneNumber2ValueToolStripStatusLabel;
+        private System.Windows.Forms.ToolStripStatusLabel faxNumberToolStripStatusLabel;
+        private System.Windows.Forms.ToolStripStatusLabel faxNumberValueToolStripStatusLabel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DceNumberColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DceAliasColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DceNameColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OrderedCountColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Status;
         private System.Windows.Forms.DataGridViewTextBoxColumn applicationNumberColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn applicationDateColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn supplierColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn contractNumberColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn contractDateColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn gkColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusColumn;
-        private System.Windows.Forms.BindingSource dceListBindingSource;
-        private System.Windows.Forms.Button exitButton;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DceNumberColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DceAliasColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DceNameColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OrderedCountColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn statusColumn;
     }
 }
