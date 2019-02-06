@@ -16,5 +16,11 @@ namespace ApplicationsAndContracts.Views
         {
             InitializeComponent();
         }
+
+        //private void ApplicationsAndContractsForm_Load(object sender, EventArgs e)
+        //{
+
+        //    this.reportViewer1.RefreshReport();
+        //}
     }
 }
