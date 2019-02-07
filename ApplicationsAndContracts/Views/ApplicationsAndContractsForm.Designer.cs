@@ -44,7 +44,6 @@
             this.contractDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gkColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.applicationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.colorPanel = new System.Windows.Forms.Panel();
             this.gkLabel = new System.Windows.Forms.Label();
             this.currentRecordNumberLabel = new System.Windows.Forms.Label();
@@ -57,7 +56,6 @@
             this.DceAliasColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DceNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OrderedCountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dceListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.colorPanel1 = new System.Windows.Forms.Panel();
             this.gkLabel1 = new System.Windows.Forms.Label();
             this.recordCountValueLabel1 = new System.Windows.Forms.Label();
@@ -106,6 +104,8 @@
             this.phoneNumber2ValueToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.faxNumberToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.faxNumberValueToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.applicationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dceListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.suppliersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contractsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ApplicationsAndContractsTabControl.SuspendLayout();
@@ -114,11 +114,9 @@
             this.applicationsGroupBox.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.applicationsDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.applicationsBindingSource)).BeginInit();
             this.dceGroupBox.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dceListDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dceListBindingSource)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -130,6 +128,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.currentContractsDataGridView)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
             this.userModifyStatusStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.applicationsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dceListBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contractsBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -962,12 +962,10 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.applicationsDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.applicationsBindingSource)).EndInit();
             this.dceGroupBox.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dceListDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dceListBindingSource)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -981,6 +979,8 @@
             this.flowLayoutPanel2.ResumeLayout(false);
             this.userModifyStatusStrip.ResumeLayout(false);
             this.userModifyStatusStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.applicationsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dceListBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contractsBindingSource)).EndInit();
             this.ResumeLayout(false);

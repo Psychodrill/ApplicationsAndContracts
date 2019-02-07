@@ -89,11 +89,11 @@
     <Compile Include="Views\ApplicationsAndContractsForm.Designer.cs">
       <DependentUpon>ApplicationsAndContractsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\DetailedApplicationViewForm.cs">
+    <Compile Include="Views\DetailedApplicationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\DetailedApplicationViewForm.Designer.cs">
-      <DependentUpon>DetailedApplicationViewForm.cs</DependentUpon>
+    <Compile Include="Views\DetailedApplicationForm.Designer.cs">
+      <DependentUpon>DetailedApplicationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\MainForm.cs">
       <SubType>Form</SubType>
@@ -106,8 +106,8 @@
     <EmbeddedResource Include="Views\ApplicationsAndContractsForm.resx">
       <DependentUpon>ApplicationsAndContractsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\DetailedApplicationViewForm.resx">
-      <DependentUpon>DetailedApplicationViewForm.cs</DependentUpon>
+    <EmbeddedResource Include="Views\DetailedApplicationForm.resx">
+      <DependentUpon>DetailedApplicationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ApplicationsAndContracts.Views
 {
-    public partial class DetailedApplicationViewForm : Form
+    public partial class DetailedApplicationForm : Form
     {
-        public DetailedApplicationViewForm()
+        public DetailedApplicationForm()
         {
             InitializeComponent();
         }
