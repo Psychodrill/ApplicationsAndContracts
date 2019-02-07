@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace ApplicationsAndContracts.Views
 {
-    public partial class ApplicationsAndContractsForm : Form
+    public partial class DetailedApplicationViewForm : Form
     {
-        public ApplicationsAndContractsForm()
+        public DetailedApplicationViewForm()
         {
             InitializeComponent();
         }
-
-
     }
 }

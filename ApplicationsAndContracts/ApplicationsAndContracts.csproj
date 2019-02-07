@@ -59,6 +59,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Messaging" />
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -88,6 +89,12 @@
     <Compile Include="Views\ApplicationsAndContractsForm.Designer.cs">
       <DependentUpon>ApplicationsAndContractsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\DetailedApplicationViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DetailedApplicationViewForm.Designer.cs">
+      <DependentUpon>DetailedApplicationViewForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +105,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Views\ApplicationsAndContractsForm.resx">
       <DependentUpon>ApplicationsAndContractsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DetailedApplicationViewForm.resx">
+      <DependentUpon>DetailedApplicationViewForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

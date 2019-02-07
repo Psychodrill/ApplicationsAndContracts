@@ -81,9 +81,9 @@
             this.performedApplicationsRadioButton = new System.Windows.Forms.RadioButton();
             this.allApplicationsRadioButton = new System.Windows.Forms.RadioButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.clearButton = new System.Windows.Forms.Button();
             this.applyButton = new System.Windows.Forms.Button();
-            this.cancelButton = new System.Windows.Forms.Button();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.userModifyToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.dateModifyToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
@@ -728,6 +728,16 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(302, 62);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
+            // cancelButton
+            // 
+            this.cancelButton.Location = new System.Drawing.Point(222, 5);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(5);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(75, 23);
+            this.cancelButton.TabIndex = 0;
+            this.cancelButton.Text = "Отменить";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            // 
             // clearButton
             // 
             this.clearButton.Location = new System.Drawing.Point(137, 5);
@@ -747,16 +757,6 @@
             this.applyButton.TabIndex = 2;
             this.applyButton.Text = "Применить";
             this.applyButton.UseVisualStyleBackColor = true;
-            // 
-            // cancelButton
-            // 
-            this.cancelButton.Location = new System.Drawing.Point(222, 5);
-            this.cancelButton.Margin = new System.Windows.Forms.Padding(5);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(75, 23);
-            this.cancelButton.TabIndex = 0;
-            this.cancelButton.Text = "Отменить";
-            this.cancelButton.UseVisualStyleBackColor = true;
             // 
             // statusStrip
             // 

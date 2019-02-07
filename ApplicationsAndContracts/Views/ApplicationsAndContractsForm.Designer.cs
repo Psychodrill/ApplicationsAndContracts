@@ -36,6 +36,14 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.recordCountValueLabel = new System.Windows.Forms.Label();
             this.applicationsDataGridView = new System.Windows.Forms.DataGridView();
+            this.Status = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.applicationNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.applicationDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.supplierColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contractNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contractDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gkColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.applicationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.colorPanel = new System.Windows.Forms.Panel();
             this.gkLabel = new System.Windows.Forms.Label();
@@ -45,6 +53,10 @@
             this.dceGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.dceListDataGridView = new System.Windows.Forms.DataGridView();
+            this.DceNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DceAliasColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DceNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrderedCountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dceListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.colorPanel1 = new System.Windows.Forms.Panel();
             this.gkLabel1 = new System.Windows.Forms.Label();
@@ -58,6 +70,31 @@
             this.addButton = new System.Windows.Forms.Button();
             this.detailedButton = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.suppliersGroupBox = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.currentRecordNumberValueLabel2 = new System.Windows.Forms.Label();
+            this.currentRecordNumberLabel2 = new System.Windows.Forms.Label();
+            this.recordCountValuelabel2 = new System.Windows.Forms.Label();
+            this.recordCountLabel2 = new System.Windows.Forms.Label();
+            this.performedComtractLabel = new System.Windows.Forms.Label();
+            this.colorPanel2 = new System.Windows.Forms.Panel();
+            this.suppliersDataGridView = new System.Windows.Forms.DataGridView();
+            this.SupplierContractsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ContractNumberContractsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ContractDateContractsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.currentContractsDataGridView = new System.Windows.Forms.DataGridView();
+            this.ApplicationNumberContractsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ApplicationDateContractsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GKContractsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StatusContractsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.exitContractsButton = new System.Windows.Forms.Button();
+            this.deleteContractsButton = new System.Windows.Forms.Button();
+            this.addContractsButton = new System.Windows.Forms.Button();
+            this.detailedContractsButton = new System.Windows.Forms.Button();
             this.userModifyStatusStrip = new System.Windows.Forms.StatusStrip();
             this.userModifyToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.userModifyValueToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
@@ -69,18 +106,8 @@
             this.phoneNumber2ValueToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.faxNumberToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.faxNumberValueToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.DceNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DceAliasColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DceNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrderedCountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.applicationNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.applicationDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.supplierColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contractNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contractDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gkColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.suppliersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.contractsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ApplicationsAndContractsTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -93,7 +120,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.dceListDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dceListBindingSource)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.suppliersGroupBox.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.suppliersDataGridView)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.currentContractsDataGridView)).BeginInit();
+            this.flowLayoutPanel2.SuspendLayout();
             this.userModifyStatusStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contractsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // ApplicationsAndContractsTabControl
@@ -210,6 +248,68 @@
             this.applicationsDataGridView.Size = new System.Drawing.Size(977, 228);
             this.applicationsDataGridView.TabIndex = 0;
             // 
+            // Status
+            // 
+            this.Status.HeaderText = "";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            this.Status.Width = 30;
+            // 
+            // applicationNumberColumn
+            // 
+            this.applicationNumberColumn.DataPropertyName = "ApplicationNumber";
+            this.applicationNumberColumn.HeaderText = "№ заявки";
+            this.applicationNumberColumn.Name = "applicationNumberColumn";
+            this.applicationNumberColumn.ReadOnly = true;
+            this.applicationNumberColumn.Width = 90;
+            // 
+            // applicationDateColumn
+            // 
+            this.applicationDateColumn.DataPropertyName = "ApplicationDate";
+            this.applicationDateColumn.HeaderText = "Дата заявки";
+            this.applicationDateColumn.Name = "applicationDateColumn";
+            this.applicationDateColumn.ReadOnly = true;
+            // 
+            // supplierColumn
+            // 
+            this.supplierColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.supplierColumn.DataPropertyName = "Supplier";
+            this.supplierColumn.HeaderText = "Поставщик";
+            this.supplierColumn.Name = "supplierColumn";
+            this.supplierColumn.ReadOnly = true;
+            // 
+            // contractNumberColumn
+            // 
+            this.contractNumberColumn.DataPropertyName = "ContractNumber";
+            this.contractNumberColumn.HeaderText = "№ договора";
+            this.contractNumberColumn.Name = "contractNumberColumn";
+            this.contractNumberColumn.ReadOnly = true;
+            // 
+            // contractDateColumn
+            // 
+            this.contractDateColumn.DataPropertyName = "ContractDate";
+            this.contractDateColumn.HeaderText = "Дата договора";
+            this.contractDateColumn.Name = "contractDateColumn";
+            this.contractDateColumn.ReadOnly = true;
+            this.contractDateColumn.Width = 110;
+            // 
+            // gkColumn
+            // 
+            this.gkColumn.DataPropertyName = "GK";
+            this.gkColumn.HeaderText = "ГК";
+            this.gkColumn.Name = "gkColumn";
+            this.gkColumn.ReadOnly = true;
+            this.gkColumn.Width = 90;
+            // 
+            // statusColumn
+            // 
+            this.statusColumn.DataPropertyName = "Status";
+            this.statusColumn.HeaderText = "Статус";
+            this.statusColumn.Name = "statusColumn";
+            this.statusColumn.ReadOnly = true;
+            this.statusColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.statusColumn.Width = 60;
+            // 
             // colorPanel
             // 
             this.colorPanel.BackColor = System.Drawing.Color.Moccasin;
@@ -317,6 +417,38 @@
             this.dceListDataGridView.Size = new System.Drawing.Size(977, 228);
             this.dceListDataGridView.TabIndex = 0;
             // 
+            // DceNumberColumn
+            // 
+            this.DceNumberColumn.DataPropertyName = "DceNumber";
+            this.DceNumberColumn.HeaderText = "№ ДСЕ";
+            this.DceNumberColumn.Name = "DceNumberColumn";
+            this.DceNumberColumn.ReadOnly = true;
+            // 
+            // DceAliasColumn
+            // 
+            this.DceAliasColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DceAliasColumn.DataPropertyName = "DceAlias";
+            this.DceAliasColumn.FillWeight = 70F;
+            this.DceAliasColumn.HeaderText = "Обозначение ДСЕ";
+            this.DceAliasColumn.Name = "DceAliasColumn";
+            this.DceAliasColumn.ReadOnly = true;
+            // 
+            // DceNameColumn
+            // 
+            this.DceNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DceNameColumn.DataPropertyName = "DceName";
+            this.DceNameColumn.HeaderText = "Наименование ДСЕ";
+            this.DceNameColumn.Name = "DceNameColumn";
+            this.DceNameColumn.ReadOnly = true;
+            // 
+            // OrderedCountColumn
+            // 
+            this.OrderedCountColumn.DataPropertyName = "OrderedCount";
+            this.OrderedCountColumn.HeaderText = "Количество заказано";
+            this.OrderedCountColumn.Name = "OrderedCountColumn";
+            this.OrderedCountColumn.ReadOnly = true;
+            this.OrderedCountColumn.Width = 140;
+            // 
             // colorPanel1
             // 
             this.colorPanel1.BackColor = System.Drawing.Color.Moccasin;
@@ -381,15 +513,16 @@
             this.flowLayoutPanel1.Controls.Add(this.deleteButton);
             this.flowLayoutPanel1.Controls.Add(this.addButton);
             this.flowLayoutPanel1.Controls.Add(this.detailedButton);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 573);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(988, 54);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(989, 54);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(908, 5);
+            this.exitButton.Location = new System.Drawing.Point(909, 5);
             this.exitButton.Margin = new System.Windows.Forms.Padding(5);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(75, 23);
@@ -399,7 +532,7 @@
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(823, 5);
+            this.deleteButton.Location = new System.Drawing.Point(824, 5);
             this.deleteButton.Margin = new System.Windows.Forms.Padding(5);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(75, 23);
@@ -409,7 +542,7 @@
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(738, 5);
+            this.addButton.Location = new System.Drawing.Point(739, 5);
             this.addButton.Margin = new System.Windows.Forms.Padding(5);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(75, 23);
@@ -419,7 +552,7 @@
             // 
             // detailedButton
             // 
-            this.detailedButton.Location = new System.Drawing.Point(653, 5);
+            this.detailedButton.Location = new System.Drawing.Point(654, 5);
             this.detailedButton.Margin = new System.Windows.Forms.Padding(5);
             this.detailedButton.Name = "detailedButton";
             this.detailedButton.Size = new System.Drawing.Size(75, 23);
@@ -430,12 +563,304 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage2.Controls.Add(this.tableLayoutPanel4);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1001, 636);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Договоры";
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Controls.Add(this.suppliersGroupBox, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.groupBox1, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel2, 0, 2);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 3;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(995, 630);
+            this.tableLayoutPanel4.TabIndex = 0;
+            // 
+            // suppliersGroupBox
+            // 
+            this.suppliersGroupBox.Controls.Add(this.tableLayoutPanel5);
+            this.suppliersGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.suppliersGroupBox.Location = new System.Drawing.Point(3, 3);
+            this.suppliersGroupBox.Name = "suppliersGroupBox";
+            this.suppliersGroupBox.Size = new System.Drawing.Size(989, 279);
+            this.suppliersGroupBox.TabIndex = 1;
+            this.suppliersGroupBox.TabStop = false;
+            this.suppliersGroupBox.Text = "Поставщики";
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 8;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel5.Controls.Add(this.currentRecordNumberValueLabel2, 5, 1);
+            this.tableLayoutPanel5.Controls.Add(this.currentRecordNumberLabel2, 4, 1);
+            this.tableLayoutPanel5.Controls.Add(this.recordCountValuelabel2, 3, 1);
+            this.tableLayoutPanel5.Controls.Add(this.recordCountLabel2, 2, 1);
+            this.tableLayoutPanel5.Controls.Add(this.performedComtractLabel, 1, 1);
+            this.tableLayoutPanel5.Controls.Add(this.colorPanel2, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.suppliersDataGridView, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 2;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(983, 260);
+            this.tableLayoutPanel5.TabIndex = 0;
+            // 
+            // currentRecordNumberValueLabel2
+            // 
+            this.currentRecordNumberValueLabel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.currentRecordNumberValueLabel2.AutoSize = true;
+            this.currentRecordNumberValueLabel2.Location = new System.Drawing.Point(484, 240);
+            this.currentRecordNumberValueLabel2.Name = "currentRecordNumberValueLabel2";
+            this.currentRecordNumberValueLabel2.Size = new System.Drawing.Size(13, 13);
+            this.currentRecordNumberValueLabel2.TabIndex = 8;
+            this.currentRecordNumberValueLabel2.Text = "0";
+            // 
+            // currentRecordNumberLabel2
+            // 
+            this.currentRecordNumberLabel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.currentRecordNumberLabel2.AutoSize = true;
+            this.currentRecordNumberLabel2.Location = new System.Drawing.Point(349, 240);
+            this.currentRecordNumberLabel2.Name = "currentRecordNumberLabel2";
+            this.currentRecordNumberLabel2.Size = new System.Drawing.Size(129, 13);
+            this.currentRecordNumberLabel2.TabIndex = 7;
+            this.currentRecordNumberLabel2.Text = "Номер текущей записи:";
+            // 
+            // recordCountValuelabel2
+            // 
+            this.recordCountValuelabel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.recordCountValuelabel2.AutoSize = true;
+            this.recordCountValuelabel2.Location = new System.Drawing.Point(309, 240);
+            this.recordCountValuelabel2.Name = "recordCountValuelabel2";
+            this.recordCountValuelabel2.Size = new System.Drawing.Size(13, 13);
+            this.recordCountValuelabel2.TabIndex = 6;
+            this.recordCountValuelabel2.Text = "0";
+            // 
+            // recordCountLabel2
+            // 
+            this.recordCountLabel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.recordCountLabel2.AutoSize = true;
+            this.recordCountLabel2.Location = new System.Drawing.Point(189, 240);
+            this.recordCountLabel2.Name = "recordCountLabel2";
+            this.recordCountLabel2.Size = new System.Drawing.Size(114, 13);
+            this.recordCountLabel2.TabIndex = 4;
+            this.recordCountLabel2.Text = "Количество записей:";
+            // 
+            // performedComtractLabel
+            // 
+            this.performedComtractLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.performedComtractLabel.AutoSize = true;
+            this.performedComtractLabel.Location = new System.Drawing.Point(49, 240);
+            this.performedComtractLabel.Name = "performedComtractLabel";
+            this.performedComtractLabel.Size = new System.Drawing.Size(102, 13);
+            this.performedComtractLabel.TabIndex = 3;
+            this.performedComtractLabel.Text = "Договор исполнен";
+            // 
+            // colorPanel2
+            // 
+            this.colorPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(254)))), ((int)(((byte)(214)))));
+            this.colorPanel2.Location = new System.Drawing.Point(3, 237);
+            this.colorPanel2.Name = "colorPanel2";
+            this.colorPanel2.Size = new System.Drawing.Size(40, 20);
+            this.colorPanel2.TabIndex = 2;
+            // 
+            // suppliersDataGridView
+            // 
+            this.suppliersDataGridView.AllowUserToAddRows = false;
+            this.suppliersDataGridView.AllowUserToDeleteRows = false;
+            this.suppliersDataGridView.AutoGenerateColumns = false;
+            this.suppliersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.suppliersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SupplierContractsColumn,
+            this.ContractNumberContractsColumn,
+            this.ContractDateContractsColumn});
+            this.tableLayoutPanel5.SetColumnSpan(this.suppliersDataGridView, 8);
+            this.suppliersDataGridView.DataSource = this.suppliersBindingSource;
+            this.suppliersDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.suppliersDataGridView.Location = new System.Drawing.Point(3, 3);
+            this.suppliersDataGridView.Name = "suppliersDataGridView";
+            this.suppliersDataGridView.ReadOnly = true;
+            this.suppliersDataGridView.RowHeadersVisible = false;
+            this.suppliersDataGridView.Size = new System.Drawing.Size(977, 228);
+            this.suppliersDataGridView.TabIndex = 0;
+            // 
+            // SupplierContractsColumn
+            // 
+            this.SupplierContractsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SupplierContractsColumn.DataPropertyName = "Supplier";
+            this.SupplierContractsColumn.HeaderText = "Поставщик";
+            this.SupplierContractsColumn.Name = "SupplierContractsColumn";
+            this.SupplierContractsColumn.ReadOnly = true;
+            // 
+            // ContractNumberContractsColumn
+            // 
+            this.ContractNumberContractsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ContractNumberContractsColumn.DataPropertyName = "ContractNumber";
+            this.ContractNumberContractsColumn.HeaderText = "№ Договора";
+            this.ContractNumberContractsColumn.Name = "ContractNumberContractsColumn";
+            this.ContractNumberContractsColumn.ReadOnly = true;
+            // 
+            // ContractDateContractsColumn
+            // 
+            this.ContractDateContractsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ContractDateContractsColumn.DataPropertyName = "ContractDate";
+            this.ContractDateContractsColumn.HeaderText = "Дата договора";
+            this.ContractDateContractsColumn.Name = "ContractDateContractsColumn";
+            this.ContractDateContractsColumn.ReadOnly = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.tableLayoutPanel6);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(3, 288);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(989, 279);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Текущие договоры";
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 8;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel6.Controls.Add(this.currentContractsDataGridView, 0, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 2;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(983, 260);
+            this.tableLayoutPanel6.TabIndex = 0;
+            // 
+            // currentContractsDataGridView
+            // 
+            this.currentContractsDataGridView.AllowUserToAddRows = false;
+            this.currentContractsDataGridView.AllowUserToDeleteRows = false;
+            this.currentContractsDataGridView.AutoGenerateColumns = false;
+            this.currentContractsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.currentContractsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ApplicationNumberContractsColumn,
+            this.ApplicationDateContractsColumn,
+            this.GKContractsColumn,
+            this.StatusContractsColumn});
+            this.tableLayoutPanel6.SetColumnSpan(this.currentContractsDataGridView, 8);
+            this.currentContractsDataGridView.DataSource = this.contractsBindingSource;
+            this.currentContractsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.currentContractsDataGridView.Location = new System.Drawing.Point(3, 3);
+            this.currentContractsDataGridView.Name = "currentContractsDataGridView";
+            this.currentContractsDataGridView.ReadOnly = true;
+            this.currentContractsDataGridView.RowHeadersVisible = false;
+            this.currentContractsDataGridView.Size = new System.Drawing.Size(977, 224);
+            this.currentContractsDataGridView.TabIndex = 2;
+            // 
+            // ApplicationNumberContractsColumn
+            // 
+            this.ApplicationNumberContractsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ApplicationNumberContractsColumn.HeaderText = "Номер заявки";
+            this.ApplicationNumberContractsColumn.Name = "ApplicationNumberContractsColumn";
+            this.ApplicationNumberContractsColumn.ReadOnly = true;
+            // 
+            // ApplicationDateContractsColumn
+            // 
+            this.ApplicationDateContractsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ApplicationDateContractsColumn.HeaderText = "Дата заявки";
+            this.ApplicationDateContractsColumn.Name = "ApplicationDateContractsColumn";
+            this.ApplicationDateContractsColumn.ReadOnly = true;
+            // 
+            // GKContractsColumn
+            // 
+            this.GKContractsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.GKContractsColumn.HeaderText = "ГК";
+            this.GKContractsColumn.Name = "GKContractsColumn";
+            this.GKContractsColumn.ReadOnly = true;
+            // 
+            // StatusContractsColumn
+            // 
+            this.StatusContractsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.StatusContractsColumn.HeaderText = "Статус";
+            this.StatusContractsColumn.Name = "StatusContractsColumn";
+            this.StatusContractsColumn.ReadOnly = true;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.exitContractsButton);
+            this.flowLayoutPanel2.Controls.Add(this.deleteContractsButton);
+            this.flowLayoutPanel2.Controls.Add(this.addContractsButton);
+            this.flowLayoutPanel2.Controls.Add(this.detailedContractsButton);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 573);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(989, 54);
+            this.flowLayoutPanel2.TabIndex = 4;
+            // 
+            // exitContractsButton
+            // 
+            this.exitContractsButton.Location = new System.Drawing.Point(909, 5);
+            this.exitContractsButton.Margin = new System.Windows.Forms.Padding(5);
+            this.exitContractsButton.Name = "exitContractsButton";
+            this.exitContractsButton.Size = new System.Drawing.Size(75, 23);
+            this.exitContractsButton.TabIndex = 4;
+            this.exitContractsButton.Text = "Выход";
+            this.exitContractsButton.UseVisualStyleBackColor = true;
+            // 
+            // deleteContractsButton
+            // 
+            this.deleteContractsButton.Location = new System.Drawing.Point(824, 5);
+            this.deleteContractsButton.Margin = new System.Windows.Forms.Padding(5);
+            this.deleteContractsButton.Name = "deleteContractsButton";
+            this.deleteContractsButton.Size = new System.Drawing.Size(75, 23);
+            this.deleteContractsButton.TabIndex = 5;
+            this.deleteContractsButton.Text = "Удалить";
+            this.deleteContractsButton.UseVisualStyleBackColor = true;
+            // 
+            // addContractsButton
+            // 
+            this.addContractsButton.Location = new System.Drawing.Point(739, 5);
+            this.addContractsButton.Margin = new System.Windows.Forms.Padding(5);
+            this.addContractsButton.Name = "addContractsButton";
+            this.addContractsButton.Size = new System.Drawing.Size(75, 23);
+            this.addContractsButton.TabIndex = 6;
+            this.addContractsButton.Text = "Добавить";
+            this.addContractsButton.UseVisualStyleBackColor = true;
+            // 
+            // detailedContractsButton
+            // 
+            this.detailedContractsButton.Location = new System.Drawing.Point(654, 5);
+            this.detailedContractsButton.Margin = new System.Windows.Forms.Padding(5);
+            this.detailedContractsButton.Name = "detailedContractsButton";
+            this.detailedContractsButton.Size = new System.Drawing.Size(75, 23);
+            this.detailedContractsButton.TabIndex = 7;
+            this.detailedContractsButton.Text = "Подробно";
+            this.detailedContractsButton.UseVisualStyleBackColor = true;
             // 
             // userModifyStatusStrip
             // 
@@ -521,100 +946,6 @@
             this.faxNumberValueToolStripStatusLabel.Size = new System.Drawing.Size(60, 19);
             this.faxNumberValueToolStripStatusLabel.Text = "#######";
             // 
-            // DceNumberColumn
-            // 
-            this.DceNumberColumn.DataPropertyName = "DceNumber";
-            this.DceNumberColumn.HeaderText = "№ ДСЕ";
-            this.DceNumberColumn.Name = "DceNumberColumn";
-            this.DceNumberColumn.ReadOnly = true;
-            // 
-            // DceAliasColumn
-            // 
-            this.DceAliasColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DceAliasColumn.DataPropertyName = "DceAlias";
-            this.DceAliasColumn.FillWeight = 70F;
-            this.DceAliasColumn.HeaderText = "Обозначение ДСЕ";
-            this.DceAliasColumn.Name = "DceAliasColumn";
-            this.DceAliasColumn.ReadOnly = true;
-            // 
-            // DceNameColumn
-            // 
-            this.DceNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DceNameColumn.DataPropertyName = "DceName";
-            this.DceNameColumn.HeaderText = "Наименование ДСЕ";
-            this.DceNameColumn.Name = "DceNameColumn";
-            this.DceNameColumn.ReadOnly = true;
-            // 
-            // OrderedCountColumn
-            // 
-            this.OrderedCountColumn.DataPropertyName = "OrderedCount";
-            this.OrderedCountColumn.HeaderText = "Количество заказано";
-            this.OrderedCountColumn.Name = "OrderedCountColumn";
-            this.OrderedCountColumn.ReadOnly = true;
-            this.OrderedCountColumn.Width = 140;
-            // 
-            // Status
-            // 
-            this.Status.HeaderText = "";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            this.Status.Width = 30;
-            // 
-            // applicationNumberColumn
-            // 
-            this.applicationNumberColumn.DataPropertyName = "ApplicationNumber";
-            this.applicationNumberColumn.HeaderText = "№ заявки";
-            this.applicationNumberColumn.Name = "applicationNumberColumn";
-            this.applicationNumberColumn.ReadOnly = true;
-            this.applicationNumberColumn.Width = 90;
-            // 
-            // applicationDateColumn
-            // 
-            this.applicationDateColumn.DataPropertyName = "ApplicationDate";
-            this.applicationDateColumn.HeaderText = "Дата заявки";
-            this.applicationDateColumn.Name = "applicationDateColumn";
-            this.applicationDateColumn.ReadOnly = true;
-            // 
-            // supplierColumn
-            // 
-            this.supplierColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.supplierColumn.DataPropertyName = "Supplier";
-            this.supplierColumn.HeaderText = "Поставщик";
-            this.supplierColumn.Name = "supplierColumn";
-            this.supplierColumn.ReadOnly = true;
-            // 
-            // contractNumberColumn
-            // 
-            this.contractNumberColumn.DataPropertyName = "ContractNumber";
-            this.contractNumberColumn.HeaderText = "№ договора";
-            this.contractNumberColumn.Name = "contractNumberColumn";
-            this.contractNumberColumn.ReadOnly = true;
-            // 
-            // contractDateColumn
-            // 
-            this.contractDateColumn.DataPropertyName = "ContractDate";
-            this.contractDateColumn.HeaderText = "Дата договора";
-            this.contractDateColumn.Name = "contractDateColumn";
-            this.contractDateColumn.ReadOnly = true;
-            this.contractDateColumn.Width = 110;
-            // 
-            // gkColumn
-            // 
-            this.gkColumn.DataPropertyName = "GK";
-            this.gkColumn.HeaderText = "ГК";
-            this.gkColumn.Name = "gkColumn";
-            this.gkColumn.ReadOnly = true;
-            this.gkColumn.Width = 90;
-            // 
-            // statusColumn
-            // 
-            this.statusColumn.DataPropertyName = "Status";
-            this.statusColumn.HeaderText = "Статус";
-            this.statusColumn.Name = "statusColumn";
-            this.statusColumn.ReadOnly = true;
-            this.statusColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.statusColumn.Width = 60;
-            // 
             // ApplicationsAndContractsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -638,8 +969,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.dceListDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dceListBindingSource)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.suppliersGroupBox.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.suppliersDataGridView)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.currentContractsDataGridView)).EndInit();
+            this.flowLayoutPanel2.ResumeLayout(false);
             this.userModifyStatusStrip.ResumeLayout(false);
             this.userModifyStatusStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contractsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -699,5 +1042,32 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn contractDateColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn gkColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn statusColumn;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.DataGridView currentContractsDataGridView;
+        private System.Windows.Forms.GroupBox suppliersGroupBox;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.Label currentRecordNumberValueLabel2;
+        private System.Windows.Forms.Label currentRecordNumberLabel2;
+        private System.Windows.Forms.Label recordCountValuelabel2;
+        private System.Windows.Forms.Label recordCountLabel2;
+        private System.Windows.Forms.Label performedComtractLabel;
+        private System.Windows.Forms.Panel colorPanel2;
+        private System.Windows.Forms.DataGridView suppliersDataGridView;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SupplierContractsColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ContractNumberContractsColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ContractDateContractsColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ApplicationNumberContractsColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ApplicationDateContractsColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GKContractsColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StatusContractsColumn;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Button exitContractsButton;
+        private System.Windows.Forms.Button deleteContractsButton;
+        private System.Windows.Forms.Button addContractsButton;
+        private System.Windows.Forms.Button detailedContractsButton;
+        private System.Windows.Forms.BindingSource suppliersBindingSource;
+        private System.Windows.Forms.BindingSource contractsBindingSource;
     }
 }
