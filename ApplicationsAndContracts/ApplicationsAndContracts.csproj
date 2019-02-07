@@ -83,6 +83,12 @@
     <Compile Include="DataAccess\SqlHelper.cs" />
     <Compile Include="Helpers\Methods.cs" />
     <Compile Include="Helpers\Resources.cs" />
+    <Compile Include="Views\ApplicationAddingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ApplicationAddingForm.Designer.cs">
+      <DependentUpon>ApplicationAddingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ApplicationsAndContractsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Views\ApplicationAddingForm.resx">
+      <DependentUpon>ApplicationAddingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\ApplicationsAndContractsForm.resx">
       <DependentUpon>ApplicationsAndContractsForm.cs</DependentUpon>
     </EmbeddedResource>
