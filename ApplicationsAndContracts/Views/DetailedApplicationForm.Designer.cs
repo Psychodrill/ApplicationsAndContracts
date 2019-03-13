@@ -49,6 +49,10 @@
             this.changeButton = new System.Windows.Forms.Button();
             this.productsGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.currentRecordNumberValueLabel = new System.Windows.Forms.Label();
+            this.currentRecordNumberLabel = new System.Windows.Forms.Label();
+            this.recordCountValuelabel = new System.Windows.Forms.Label();
+            this.recordCountLabel = new System.Windows.Forms.Label();
             this.productsDataGridView = new System.Windows.Forms.DataGridView();
             this.OrderColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,10 +60,7 @@
             this.ProductAliasColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SetSinceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SetBeforeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.currentRecordNumberValueLabel = new System.Windows.Forms.Label();
-            this.currentRecordNumberLabel = new System.Windows.Forms.Label();
-            this.recordCountValuelabel = new System.Windows.Forms.Label();
-            this.recordCountLabel = new System.Windows.Forms.Label();
+            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.deleteButton = new System.Windows.Forms.Button();
             this.addButton = new System.Windows.Forms.Button();
@@ -70,6 +71,7 @@
             this.DceAliasColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DceNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OrderedCountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gkLabel1 = new System.Windows.Forms.Label();
             this.colorPanel = new System.Windows.Forms.Panel();
             this.recordCountLabel1 = new System.Windows.Forms.Label();
@@ -90,8 +92,6 @@
             this.phoneNumber2ValueToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.faxNumberToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.faxNumberValueToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.applicationGroupBox.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -99,14 +99,14 @@
             this.productsGroupBox.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
             this.dceGroupBox.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dceDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dceBindingSource)).BeginInit();
             this.flowLayoutPanel3.SuspendLayout();
             this.userModifyStatusStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dceBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -340,6 +340,46 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(996, 217);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
+            // currentRecordNumberValueLabel
+            // 
+            this.currentRecordNumberValueLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.currentRecordNumberValueLabel.AutoSize = true;
+            this.currentRecordNumberValueLabel.Location = new System.Drawing.Point(298, 193);
+            this.currentRecordNumberValueLabel.Name = "currentRecordNumberValueLabel";
+            this.currentRecordNumberValueLabel.Size = new System.Drawing.Size(13, 13);
+            this.currentRecordNumberValueLabel.TabIndex = 9;
+            this.currentRecordNumberValueLabel.Text = "0";
+            // 
+            // currentRecordNumberLabel
+            // 
+            this.currentRecordNumberLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.currentRecordNumberLabel.AutoSize = true;
+            this.currentRecordNumberLabel.Location = new System.Drawing.Point(163, 193);
+            this.currentRecordNumberLabel.Name = "currentRecordNumberLabel";
+            this.currentRecordNumberLabel.Size = new System.Drawing.Size(129, 13);
+            this.currentRecordNumberLabel.TabIndex = 8;
+            this.currentRecordNumberLabel.Text = "Номер текущей записи:";
+            // 
+            // recordCountValuelabel
+            // 
+            this.recordCountValuelabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.recordCountValuelabel.AutoSize = true;
+            this.recordCountValuelabel.Location = new System.Drawing.Point(123, 193);
+            this.recordCountValuelabel.Name = "recordCountValuelabel";
+            this.recordCountValuelabel.Size = new System.Drawing.Size(13, 13);
+            this.recordCountValuelabel.TabIndex = 7;
+            this.recordCountValuelabel.Text = "0";
+            // 
+            // recordCountLabel
+            // 
+            this.recordCountLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.recordCountLabel.AutoSize = true;
+            this.recordCountLabel.Location = new System.Drawing.Point(3, 193);
+            this.recordCountLabel.Name = "recordCountLabel";
+            this.recordCountLabel.Size = new System.Drawing.Size(114, 13);
+            this.recordCountLabel.TabIndex = 5;
+            this.recordCountLabel.Text = "Количество записей:";
+            // 
             // productsDataGridView
             // 
             this.productsDataGridView.AllowUserToAddRows = false;
@@ -413,46 +453,6 @@
             this.SetBeforeColumn.HeaderText = "Комплект ПО";
             this.SetBeforeColumn.Name = "SetBeforeColumn";
             this.SetBeforeColumn.ReadOnly = true;
-            // 
-            // currentRecordNumberValueLabel
-            // 
-            this.currentRecordNumberValueLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.currentRecordNumberValueLabel.AutoSize = true;
-            this.currentRecordNumberValueLabel.Location = new System.Drawing.Point(298, 193);
-            this.currentRecordNumberValueLabel.Name = "currentRecordNumberValueLabel";
-            this.currentRecordNumberValueLabel.Size = new System.Drawing.Size(13, 13);
-            this.currentRecordNumberValueLabel.TabIndex = 9;
-            this.currentRecordNumberValueLabel.Text = "0";
-            // 
-            // currentRecordNumberLabel
-            // 
-            this.currentRecordNumberLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.currentRecordNumberLabel.AutoSize = true;
-            this.currentRecordNumberLabel.Location = new System.Drawing.Point(163, 193);
-            this.currentRecordNumberLabel.Name = "currentRecordNumberLabel";
-            this.currentRecordNumberLabel.Size = new System.Drawing.Size(129, 13);
-            this.currentRecordNumberLabel.TabIndex = 8;
-            this.currentRecordNumberLabel.Text = "Номер текущей записи:";
-            // 
-            // recordCountValuelabel
-            // 
-            this.recordCountValuelabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.recordCountValuelabel.AutoSize = true;
-            this.recordCountValuelabel.Location = new System.Drawing.Point(123, 193);
-            this.recordCountValuelabel.Name = "recordCountValuelabel";
-            this.recordCountValuelabel.Size = new System.Drawing.Size(13, 13);
-            this.recordCountValuelabel.TabIndex = 7;
-            this.recordCountValuelabel.Text = "0";
-            // 
-            // recordCountLabel
-            // 
-            this.recordCountLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.recordCountLabel.AutoSize = true;
-            this.recordCountLabel.Location = new System.Drawing.Point(3, 193);
-            this.recordCountLabel.Name = "recordCountLabel";
-            this.recordCountLabel.Size = new System.Drawing.Size(114, 13);
-            this.recordCountLabel.TabIndex = 5;
-            this.recordCountLabel.Text = "Количество записей:";
             // 
             // flowLayoutPanel2
             // 
@@ -765,16 +765,16 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.dceGroupBox.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dceDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dceBindingSource)).EndInit();
             this.flowLayoutPanel3.ResumeLayout(false);
             this.userModifyStatusStrip.ResumeLayout(false);
             this.userModifyStatusStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dceBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
