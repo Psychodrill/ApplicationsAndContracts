@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.applicationGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -54,14 +55,24 @@
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.orderLabel = new System.Windows.Forms.Label();
             this.productLabel = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.setSinceLabel = new System.Windows.Forms.Label();
+            this.setUntilLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.productGroupBox = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.ProductNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductIndexColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductAliasColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.applicationGroupBox.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.productGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -71,15 +82,16 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.applicationGroupBox, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.productGroupBox, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1008, 662);
             this.tableLayoutPanel1.TabIndex = 0;
@@ -277,7 +289,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(3, 93);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1002, 132);
+            this.groupBox1.Size = new System.Drawing.Size(1002, 81);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
@@ -297,23 +309,23 @@
             this.tableLayoutPanel3.Controls.Add(this.textBox11, 4, 2);
             this.tableLayoutPanel3.Controls.Add(this.orderLabel, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.productLabel, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.label3, 2, 1);
-            this.tableLayoutPanel3.Controls.Add(this.label4, 3, 1);
+            this.tableLayoutPanel3.Controls.Add(this.setSinceLabel, 2, 1);
+            this.tableLayoutPanel3.Controls.Add(this.setUntilLabel, 3, 1);
             this.tableLayoutPanel3.Controls.Add(this.label5, 4, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(996, 113);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(996, 62);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // textBox7
             // 
             this.textBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox7.Location = new System.Drawing.Point(3, 96);
+            this.textBox7.Location = new System.Drawing.Point(3, 40);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(193, 20);
             this.textBox7.TabIndex = 0;
@@ -321,7 +333,7 @@
             // textBox8
             // 
             this.textBox8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox8.Location = new System.Drawing.Point(202, 96);
+            this.textBox8.Location = new System.Drawing.Point(202, 40);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(193, 20);
             this.textBox8.TabIndex = 1;
@@ -329,7 +341,7 @@
             // textBox9
             // 
             this.textBox9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox9.Location = new System.Drawing.Point(401, 96);
+            this.textBox9.Location = new System.Drawing.Point(401, 40);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(193, 20);
             this.textBox9.TabIndex = 2;
@@ -337,7 +349,7 @@
             // textBox10
             // 
             this.textBox10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox10.Location = new System.Drawing.Point(600, 96);
+            this.textBox10.Location = new System.Drawing.Point(600, 40);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(193, 20);
             this.textBox10.TabIndex = 3;
@@ -345,7 +357,7 @@
             // textBox11
             // 
             this.textBox11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox11.Location = new System.Drawing.Point(799, 96);
+            this.textBox11.Location = new System.Drawing.Point(799, 40);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(194, 20);
             this.textBox11.TabIndex = 4;
@@ -368,23 +380,23 @@
             this.productLabel.TabIndex = 6;
             this.productLabel.Text = "Изделие";
             // 
-            // label3
+            // setSinceLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(401, 24);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Комплект С";
+            this.setSinceLabel.AutoSize = true;
+            this.setSinceLabel.Location = new System.Drawing.Point(401, 24);
+            this.setSinceLabel.Name = "setSinceLabel";
+            this.setSinceLabel.Size = new System.Drawing.Size(67, 13);
+            this.setSinceLabel.TabIndex = 7;
+            this.setSinceLabel.Text = "Комплект С";
             // 
-            // label4
+            // setUntilLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(600, 24);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Комплект ПО";
+            this.setUntilLabel.AutoSize = true;
+            this.setUntilLabel.Location = new System.Drawing.Point(600, 24);
+            this.setUntilLabel.Name = "setUntilLabel";
+            this.setUntilLabel.Size = new System.Drawing.Size(76, 13);
+            this.setUntilLabel.TabIndex = 8;
+            this.setUntilLabel.Text = "Комплект ПО";
             // 
             // label5
             // 
@@ -394,6 +406,69 @@
             this.label5.Size = new System.Drawing.Size(81, 13);
             this.label5.TabIndex = 9;
             this.label5.Text = "Машино-серия";
+            // 
+            // productGroupBox
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.productGroupBox, 2);
+            this.productGroupBox.Controls.Add(this.dataGridView1);
+            this.productGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.productGroupBox.Location = new System.Drawing.Point(3, 180);
+            this.productGroupBox.Name = "productGroupBox";
+            this.productGroupBox.Size = new System.Drawing.Size(1002, 149);
+            this.productGroupBox.TabIndex = 4;
+            this.productGroupBox.TabStop = false;
+            this.productGroupBox.Text = "Изделие";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ProductNumberColumn,
+            this.ProductIndexColumn,
+            this.ProductAliasColumn,
+            this.ProductNameColumn});
+            this.dataGridView1.DataSource = this.bindingSource1;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 16);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.ShowRowErrors = false;
+            this.dataGridView1.Size = new System.Drawing.Size(996, 130);
+            this.dataGridView1.TabIndex = 3;
+            // 
+            // ProductNumberColumn
+            // 
+            this.ProductNumberColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ProductNumberColumn.HeaderText = "ProductNumber";
+            this.ProductNumberColumn.Name = "ProductNumberColumn";
+            this.ProductNumberColumn.ReadOnly = true;
+            // 
+            // ProductIndexColumn
+            // 
+            this.ProductIndexColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ProductIndexColumn.HeaderText = "ProductIndex";
+            this.ProductIndexColumn.Name = "ProductIndexColumn";
+            this.ProductIndexColumn.ReadOnly = true;
+            // 
+            // ProductAliasColumn
+            // 
+            this.ProductAliasColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ProductAliasColumn.HeaderText = "ProductAlias";
+            this.ProductAliasColumn.Name = "ProductAliasColumn";
+            this.ProductAliasColumn.ReadOnly = true;
+            // 
+            // ProductNameColumn
+            // 
+            this.ProductNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ProductNameColumn.HeaderText = "ProductName";
+            this.ProductNameColumn.Name = "ProductNameColumn";
+            this.ProductNameColumn.ReadOnly = true;
             // 
             // DceSelectionForm
             // 
@@ -410,6 +485,9 @@
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.productGroupBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -442,8 +520,15 @@
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label orderLabel;
         private System.Windows.Forms.Label productLabel;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label setSinceLabel;
+        private System.Windows.Forms.Label setUntilLabel;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.GroupBox productGroupBox;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductNumberColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductIndexColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductAliasColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductNameColumn;
     }
 }
