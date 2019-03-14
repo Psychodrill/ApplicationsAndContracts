@@ -60,7 +60,6 @@
             this.ProductAliasColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SetSinceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SetBeforeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.deleteButton = new System.Windows.Forms.Button();
             this.addButton = new System.Windows.Forms.Button();
@@ -71,7 +70,6 @@
             this.DceAliasColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DceNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OrderedCountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gkLabel1 = new System.Windows.Forms.Label();
             this.colorPanel = new System.Windows.Forms.Panel();
             this.recordCountLabel1 = new System.Windows.Forms.Label();
@@ -92,6 +90,8 @@
             this.phoneNumber2ValueToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.faxNumberToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.faxNumberValueToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.applicationGroupBox.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -99,14 +99,14 @@
             this.productsGroupBox.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productsDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             this.flowLayoutPanel2.SuspendLayout();
             this.dceGroupBox.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dceDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dceBindingSource)).BeginInit();
             this.flowLayoutPanel3.SuspendLayout();
             this.userModifyStatusStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dceBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -765,16 +765,16 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productsDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.dceGroupBox.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dceDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dceBindingSource)).EndInit();
             this.flowLayoutPanel3.ResumeLayout(false);
             this.userModifyStatusStrip.ResumeLayout(false);
             this.userModifyStatusStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dceBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
