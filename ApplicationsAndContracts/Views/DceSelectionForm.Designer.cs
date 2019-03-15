@@ -59,8 +59,8 @@
             this.setUntilLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.productGroupBox = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.productDataGridView = new System.Windows.Forms.DataGridView();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ProductNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductIndexColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductAliasColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,8 +71,8 @@
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.productGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -85,6 +85,7 @@
             this.tableLayoutPanel1.Controls.Add(this.productGroupBox, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -92,8 +93,8 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1008, 662);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1344, 815);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // applicationGroupBox
@@ -101,9 +102,11 @@
             this.tableLayoutPanel1.SetColumnSpan(this.applicationGroupBox, 2);
             this.applicationGroupBox.Controls.Add(this.tableLayoutPanel2);
             this.applicationGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.applicationGroupBox.Location = new System.Drawing.Point(3, 3);
+            this.applicationGroupBox.Location = new System.Drawing.Point(4, 4);
+            this.applicationGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.applicationGroupBox.Name = "applicationGroupBox";
-            this.applicationGroupBox.Size = new System.Drawing.Size(1002, 84);
+            this.applicationGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.applicationGroupBox.Size = new System.Drawing.Size(1336, 103);
             this.applicationGroupBox.TabIndex = 1;
             this.applicationGroupBox.TabStop = false;
             this.applicationGroupBox.Text = "Заявка";
@@ -133,22 +136,24 @@
             this.tableLayoutPanel2.Controls.Add(this.departmentLabel, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.departmentTextBox, 2, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 19);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(996, 65);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1328, 80);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // contractDateLlabel
             // 
             this.contractDateLlabel.AutoSize = true;
             this.contractDateLlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.contractDateLlabel.Location = new System.Drawing.Point(757, 24);
+            this.contractDateLlabel.Location = new System.Drawing.Point(1011, 30);
+            this.contractDateLlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.contractDateLlabel.Name = "contractDateLlabel";
-            this.contractDateLlabel.Size = new System.Drawing.Size(83, 13);
+            this.contractDateLlabel.Size = new System.Drawing.Size(106, 17);
             this.contractDateLlabel.TabIndex = 4;
             this.contractDateLlabel.Text = "Дата договора";
             // 
@@ -156,9 +161,10 @@
             // 
             this.applicationNumberLabel.AutoSize = true;
             this.applicationNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.applicationNumberLabel.Location = new System.Drawing.Point(3, 24);
+            this.applicationNumberLabel.Location = new System.Drawing.Point(4, 30);
+            this.applicationNumberLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.applicationNumberLabel.Name = "applicationNumberLabel";
-            this.applicationNumberLabel.Size = new System.Drawing.Size(80, 13);
+            this.applicationNumberLabel.Size = new System.Drawing.Size(100, 17);
             this.applicationNumberLabel.TabIndex = 0;
             this.applicationNumberLabel.Text = "Номер заявки";
             // 
@@ -166,9 +172,10 @@
             // 
             this.applicationDateLabel.AutoSize = true;
             this.applicationDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.applicationDateLabel.Location = new System.Drawing.Point(122, 24);
+            this.applicationDateLabel.Location = new System.Drawing.Point(163, 30);
+            this.applicationDateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.applicationDateLabel.Name = "applicationDateLabel";
-            this.applicationDateLabel.Size = new System.Drawing.Size(72, 13);
+            this.applicationDateLabel.Size = new System.Drawing.Size(91, 17);
             this.applicationDateLabel.TabIndex = 1;
             this.applicationDateLabel.Text = "Дата заявки";
             // 
@@ -176,9 +183,10 @@
             // 
             this.supplierLabel.AutoSize = true;
             this.supplierLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.supplierLabel.Location = new System.Drawing.Point(360, 24);
+            this.supplierLabel.Location = new System.Drawing.Point(481, 30);
+            this.supplierLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.supplierLabel.Name = "supplierLabel";
-            this.supplierLabel.Size = new System.Drawing.Size(65, 13);
+            this.supplierLabel.Size = new System.Drawing.Size(81, 17);
             this.supplierLabel.TabIndex = 2;
             this.supplierLabel.Text = "Поставщик";
             // 
@@ -186,9 +194,10 @@
             // 
             this.contractNumberLlabel.AutoSize = true;
             this.contractNumberLlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.contractNumberLlabel.Location = new System.Drawing.Point(638, 24);
+            this.contractNumberLlabel.Location = new System.Drawing.Point(852, 30);
+            this.contractNumberLlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.contractNumberLlabel.Name = "contractNumberLlabel";
-            this.contractNumberLlabel.Size = new System.Drawing.Size(71, 13);
+            this.contractNumberLlabel.Size = new System.Drawing.Size(89, 17);
             this.contractNumberLlabel.TabIndex = 3;
             this.contractNumberLlabel.Text = "№ Договора";
             // 
@@ -196,9 +205,10 @@
             // 
             this.stateContractLabel.AutoSize = true;
             this.stateContractLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.stateContractLabel.Location = new System.Drawing.Point(876, 24);
+            this.stateContractLabel.Location = new System.Drawing.Point(1170, 30);
+            this.stateContractLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.stateContractLabel.Name = "stateContractLabel";
-            this.stateContractLabel.Size = new System.Drawing.Size(20, 13);
+            this.stateContractLabel.Size = new System.Drawing.Size(25, 17);
             this.stateContractLabel.TabIndex = 5;
             this.stateContractLabel.Text = "ГК";
             // 
@@ -206,69 +216,76 @@
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(3, 40);
+            this.textBox1.Location = new System.Drawing.Point(4, 51);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(113, 20);
+            this.textBox1.Size = new System.Drawing.Size(151, 23);
             this.textBox1.TabIndex = 6;
             // 
             // textBox2
             // 
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(122, 40);
+            this.textBox2.Location = new System.Drawing.Point(163, 51);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(113, 20);
+            this.textBox2.Size = new System.Drawing.Size(151, 23);
             this.textBox2.TabIndex = 7;
             // 
             // textBox3
             // 
             this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(360, 40);
+            this.textBox3.Location = new System.Drawing.Point(481, 51);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(272, 20);
+            this.textBox3.Size = new System.Drawing.Size(363, 23);
             this.textBox3.TabIndex = 8;
             // 
             // textBox4
             // 
             this.textBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox4.Location = new System.Drawing.Point(638, 40);
+            this.textBox4.Location = new System.Drawing.Point(852, 51);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(113, 20);
+            this.textBox4.Size = new System.Drawing.Size(151, 23);
             this.textBox4.TabIndex = 9;
             // 
             // textBox5
             // 
             this.textBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox5.Location = new System.Drawing.Point(757, 40);
+            this.textBox5.Location = new System.Drawing.Point(1011, 51);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(113, 20);
+            this.textBox5.Size = new System.Drawing.Size(151, 23);
             this.textBox5.TabIndex = 10;
             // 
             // textBox6
             // 
             this.textBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox6.Location = new System.Drawing.Point(876, 40);
+            this.textBox6.Location = new System.Drawing.Point(1170, 51);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(117, 20);
+            this.textBox6.Size = new System.Drawing.Size(154, 23);
             this.textBox6.TabIndex = 11;
             // 
             // departmentLabel
             // 
             this.departmentLabel.AutoSize = true;
             this.departmentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.departmentLabel.Location = new System.Drawing.Point(241, 24);
+            this.departmentLabel.Location = new System.Drawing.Point(322, 30);
+            this.departmentLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.departmentLabel.Name = "departmentLabel";
-            this.departmentLabel.Size = new System.Drawing.Size(38, 13);
+            this.departmentLabel.Size = new System.Drawing.Size(50, 17);
             this.departmentLabel.TabIndex = 12;
             this.departmentLabel.Text = "Отдел";
             // 
@@ -276,10 +293,11 @@
             // 
             this.departmentTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.departmentTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.departmentTextBox.Location = new System.Drawing.Point(241, 40);
+            this.departmentTextBox.Location = new System.Drawing.Point(322, 51);
+            this.departmentTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.departmentTextBox.Name = "departmentTextBox";
             this.departmentTextBox.ReadOnly = true;
-            this.departmentTextBox.Size = new System.Drawing.Size(113, 20);
+            this.departmentTextBox.Size = new System.Drawing.Size(151, 23);
             this.departmentTextBox.TabIndex = 13;
             // 
             // groupBox1
@@ -287,9 +305,11 @@
             this.tableLayoutPanel1.SetColumnSpan(this.groupBox1, 2);
             this.groupBox1.Controls.Add(this.tableLayoutPanel3);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(3, 93);
+            this.groupBox1.Location = new System.Drawing.Point(4, 115);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1002, 81);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(1336, 100);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
@@ -313,169 +333,188 @@
             this.tableLayoutPanel3.Controls.Add(this.setUntilLabel, 3, 1);
             this.tableLayoutPanel3.Controls.Add(this.label5, 4, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 19);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(996, 62);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1328, 77);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // textBox7
             // 
             this.textBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox7.Location = new System.Drawing.Point(3, 40);
+            this.textBox7.Location = new System.Drawing.Point(4, 51);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(193, 20);
+            this.textBox7.Size = new System.Drawing.Size(257, 22);
             this.textBox7.TabIndex = 0;
             // 
             // textBox8
             // 
             this.textBox8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox8.Location = new System.Drawing.Point(202, 40);
+            this.textBox8.Location = new System.Drawing.Point(269, 51);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(193, 20);
+            this.textBox8.Size = new System.Drawing.Size(257, 22);
             this.textBox8.TabIndex = 1;
             // 
             // textBox9
             // 
             this.textBox9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox9.Location = new System.Drawing.Point(401, 40);
+            this.textBox9.Location = new System.Drawing.Point(534, 51);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(193, 20);
+            this.textBox9.Size = new System.Drawing.Size(257, 22);
             this.textBox9.TabIndex = 2;
             // 
             // textBox10
             // 
             this.textBox10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox10.Location = new System.Drawing.Point(600, 40);
+            this.textBox10.Location = new System.Drawing.Point(799, 51);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(193, 20);
+            this.textBox10.Size = new System.Drawing.Size(257, 22);
             this.textBox10.TabIndex = 3;
             // 
             // textBox11
             // 
             this.textBox11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox11.Location = new System.Drawing.Point(799, 40);
+            this.textBox11.Location = new System.Drawing.Point(1064, 51);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(194, 20);
+            this.textBox11.Size = new System.Drawing.Size(260, 22);
             this.textBox11.TabIndex = 4;
             // 
             // orderLabel
             // 
             this.orderLabel.AutoSize = true;
-            this.orderLabel.Location = new System.Drawing.Point(3, 24);
+            this.orderLabel.Location = new System.Drawing.Point(4, 30);
+            this.orderLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.orderLabel.Name = "orderLabel";
-            this.orderLabel.Size = new System.Drawing.Size(38, 13);
+            this.orderLabel.Size = new System.Drawing.Size(47, 17);
             this.orderLabel.TabIndex = 5;
             this.orderLabel.Text = "Заказ";
             // 
             // productLabel
             // 
             this.productLabel.AutoSize = true;
-            this.productLabel.Location = new System.Drawing.Point(202, 24);
+            this.productLabel.Location = new System.Drawing.Point(269, 30);
+            this.productLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.productLabel.Name = "productLabel";
-            this.productLabel.Size = new System.Drawing.Size(51, 13);
+            this.productLabel.Size = new System.Drawing.Size(65, 17);
             this.productLabel.TabIndex = 6;
             this.productLabel.Text = "Изделие";
             // 
             // setSinceLabel
             // 
             this.setSinceLabel.AutoSize = true;
-            this.setSinceLabel.Location = new System.Drawing.Point(401, 24);
+            this.setSinceLabel.Location = new System.Drawing.Point(534, 30);
+            this.setSinceLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.setSinceLabel.Name = "setSinceLabel";
-            this.setSinceLabel.Size = new System.Drawing.Size(67, 13);
+            this.setSinceLabel.Size = new System.Drawing.Size(85, 17);
             this.setSinceLabel.TabIndex = 7;
             this.setSinceLabel.Text = "Комплект С";
             // 
             // setUntilLabel
             // 
             this.setUntilLabel.AutoSize = true;
-            this.setUntilLabel.Location = new System.Drawing.Point(600, 24);
+            this.setUntilLabel.Location = new System.Drawing.Point(799, 30);
+            this.setUntilLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.setUntilLabel.Name = "setUntilLabel";
-            this.setUntilLabel.Size = new System.Drawing.Size(76, 13);
+            this.setUntilLabel.Size = new System.Drawing.Size(97, 17);
             this.setUntilLabel.TabIndex = 8;
             this.setUntilLabel.Text = "Комплект ПО";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(799, 24);
+            this.label5.Location = new System.Drawing.Point(1064, 30);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 13);
+            this.label5.Size = new System.Drawing.Size(106, 17);
             this.label5.TabIndex = 9;
             this.label5.Text = "Машино-серия";
             // 
             // productGroupBox
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.productGroupBox, 2);
-            this.productGroupBox.Controls.Add(this.dataGridView1);
+            this.productGroupBox.Controls.Add(this.productDataGridView);
             this.productGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.productGroupBox.Location = new System.Drawing.Point(3, 180);
+            this.productGroupBox.Location = new System.Drawing.Point(4, 223);
+            this.productGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.productGroupBox.Name = "productGroupBox";
-            this.productGroupBox.Size = new System.Drawing.Size(1002, 149);
+            this.productGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productGroupBox.Size = new System.Drawing.Size(1336, 182);
             this.productGroupBox.TabIndex = 4;
             this.productGroupBox.TabStop = false;
             this.productGroupBox.Text = "Изделие";
             // 
-            // dataGridView1
+            // productDataGridView
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.productDataGridView.AllowUserToAddRows = false;
+            this.productDataGridView.AllowUserToDeleteRows = false;
+            this.productDataGridView.AutoGenerateColumns = false;
+            this.productDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.productDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ProductNumberColumn,
             this.ProductIndexColumn,
             this.ProductAliasColumn,
             this.ProductNameColumn});
-            this.dataGridView1.DataSource = this.bindingSource1;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 16);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.ShowRowErrors = false;
-            this.dataGridView1.Size = new System.Drawing.Size(996, 130);
-            this.dataGridView1.TabIndex = 3;
+            this.productDataGridView.DataSource = this.productBindingSource;
+            this.productDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.productDataGridView.Location = new System.Drawing.Point(4, 19);
+            this.productDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productDataGridView.MultiSelect = false;
+            this.productDataGridView.Name = "productDataGridView";
+            this.productDataGridView.ReadOnly = true;
+            this.productDataGridView.RowHeadersVisible = false;
+            this.productDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.productDataGridView.ShowRowErrors = false;
+            this.productDataGridView.Size = new System.Drawing.Size(1328, 159);
+            this.productDataGridView.TabIndex = 3;
             // 
             // ProductNumberColumn
             // 
             this.ProductNumberColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ProductNumberColumn.HeaderText = "ProductNumber";
+            this.ProductNumberColumn.DataPropertyName = "ProductNumber";
+            this.ProductNumberColumn.HeaderText = "Номер изделия";
             this.ProductNumberColumn.Name = "ProductNumberColumn";
             this.ProductNumberColumn.ReadOnly = true;
             // 
             // ProductIndexColumn
             // 
             this.ProductIndexColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ProductIndexColumn.HeaderText = "ProductIndex";
+            this.ProductIndexColumn.DataPropertyName = "ProductIndex";
+            this.ProductIndexColumn.HeaderText = "Индекс изделия";
             this.ProductIndexColumn.Name = "ProductIndexColumn";
             this.ProductIndexColumn.ReadOnly = true;
             // 
             // ProductAliasColumn
             // 
             this.ProductAliasColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ProductAliasColumn.HeaderText = "ProductAlias";
+            this.ProductAliasColumn.DataPropertyName = "ProductAlias";
+            this.ProductAliasColumn.HeaderText = "Обозначение изделия";
             this.ProductAliasColumn.Name = "ProductAliasColumn";
             this.ProductAliasColumn.ReadOnly = true;
             // 
             // ProductNameColumn
             // 
             this.ProductNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ProductNameColumn.HeaderText = "ProductName";
+            this.ProductNameColumn.DataPropertyName = "ProductName";
+            this.ProductNameColumn.HeaderText = "Наименование изделия";
             this.ProductNameColumn.Name = "ProductNameColumn";
             this.ProductNameColumn.ReadOnly = true;
             // 
             // DceSelectionForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 662);
+            this.ClientSize = new System.Drawing.Size(1344, 815);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DceSelectionForm";
             this.Text = "DceSelectionForm";
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -486,8 +525,8 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.productGroupBox.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -523,9 +562,9 @@
         private System.Windows.Forms.Label setSinceLabel;
         private System.Windows.Forms.Label setUntilLabel;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView productDataGridView;
         private System.Windows.Forms.GroupBox productGroupBox;
-        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.BindingSource productBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductNumberColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductIndexColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductAliasColumn;
