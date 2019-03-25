@@ -123,7 +123,7 @@
             this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -225,9 +225,9 @@
             this.dceGroupBox.Controls.Add(this.tableLayoutPanel5);
             this.dceGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dceGroupBox.Location = new System.Drawing.Point(4, 499);
-            this.dceGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dceGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.dceGroupBox.Name = "dceGroupBox";
-            this.dceGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dceGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.dceGroupBox.Size = new System.Drawing.Size(1336, 262);
             this.dceGroupBox.TabIndex = 5;
             this.dceGroupBox.TabStop = false;
@@ -254,7 +254,7 @@
             this.tableLayoutPanel5.Controls.Add(this.flowLayoutPanel3, 7, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(4, 19);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -275,7 +275,7 @@
             this.tableLayoutPanel5.SetColumnSpan(this.dceDataGridView, 8);
             this.dceDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dceDataGridView.Location = new System.Drawing.Point(4, 4);
-            this.dceDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dceDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.dceDataGridView.Name = "dceDataGridView";
             this.dceDataGridView.ReadOnly = true;
             this.dceDataGridView.RowHeadersVisible = false;
@@ -330,7 +330,7 @@
             this.colorPanel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.colorPanel.BackColor = System.Drawing.Color.LightCyan;
             this.colorPanel.Location = new System.Drawing.Point(4, 205);
-            this.colorPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.colorPanel.Margin = new System.Windows.Forms.Padding(4);
             this.colorPanel.Name = "colorPanel";
             this.colorPanel.Size = new System.Drawing.Size(53, 25);
             this.colorPanel.TabIndex = 2;
@@ -386,7 +386,7 @@
             this.flowLayoutPanel3.Controls.Add(this.selectButton);
             this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(939, 201);
-            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(385, 34);
             this.flowLayoutPanel3.TabIndex = 10;
@@ -394,7 +394,7 @@
             // cancelButton
             // 
             this.cancelButton.Location = new System.Drawing.Point(281, 4);
-            this.cancelButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(4);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(100, 28);
             this.cancelButton.TabIndex = 0;
@@ -404,7 +404,7 @@
             // applyButton
             // 
             this.applyButton.Location = new System.Drawing.Point(173, 4);
-            this.applyButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.applyButton.Margin = new System.Windows.Forms.Padding(4);
             this.applyButton.Name = "applyButton";
             this.applyButton.Size = new System.Drawing.Size(100, 28);
             this.applyButton.TabIndex = 1;
@@ -414,7 +414,7 @@
             // selectButton
             // 
             this.selectButton.Location = new System.Drawing.Point(65, 4);
-            this.selectButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.selectButton.Margin = new System.Windows.Forms.Padding(4);
             this.selectButton.Name = "selectButton";
             this.selectButton.Size = new System.Drawing.Size(100, 28);
             this.selectButton.TabIndex = 2;
@@ -426,9 +426,9 @@
             this.productsGroupBox.Controls.Add(this.tableLayoutPanel4);
             this.productsGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.productsGroupBox.Location = new System.Drawing.Point(4, 229);
-            this.productsGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productsGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.productsGroupBox.Name = "productsGroupBox";
-            this.productsGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productsGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.productsGroupBox.Size = new System.Drawing.Size(1336, 262);
             this.productsGroupBox.TabIndex = 4;
             this.productsGroupBox.TabStop = false;
@@ -450,7 +450,7 @@
             this.tableLayoutPanel4.Controls.Add(this.productsDataGridView, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(4, 19);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -517,7 +517,7 @@
             this.tableLayoutPanel4.SetColumnSpan(this.productsDataGridView, 6);
             this.productsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.productsDataGridView.Location = new System.Drawing.Point(4, 4);
-            this.productsDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productsDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.productsDataGridView.Name = "productsDataGridView";
             this.productsDataGridView.ReadOnly = true;
             this.productsDataGridView.RowHeadersVisible = false;
@@ -579,9 +579,9 @@
             // 
             this.applicationGroupBox.Controls.Add(this.tableLayoutPanel2);
             this.applicationGroupBox.Location = new System.Drawing.Point(4, 4);
-            this.applicationGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.applicationGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.applicationGroupBox.Name = "applicationGroupBox";
-            this.applicationGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.applicationGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.applicationGroupBox.Size = new System.Drawing.Size(481, 74);
             this.applicationGroupBox.TabIndex = 0;
             this.applicationGroupBox.TabStop = false;
@@ -601,7 +601,7 @@
             this.tableLayoutPanel2.Controls.Add(this.comboBox1, 2, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 19);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -623,7 +623,7 @@
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox1.Location = new System.Drawing.Point(4, 21);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(157, 22);
             this.textBox1.TabIndex = 3;
@@ -643,7 +643,7 @@
             this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(169, 21);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(157, 22);
             this.dateTimePicker1.TabIndex = 4;
@@ -663,7 +663,7 @@
             this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(334, 21);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(135, 24);
             this.comboBox1.TabIndex = 5;
@@ -673,9 +673,9 @@
             this.tableLayoutPanel1.SetColumnSpan(this.groupBox1, 2);
             this.groupBox1.Controls.Add(this.tableLayoutPanel3);
             this.groupBox1.Location = new System.Drawing.Point(4, 86);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1336, 135);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
@@ -706,7 +706,7 @@
             this.tableLayoutPanel3.Controls.Add(this.label8, 3, 2);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 19);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 4;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -720,7 +720,7 @@
             // 
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox2.Location = new System.Drawing.Point(4, 32);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(324, 22);
             this.textBox2.TabIndex = 0;
@@ -729,7 +729,7 @@
             // 
             this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox3.Location = new System.Drawing.Point(336, 32);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(324, 22);
             this.textBox3.TabIndex = 1;
@@ -738,7 +738,7 @@
             // 
             this.textBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox4.Location = new System.Drawing.Point(668, 32);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(324, 22);
             this.textBox4.TabIndex = 2;
@@ -747,7 +747,7 @@
             // 
             this.textBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox5.Location = new System.Drawing.Point(1000, 32);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(324, 22);
             this.textBox5.TabIndex = 3;
@@ -756,7 +756,7 @@
             // 
             this.textBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox6.Location = new System.Drawing.Point(4, 88);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(324, 22);
             this.textBox6.TabIndex = 4;
@@ -765,7 +765,7 @@
             // 
             this.textBox7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox7.Location = new System.Drawing.Point(336, 88);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(324, 22);
             this.textBox7.TabIndex = 5;
@@ -774,7 +774,7 @@
             // 
             this.textBox8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox8.Location = new System.Drawing.Point(668, 88);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(324, 22);
             this.textBox8.TabIndex = 6;
@@ -783,7 +783,7 @@
             // 
             this.textBox9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox9.Location = new System.Drawing.Point(1000, 88);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(324, 22);
             this.textBox9.TabIndex = 7;
@@ -882,7 +882,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1344, 815);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ApplicationAddingForm";
             this.Text = "Добавление заявки";
             this.tableLayoutPanel1.ResumeLayout(false);

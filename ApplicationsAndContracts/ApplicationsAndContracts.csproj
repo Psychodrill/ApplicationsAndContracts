@@ -89,6 +89,12 @@
     <Compile Include="Views\ApplicationAddingForm.Designer.cs">
       <DependentUpon>ApplicationAddingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ApplicationContentChangingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ApplicationContentChangingForm.Designer.cs">
+      <DependentUpon>ApplicationContentChangingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ApplicationsAndContractsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Views\ApplicationAddingForm.resx">
       <DependentUpon>ApplicationAddingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ApplicationContentChangingForm.resx">
+      <DependentUpon>ApplicationContentChangingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ApplicationsAndContractsForm.resx">
       <DependentUpon>ApplicationsAndContractsForm.cs</DependentUpon>
