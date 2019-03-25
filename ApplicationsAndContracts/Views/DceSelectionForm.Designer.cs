@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.statusStrip = new System.Windows.Forms.StatusStrip();
+            this.userModifyToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.dateModifyToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.applicationGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.contractDateLlabel = new System.Windows.Forms.Label();
@@ -72,14 +75,12 @@
             this.CalculatedCountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OrderedCountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MarkerColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusStrip = new System.Windows.Forms.StatusStrip();
-            this.userModifyToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.dateModifyToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.applyButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
+            this.applyButton = new System.Windows.Forms.Button();
             this.dceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
+            this.statusStrip.SuspendLayout();
             this.applicationGroupBox.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.orderGroupBox.SuspendLayout();
@@ -89,7 +90,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.dceGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dceDataGridView)).BeginInit();
-            this.statusStrip.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dceBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -118,6 +118,33 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1344, 815);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // statusStrip
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.statusStrip, 2);
+            this.statusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.userModifyToolStripStatusLabel,
+            this.dateModifyToolStripStatusLabel});
+            this.statusStrip.Location = new System.Drawing.Point(0, 790);
+            this.statusStrip.Name = "statusStrip";
+            this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.statusStrip.Size = new System.Drawing.Size(1344, 25);
+            this.statusStrip.TabIndex = 6;
+            this.statusStrip.Text = "statusStrip1";
+            // 
+            // userModifyToolStripStatusLabel
+            // 
+            this.userModifyToolStripStatusLabel.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
+            this.userModifyToolStripStatusLabel.Name = "userModifyToolStripStatusLabel";
+            this.userModifyToolStripStatusLabel.Size = new System.Drawing.Size(143, 20);
+            this.userModifyToolStripStatusLabel.Text = "####_Surname A.A.";
+            // 
+            // dateModifyToolStripStatusLabel
+            // 
+            this.dateModifyToolStripStatusLabel.Name = "dateModifyToolStripStatusLabel";
+            this.dateModifyToolStripStatusLabel.Size = new System.Drawing.Size(87, 20);
+            this.dateModifyToolStripStatusLabel.Text = "##.##.####";
             // 
             // applicationGroupBox
             // 
@@ -600,33 +627,6 @@
             this.MarkerColumn.Name = "MarkerColumn";
             this.MarkerColumn.ReadOnly = true;
             // 
-            // statusStrip
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.statusStrip, 2);
-            this.statusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.userModifyToolStripStatusLabel,
-            this.dateModifyToolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 790);
-            this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip.Size = new System.Drawing.Size(1344, 25);
-            this.statusStrip.TabIndex = 6;
-            this.statusStrip.Text = "statusStrip1";
-            // 
-            // userModifyToolStripStatusLabel
-            // 
-            this.userModifyToolStripStatusLabel.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
-            this.userModifyToolStripStatusLabel.Name = "userModifyToolStripStatusLabel";
-            this.userModifyToolStripStatusLabel.Size = new System.Drawing.Size(143, 20);
-            this.userModifyToolStripStatusLabel.Text = "####_Surname A.A.";
-            // 
-            // dateModifyToolStripStatusLabel
-            // 
-            this.dateModifyToolStripStatusLabel.Name = "dateModifyToolStripStatusLabel";
-            this.dateModifyToolStripStatusLabel.Size = new System.Drawing.Size(87, 20);
-            this.dateModifyToolStripStatusLabel.Text = "##.##.####";
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoSize = true;
@@ -639,16 +639,6 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(666, 33);
             this.flowLayoutPanel1.TabIndex = 7;
             // 
-            // applyButton
-            // 
-            this.applyButton.AutoSize = true;
-            this.applyButton.Location = new System.Drawing.Point(483, 3);
-            this.applyButton.Name = "applyButton";
-            this.applyButton.Size = new System.Drawing.Size(91, 27);
-            this.applyButton.TabIndex = 0;
-            this.applyButton.Text = "Применить";
-            this.applyButton.UseVisualStyleBackColor = true;
-            // 
             // cancelButton
             // 
             this.cancelButton.AutoSize = true;
@@ -658,6 +648,16 @@
             this.cancelButton.TabIndex = 1;
             this.cancelButton.Text = "Отменить";
             this.cancelButton.UseVisualStyleBackColor = true;
+            // 
+            // applyButton
+            // 
+            this.applyButton.AutoSize = true;
+            this.applyButton.Location = new System.Drawing.Point(483, 3);
+            this.applyButton.Name = "applyButton";
+            this.applyButton.Size = new System.Drawing.Size(91, 27);
+            this.applyButton.TabIndex = 0;
+            this.applyButton.Text = "Применить";
+            this.applyButton.UseVisualStyleBackColor = true;
             // 
             // DceSelectionForm
             // 
@@ -670,6 +670,8 @@
             this.Text = "DceSelectionForm";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.statusStrip.ResumeLayout(false);
+            this.statusStrip.PerformLayout();
             this.applicationGroupBox.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
@@ -681,8 +683,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.dceGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dceDataGridView)).EndInit();
-            this.statusStrip.ResumeLayout(false);
-            this.statusStrip.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dceBindingSource)).EndInit();

@@ -119,7 +119,7 @@
             this.tableLayoutPanel1.Controls.Add(this.dceGroupBox, 0, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 111F));
@@ -136,9 +136,9 @@
             this.applicationGroupBox.Controls.Add(this.tableLayoutPanel2);
             this.applicationGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.applicationGroupBox.Location = new System.Drawing.Point(4, 4);
-            this.applicationGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.applicationGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.applicationGroupBox.Name = "applicationGroupBox";
-            this.applicationGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.applicationGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.applicationGroupBox.Size = new System.Drawing.Size(1336, 103);
             this.applicationGroupBox.TabIndex = 0;
             this.applicationGroupBox.TabStop = false;
@@ -167,7 +167,7 @@
             this.tableLayoutPanel2.Controls.Add(this.textBox6, 5, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 19);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
@@ -239,7 +239,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(4, 51);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(123, 22);
@@ -248,7 +248,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(136, 51);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(123, 22);
@@ -258,7 +258,7 @@
             // 
             this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox3.Location = new System.Drawing.Point(268, 51);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(589, 22);
@@ -267,7 +267,7 @@
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(865, 51);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(123, 22);
@@ -276,7 +276,7 @@
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(997, 51);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(123, 22);
@@ -286,7 +286,7 @@
             // 
             this.textBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox6.Location = new System.Drawing.Point(1129, 51);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(195, 22);
@@ -299,7 +299,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 115);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1336, 52);
             this.flowLayoutPanel1.TabIndex = 1;
@@ -307,7 +307,7 @@
             // exitButton
             // 
             this.exitButton.Location = new System.Drawing.Point(1232, 4);
-            this.exitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(4);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(100, 28);
             this.exitButton.TabIndex = 1;
@@ -317,7 +317,7 @@
             // changeButton
             // 
             this.changeButton.Location = new System.Drawing.Point(1124, 4);
-            this.changeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.changeButton.Margin = new System.Windows.Forms.Padding(4);
             this.changeButton.Name = "changeButton";
             this.changeButton.Size = new System.Drawing.Size(100, 28);
             this.changeButton.TabIndex = 0;
@@ -329,9 +329,9 @@
             this.productsGroupBox.Controls.Add(this.tableLayoutPanel3);
             this.productsGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.productsGroupBox.Location = new System.Drawing.Point(4, 175);
-            this.productsGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productsGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.productsGroupBox.Name = "productsGroupBox";
-            this.productsGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productsGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.productsGroupBox.Size = new System.Drawing.Size(1336, 289);
             this.productsGroupBox.TabIndex = 3;
             this.productsGroupBox.TabStop = false;
@@ -354,7 +354,7 @@
             this.tableLayoutPanel3.Controls.Add(this.flowLayoutPanel2, 5, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 19);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -423,7 +423,7 @@
             this.productsDataGridView.DataSource = this.productsBindingSource;
             this.productsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.productsDataGridView.Location = new System.Drawing.Point(4, 4);
-            this.productsDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productsDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.productsDataGridView.Name = "productsDataGridView";
             this.productsDataGridView.ReadOnly = true;
             this.productsDataGridView.RowHeadersVisible = false;
@@ -488,7 +488,7 @@
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(973, 228);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(351, 34);
             this.flowLayoutPanel2.TabIndex = 10;
@@ -496,7 +496,7 @@
             // deleteButton
             // 
             this.deleteButton.Location = new System.Drawing.Point(247, 4);
-            this.deleteButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.deleteButton.Margin = new System.Windows.Forms.Padding(4);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(100, 28);
             this.deleteButton.TabIndex = 1;
@@ -506,7 +506,7 @@
             // addButton
             // 
             this.addButton.Location = new System.Drawing.Point(139, 4);
-            this.addButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addButton.Margin = new System.Windows.Forms.Padding(4);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(100, 28);
             this.addButton.TabIndex = 0;
@@ -518,9 +518,9 @@
             this.dceGroupBox.Controls.Add(this.tableLayoutPanel4);
             this.dceGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dceGroupBox.Location = new System.Drawing.Point(4, 472);
-            this.dceGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dceGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.dceGroupBox.Name = "dceGroupBox";
-            this.dceGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dceGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.dceGroupBox.Size = new System.Drawing.Size(1336, 289);
             this.dceGroupBox.TabIndex = 4;
             this.dceGroupBox.TabStop = false;
@@ -547,7 +547,7 @@
             this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel3, 7, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(4, 19);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -570,7 +570,7 @@
             this.dceDataGridView.DataSource = this.dceBindingSource;
             this.dceDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dceDataGridView.Location = new System.Drawing.Point(4, 4);
-            this.dceDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dceDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.dceDataGridView.Name = "dceDataGridView";
             this.dceDataGridView.ReadOnly = true;
             this.dceDataGridView.RowHeadersVisible = false;
@@ -625,7 +625,7 @@
             this.colorPanel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.colorPanel.BackColor = System.Drawing.Color.LightCyan;
             this.colorPanel.Location = new System.Drawing.Point(4, 232);
-            this.colorPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.colorPanel.Margin = new System.Windows.Forms.Padding(4);
             this.colorPanel.Name = "colorPanel";
             this.colorPanel.Size = new System.Drawing.Size(53, 25);
             this.colorPanel.TabIndex = 2;
@@ -681,7 +681,7 @@
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(1075, 228);
-            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(249, 34);
             this.flowLayoutPanel3.TabIndex = 10;
@@ -689,7 +689,7 @@
             // changeDceButton
             // 
             this.changeDceButton.Location = new System.Drawing.Point(145, 4);
-            this.changeDceButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.changeDceButton.Margin = new System.Windows.Forms.Padding(4);
             this.changeDceButton.Name = "changeDceButton";
             this.changeDceButton.Size = new System.Drawing.Size(100, 28);
             this.changeDceButton.TabIndex = 0;
@@ -699,7 +699,7 @@
             // deleteDceButton
             // 
             this.deleteDceButton.Location = new System.Drawing.Point(37, 4);
-            this.deleteDceButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.deleteDceButton.Margin = new System.Windows.Forms.Padding(4);
             this.deleteDceButton.Name = "deleteDceButton";
             this.deleteDceButton.Size = new System.Drawing.Size(100, 28);
             this.deleteDceButton.TabIndex = 1;
@@ -799,7 +799,7 @@
             this.ClientSize = new System.Drawing.Size(1344, 815);
             this.Controls.Add(this.userModifyStatusStrip);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DetailedApplicationForm";
             this.Text = "Подробный просмотр заявки";
             this.tableLayoutPanel1.ResumeLayout(false);

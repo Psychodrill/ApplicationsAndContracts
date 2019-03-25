@@ -95,11 +95,11 @@
     <Compile Include="Views\ApplicationsAndContractsForm.Designer.cs">
       <DependentUpon>ApplicationsAndContractsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\ChangingApplicationForm.cs">
+    <Compile Include="Views\ApplicationChangingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\ChangingApplicationForm.Designer.cs">
-      <DependentUpon>ChangingApplicationForm.cs</DependentUpon>
+    <Compile Include="Views\ApplicationChangingForm.Designer.cs">
+      <DependentUpon>ApplicationChangingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\DceSelectionForm.cs">
       <SubType>Form</SubType>
@@ -126,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ApplicationsAndContractsForm.resx">
       <DependentUpon>ApplicationsAndContractsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ApplicationChangingForm.resx">
+      <DependentUpon>ApplicationChangingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\DceSelectionForm.resx">
       <DependentUpon>DceSelectionForm.cs</DependentUpon>
