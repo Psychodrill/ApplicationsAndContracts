@@ -92,9 +92,9 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(939, 481);
@@ -105,11 +105,11 @@
             this.tableLayoutPanel1.SetColumnSpan(this.orderGroupBox, 2);
             this.orderGroupBox.Controls.Add(this.tableLayoutPanel3);
             this.orderGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.orderGroupBox.Location = new System.Drawing.Point(4, 109);
+            this.orderGroupBox.Location = new System.Drawing.Point(4, 113);
             this.orderGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.orderGroupBox.Name = "orderGroupBox";
             this.orderGroupBox.Padding = new System.Windows.Forms.Padding(4);
-            this.orderGroupBox.Size = new System.Drawing.Size(931, 97);
+            this.orderGroupBox.Size = new System.Drawing.Size(931, 101);
             this.orderGroupBox.TabIndex = 3;
             this.orderGroupBox.TabStop = false;
             this.orderGroupBox.Text = "Заказ";
@@ -140,7 +140,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(923, 74);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(923, 78);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // textBox8
@@ -252,7 +252,7 @@
             this.applicationGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.applicationGroupBox.Name = "applicationGroupBox";
             this.applicationGroupBox.Padding = new System.Windows.Forms.Padding(4);
-            this.applicationGroupBox.Size = new System.Drawing.Size(931, 97);
+            this.applicationGroupBox.Size = new System.Drawing.Size(931, 101);
             this.applicationGroupBox.TabIndex = 1;
             this.applicationGroupBox.TabStop = false;
             this.applicationGroupBox.Text = "Заявка";
@@ -289,7 +289,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(923, 74);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(923, 78);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // contractDateLlabel
@@ -435,9 +435,9 @@
             this.tableLayoutPanel1.SetColumnSpan(this.dceGroupBox, 2);
             this.dceGroupBox.Controls.Add(this.dceDataGridView);
             this.dceGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dceGroupBox.Location = new System.Drawing.Point(3, 213);
+            this.dceGroupBox.Location = new System.Drawing.Point(3, 221);
             this.dceGroupBox.Name = "dceGroupBox";
-            this.dceGroupBox.Size = new System.Drawing.Size(933, 205);
+            this.dceGroupBox.Size = new System.Drawing.Size(933, 196);
             this.dceGroupBox.TabIndex = 6;
             this.dceGroupBox.TabStop = false;
             this.dceGroupBox.Text = "ДСЕ";
@@ -462,7 +462,7 @@
             this.dceDataGridView.RowTemplate.Height = 24;
             this.dceDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dceDataGridView.ShowRowErrors = false;
-            this.dceDataGridView.Size = new System.Drawing.Size(927, 184);
+            this.dceDataGridView.Size = new System.Drawing.Size(927, 175);
             this.dceDataGridView.TabIndex = 0;
             // 
             // DceNumberColumn
@@ -504,9 +504,9 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.statusStrip1, 2);
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Location = new System.Drawing.Point(0, 460);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 459);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(939, 21);
+            this.statusStrip1.Size = new System.Drawing.Size(939, 22);
             this.statusStrip1.TabIndex = 7;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -517,7 +517,7 @@
             this.flowLayoutPanel1.Controls.Add(this.applyButton);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(472, 424);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(472, 423);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(464, 33);
             this.flowLayoutPanel1.TabIndex = 8;

@@ -343,14 +343,14 @@
             this.applyButton.Text = "Применить";
             this.applyButton.UseVisualStyleBackColor = true;
             // 
-            // ChangingApplicationForm
+            // ApplicationChangingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(406, 355);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "ChangingApplicationForm";
+            this.Name = "ApplicationChangingForm";
             this.Text = "Изменение заявки";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
