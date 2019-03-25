@@ -107,6 +107,12 @@
     <Compile Include="Views\ApplicationChangingForm.Designer.cs">
       <DependentUpon>ApplicationChangingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ContactInfoAddingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ContactInfoAddingForm.Designer.cs">
+      <DependentUpon>ContactInfoAddingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ContactInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ApplicationChangingForm.resx">
       <DependentUpon>ApplicationChangingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ContactInfoAddingForm.resx">
+      <DependentUpon>ContactInfoAddingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ContactInfoForm.resx">
       <DependentUpon>ContactInfoForm.cs</DependentUpon>

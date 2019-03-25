@@ -38,16 +38,21 @@
             this.Phone1Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Phone2Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FaxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.userModifyStatusStrip = new System.Windows.Forms.StatusStrip();
+            this.userModifyToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.userModifyValueToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.dateModifyToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.dateModifyValueToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dceDataGridView)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            this.userModifyStatusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -58,8 +63,8 @@
             this.tableLayoutPanel1.Controls.Add(this.searchingLineTextBox, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.searchingButton, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.statusStrip1, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.userModifyStatusStrip, 0, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -161,16 +166,6 @@
             this.FaxColumn.Name = "FaxColumn";
             this.FaxColumn.ReadOnly = true;
             // 
-            // statusStrip1
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.statusStrip1, 2);
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Location = new System.Drawing.Point(0, 493);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(787, 22);
-            this.statusStrip1.TabIndex = 3;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.button1);
@@ -224,6 +219,49 @@
             this.button4.Text = "Добавить";
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // userModifyStatusStrip
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.userModifyStatusStrip, 2);
+            this.userModifyStatusStrip.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userModifyStatusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.userModifyStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.userModifyToolStripStatusLabel,
+            this.userModifyValueToolStripStatusLabel,
+            this.dateModifyToolStripStatusLabel,
+            this.dateModifyValueToolStripStatusLabel});
+            this.userModifyStatusStrip.Location = new System.Drawing.Point(0, 485);
+            this.userModifyStatusStrip.Name = "userModifyStatusStrip";
+            this.userModifyStatusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.userModifyStatusStrip.Size = new System.Drawing.Size(787, 30);
+            this.userModifyStatusStrip.TabIndex = 7;
+            this.userModifyStatusStrip.Text = "statusStrip1";
+            // 
+            // userModifyToolStripStatusLabel
+            // 
+            this.userModifyToolStripStatusLabel.Name = "userModifyToolStripStatusLabel";
+            this.userModifyToolStripStatusLabel.Size = new System.Drawing.Size(164, 25);
+            this.userModifyToolStripStatusLabel.Text = "Автор корректировки:";
+            // 
+            // userModifyValueToolStripStatusLabel
+            // 
+            this.userModifyValueToolStripStatusLabel.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
+            this.userModifyValueToolStripStatusLabel.Name = "userModifyValueToolStripStatusLabel";
+            this.userModifyValueToolStripStatusLabel.Size = new System.Drawing.Size(143, 25);
+            this.userModifyValueToolStripStatusLabel.Text = "####_Surname A.A.";
+            // 
+            // dateModifyToolStripStatusLabel
+            // 
+            this.dateModifyToolStripStatusLabel.Name = "dateModifyToolStripStatusLabel";
+            this.dateModifyToolStripStatusLabel.Size = new System.Drawing.Size(154, 25);
+            this.dateModifyToolStripStatusLabel.Text = "Дата корректировки:";
+            // 
+            // dateModifyValueToolStripStatusLabel
+            // 
+            this.dateModifyValueToolStripStatusLabel.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
+            this.dateModifyValueToolStripStatusLabel.Name = "dateModifyValueToolStripStatusLabel";
+            this.dateModifyValueToolStripStatusLabel.Size = new System.Drawing.Size(91, 25);
+            this.dateModifyValueToolStripStatusLabel.Text = "##.##.####";
+            // 
             // ContactInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -238,6 +276,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dceDataGridView)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            this.userModifyStatusStrip.ResumeLayout(false);
+            this.userModifyStatusStrip.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -254,11 +294,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Phone2Column;
         private System.Windows.Forms.DataGridViewTextBoxColumn FaxColumn;
         private System.Windows.Forms.Button searchingButton;
-        private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.StatusStrip userModifyStatusStrip;
+        private System.Windows.Forms.ToolStripStatusLabel userModifyToolStripStatusLabel;
+        private System.Windows.Forms.ToolStripStatusLabel userModifyValueToolStripStatusLabel;
+        private System.Windows.Forms.ToolStripStatusLabel dateModifyToolStripStatusLabel;
+        private System.Windows.Forms.ToolStripStatusLabel dateModifyValueToolStripStatusLabel;
     }
 }
