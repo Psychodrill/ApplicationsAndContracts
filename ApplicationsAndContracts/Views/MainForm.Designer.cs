@@ -122,7 +122,7 @@
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 1, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 160F));
@@ -138,9 +138,9 @@
             this.supplyGroupBox.Controls.Add(this.tableLayoutPanel5);
             this.supplyGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.supplyGroupBox.Location = new System.Drawing.Point(4, 4);
-            this.supplyGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.supplyGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.supplyGroupBox.Name = "supplyGroupBox";
-            this.supplyGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.supplyGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.supplyGroupBox.Size = new System.Drawing.Size(812, 152);
             this.supplyGroupBox.TabIndex = 6;
             this.supplyGroupBox.TabStop = false;
@@ -157,7 +157,7 @@
             this.tableLayoutPanel5.Controls.Add(this.orderGroupBox, 2, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(4, 19);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -170,9 +170,9 @@
             this.supplierGroupBox.Controls.Add(this.tableLayoutPanel2);
             this.supplierGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.supplierGroupBox.Location = new System.Drawing.Point(4, 4);
-            this.supplierGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.supplierGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.supplierGroupBox.Name = "supplierGroupBox";
-            this.supplierGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.supplierGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel5.SetRowSpan(this.supplierGroupBox, 2);
             this.supplierGroupBox.Size = new System.Drawing.Size(394, 122);
             this.supplierGroupBox.TabIndex = 0;
@@ -192,7 +192,7 @@
             this.tableLayoutPanel2.Controls.Add(this.contractDateLabel, 1, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 19);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -207,7 +207,7 @@
             this.tableLayoutPanel2.SetColumnSpan(this.supplierNameTextBox, 2);
             this.supplierNameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.supplierNameTextBox.Location = new System.Drawing.Point(4, 21);
-            this.supplierNameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.supplierNameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.supplierNameTextBox.Name = "supplierNameTextBox";
             this.supplierNameTextBox.Size = new System.Drawing.Size(378, 22);
             this.supplierNameTextBox.TabIndex = 0;
@@ -216,7 +216,7 @@
             // 
             this.contractNumberTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contractNumberTextBox.Location = new System.Drawing.Point(4, 68);
-            this.contractNumberTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contractNumberTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.contractNumberTextBox.Name = "contractNumberTextBox";
             this.contractNumberTextBox.Size = new System.Drawing.Size(185, 22);
             this.contractNumberTextBox.TabIndex = 2;
@@ -248,7 +248,7 @@
             // 
             this.contractDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.contractDateTimePicker.Location = new System.Drawing.Point(197, 68);
-            this.contractDateTimePicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contractDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.contractDateTimePicker.Name = "contractDateTimePicker";
             this.contractDateTimePicker.Size = new System.Drawing.Size(176, 22);
             this.contractDateTimePicker.TabIndex = 10;
@@ -269,9 +269,9 @@
             this.applicationGroupBox.Controls.Add(this.tableLayoutPanel6);
             this.applicationGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.applicationGroupBox.Location = new System.Drawing.Point(406, 4);
-            this.applicationGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.applicationGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.applicationGroupBox.Name = "applicationGroupBox";
-            this.applicationGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.applicationGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel5.SetRowSpan(this.applicationGroupBox, 2);
             this.applicationGroupBox.Size = new System.Drawing.Size(193, 122);
             this.applicationGroupBox.TabIndex = 2;
@@ -288,7 +288,7 @@
             this.tableLayoutPanel6.Controls.Add(this.applicationDateTimePicker, 0, 3);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(4, 19);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 4;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -323,7 +323,7 @@
             // applicationNumberTextBox
             // 
             this.applicationNumberTextBox.Location = new System.Drawing.Point(4, 21);
-            this.applicationNumberTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.applicationNumberTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.applicationNumberTextBox.Name = "applicationNumberTextBox";
             this.applicationNumberTextBox.Size = new System.Drawing.Size(175, 22);
             this.applicationNumberTextBox.TabIndex = 4;
@@ -332,7 +332,7 @@
             // 
             this.applicationDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.applicationDateTimePicker.Location = new System.Drawing.Point(4, 68);
-            this.applicationDateTimePicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.applicationDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.applicationDateTimePicker.Name = "applicationDateTimePicker";
             this.applicationDateTimePicker.Size = new System.Drawing.Size(175, 22);
             this.applicationDateTimePicker.TabIndex = 9;
@@ -343,9 +343,9 @@
             this.orderGroupBox.Controls.Add(this.tableLayoutPanel4);
             this.orderGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.orderGroupBox.Location = new System.Drawing.Point(607, 4);
-            this.orderGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.orderGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.orderGroupBox.Name = "orderGroupBox";
-            this.orderGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.orderGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel5.SetRowSpan(this.orderGroupBox, 2);
             this.orderGroupBox.Size = new System.Drawing.Size(193, 122);
             this.orderGroupBox.TabIndex = 2;
@@ -362,7 +362,7 @@
             this.tableLayoutPanel4.Controls.Add(this.orderLabel, 0, 2);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(4, 19);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 4;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -386,7 +386,7 @@
             // gkTextBox
             // 
             this.gkTextBox.Location = new System.Drawing.Point(4, 21);
-            this.gkTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gkTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.gkTextBox.Name = "gkTextBox";
             this.gkTextBox.Size = new System.Drawing.Size(177, 22);
             this.gkTextBox.TabIndex = 1;
@@ -394,7 +394,7 @@
             // orderTextBox
             // 
             this.orderTextBox.Location = new System.Drawing.Point(4, 68);
-            this.orderTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.orderTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.orderTextBox.Name = "orderTextBox";
             this.orderTextBox.Size = new System.Drawing.Size(177, 22);
             this.orderTextBox.TabIndex = 2;
@@ -416,9 +416,9 @@
             this.productionGroupBox.Controls.Add(this.tableLayoutPanel8);
             this.productionGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.productionGroupBox.Location = new System.Drawing.Point(4, 250);
-            this.productionGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productionGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.productionGroupBox.Name = "productionGroupBox";
-            this.productionGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productionGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.productionGroupBox.Size = new System.Drawing.Size(812, 201);
             this.productionGroupBox.TabIndex = 7;
             this.productionGroupBox.TabStop = false;
@@ -432,7 +432,7 @@
             this.tableLayoutPanel8.Controls.Add(this.dceGroupBox, 1, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(4, 19);
-            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 2;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -445,9 +445,9 @@
             this.productGroupBox.Controls.Add(this.tableLayoutPanel3);
             this.productGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.productGroupBox.Location = new System.Drawing.Point(4, 4);
-            this.productGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.productGroupBox.Name = "productGroupBox";
-            this.productGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel8.SetRowSpan(this.productGroupBox, 2);
             this.productGroupBox.Size = new System.Drawing.Size(394, 170);
             this.productGroupBox.TabIndex = 3;
@@ -470,7 +470,7 @@
             this.tableLayoutPanel3.Controls.Add(this.productAliasLabel, 0, 2);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 19);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 6;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -487,7 +487,7 @@
             this.productNumberComboBox.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.productNumberComboBox.FormattingEnabled = true;
             this.productNumberComboBox.Location = new System.Drawing.Point(4, 21);
-            this.productNumberComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productNumberComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.productNumberComboBox.Name = "productNumberComboBox";
             this.productNumberComboBox.Size = new System.Drawing.Size(185, 24);
             this.productNumberComboBox.TabIndex = 4;
@@ -519,7 +519,7 @@
             this.tableLayoutPanel3.SetColumnSpan(this.productNameTextBox, 2);
             this.productNameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.productNameTextBox.Location = new System.Drawing.Point(4, 117);
-            this.productNameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productNameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.productNameTextBox.Name = "productNameTextBox";
             this.productNameTextBox.Size = new System.Drawing.Size(378, 22);
             this.productNameTextBox.TabIndex = 3;
@@ -529,7 +529,7 @@
             this.tableLayoutPanel3.SetColumnSpan(this.productAliasTextBox, 2);
             this.productAliasTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.productAliasTextBox.Location = new System.Drawing.Point(4, 70);
-            this.productAliasTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productAliasTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.productAliasTextBox.Name = "productAliasTextBox";
             this.productAliasTextBox.Size = new System.Drawing.Size(378, 22);
             this.productAliasTextBox.TabIndex = 2;
@@ -551,7 +551,7 @@
             this.productIndexComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.productIndexComboBox.FormattingEnabled = true;
             this.productIndexComboBox.Location = new System.Drawing.Point(197, 21);
-            this.productIndexComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productIndexComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.productIndexComboBox.Name = "productIndexComboBox";
             this.productIndexComboBox.Size = new System.Drawing.Size(185, 24);
             this.productIndexComboBox.TabIndex = 5;
@@ -572,9 +572,9 @@
             this.dceGroupBox.Controls.Add(this.tableLayoutPanel7);
             this.dceGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dceGroupBox.Location = new System.Drawing.Point(406, 4);
-            this.dceGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dceGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.dceGroupBox.Name = "dceGroupBox";
-            this.dceGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dceGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel8.SetRowSpan(this.dceGroupBox, 2);
             this.dceGroupBox.Size = new System.Drawing.Size(394, 170);
             this.dceGroupBox.TabIndex = 4;
@@ -594,7 +594,7 @@
             this.tableLayoutPanel7.Controls.Add(this.dceAliasLabel, 0, 2);
             this.tableLayoutPanel7.Controls.Add(this.dceNameLabel, 0, 4);
             this.tableLayoutPanel7.Location = new System.Drawing.Point(4, 20);
-            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 6;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -610,7 +610,7 @@
             // 
             this.tableLayoutPanel7.SetColumnSpan(this.dceNameTextBox, 3);
             this.dceNameTextBox.Location = new System.Drawing.Point(4, 115);
-            this.dceNameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dceNameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.dceNameTextBox.Name = "dceNameTextBox";
             this.dceNameTextBox.Size = new System.Drawing.Size(376, 22);
             this.dceNameTextBox.TabIndex = 2;
@@ -620,7 +620,7 @@
             this.dceAliasTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.tableLayoutPanel7.SetColumnSpan(this.dceAliasTextBox, 3);
             this.dceAliasTextBox.Location = new System.Drawing.Point(4, 68);
-            this.dceAliasTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dceAliasTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.dceAliasTextBox.Name = "dceAliasTextBox";
             this.dceAliasTextBox.Size = new System.Drawing.Size(376, 22);
             this.dceAliasTextBox.TabIndex = 3;
@@ -629,7 +629,7 @@
             // 
             this.dceNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dceNumberTextBox.Location = new System.Drawing.Point(4, 21);
-            this.dceNumberTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dceNumberTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.dceNumberTextBox.Name = "dceNumberTextBox";
             this.dceNumberTextBox.Size = new System.Drawing.Size(119, 22);
             this.dceNumberTextBox.TabIndex = 1;
@@ -675,7 +675,7 @@
             this.flowLayoutPanel2.Controls.Add(this.departmentGroupBox);
             this.flowLayoutPanel2.Controls.Add(this.applicationStatusGroupBox);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(4, 164);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(812, 78);
             this.flowLayoutPanel2.TabIndex = 9;
@@ -684,9 +684,9 @@
             // 
             this.departmentGroupBox.Controls.Add(this.tableLayoutPanel9);
             this.departmentGroupBox.Location = new System.Drawing.Point(4, 4);
-            this.departmentGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.departmentGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.departmentGroupBox.Name = "departmentGroupBox";
-            this.departmentGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.departmentGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.departmentGroupBox.Size = new System.Drawing.Size(131, 75);
             this.departmentGroupBox.TabIndex = 8;
             this.departmentGroupBox.TabStop = false;
@@ -700,7 +700,7 @@
             this.tableLayoutPanel9.Controls.Add(this.departmentLabel, 0, 0);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel9.Location = new System.Drawing.Point(4, 19);
-            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 2;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -712,7 +712,7 @@
             // 
             this.departmentComboBox.FormattingEnabled = true;
             this.departmentComboBox.Location = new System.Drawing.Point(4, 21);
-            this.departmentComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.departmentComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.departmentComboBox.Name = "departmentComboBox";
             this.departmentComboBox.Size = new System.Drawing.Size(113, 24);
             this.departmentComboBox.TabIndex = 0;
@@ -734,9 +734,9 @@
             this.applicationStatusGroupBox.Controls.Add(this.performedApplicationsRadioButton);
             this.applicationStatusGroupBox.Controls.Add(this.allApplicationsRadioButton);
             this.applicationStatusGroupBox.Location = new System.Drawing.Point(143, 4);
-            this.applicationStatusGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.applicationStatusGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.applicationStatusGroupBox.Name = "applicationStatusGroupBox";
-            this.applicationStatusGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.applicationStatusGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.applicationStatusGroupBox.Size = new System.Drawing.Size(288, 75);
             this.applicationStatusGroupBox.TabIndex = 9;
             this.applicationStatusGroupBox.TabStop = false;
@@ -746,7 +746,7 @@
             // 
             this.notPerformedApplicationsRadioButton.AutoSize = true;
             this.notPerformedApplicationsRadioButton.Location = new System.Drawing.Point(137, 23);
-            this.notPerformedApplicationsRadioButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.notPerformedApplicationsRadioButton.Margin = new System.Windows.Forms.Padding(4);
             this.notPerformedApplicationsRadioButton.Name = "notPerformedApplicationsRadioButton";
             this.notPerformedApplicationsRadioButton.Size = new System.Drawing.Size(138, 21);
             this.notPerformedApplicationsRadioButton.TabIndex = 2;
@@ -757,7 +757,7 @@
             // 
             this.performedApplicationsRadioButton.AutoSize = true;
             this.performedApplicationsRadioButton.Location = new System.Drawing.Point(8, 47);
-            this.performedApplicationsRadioButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.performedApplicationsRadioButton.Margin = new System.Windows.Forms.Padding(4);
             this.performedApplicationsRadioButton.Name = "performedApplicationsRadioButton";
             this.performedApplicationsRadioButton.Size = new System.Drawing.Size(122, 21);
             this.performedApplicationsRadioButton.TabIndex = 1;
@@ -769,7 +769,7 @@
             this.allApplicationsRadioButton.AutoSize = true;
             this.allApplicationsRadioButton.Checked = true;
             this.allApplicationsRadioButton.Location = new System.Drawing.Point(8, 23);
-            this.allApplicationsRadioButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.allApplicationsRadioButton.Margin = new System.Windows.Forms.Padding(4);
             this.allApplicationsRadioButton.Name = "allApplicationsRadioButton";
             this.allApplicationsRadioButton.Size = new System.Drawing.Size(102, 21);
             this.allApplicationsRadioButton.TabIndex = 0;
@@ -785,7 +785,7 @@
             this.flowLayoutPanel1.Controls.Add(this.applyButton);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(414, 489);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(402, 76);
             this.flowLayoutPanel1.TabIndex = 5;
@@ -853,7 +853,7 @@
             this.ClientSize = new System.Drawing.Size(820, 569);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Заявки и договоры";

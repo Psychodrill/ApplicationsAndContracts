@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace ApplicationsAndContracts.Views
 {
-    public partial class DceSelectionForm : Form
+    public partial class ChangingApplicationForm : Form
     {
-        public DceSelectionForm()
+        public ChangingApplicationForm()
         {
             InitializeComponent();
         }
-        
     }
 }

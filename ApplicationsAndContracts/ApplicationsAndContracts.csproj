@@ -95,6 +95,12 @@
     <Compile Include="Views\ApplicationsAndContractsForm.Designer.cs">
       <DependentUpon>ApplicationsAndContractsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ChangingApplicationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ChangingApplicationForm.Designer.cs">
+      <DependentUpon>ChangingApplicationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\DceSelectionForm.cs">
       <SubType>Form</SubType>
     </Compile>

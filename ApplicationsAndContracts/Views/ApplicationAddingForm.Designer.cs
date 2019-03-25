@@ -56,6 +56,7 @@
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.cancelButton = new System.Windows.Forms.Button();
             this.applyButton = new System.Windows.Forms.Button();
+            this.selectButton = new System.Windows.Forms.Button();
             this.productsGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.currentRecordNumberValueLabel = new System.Windows.Forms.Label();
@@ -95,7 +96,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.selectButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.userModifyStatusStrip.SuspendLayout();
             this.dceGroupBox.SuspendLayout();
@@ -123,18 +123,20 @@
             this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1008, 662);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1344, 815);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // userModifyStatusStrip
             // 
+            this.userModifyStatusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.userModifyStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.userModifyToolStripStatusLabel,
             this.userModifyValueToolStripStatusLabel,
@@ -146,84 +148,87 @@
             this.phoneNumber2ValueToolStripStatusLabel,
             this.faxNumberToolStripStatusLabel,
             this.faxNumberValueToolStripStatusLabel});
-            this.userModifyStatusStrip.Location = new System.Drawing.Point(0, 638);
+            this.userModifyStatusStrip.Location = new System.Drawing.Point(0, 786);
             this.userModifyStatusStrip.Name = "userModifyStatusStrip";
-            this.userModifyStatusStrip.Size = new System.Drawing.Size(1008, 24);
+            this.userModifyStatusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.userModifyStatusStrip.Size = new System.Drawing.Size(1344, 29);
             this.userModifyStatusStrip.TabIndex = 6;
             this.userModifyStatusStrip.Text = "statusStrip1";
             // 
             // userModifyToolStripStatusLabel
             // 
             this.userModifyToolStripStatusLabel.Name = "userModifyToolStripStatusLabel";
-            this.userModifyToolStripStatusLabel.Size = new System.Drawing.Size(130, 19);
+            this.userModifyToolStripStatusLabel.Size = new System.Drawing.Size(164, 24);
             this.userModifyToolStripStatusLabel.Text = "Автор корректировки:";
             // 
             // userModifyValueToolStripStatusLabel
             // 
             this.userModifyValueToolStripStatusLabel.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
             this.userModifyValueToolStripStatusLabel.Name = "userModifyValueToolStripStatusLabel";
-            this.userModifyValueToolStripStatusLabel.Size = new System.Drawing.Size(116, 19);
+            this.userModifyValueToolStripStatusLabel.Size = new System.Drawing.Size(143, 24);
             this.userModifyValueToolStripStatusLabel.Text = "####_Surname A.A.";
             // 
             // userDepartmentToolStripStatusLabel
             // 
             this.userDepartmentToolStripStatusLabel.Name = "userDepartmentToolStripStatusLabel";
-            this.userDepartmentToolStripStatusLabel.Size = new System.Drawing.Size(43, 19);
+            this.userDepartmentToolStripStatusLabel.Size = new System.Drawing.Size(53, 24);
             this.userDepartmentToolStripStatusLabel.Text = "Отдел:";
             // 
             // userDepartmentValueToolStripStatusLabel
             // 
             this.userDepartmentValueToolStripStatusLabel.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
             this.userDepartmentValueToolStripStatusLabel.Name = "userDepartmentValueToolStripStatusLabel";
-            this.userDepartmentValueToolStripStatusLabel.Size = new System.Drawing.Size(39, 19);
+            this.userDepartmentValueToolStripStatusLabel.Size = new System.Drawing.Size(49, 24);
             this.userDepartmentValueToolStripStatusLabel.Text = "####";
             // 
             // phoneNumber1ToolStripStatusLabel
             // 
             this.phoneNumber1ToolStripStatusLabel.Name = "phoneNumber1ToolStripStatusLabel";
-            this.phoneNumber1ToolStripStatusLabel.Size = new System.Drawing.Size(65, 19);
+            this.phoneNumber1ToolStripStatusLabel.Size = new System.Drawing.Size(80, 24);
             this.phoneNumber1ToolStripStatusLabel.Text = "Телефон1:";
             // 
             // phoneNumber1ValueToolStripStatusLabel
             // 
             this.phoneNumber1ValueToolStripStatusLabel.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
             this.phoneNumber1ValueToolStripStatusLabel.Name = "phoneNumber1ValueToolStripStatusLabel";
-            this.phoneNumber1ValueToolStripStatusLabel.Size = new System.Drawing.Size(60, 19);
+            this.phoneNumber1ValueToolStripStatusLabel.Size = new System.Drawing.Size(76, 24);
             this.phoneNumber1ValueToolStripStatusLabel.Text = "#######";
             // 
             // phoneNumber2ToolStripStatusLabel
             // 
             this.phoneNumber2ToolStripStatusLabel.Name = "phoneNumber2ToolStripStatusLabel";
-            this.phoneNumber2ToolStripStatusLabel.Size = new System.Drawing.Size(65, 19);
+            this.phoneNumber2ToolStripStatusLabel.Size = new System.Drawing.Size(80, 24);
             this.phoneNumber2ToolStripStatusLabel.Text = "Телефон2:";
             // 
             // phoneNumber2ValueToolStripStatusLabel
             // 
             this.phoneNumber2ValueToolStripStatusLabel.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
             this.phoneNumber2ValueToolStripStatusLabel.Name = "phoneNumber2ValueToolStripStatusLabel";
-            this.phoneNumber2ValueToolStripStatusLabel.Size = new System.Drawing.Size(60, 19);
+            this.phoneNumber2ValueToolStripStatusLabel.Size = new System.Drawing.Size(76, 24);
             this.phoneNumber2ValueToolStripStatusLabel.Text = "#######";
             // 
             // faxNumberToolStripStatusLabel
             // 
             this.faxNumberToolStripStatusLabel.Name = "faxNumberToolStripStatusLabel";
-            this.faxNumberToolStripStatusLabel.Size = new System.Drawing.Size(37, 19);
+            this.faxNumberToolStripStatusLabel.Size = new System.Drawing.Size(45, 24);
             this.faxNumberToolStripStatusLabel.Text = "Факс:";
             // 
             // faxNumberValueToolStripStatusLabel
             // 
             this.faxNumberValueToolStripStatusLabel.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
             this.faxNumberValueToolStripStatusLabel.Name = "faxNumberValueToolStripStatusLabel";
-            this.faxNumberValueToolStripStatusLabel.Size = new System.Drawing.Size(60, 19);
+            this.faxNumberValueToolStripStatusLabel.Size = new System.Drawing.Size(76, 24);
             this.faxNumberValueToolStripStatusLabel.Text = "#######";
             // 
             // dceGroupBox
             // 
             this.dceGroupBox.Controls.Add(this.tableLayoutPanel5);
             this.dceGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dceGroupBox.Location = new System.Drawing.Point(3, 405);
+            this.dceGroupBox.Location = new System.Drawing.Point(4, 499);
+            this.dceGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dceGroupBox.Name = "dceGroupBox";
-            this.dceGroupBox.Size = new System.Drawing.Size(1002, 214);
+            this.dceGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dceGroupBox.Size = new System.Drawing.Size(1336, 262);
             this.dceGroupBox.TabIndex = 5;
             this.dceGroupBox.TabStop = false;
             this.dceGroupBox.Text = "ДСЕ";
@@ -232,11 +237,11 @@
             // 
             this.tableLayoutPanel5.ColumnCount = 8;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 187F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel5.Controls.Add(this.dceDataGridView, 0, 0);
@@ -248,12 +253,13 @@
             this.tableLayoutPanel5.Controls.Add(this.currentRecordNumberValueLabel1, 5, 1);
             this.tableLayoutPanel5.Controls.Add(this.flowLayoutPanel3, 7, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(4, 19);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(996, 195);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1328, 239);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // dceDataGridView
@@ -268,11 +274,12 @@
             this.OrderedCountColumn});
             this.tableLayoutPanel5.SetColumnSpan(this.dceDataGridView, 8);
             this.dceDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dceDataGridView.Location = new System.Drawing.Point(3, 3);
+            this.dceDataGridView.Location = new System.Drawing.Point(4, 4);
+            this.dceDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dceDataGridView.Name = "dceDataGridView";
             this.dceDataGridView.ReadOnly = true;
             this.dceDataGridView.RowHeadersVisible = false;
-            this.dceDataGridView.Size = new System.Drawing.Size(990, 155);
+            this.dceDataGridView.Size = new System.Drawing.Size(1320, 189);
             this.dceDataGridView.TabIndex = 1;
             // 
             // DceNumberColumn
@@ -311,9 +318,10 @@
             // 
             this.gkLabel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.gkLabel1.AutoSize = true;
-            this.gkLabel1.Location = new System.Drawing.Point(49, 171);
+            this.gkLabel1.Location = new System.Drawing.Point(65, 209);
+            this.gkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gkLabel1.Name = "gkLabel1";
-            this.gkLabel1.Size = new System.Drawing.Size(97, 13);
+            this.gkLabel1.Size = new System.Drawing.Size(124, 17);
             this.gkLabel1.TabIndex = 4;
             this.gkLabel1.Text = "Позиция закрыта";
             // 
@@ -321,18 +329,20 @@
             // 
             this.colorPanel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.colorPanel.BackColor = System.Drawing.Color.LightCyan;
-            this.colorPanel.Location = new System.Drawing.Point(3, 168);
+            this.colorPanel.Location = new System.Drawing.Point(4, 205);
+            this.colorPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.colorPanel.Name = "colorPanel";
-            this.colorPanel.Size = new System.Drawing.Size(40, 20);
+            this.colorPanel.Size = new System.Drawing.Size(53, 25);
             this.colorPanel.TabIndex = 2;
             // 
             // recordCountLabel1
             // 
             this.recordCountLabel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.recordCountLabel1.AutoSize = true;
-            this.recordCountLabel1.Location = new System.Drawing.Point(189, 171);
+            this.recordCountLabel1.Location = new System.Drawing.Point(252, 209);
+            this.recordCountLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.recordCountLabel1.Name = "recordCountLabel1";
-            this.recordCountLabel1.Size = new System.Drawing.Size(114, 13);
+            this.recordCountLabel1.Size = new System.Drawing.Size(148, 17);
             this.recordCountLabel1.TabIndex = 5;
             this.recordCountLabel1.Text = "Количество записей:";
             // 
@@ -340,9 +350,10 @@
             // 
             this.recordCountValueLabel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.recordCountValueLabel1.AutoSize = true;
-            this.recordCountValueLabel1.Location = new System.Drawing.Point(309, 171);
+            this.recordCountValueLabel1.Location = new System.Drawing.Point(408, 209);
+            this.recordCountValueLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.recordCountValueLabel1.Name = "recordCountValueLabel1";
-            this.recordCountValueLabel1.Size = new System.Drawing.Size(13, 13);
+            this.recordCountValueLabel1.Size = new System.Drawing.Size(16, 17);
             this.recordCountValueLabel1.TabIndex = 7;
             this.recordCountValueLabel1.Text = "0";
             // 
@@ -350,9 +361,10 @@
             // 
             this.currentRecordNumberLabel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.currentRecordNumberLabel1.AutoSize = true;
-            this.currentRecordNumberLabel1.Location = new System.Drawing.Point(349, 171);
+            this.currentRecordNumberLabel1.Location = new System.Drawing.Point(461, 209);
+            this.currentRecordNumberLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.currentRecordNumberLabel1.Name = "currentRecordNumberLabel1";
-            this.currentRecordNumberLabel1.Size = new System.Drawing.Size(129, 13);
+            this.currentRecordNumberLabel1.Size = new System.Drawing.Size(165, 17);
             this.currentRecordNumberLabel1.TabIndex = 8;
             this.currentRecordNumberLabel1.Text = "Номер текущей записи:";
             // 
@@ -360,9 +372,10 @@
             // 
             this.currentRecordNumberValueLabel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.currentRecordNumberValueLabel1.AutoSize = true;
-            this.currentRecordNumberValueLabel1.Location = new System.Drawing.Point(484, 171);
+            this.currentRecordNumberValueLabel1.Location = new System.Drawing.Point(634, 209);
+            this.currentRecordNumberValueLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.currentRecordNumberValueLabel1.Name = "currentRecordNumberValueLabel1";
-            this.currentRecordNumberValueLabel1.Size = new System.Drawing.Size(13, 13);
+            this.currentRecordNumberValueLabel1.Size = new System.Drawing.Size(16, 17);
             this.currentRecordNumberValueLabel1.TabIndex = 9;
             this.currentRecordNumberValueLabel1.Text = "0";
             // 
@@ -372,36 +385,51 @@
             this.flowLayoutPanel3.Controls.Add(this.applyButton);
             this.flowLayoutPanel3.Controls.Add(this.selectButton);
             this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(704, 164);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(939, 201);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(289, 28);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(385, 34);
             this.flowLayoutPanel3.TabIndex = 10;
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(211, 3);
+            this.cancelButton.Location = new System.Drawing.Point(281, 4);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(75, 23);
+            this.cancelButton.Size = new System.Drawing.Size(100, 28);
             this.cancelButton.TabIndex = 0;
             this.cancelButton.Text = "Отменить";
             this.cancelButton.UseVisualStyleBackColor = true;
             // 
             // applyButton
             // 
-            this.applyButton.Location = new System.Drawing.Point(130, 3);
+            this.applyButton.Location = new System.Drawing.Point(173, 4);
+            this.applyButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.applyButton.Name = "applyButton";
-            this.applyButton.Size = new System.Drawing.Size(75, 23);
+            this.applyButton.Size = new System.Drawing.Size(100, 28);
             this.applyButton.TabIndex = 1;
             this.applyButton.Text = "Применить";
             this.applyButton.UseVisualStyleBackColor = true;
+            // 
+            // selectButton
+            // 
+            this.selectButton.Location = new System.Drawing.Point(65, 4);
+            this.selectButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.selectButton.Name = "selectButton";
+            this.selectButton.Size = new System.Drawing.Size(100, 28);
+            this.selectButton.TabIndex = 2;
+            this.selectButton.Text = "Выбрать ДСЕ";
+            this.selectButton.UseVisualStyleBackColor = true;
             // 
             // productsGroupBox
             // 
             this.productsGroupBox.Controls.Add(this.tableLayoutPanel4);
             this.productsGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.productsGroupBox.Location = new System.Drawing.Point(3, 185);
+            this.productsGroupBox.Location = new System.Drawing.Point(4, 229);
+            this.productsGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.productsGroupBox.Name = "productsGroupBox";
-            this.productsGroupBox.Size = new System.Drawing.Size(1002, 214);
+            this.productsGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productsGroupBox.Size = new System.Drawing.Size(1336, 262);
             this.productsGroupBox.TabIndex = 4;
             this.productsGroupBox.TabStop = false;
             this.productsGroupBox.Text = "Изделия";
@@ -410,9 +438,9 @@
             // 
             this.tableLayoutPanel4.ColumnCount = 6;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel4.Controls.Add(this.currentRecordNumberValueLabel, 3, 1);
@@ -421,21 +449,23 @@
             this.tableLayoutPanel4.Controls.Add(this.recordCountLabel, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.productsDataGridView, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(4, 19);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(996, 195);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1328, 239);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // currentRecordNumberValueLabel
             // 
             this.currentRecordNumberValueLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.currentRecordNumberValueLabel.AutoSize = true;
-            this.currentRecordNumberValueLabel.Location = new System.Drawing.Point(298, 182);
+            this.currentRecordNumberValueLabel.Location = new System.Drawing.Point(386, 222);
+            this.currentRecordNumberValueLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.currentRecordNumberValueLabel.Name = "currentRecordNumberValueLabel";
-            this.currentRecordNumberValueLabel.Size = new System.Drawing.Size(13, 13);
+            this.currentRecordNumberValueLabel.Size = new System.Drawing.Size(16, 17);
             this.currentRecordNumberValueLabel.TabIndex = 9;
             this.currentRecordNumberValueLabel.Text = "0";
             // 
@@ -443,9 +473,10 @@
             // 
             this.currentRecordNumberLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.currentRecordNumberLabel.AutoSize = true;
-            this.currentRecordNumberLabel.Location = new System.Drawing.Point(163, 182);
+            this.currentRecordNumberLabel.Location = new System.Drawing.Point(213, 222);
+            this.currentRecordNumberLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.currentRecordNumberLabel.Name = "currentRecordNumberLabel";
-            this.currentRecordNumberLabel.Size = new System.Drawing.Size(129, 13);
+            this.currentRecordNumberLabel.Size = new System.Drawing.Size(165, 17);
             this.currentRecordNumberLabel.TabIndex = 8;
             this.currentRecordNumberLabel.Text = "Номер текущей записи:";
             // 
@@ -453,9 +484,10 @@
             // 
             this.recordCountValuelabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.recordCountValuelabel.AutoSize = true;
-            this.recordCountValuelabel.Location = new System.Drawing.Point(123, 182);
+            this.recordCountValuelabel.Location = new System.Drawing.Point(160, 222);
+            this.recordCountValuelabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.recordCountValuelabel.Name = "recordCountValuelabel";
-            this.recordCountValuelabel.Size = new System.Drawing.Size(13, 13);
+            this.recordCountValuelabel.Size = new System.Drawing.Size(16, 17);
             this.recordCountValuelabel.TabIndex = 7;
             this.recordCountValuelabel.Text = "0";
             // 
@@ -463,9 +495,10 @@
             // 
             this.recordCountLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.recordCountLabel.AutoSize = true;
-            this.recordCountLabel.Location = new System.Drawing.Point(3, 182);
+            this.recordCountLabel.Location = new System.Drawing.Point(4, 222);
+            this.recordCountLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.recordCountLabel.Name = "recordCountLabel";
-            this.recordCountLabel.Size = new System.Drawing.Size(114, 13);
+            this.recordCountLabel.Size = new System.Drawing.Size(148, 17);
             this.recordCountLabel.TabIndex = 5;
             this.recordCountLabel.Text = "Количество записей:";
             // 
@@ -483,11 +516,12 @@
             this.SetBeforeColumn});
             this.tableLayoutPanel4.SetColumnSpan(this.productsDataGridView, 6);
             this.productsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.productsDataGridView.Location = new System.Drawing.Point(3, 3);
+            this.productsDataGridView.Location = new System.Drawing.Point(4, 4);
+            this.productsDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.productsDataGridView.Name = "productsDataGridView";
             this.productsDataGridView.ReadOnly = true;
             this.productsDataGridView.RowHeadersVisible = false;
-            this.productsDataGridView.Size = new System.Drawing.Size(990, 176);
+            this.productsDataGridView.Size = new System.Drawing.Size(1320, 214);
             this.productsDataGridView.TabIndex = 2;
             // 
             // OrderColumn
@@ -544,9 +578,11 @@
             // applicationGroupBox
             // 
             this.applicationGroupBox.Controls.Add(this.tableLayoutPanel2);
-            this.applicationGroupBox.Location = new System.Drawing.Point(3, 3);
+            this.applicationGroupBox.Location = new System.Drawing.Point(4, 4);
+            this.applicationGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.applicationGroupBox.Name = "applicationGroupBox";
-            this.applicationGroupBox.Size = new System.Drawing.Size(361, 60);
+            this.applicationGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.applicationGroupBox.Size = new System.Drawing.Size(481, 74);
             this.applicationGroupBox.TabIndex = 0;
             this.applicationGroupBox.TabStop = false;
             this.applicationGroupBox.Text = "Реквизиты заявки";
@@ -564,37 +600,41 @@
             this.tableLayoutPanel2.Controls.Add(this.departmentLabel, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.comboBox1, 2, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 19);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(355, 41);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(473, 51);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // applicationNumberLabel
             // 
             this.applicationNumberLabel.AutoSize = true;
-            this.applicationNumberLabel.Location = new System.Drawing.Point(3, 0);
+            this.applicationNumberLabel.Location = new System.Drawing.Point(4, 0);
+            this.applicationNumberLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.applicationNumberLabel.Name = "applicationNumberLabel";
-            this.applicationNumberLabel.Size = new System.Drawing.Size(80, 13);
+            this.applicationNumberLabel.Size = new System.Drawing.Size(100, 17);
             this.applicationNumberLabel.TabIndex = 0;
             this.applicationNumberLabel.Text = "Номер заявки";
             // 
             // textBox1
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(3, 16);
+            this.textBox1.Location = new System.Drawing.Point(4, 21);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(118, 20);
+            this.textBox1.Size = new System.Drawing.Size(157, 22);
             this.textBox1.TabIndex = 3;
             // 
             // applicationDateLabel
             // 
             this.applicationDateLabel.AutoSize = true;
-            this.applicationDateLabel.Location = new System.Drawing.Point(127, 0);
+            this.applicationDateLabel.Location = new System.Drawing.Point(169, 0);
+            this.applicationDateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.applicationDateLabel.Name = "applicationDateLabel";
-            this.applicationDateLabel.Size = new System.Drawing.Size(72, 13);
+            this.applicationDateLabel.Size = new System.Drawing.Size(91, 17);
             this.applicationDateLabel.TabIndex = 1;
             this.applicationDateLabel.Text = "Дата заявки";
             // 
@@ -602,17 +642,19 @@
             // 
             this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(127, 16);
+            this.dateTimePicker1.Location = new System.Drawing.Point(169, 21);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(118, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(157, 22);
             this.dateTimePicker1.TabIndex = 4;
             // 
             // departmentLabel
             // 
             this.departmentLabel.AutoSize = true;
-            this.departmentLabel.Location = new System.Drawing.Point(251, 0);
+            this.departmentLabel.Location = new System.Drawing.Point(334, 0);
+            this.departmentLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.departmentLabel.Name = "departmentLabel";
-            this.departmentLabel.Size = new System.Drawing.Size(38, 13);
+            this.departmentLabel.Size = new System.Drawing.Size(50, 17);
             this.departmentLabel.TabIndex = 2;
             this.departmentLabel.Text = "Отдел";
             // 
@@ -620,18 +662,21 @@
             // 
             this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(251, 16);
+            this.comboBox1.Location = new System.Drawing.Point(334, 21);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(101, 21);
+            this.comboBox1.Size = new System.Drawing.Size(135, 24);
             this.comboBox1.TabIndex = 5;
             // 
             // groupBox1
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.groupBox1, 2);
             this.groupBox1.Controls.Add(this.tableLayoutPanel3);
-            this.groupBox1.Location = new System.Drawing.Point(3, 69);
+            this.groupBox1.Location = new System.Drawing.Point(4, 86);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1002, 110);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(1336, 135);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Поставщик";
@@ -660,87 +705,97 @@
             this.tableLayoutPanel3.Controls.Add(this.label7, 2, 2);
             this.tableLayoutPanel3.Controls.Add(this.label8, 3, 2);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 19);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 4;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(996, 91);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1328, 112);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // textBox2
             // 
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.Location = new System.Drawing.Point(3, 25);
+            this.textBox2.Location = new System.Drawing.Point(4, 32);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(243, 20);
+            this.textBox2.Size = new System.Drawing.Size(324, 22);
             this.textBox2.TabIndex = 0;
             // 
             // textBox3
             // 
             this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox3.Location = new System.Drawing.Point(252, 25);
+            this.textBox3.Location = new System.Drawing.Point(336, 32);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(243, 20);
+            this.textBox3.Size = new System.Drawing.Size(324, 22);
             this.textBox3.TabIndex = 1;
             // 
             // textBox4
             // 
             this.textBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox4.Location = new System.Drawing.Point(501, 25);
+            this.textBox4.Location = new System.Drawing.Point(668, 32);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(243, 20);
+            this.textBox4.Size = new System.Drawing.Size(324, 22);
             this.textBox4.TabIndex = 2;
             // 
             // textBox5
             // 
             this.textBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox5.Location = new System.Drawing.Point(750, 25);
+            this.textBox5.Location = new System.Drawing.Point(1000, 32);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(243, 20);
+            this.textBox5.Size = new System.Drawing.Size(324, 22);
             this.textBox5.TabIndex = 3;
             // 
             // textBox6
             // 
             this.textBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox6.Location = new System.Drawing.Point(3, 69);
+            this.textBox6.Location = new System.Drawing.Point(4, 88);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(243, 20);
+            this.textBox6.Size = new System.Drawing.Size(324, 22);
             this.textBox6.TabIndex = 4;
             // 
             // textBox7
             // 
             this.textBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox7.Location = new System.Drawing.Point(252, 69);
+            this.textBox7.Location = new System.Drawing.Point(336, 88);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(243, 20);
+            this.textBox7.Size = new System.Drawing.Size(324, 22);
             this.textBox7.TabIndex = 5;
             // 
             // textBox8
             // 
             this.textBox8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox8.Location = new System.Drawing.Point(501, 69);
+            this.textBox8.Location = new System.Drawing.Point(668, 88);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(243, 20);
+            this.textBox8.Size = new System.Drawing.Size(324, 22);
             this.textBox8.TabIndex = 6;
             // 
             // textBox9
             // 
             this.textBox9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox9.Location = new System.Drawing.Point(750, 69);
+            this.textBox9.Location = new System.Drawing.Point(1000, 88);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(243, 20);
+            this.textBox9.Size = new System.Drawing.Size(324, 22);
             this.textBox9.TabIndex = 7;
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 9);
+            this.label1.Location = new System.Drawing.Point(4, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 13);
+            this.label1.Size = new System.Drawing.Size(106, 17);
             this.label1.TabIndex = 8;
             this.label1.Text = "Наименование";
             // 
@@ -748,9 +803,10 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(252, 9);
+            this.label2.Location = new System.Drawing.Point(336, 11);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 13);
+            this.label2.Size = new System.Drawing.Size(121, 17);
             this.label2.TabIndex = 9;
             this.label2.Text = "Код организации";
             // 
@@ -758,9 +814,10 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(501, 9);
+            this.label3.Location = new System.Drawing.Point(668, 11);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 13);
+            this.label3.Size = new System.Drawing.Size(115, 17);
             this.label3.TabIndex = 10;
             this.label3.Text = "Номер договора";
             // 
@@ -768,9 +825,10 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(750, 9);
+            this.label4.Location = new System.Drawing.Point(1000, 11);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 13);
+            this.label4.Size = new System.Drawing.Size(106, 17);
             this.label4.TabIndex = 11;
             this.label4.Text = "Дата договора";
             // 
@@ -778,9 +836,10 @@
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 53);
+            this.label5.Location = new System.Drawing.Point(4, 67);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 13);
+            this.label5.Size = new System.Drawing.Size(107, 17);
             this.label5.TabIndex = 12;
             this.label5.Text = "Новый договор";
             // 
@@ -788,9 +847,10 @@
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(252, 53);
+            this.label6.Location = new System.Drawing.Point(336, 67);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(20, 13);
+            this.label6.Size = new System.Drawing.Size(25, 17);
             this.label6.TabIndex = 13;
             this.label6.Text = "ГК";
             // 
@@ -798,9 +858,10 @@
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(501, 53);
+            this.label7.Location = new System.Drawing.Point(668, 67);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(74, 13);
+            this.label7.Size = new System.Drawing.Size(95, 17);
             this.label7.TabIndex = 14;
             this.label7.Text = "Исполнитель";
             // 
@@ -808,27 +869,20 @@
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(750, 53);
+            this.label8.Location = new System.Drawing.Point(1000, 67);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(109, 13);
+            this.label8.Size = new System.Drawing.Size(142, 17);
             this.label8.TabIndex = 15;
             this.label8.Text = "Контактные данные";
             // 
-            // selectButton
-            // 
-            this.selectButton.Location = new System.Drawing.Point(49, 3);
-            this.selectButton.Name = "selectButton";
-            this.selectButton.Size = new System.Drawing.Size(75, 23);
-            this.selectButton.TabIndex = 2;
-            this.selectButton.Text = "Выбрать ДСЕ";
-            this.selectButton.UseVisualStyleBackColor = true;
-            // 
             // ApplicationAddingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 662);
+            this.ClientSize = new System.Drawing.Size(1344, 815);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ApplicationAddingForm";
             this.Text = "Добавление заявки";
             this.tableLayoutPanel1.ResumeLayout(false);
