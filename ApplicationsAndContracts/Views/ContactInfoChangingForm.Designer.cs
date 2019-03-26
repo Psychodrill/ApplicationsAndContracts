@@ -1,6 +1,6 @@
 ﻿namespace ApplicationsAndContracts.Views
 {
-    partial class ContactInfoAddingForm
+    partial class ContactInfoChangingForm
     {
         /// <summary>
         /// Required designer variable.
@@ -87,7 +87,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(394, 335);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel1.TabIndex = 1;
             // 
             // tabNumberLabel
             // 
@@ -103,6 +103,7 @@
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox1.Location = new System.Drawing.Point(3, 50);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(191, 22);
             this.textBox1.TabIndex = 1;
             // 
@@ -138,6 +139,7 @@
             this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox3.Location = new System.Drawing.Point(3, 140);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(191, 22);
             this.textBox3.TabIndex = 5;
             // 
@@ -237,15 +239,15 @@
             this.maskedTextBox3.Size = new System.Drawing.Size(191, 22);
             this.maskedTextBox3.TabIndex = 16;
             // 
-            // ContactInfoAddingForm
+            // ContactInfoChangingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(394, 335);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MinimumSize = new System.Drawing.Size(412, 380);
-            this.Name = "ContactInfoAddingForm";
-            this.Text = "Добавление контактных данных";
+            this.Name = "ContactInfoChangingForm";
+            this.Text = "Изменение контактных данных";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -272,7 +274,7 @@
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
     }
 }

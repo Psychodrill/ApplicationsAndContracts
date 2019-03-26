@@ -65,6 +65,7 @@
             this.ProductIndexColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductAliasColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dceGroupBox = new System.Windows.Forms.GroupBox();
             this.dceDataGridView = new System.Windows.Forms.DataGridView();
             this.DceNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,7 +76,6 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.cancelButton = new System.Windows.Forms.Button();
             this.applyButton = new System.Windows.Forms.Button();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.applicationGroupBox.SuspendLayout();
@@ -84,10 +84,10 @@
             this.tableLayoutPanel3.SuspendLayout();
             this.productGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.dceGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dceDataGridView)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dceBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -659,11 +659,11 @@
             this.tableLayoutPanel3.PerformLayout();
             this.productGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.productDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             this.dceGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dceDataGridView)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dceBindingSource)).EndInit();
             this.ResumeLayout(false);
 
