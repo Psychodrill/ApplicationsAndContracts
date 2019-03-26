@@ -124,11 +124,12 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 160F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 86F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 209F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(820, 569);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -246,11 +247,12 @@
             // 
             // contractDateTimePicker
             // 
+            this.contractDateTimePicker.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contractDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.contractDateTimePicker.Location = new System.Drawing.Point(197, 68);
             this.contractDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.contractDateTimePicker.Name = "contractDateTimePicker";
-            this.contractDateTimePicker.Size = new System.Drawing.Size(176, 22);
+            this.contractDateTimePicker.Size = new System.Drawing.Size(185, 22);
             this.contractDateTimePicker.TabIndex = 10;
             // 
             // contractDateLabel
@@ -322,19 +324,21 @@
             // 
             // applicationNumberTextBox
             // 
+            this.applicationNumberTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.applicationNumberTextBox.Location = new System.Drawing.Point(4, 21);
             this.applicationNumberTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.applicationNumberTextBox.Name = "applicationNumberTextBox";
-            this.applicationNumberTextBox.Size = new System.Drawing.Size(175, 22);
+            this.applicationNumberTextBox.Size = new System.Drawing.Size(177, 22);
             this.applicationNumberTextBox.TabIndex = 4;
             // 
             // applicationDateTimePicker
             // 
+            this.applicationDateTimePicker.Dock = System.Windows.Forms.DockStyle.Fill;
             this.applicationDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.applicationDateTimePicker.Location = new System.Drawing.Point(4, 68);
             this.applicationDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.applicationDateTimePicker.Name = "applicationDateTimePicker";
-            this.applicationDateTimePicker.Size = new System.Drawing.Size(175, 22);
+            this.applicationDateTimePicker.Size = new System.Drawing.Size(177, 22);
             this.applicationDateTimePicker.TabIndex = 9;
             // 
             // orderGroupBox
@@ -385,6 +389,7 @@
             // 
             // gkTextBox
             // 
+            this.gkTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gkTextBox.Location = new System.Drawing.Point(4, 21);
             this.gkTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.gkTextBox.Name = "gkTextBox";
@@ -393,6 +398,7 @@
             // 
             // orderTextBox
             // 
+            this.orderTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.orderTextBox.Location = new System.Drawing.Point(4, 68);
             this.orderTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.orderTextBox.Name = "orderTextBox";
@@ -593,7 +599,8 @@
             this.tableLayoutPanel7.Controls.Add(this.dceNumberLabel, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.dceAliasLabel, 0, 2);
             this.tableLayoutPanel7.Controls.Add(this.dceNameLabel, 0, 4);
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(4, 20);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(4, 19);
             this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 6;
@@ -603,35 +610,36 @@
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(385, 148);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(386, 147);
             this.tableLayoutPanel7.TabIndex = 4;
             // 
             // dceNameTextBox
             // 
             this.tableLayoutPanel7.SetColumnSpan(this.dceNameTextBox, 3);
+            this.dceNameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dceNameTextBox.Location = new System.Drawing.Point(4, 115);
             this.dceNameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.dceNameTextBox.Name = "dceNameTextBox";
-            this.dceNameTextBox.Size = new System.Drawing.Size(376, 22);
+            this.dceNameTextBox.Size = new System.Drawing.Size(378, 22);
             this.dceNameTextBox.TabIndex = 2;
             // 
             // dceAliasTextBox
             // 
-            this.dceAliasTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.tableLayoutPanel7.SetColumnSpan(this.dceAliasTextBox, 3);
+            this.dceAliasTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dceAliasTextBox.Location = new System.Drawing.Point(4, 68);
             this.dceAliasTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.dceAliasTextBox.Name = "dceAliasTextBox";
-            this.dceAliasTextBox.Size = new System.Drawing.Size(376, 22);
+            this.dceAliasTextBox.Size = new System.Drawing.Size(378, 22);
             this.dceAliasTextBox.TabIndex = 3;
             // 
             // dceNumberTextBox
             // 
-            this.dceNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.dceNumberTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dceNumberTextBox.Location = new System.Drawing.Point(4, 21);
             this.dceNumberTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.dceNumberTextBox.Name = "dceNumberTextBox";
-            this.dceNumberTextBox.Size = new System.Drawing.Size(119, 22);
+            this.dceNumberTextBox.Size = new System.Drawing.Size(120, 22);
             this.dceNumberTextBox.TabIndex = 1;
             // 
             // dceNumberLabel
@@ -674,6 +682,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.flowLayoutPanel2, 2);
             this.flowLayoutPanel2.Controls.Add(this.departmentGroupBox);
             this.flowLayoutPanel2.Controls.Add(this.applicationStatusGroupBox);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(4, 164);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
@@ -779,19 +788,21 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.flowLayoutPanel1.AutoSize = true;
             this.flowLayoutPanel1.Controls.Add(this.cancelButton);
             this.flowLayoutPanel1.Controls.Add(this.clearButton);
             this.flowLayoutPanel1.Controls.Add(this.applyButton);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(414, 489);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(414, 459);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(402, 76);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(402, 40);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
             // cancelButton
             // 
+            this.cancelButton.AutoSize = true;
             this.cancelButton.Location = new System.Drawing.Point(295, 6);
             this.cancelButton.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.cancelButton.Name = "cancelButton";
@@ -802,6 +813,7 @@
             // 
             // clearButton
             // 
+            this.clearButton.AutoSize = true;
             this.clearButton.Location = new System.Drawing.Point(181, 6);
             this.clearButton.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.clearButton.Name = "clearButton";
@@ -812,6 +824,7 @@
             // 
             // applyButton
             // 
+            this.applyButton.AutoSize = true;
             this.applyButton.Location = new System.Drawing.Point(67, 6);
             this.applyButton.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.applyButton.Name = "applyButton";
@@ -858,6 +871,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Заявки и договоры";
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.supplyGroupBox.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.supplierGroupBox.ResumeLayout(false);
@@ -884,6 +898,7 @@
             this.applicationStatusGroupBox.ResumeLayout(false);
             this.applicationStatusGroupBox.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
             this.ResumeLayout(false);
