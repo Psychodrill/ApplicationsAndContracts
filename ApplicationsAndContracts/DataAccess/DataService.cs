@@ -25,11 +25,11 @@ namespace ApplicationsAndContracts.DataAccess
             return result;
         }
 
-        public DataRow GetSupplierList()
+        public IEnumerable<DataRow> GetSupplierList()
         {
             var parameters = new SqlParameter[0];
             var rows = SqlHelper.ExecuteSqlCommand(SQL.GetSupplierList, parameters);
-            var result =  rows.AsEnumerable().FirstOrDefault();
+            var result =  rows.AsEnumerable();
             return result;
         }
     }
