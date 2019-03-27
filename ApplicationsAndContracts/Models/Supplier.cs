@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ApplicationsAndContracts.Models
 {
-    class Supplier
+    public class Supplier
     {
         public static Supplier CreateFrom (DataRow row)
         {
