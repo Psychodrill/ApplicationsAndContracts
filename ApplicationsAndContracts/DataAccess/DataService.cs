@@ -16,6 +16,18 @@ namespace ApplicationsAndContracts.DataAccess
             //SqlHelper.Initialize("880_SQL", "MTS_1");
             SqlHelper.Initialize("RESERV", "MTS_1_Test");
         }
+        //public delegate IEnumerable<DataRow> GetListWithoutParameter(string functionName);
+
+        //GetListWithoutParameter ma = delegate (string functionName)
+        //{
+        //{
+        //    var parameters = new SqlParameter[0];
+        //    var rows = SqlHelper.ExecuteSqlCommand(SQL., parameters);
+        //    var result = rows.AsEnumerable();
+        //    return result; ;
+        //}
+
+
 
         public DataRow GetSDS()
         {
@@ -30,6 +42,14 @@ namespace ApplicationsAndContracts.DataAccess
             var parameters = new SqlParameter[0];
             var rows = SqlHelper.ExecuteSqlCommand(SQL.GetSupplierList, parameters);
             var result =  rows.AsEnumerable();
+            return result;
+        }
+
+        public IEnumerable<DataRow> GetContractList()
+        {
+            var parameters = new SqlParameter[0];
+            var rows = SqlHelper.ExecuteSqlCommand(SQL.GetSupplierList, parameters);
+            var result = rows.AsEnumerable();
             return result;
         }
     }

@@ -16,6 +16,7 @@ namespace ApplicationsAndContracts.Models
         public static SupplierList GetSupplierList()
         {
             var rows = new DataService().GetSupplierList();
+
             var list = rows.Select(row => Supplier.CreateFrom(row)).ToList();
             var result = new SupplierList(list);
             return result;

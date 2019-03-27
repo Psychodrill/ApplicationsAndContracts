@@ -18,12 +18,6 @@ namespace ApplicationsAndContracts.Models
             return result;
         }
 
-        //public Supplier GetSupplier(string supplierName)
-        //{
-        //    if (supplierName == string.Empty) return Supplier.Empty();
-        //    var result = this.FirstOrDefault(x => x.SupplierName == supplierName);
-        //    return result;
-        //}
 
 
         public Supplier()
