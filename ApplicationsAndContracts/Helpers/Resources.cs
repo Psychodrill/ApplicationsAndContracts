@@ -63,5 +63,7 @@ namespace ApplicationsAndContracts.Helpers
         public const string ChangeQueryText = "Измените запрос и повторите ввод.";
 
         public static string EmptySearchingCriteriaText = "Отсутствуют критерии поиска.";
+
+        public static string SupplierIsOutOfRangeText = "Поставщик отсутствует в списке поставщиков";
     }
 }

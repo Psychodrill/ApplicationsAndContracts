@@ -5,10 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using ApplicationsAndContracts.DataAccess;
-
-
-
-
+using ApplicationsAndContracts.Helpers;
 
 
 namespace ApplicationsAndContracts.Models
@@ -20,10 +17,30 @@ namespace ApplicationsAndContracts.Models
         {
             var rows = new DataService().GetSupplierList();
             var list = rows.Select(row => Supplier.CreateFrom(row)).ToList();
-            var result = new SupplierList();
+            var result = new SupplierList(list);
             return result;
         }
-        private SupplierList() : base()
+        public Supplier GetSupplier(string supplierName)
+        {
+            if (supplierName == string.Empty) return Supplier.Empty();
+            var result = this.FirstOrDefault(x => x.SupplierName == supplierName);
+            if (result!= null) return result;
+            throw new ApplicationException(string.Format(Resources.SupplierIsOutOfRangeText, supplierName));
+        }
+
+
+        public Supplier TryGetSupplier (string supplierName)
+        {
+            try
+            {
+                return GetSupplier(supplierName);
+            }
+            catch (ApplicationException)
+            {
+                return Supplier.Empty();
+            }
+        }
+        private SupplierList(IEnumerable<Supplier> items) : base(items)
         {
 
         }

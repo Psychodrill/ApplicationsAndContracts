@@ -18,9 +18,24 @@ namespace ApplicationsAndContracts.Models
             return result;
         }
 
+        //public Supplier GetSupplier(string supplierName)
+        //{
+        //    if (supplierName == string.Empty) return Supplier.Empty();
+        //    var result = this.FirstOrDefault(x => x.SupplierName == supplierName);
+        //    return result;
+        //}
+
+
         public Supplier()
         {
 
+        }
+
+        public static Supplier Empty()
+        {
+            var result = new Supplier();
+            result.SupplierName = string.Empty;
+            return result; 
         }
 
         public int SupplierCode { get; private set; }

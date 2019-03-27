@@ -205,6 +205,8 @@
             // 
             // supplierNameTextBox
             // 
+            this.supplierNameTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.supplierNameTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.tableLayoutPanel2.SetColumnSpan(this.supplierNameTextBox, 2);
             this.supplierNameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.supplierNameTextBox.Location = new System.Drawing.Point(4, 21);
