@@ -83,6 +83,7 @@
     <Compile Include="DataAccess\SqlHelper.cs" />
     <Compile Include="Helpers\Methods.cs" />
     <Compile Include="Helpers\Resources.cs" />
+    <Compile Include="Models\Supplier.cs" />
     <Compile Include="Views\ApplicationAddingForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -14,5 +14,12 @@ namespace ApplicationsAndContracts.DataAccess
                        [UserDepartment],
                        [Date]
                   FROM [dbo].[ft_WorkWithDce_GetSDS]()";
+
+        internal const string GetSupplierList = @"
+                SELECT [SupplierCode],
+                       [SupplierName]
+                  FROM [dbo].[ft_ApplicationsAndContracts_GetSupplierList]()";
     }
+
+
 }
