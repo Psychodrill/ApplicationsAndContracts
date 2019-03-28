@@ -18,16 +18,15 @@ namespace ApplicationsAndContracts.Models
             return result;
         }
 
-        Contract()
+        public Contract()
         {
-
         }
         
         public static Contract Empty()
         {
             var result = new Contract();
             result.ContractNumber = string.Empty;
-            result.ContractDate = string.Empty;
+            //result.ContractDate = string.Empty;
             return result;
         }
 

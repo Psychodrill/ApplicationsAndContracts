@@ -70,7 +70,7 @@ namespace ApplicationsAndContracts
         {
             var converter = new StrConverter();
             var contractNumber = converter.TryParse(this.contractNumberTextBox.Text);
-            var currentContract = this.contractList.TryGetContract(contractNumber);
+            var currentContract =  contractList.TryGetContract(contractNumber);
         }
 
         private void supplierNameTextBox_Validating(object sender, CancelEventArgs e)

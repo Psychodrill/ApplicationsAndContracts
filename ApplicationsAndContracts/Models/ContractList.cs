@@ -35,16 +35,15 @@ namespace ApplicationsAndContracts.Models
             try
             {
                return GetContract(contractNumber);
-
             }
-            catch (ApplicationException )
+            catch (ApplicationException)
             {
                 return Contract.Empty();
             }
         }
 
 
-        public ContractList(IEnumerable<Contract> collection) : base(collection)
+        private ContractList(IEnumerable<Contract> collection) : base(collection)
         {
         }
 

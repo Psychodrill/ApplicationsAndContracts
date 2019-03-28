@@ -37,7 +37,7 @@ namespace ApplicationsAndContracts.DataAccess
         public IEnumerable<DataRow> GetContractList()
         {
             var parameters = new SqlParameter[0];
-            var rows = SqlHelper.ExecuteSqlCommand(SQL.GetSupplierList, parameters);
+            var rows = SqlHelper.ExecuteSqlCommand(SQL.GetContractList, parameters);
             var result = rows.AsEnumerable();
             return result;
         }
