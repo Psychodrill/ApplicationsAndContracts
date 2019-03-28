@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace ApplicationsAndContracts.DataAccess
 {
-    class SQL
+     class SQL
     {
+
         internal const string GetSDS = @"
                 SELECT [UserRole],
                        [UserName],
@@ -21,8 +23,10 @@ namespace ApplicationsAndContracts.DataAccess
                   FROM [dbo].[ft_ApplicationsAndContracts_GetSupplierList]()";
         internal const string GetContractList = @"
                 SELECT [ConttractId],
-                       [ContractNumber]
+                       [ContractNumber],
+                       [ContractDate]
                   FROM [dbo].[ft_ApplicationsAndContracts_GetContractList]()";
+    
     }
 
 

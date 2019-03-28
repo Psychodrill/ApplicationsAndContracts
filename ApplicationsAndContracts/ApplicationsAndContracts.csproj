@@ -86,6 +86,8 @@
     <Compile Include="DataAccess\SqlHelper.cs" />
     <Compile Include="Helpers\Methods.cs" />
     <Compile Include="Helpers\Resources.cs" />
+    <Compile Include="Models\Contract.cs" />
+    <Compile Include="Models\ContractList.cs" />
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Models\SupplierList.cs" />
     <Compile Include="Views\ApplicationAddingForm.cs">

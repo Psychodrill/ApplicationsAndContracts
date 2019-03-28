@@ -217,6 +217,8 @@
             // 
             // contractNumberTextBox
             // 
+            this.contractNumberTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.contractNumberTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.contractNumberTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contractNumberTextBox.Location = new System.Drawing.Point(4, 68);
             this.contractNumberTextBox.Margin = new System.Windows.Forms.Padding(4);
