@@ -14,7 +14,7 @@ namespace ApplicationsAndContracts.Models
             var result = new Contract();
             result.ContractId = row.Field<int>("ContractId");
             result.ContractNumber = row.Field<string>("ContractNumber");
-            result.ContractDate = row.Field<string>("ContractDate");
+            result.ContractDate = row.Field<DateTime>("ContractDate");
             return result;
         }
 
@@ -26,7 +26,7 @@ namespace ApplicationsAndContracts.Models
         {
             var result = new Contract();
             result.ContractNumber = string.Empty;
-            //result.ContractDate = string.Empty;
+            result.ContractDate = DateTime.MinValue;
             return result;
         }
 
@@ -34,8 +34,8 @@ namespace ApplicationsAndContracts.Models
 
 
         public int ContractId { get; private set; }
-        public string ContractNumber { get; private set; }  
-        public string ContractDate { get; private set; }
+        public string ContractNumber { get; private set; }
+        public DateTime ContractDate { get; private set; }
 
     }
 }

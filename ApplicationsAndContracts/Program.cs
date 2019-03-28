@@ -4,13 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ApplicationsAndContracts.Helpers;
+using ApplicationsAndContracts.Models;
 
 
 namespace ApplicationsAndContracts
 {
     static class Program
     {
-        //public static SDS SDS { get; private set}
+        public static SDS SDS { get; private set; }
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

@@ -37,7 +37,6 @@
             this.contractNumberTextBox = new System.Windows.Forms.TextBox();
             this.supplierNameLabel = new System.Windows.Forms.Label();
             this.contractNumberLabel = new System.Windows.Forms.Label();
-            this.contractDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.contractDateLabel = new System.Windows.Forms.Label();
             this.applicationGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
@@ -87,6 +86,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.userModifyToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.dateModifyToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.contractDateComboBox = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.supplyGroupBox.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -189,8 +189,8 @@
             this.tableLayoutPanel2.Controls.Add(this.contractNumberTextBox, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.supplierNameLabel, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.contractNumberLabel, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.contractDateTimePicker, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.contractDateLabel, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.contractDateComboBox, 1, 3);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 19);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
@@ -248,16 +248,6 @@
             this.contractNumberLabel.Size = new System.Drawing.Size(90, 17);
             this.contractNumberLabel.TabIndex = 4;
             this.contractNumberLabel.Text = "№ договора:";
-            // 
-            // contractDateTimePicker
-            // 
-            this.contractDateTimePicker.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contractDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.contractDateTimePicker.Location = new System.Drawing.Point(197, 68);
-            this.contractDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
-            this.contractDateTimePicker.Name = "contractDateTimePicker";
-            this.contractDateTimePicker.Size = new System.Drawing.Size(185, 22);
-            this.contractDateTimePicker.TabIndex = 10;
             // 
             // contractDateLabel
             // 
@@ -863,6 +853,17 @@
             this.dateModifyToolStripStatusLabel.Size = new System.Drawing.Size(87, 24);
             this.dateModifyToolStripStatusLabel.Text = "##.##.####";
             // 
+            // contractDateComboBox
+            // 
+            this.contractDateComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.contractDateComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contractDateComboBox.FormatString = "d";
+            this.contractDateComboBox.FormattingEnabled = true;
+            this.contractDateComboBox.Location = new System.Drawing.Point(196, 67);
+            this.contractDateComboBox.Name = "contractDateComboBox";
+            this.contractDateComboBox.Size = new System.Drawing.Size(187, 24);
+            this.contractDateComboBox.TabIndex = 6;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -957,7 +958,6 @@
         private System.Windows.Forms.GroupBox departmentGroupBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.ComboBox departmentComboBox;
-        private System.Windows.Forms.DateTimePicker contractDateTimePicker;
         private System.Windows.Forms.DateTimePicker applicationDateTimePicker;
         private System.Windows.Forms.ToolStripStatusLabel userModifyToolStripStatusLabel;
         private System.Windows.Forms.ToolStripStatusLabel dateModifyToolStripStatusLabel;
@@ -971,6 +971,7 @@
         private System.Windows.Forms.Button applyButton;
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.Button cancelButton;
+        private System.Windows.Forms.ComboBox contractDateComboBox;
     }
 }
 

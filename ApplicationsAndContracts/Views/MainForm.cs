@@ -26,7 +26,7 @@ namespace ApplicationsAndContracts
         private string supplierName;
         //private string contractId;
         private string contractNumber;
-        //private string contractDate;
+        private DateTime contractDate;
         public MainForm()
         {
             this.dataService = new DataService();
@@ -107,6 +107,7 @@ namespace ApplicationsAndContracts
             this.supplierNameTextBox.AutoCompleteCustomSource.AddRange(this.supplierList.Select(x => x.SupplierName.Trim()).ToArray());
             this.contractList = ContractList.GetContractList();
             this.contractNumberTextBox.AutoCompleteCustomSource.AddRange(this.contractList.Select(x => x.ContractNumber.Trim()).ToArray());
+            //this.contractDateComboBox.DataSource = this.contractList.GetContractNumberList();
         }
 
 

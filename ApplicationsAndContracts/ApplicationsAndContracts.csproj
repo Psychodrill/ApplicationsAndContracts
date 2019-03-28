@@ -37,6 +37,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -88,6 +89,7 @@
     <Compile Include="Helpers\Resources.cs" />
     <Compile Include="Models\Contract.cs" />
     <Compile Include="Models\ContractList.cs" />
+    <Compile Include="Models\SDS.cs" />
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Models\SupplierList.cs" />
     <Compile Include="Views\ApplicationAddingForm.cs">
