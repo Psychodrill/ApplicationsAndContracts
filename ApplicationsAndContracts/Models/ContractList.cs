@@ -28,6 +28,12 @@ namespace ApplicationsAndContracts.Models
             throw new ApplicationException(string.Format(Resources.ContractIsOutOfRangeText, contractNumber));
         }
 
+        public List<DateTime> GetContractDateList()
+        {
+            var result = this.Select(x => x.ContractDate).Distinct().OrderBy(x => x).ToList();
+            return result;
+        }
+
 
 
         public Contract TryGetContract (string contractNumber)

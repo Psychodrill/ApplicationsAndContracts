@@ -34,7 +34,7 @@ namespace ApplicationsAndContracts.Models
 
 
         public int ContractId { get; private set; }
-        public string ContractNumber { get; private set; }
+        public string ContractNumber { get;  private set; }
         public DateTime ContractDate { get; private set; }
 
     }

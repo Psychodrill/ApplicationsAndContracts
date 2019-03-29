@@ -38,6 +38,7 @@
             this.supplierNameLabel = new System.Windows.Forms.Label();
             this.contractNumberLabel = new System.Windows.Forms.Label();
             this.contractDateLabel = new System.Windows.Forms.Label();
+            this.contractDateComboBox = new System.Windows.Forms.ComboBox();
             this.applicationGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.applicationNumberLabel = new System.Windows.Forms.Label();
@@ -86,7 +87,6 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.userModifyToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.dateModifyToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.contractDateComboBox = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.supplyGroupBox.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -259,6 +259,17 @@
             this.contractDateLabel.Size = new System.Drawing.Size(110, 17);
             this.contractDateLabel.TabIndex = 5;
             this.contractDateLabel.Text = "Дата договора:";
+            // 
+            // contractDateComboBox
+            // 
+            this.contractDateComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.contractDateComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contractDateComboBox.FormatString = "d";
+            this.contractDateComboBox.FormattingEnabled = true;
+            this.contractDateComboBox.Location = new System.Drawing.Point(196, 67);
+            this.contractDateComboBox.Name = "contractDateComboBox";
+            this.contractDateComboBox.Size = new System.Drawing.Size(187, 24);
+            this.contractDateComboBox.TabIndex = 6;
             // 
             // applicationGroupBox
             // 
@@ -852,17 +863,6 @@
             this.dateModifyToolStripStatusLabel.Name = "dateModifyToolStripStatusLabel";
             this.dateModifyToolStripStatusLabel.Size = new System.Drawing.Size(87, 24);
             this.dateModifyToolStripStatusLabel.Text = "##.##.####";
-            // 
-            // contractDateComboBox
-            // 
-            this.contractDateComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.contractDateComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contractDateComboBox.FormatString = "d";
-            this.contractDateComboBox.FormattingEnabled = true;
-            this.contractDateComboBox.Location = new System.Drawing.Point(196, 67);
-            this.contractDateComboBox.Name = "contractDateComboBox";
-            this.contractDateComboBox.Size = new System.Drawing.Size(187, 24);
-            this.contractDateComboBox.TabIndex = 6;
             // 
             // MainForm
             // 
