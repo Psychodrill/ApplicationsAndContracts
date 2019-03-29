@@ -26,7 +26,14 @@ namespace ApplicationsAndContracts.DataAccess
                        [ContractNumber],
                        [ContractDate]
                   FROM [dbo].[ft_ApplicationsAndContracts_GetContractList]()";
-    
+
+        internal const string GetApplicationList = @"
+                SELECT [ApplicationNumber],
+                       [ApplicationDate],
+                       [ApplicationStatus]
+                  FROM [dbo].[ft_ApplicationsAndContracts_GetApplicationList]()";
+
+
     }
 
 

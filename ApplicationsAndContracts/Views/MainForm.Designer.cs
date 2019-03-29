@@ -44,7 +44,6 @@
             this.applicationNumberLabel = new System.Windows.Forms.Label();
             this.applicationsDateLabel = new System.Windows.Forms.Label();
             this.applicationNumberTextBox = new System.Windows.Forms.TextBox();
-            this.applicationDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.orderGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.gkLabel = new System.Windows.Forms.Label();
@@ -87,6 +86,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.userModifyToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.dateModifyToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.applicationDateComboBox = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.supplyGroupBox.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -262,6 +262,7 @@
             // 
             // contractDateComboBox
             // 
+            this.contractDateComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.contractDateComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.contractDateComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contractDateComboBox.FormatString = "d";
@@ -292,7 +293,7 @@
             this.tableLayoutPanel6.Controls.Add(this.applicationNumberLabel, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.applicationsDateLabel, 0, 2);
             this.tableLayoutPanel6.Controls.Add(this.applicationNumberTextBox, 0, 1);
-            this.tableLayoutPanel6.Controls.Add(this.applicationDateTimePicker, 0, 3);
+            this.tableLayoutPanel6.Controls.Add(this.applicationDateComboBox, 0, 3);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(4, 19);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4);
@@ -329,22 +330,14 @@
             // 
             // applicationNumberTextBox
             // 
+            this.applicationNumberTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.applicationNumberTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.applicationNumberTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.applicationNumberTextBox.Location = new System.Drawing.Point(4, 21);
             this.applicationNumberTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.applicationNumberTextBox.Name = "applicationNumberTextBox";
             this.applicationNumberTextBox.Size = new System.Drawing.Size(177, 22);
             this.applicationNumberTextBox.TabIndex = 4;
-            // 
-            // applicationDateTimePicker
-            // 
-            this.applicationDateTimePicker.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.applicationDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.applicationDateTimePicker.Location = new System.Drawing.Point(4, 68);
-            this.applicationDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
-            this.applicationDateTimePicker.Name = "applicationDateTimePicker";
-            this.applicationDateTimePicker.Size = new System.Drawing.Size(177, 22);
-            this.applicationDateTimePicker.TabIndex = 9;
             // 
             // orderGroupBox
             // 
@@ -864,6 +857,17 @@
             this.dateModifyToolStripStatusLabel.Size = new System.Drawing.Size(87, 24);
             this.dateModifyToolStripStatusLabel.Text = "##.##.####";
             // 
+            // applicationDateComboBox
+            // 
+            this.applicationDateComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.applicationDateComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.applicationDateComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.applicationDateComboBox.FormattingEnabled = true;
+            this.applicationDateComboBox.Location = new System.Drawing.Point(3, 67);
+            this.applicationDateComboBox.Name = "applicationDateComboBox";
+            this.applicationDateComboBox.Size = new System.Drawing.Size(179, 24);
+            this.applicationDateComboBox.TabIndex = 7;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -958,7 +962,6 @@
         private System.Windows.Forms.GroupBox departmentGroupBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.ComboBox departmentComboBox;
-        private System.Windows.Forms.DateTimePicker applicationDateTimePicker;
         private System.Windows.Forms.ToolStripStatusLabel userModifyToolStripStatusLabel;
         private System.Windows.Forms.ToolStripStatusLabel dateModifyToolStripStatusLabel;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
@@ -972,6 +975,7 @@
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.ComboBox contractDateComboBox;
+        private System.Windows.Forms.ComboBox applicationDateComboBox;
     }
 }
 

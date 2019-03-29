@@ -21,17 +21,24 @@ namespace ApplicationsAndContracts
 
         private SupplierList supplierList;
         private ContractList contractList;
+        private ApplicationList applicationList;
 
         //private int supplierCode;
         private string supplierName;
         //private string contractId;
         private string contractNumber;
         private DateTime contractDate;
+
+        private string applicationNumber;
+        private DateTime applicationDate;
+        private byte applicationStatus;
         public MainForm()
         {
             this.dataService = new DataService();
             this.supplierName = string.Empty;
             this.contractNumber = string.Empty;
+            this.contractDate = DateTime.MinValue;
+            this.applicationNumber = string.Empty;
 
             InitializeComponent();
 
@@ -43,7 +50,68 @@ namespace ApplicationsAndContracts
 
             this.contractNumberTextBox.TextChanged += new EventHandler(contractNumberTextBox_TextChanged);
             this.contractNumberTextBox.Validating += new CancelEventHandler(contractNumberTextBox_Validating);
+
+            this.contractDateComboBox.TextChanged += new EventHandler(contractDateComboBox_TextChanged);
+            this.contractDateComboBox.Validating += new CancelEventHandler(contractDatecomboBox_Validating);
+
+            this.applicationNumberTextBox.TextChanged += new EventHandler(applicationNumberTextBox_TextChanged);
+            this.applicationNumberTextBox.Validating += new CancelEventHandler(applicationNumberTextBox_Validating);
             #endregion
+        }
+
+        private void applicationNumberTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            var converter = new StrConverter();
+            try
+            {
+                var applicationNumber = converter.Parse(this.applicationNumberTextBox.Text);
+                this.applicationList.GetApplication(applicationNumber);
+                this.applicationNumber = applicationNumber;
+            }
+            catch (ApplicationException ex)
+            {
+                e.Cancel = true;
+                Methods.ShowInfo(this, ex.Message);
+            }
+            finally
+            {
+                this.applicationNumberTextBox.Text = converter.Format(applicationNumber);
+            };
+
+        }
+
+        private void applicationNumberTextBox_TextChanged(object sender, EventArgs e)
+        {
+            var converter = new StrConverter();
+            var applicationNumber = converter.TryParse(this.applicationNumberTextBox.Text);
+            var currentApplication = applicationList.TryGetApplication(applicationNumber); ;
+        }
+
+        private void contractDatecomboBox_Validating(object sender, CancelEventArgs e)
+        {
+            var converter = new StrConverter();
+            try
+            {
+                var contractDate = converter.Parse(this.contractDateComboBox.Text);
+                this.contractList.GetContract(contractNumber);
+                this.contractDate = Convert.ToDateTime(contractDate);
+            }
+            catch (ApplicationException ex)
+            {
+                e.Cancel = true;
+                Methods.ShowInfo(this, ex.Message);
+            }
+            finally
+            {
+                this.contractDateComboBox.Text = converter.Format(contractDate.ToShortDateString());
+            };
+        }
+
+        private void contractDateComboBox_TextChanged(object sender, EventArgs e)
+        {
+            var converter = new StrConverter();
+            var contractDate = converter.TryParse(this.contractDateComboBox.Text);
+            var currentContract = contractList.TryGetContract(contractNumber);
         }
 
         private void contractNumberTextBox_Validating(object sender, CancelEventArgs e)
@@ -108,6 +176,14 @@ namespace ApplicationsAndContracts
             this.contractList = ContractList.GetContractList();
             this.contractNumberTextBox.AutoCompleteCustomSource.AddRange(this.contractList.Select(x => x.ContractNumber.Trim()).ToArray());
             this.contractDateComboBox.DataSource = this.contractList.GetContractDateList();
+            this.contractDateComboBox.AutoCompleteCustomSource.AddRange(this.contractList.Select(x => x.ContractDate.ToShortDateString()).ToArray());
+            this.applicationList = ApplicationList.GetApplicationList();
+            this.applicationNumberTextBox.AutoCompleteCustomSource.AddRange(this.applicationList.Select(x => x.ApplicationNumber.Trim()).ToArray());
+            this.applicationDateComboBox.DataSource = this.applicationList.GetApplicationDateList();
+            this.applicationDateComboBox.AutoCompleteCustomSource.AddRange(this.applicationList.Select(x => x.ApplicationDate.ToShortDateString()).ToArray());
+            
+
+
         }
 
 
