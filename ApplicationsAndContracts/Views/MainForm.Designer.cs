@@ -44,6 +44,7 @@
             this.applicationNumberLabel = new System.Windows.Forms.Label();
             this.applicationsDateLabel = new System.Windows.Forms.Label();
             this.applicationNumberTextBox = new System.Windows.Forms.TextBox();
+            this.applicationDateComboBox = new System.Windows.Forms.ComboBox();
             this.orderGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.gkLabel = new System.Windows.Forms.Label();
@@ -86,7 +87,6 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.userModifyToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.dateModifyToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.applicationDateComboBox = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.supplyGroupBox.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -338,6 +338,18 @@
             this.applicationNumberTextBox.Name = "applicationNumberTextBox";
             this.applicationNumberTextBox.Size = new System.Drawing.Size(177, 22);
             this.applicationNumberTextBox.TabIndex = 4;
+            // 
+            // applicationDateComboBox
+            // 
+            this.applicationDateComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.applicationDateComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.applicationDateComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.applicationDateComboBox.FormatString = "d";
+            this.applicationDateComboBox.FormattingEnabled = true;
+            this.applicationDateComboBox.Location = new System.Drawing.Point(3, 67);
+            this.applicationDateComboBox.Name = "applicationDateComboBox";
+            this.applicationDateComboBox.Size = new System.Drawing.Size(179, 24);
+            this.applicationDateComboBox.TabIndex = 7;
             // 
             // orderGroupBox
             // 
@@ -856,17 +868,6 @@
             this.dateModifyToolStripStatusLabel.Name = "dateModifyToolStripStatusLabel";
             this.dateModifyToolStripStatusLabel.Size = new System.Drawing.Size(87, 24);
             this.dateModifyToolStripStatusLabel.Text = "##.##.####";
-            // 
-            // applicationDateComboBox
-            // 
-            this.applicationDateComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.applicationDateComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.applicationDateComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.applicationDateComboBox.FormattingEnabled = true;
-            this.applicationDateComboBox.Location = new System.Drawing.Point(3, 67);
-            this.applicationDateComboBox.Name = "applicationDateComboBox";
-            this.applicationDateComboBox.Size = new System.Drawing.Size(179, 24);
-            this.applicationDateComboBox.TabIndex = 7;
             // 
             // MainForm
             // 

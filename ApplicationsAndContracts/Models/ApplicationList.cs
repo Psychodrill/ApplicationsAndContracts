@@ -24,7 +24,7 @@ namespace ApplicationsAndContracts.Models
             if (applicationNumber == string.Empty) return Applicationmodel.Empty();
             var result = this.FirstOrDefault(x => x.ApplicationNumber == applicationNumber);
             if (result != null) return result;
-            throw new ApplicationException(string.Format(Resources.ContractIsOutOfRangeText, applicationNumber));
+            throw new ApplicationException(string.Format(Resources.ApplicationIsOutOfRangeText, applicationNumber));
         }
 
         public List<DateTime> GetApplicationDateList()

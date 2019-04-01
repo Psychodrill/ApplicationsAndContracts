@@ -58,6 +58,8 @@ namespace ApplicationsAndContracts.Helpers
 
         //public const string IsUpdateWarehouseGroupText = "Заменить на склад №{0}, группу №{1}?";
 
+        public const string ApplicationIsOutOfRangeText = "Заявка отсутствует в списке заявок";
+
         public const string QueryIsOutOfRangeText = "Данные, удовлетворяющие условиям поиска отсутствуют.";
 
         public const string ChangeQueryText = "Измените запрос и повторите ввод.";

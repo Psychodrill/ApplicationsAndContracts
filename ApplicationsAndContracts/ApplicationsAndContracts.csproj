@@ -77,6 +77,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contexts\Context.cs" />
+    <Compile Include="Converters\DateConverter.cs" />
     <Compile Include="Converters\IntConverter.cs" />
     <Compile Include="Converters\NewByteConverter.cs" />
     <Compile Include="Converters\NewDecimalConverter.cs" />
