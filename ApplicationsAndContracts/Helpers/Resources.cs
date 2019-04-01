@@ -38,9 +38,9 @@ namespace ApplicationsAndContracts.Helpers
 
         public const string UnselectedText = "-- (не выбран) --";
 
-        public const string ContractDateIsOutOfRange = "Дата договора отсутствует в списке дат договоров";
+        public const string ContractDateIsOutOfRange = "Договор с указанной датой отсутсвует";
 
-        public const string ApplicationDateIsOutOfRange = "Дата заявки отсутствует в списке дат ззаявок";
+        public const string ApplicationDateIsOutOfRange = "Заявка с указанной датой отсутствует";
 
         //public const string AreYouReadyToDeleteText = "Вы действительно хотите удалить запись?";
 

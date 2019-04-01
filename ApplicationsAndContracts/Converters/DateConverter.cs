@@ -11,9 +11,11 @@ namespace ApplicationsAndContracts.Converters
     {
         //public DateTime Parse(DateTime value)
         //{
-        //    if (value == null || value == DateTime.MinValue || value.ToString() == Resources.UnselectedText)
+        //    if (value == null || value == string.Empty || value == Resources.UnselectedText)
         //        return DateTime.MinValue;
-        //    else return value;
+        //    //DateTime result = DateTime.MinValue;
+        //    //if (DateTime.TryParse(value.ToShortDateString(), out result)) return result;
+        //    else return Convert.ToDateTime(value);
         //    throw new ApplicationException(Resources.IncorrectValueText);
         //}
 
@@ -40,8 +42,7 @@ namespace ApplicationsAndContracts.Converters
 
         }
 
-
-
+        
         public string TryParse(string value)
         {
             try

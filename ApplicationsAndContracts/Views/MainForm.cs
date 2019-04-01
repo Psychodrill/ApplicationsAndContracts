@@ -11,6 +11,7 @@ using ApplicationsAndContracts.DataAccess;
 using ApplicationsAndContracts.Models;
 using ApplicationsAndContracts.Converters;
 using ApplicationsAndContracts.Helpers;
+using System.Text.RegularExpressions;
 
 
 namespace ApplicationsAndContracts
@@ -64,7 +65,7 @@ namespace ApplicationsAndContracts
 
         private void applicationDateComboBox_Validating(object sender, CancelEventArgs e)
         {
-            var converter = new StrConverter();
+            var converter = new DateConverter();
             try
             {
                 var applicationDate = converter.Parse(this.applicationDateComboBox.Text);
@@ -78,13 +79,13 @@ namespace ApplicationsAndContracts
             }
             finally
             {
-                this.applicationDateComboBox.Text = converter.Format(applicationDate.ToShortDateString());
+                this.applicationDateComboBox.Text = converter.Format(applicationDate);
             }
         }
 
         private void applicationDateComboBox_TextChanged(object sender, EventArgs e)
         {
-            var converter = new StrConverter();
+            var converter = new DateConverter();
             var applicationDate = converter.TryParse(this.applicationDateComboBox.Text);
             var currentApplication = applicationList.TryGetApplication(applicationNumber);
         }
@@ -119,7 +120,7 @@ namespace ApplicationsAndContracts
 
         private void contractDatecomboBox_Validating(object sender, CancelEventArgs e)
         {
-            var converter = new StrConverter();
+            var converter = new DateConverter();
             try
             {
                 var contractDate = converter.Parse(this.contractDateComboBox.Text);
@@ -133,15 +134,18 @@ namespace ApplicationsAndContracts
             }
             finally
             {
-                this.contractDateComboBox.Text = converter.Format(contractDate.ToShortDateString());
+                this.contractDateComboBox.Text = converter.Format(contractDate);
             }
         }
 
         private void contractDateComboBox_TextChanged(object sender, EventArgs e)
         {
-            var converter = new StrConverter();
-            var contractDate = converter.TryParse(this.contractDateComboBox.Text);
+            var converter = new DateConverter();
+
+            var contractDate = converter.TryParse(contractDateComboBox.Text);
             var currentContract = contractList.TryGetContract(contractNumber);
+            if (IsMatchingDateTypeRange(this.contractDateComboBox.Text)) return;
+            else contractDateComboBox.Text= Resources.UnselectedText;
         }
 
         private void contractNumberTextBox_Validating(object sender, CancelEventArgs e)
@@ -197,6 +201,13 @@ namespace ApplicationsAndContracts
             var supplierName = converter.TryParse(this.supplierNameTextBox.Text);
             var currentSupplier = this.supplierList.TryGetSupplier(supplierName);
             
+        }
+
+        private bool IsMatchingDateTypeRange(string textparameter)
+        {
+            Regex filter = new Regex(@"\d\b\d?");
+            return filter.IsMatch(textparameter);
+
         }
 
         private void MainForm_Load(object sender, EventArgs e)

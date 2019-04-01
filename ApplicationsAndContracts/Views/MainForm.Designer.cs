@@ -87,7 +87,6 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.userModifyToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.dateModifyToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.supplyGroupBox.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -693,7 +692,6 @@
             this.tableLayoutPanel1.SetColumnSpan(this.flowLayoutPanel2, 2);
             this.flowLayoutPanel2.Controls.Add(this.departmentGroupBox);
             this.flowLayoutPanel2.Controls.Add(this.applicationStatusGroupBox);
-            this.flowLayoutPanel2.Controls.Add(this.maskedTextBox1);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(4, 164);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
@@ -871,15 +869,6 @@
             this.dateModifyToolStripStatusLabel.Size = new System.Drawing.Size(87, 24);
             this.dateModifyToolStripStatusLabel.Text = "##.##.####";
             // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.AllowPromptAsInput = false;
-            this.maskedTextBox1.Location = new System.Drawing.Point(438, 3);
-            this.maskedTextBox1.Mask = "00.00.0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 22);
-            this.maskedTextBox1.TabIndex = 10;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -913,7 +902,6 @@
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel2.PerformLayout();
             this.departmentGroupBox.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel9.PerformLayout();
@@ -989,7 +977,6 @@
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.ComboBox contractDateComboBox;
         private System.Windows.Forms.ComboBox applicationDateComboBox;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }
 
