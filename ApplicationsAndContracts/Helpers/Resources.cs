@@ -38,6 +38,10 @@ namespace ApplicationsAndContracts.Helpers
 
         public const string UnselectedText = "-- (не выбран) --";
 
+        public const string ContractDateIsOutOfRange = "Дата договора отсутствует в списке дат договоров";
+
+        public const string ApplicationDateIsOutOfRange = "Дата заявки отсутствует в списке дат ззаявок";
+
         //public const string AreYouReadyToDeleteText = "Вы действительно хотите удалить запись?";
 
         //public const string AreYouReadyToAddNewItemText = "Вы действительно хотите добавить новую запись (ДСЕ №{0}, склад №{1}, группа {2})?";

@@ -20,12 +20,20 @@ namespace ApplicationsAndContracts.Models
             return result;
         }
 
-        public Contract GetContract (string contractNumber)
+        public Contract GetContractNumber (string contractNumber)
         {
             if (contractNumber == string.Empty) return Contract.Empty();
             var result = this.FirstOrDefault(x => x.ContractNumber == contractNumber);
             if (result != null) return result;
             throw new ApplicationException(string.Format(Resources.ContractIsOutOfRangeText, contractNumber));
+        }
+
+        public Contract GetContractDate (DateTime contractDate)
+        {
+            if (contractDate == DateTime.MinValue) return Contract.Empty();
+            var result = this.FirstOrDefault(x => x.ContractDate == contractDate);
+            if (result!= null) return result;
+            throw new ApplicationException(string.Format(Resources.ContractDateIsOutOfRange, contractDate)); 
         }
 
         public List<DateTime> GetContractDateList()
@@ -40,7 +48,7 @@ namespace ApplicationsAndContracts.Models
         {
             try
             {
-               return GetContract(contractNumber);
+               return GetContractNumber(contractNumber);
             }
             catch (ApplicationException)
             {

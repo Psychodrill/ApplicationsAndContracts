@@ -27,6 +27,14 @@ namespace ApplicationsAndContracts.Models
             throw new ApplicationException(string.Format(Resources.ApplicationIsOutOfRangeText, applicationNumber));
         }
 
+        public Applicationmodel GetApplicationDate(DateTime applicationDate)
+        {
+            if (applicationDate == DateTime.MinValue) return Applicationmodel.Empty();
+            var result = this.FirstOrDefault(x => x.ApplicationDate == applicationDate);
+            if (result != null) return result;
+            throw new ApplicationException(string.Format(Resources.ApplicationDateIsOutOfRange, applicationDate));
+        }
+
         public List<DateTime> GetApplicationDateList()
         {
             var result = this.Select(x => x.ApplicationDate).Distinct().OrderBy(x => x).ToList();

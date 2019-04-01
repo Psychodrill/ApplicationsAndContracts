@@ -58,17 +58,17 @@ namespace ApplicationsAndContracts
             this.applicationNumberTextBox.Validating += new CancelEventHandler(applicationNumberTextBox_Validating);
 
             this.applicationDateComboBox.TextChanged += new EventHandler(applicationDateComboBox_TextChanged);
-            this.applicationDateComboBox.Validating += new CancelEventHandler(applicationComboBox_Validating);
+            this.applicationDateComboBox.Validating += new CancelEventHandler(applicationDateComboBox_Validating);
             #endregion
         }
 
-        private void applicationComboBox_Validating(object sender, CancelEventArgs e)
+        private void applicationDateComboBox_Validating(object sender, CancelEventArgs e)
         {
             var converter = new StrConverter();
             try
             {
                 var applicationDate = converter.Parse(this.applicationDateComboBox.Text);
-                this.applicationList.GetApplication(applicationNumber);
+                this.applicationList.GetApplicationDate(Convert.ToDateTime(applicationDate));
                 this.applicationDate = Convert.ToDateTime(applicationDate);
             }
             catch (ApplicationException ex)
@@ -119,11 +119,11 @@ namespace ApplicationsAndContracts
 
         private void contractDatecomboBox_Validating(object sender, CancelEventArgs e)
         {
-            var converter = new DateConverter();
+            var converter = new StrConverter();
             try
             {
                 var contractDate = converter.Parse(this.contractDateComboBox.Text);
-                this.contractList.GetContract(contractNumber);
+                this.contractList.GetContractDate(Convert.ToDateTime(contractDate));
                 this.contractDate = Convert.ToDateTime(contractDate);
             }
             catch (ApplicationException ex)
@@ -133,13 +133,13 @@ namespace ApplicationsAndContracts
             }
             finally
             {
-                this.contractDateComboBox.Text = converter.Format(contractDate);
+                this.contractDateComboBox.Text = converter.Format(contractDate.ToShortDateString());
             }
         }
 
         private void contractDateComboBox_TextChanged(object sender, EventArgs e)
         {
-            var converter = new DateConverter();
+            var converter = new StrConverter();
             var contractDate = converter.TryParse(this.contractDateComboBox.Text);
             var currentContract = contractList.TryGetContract(contractNumber);
         }
@@ -150,7 +150,7 @@ namespace ApplicationsAndContracts
             try
             {
                 var contractNumber = converter.Parse(this.contractNumberTextBox.Text);
-                this.contractList.GetContract(contractNumber);
+                this.contractList.GetContractNumber(contractNumber);
                 this.contractNumber = contractNumber;
             }
             catch (ApplicationException ex)
