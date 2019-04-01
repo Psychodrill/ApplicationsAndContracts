@@ -203,7 +203,7 @@ namespace ApplicationsAndContracts
             
         }
 
-        private bool IsMatchingDateTypeRange(string textparameter)
+        private bool IsMatchingDiditRange(string textparameter)
         {
             Regex filter = new Regex(@"\d\b\d?");
             return filter.IsMatch(textparameter);
