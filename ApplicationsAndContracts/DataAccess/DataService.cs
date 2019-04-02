@@ -56,5 +56,13 @@ namespace ApplicationsAndContracts.DataAccess
             var result = rows.AsEnumerable();
             return result;
         }
+
+        public IEnumerable<DataRow>GetOrderList()
+        {
+            var parameters = new SqlParameter[0];
+            var rows = SqlHelper.ExecuteSqlCommand(SQL.GetStateContractList, parameters);
+            var result = rows.AsEnumerable();
+            return result;
+        }
     }
 }

@@ -39,6 +39,11 @@ namespace ApplicationsAndContracts.DataAccess
                        [ContractNumber]
                   FROM [dbo].[ft_ApplicationsAndContracts_GetStateContractList]()";
 
+        internal const string GetOrderList = @"
+                SELECT [ApplicationId],
+                       [Order]
+                FROM [dbo].[ft_ApplicationsAndContracts_GetApplicationIdFromOrder]()";
+
 
     }
 

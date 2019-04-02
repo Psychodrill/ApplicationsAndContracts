@@ -92,6 +92,8 @@
     <Compile Include="Models\Applicationmodel.cs" />
     <Compile Include="Models\Contract.cs" />
     <Compile Include="Models\ContractList.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderList.cs" />
     <Compile Include="Models\SDS.cs" />
     <Compile Include="Models\StateContract.cs" />
     <Compile Include="Models\StateContractList.cs" />
