@@ -22,7 +22,7 @@ namespace ApplicationsAndContracts.Models
         public StateContract GetStateContractNumber(string contractNumber)
         {
             if (contractNumber == string.Empty) return StateContract.Empty();
-            var result = this.FirstOrDefault(x => x.ContractNumber == contractNumber);
+            var result = this.FirstOrDefault(x => x.StateContractNumber == contractNumber);
             if (result != null) return result;
             throw new ApplicationException(string.Format(Resources.ContractIsOutOfRangeText, contractNumber));
         }
@@ -39,6 +39,7 @@ namespace ApplicationsAndContracts.Models
                 return StateContract.Empty();
             }
         }
+
 
 
 

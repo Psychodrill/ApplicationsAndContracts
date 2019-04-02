@@ -23,6 +23,7 @@ namespace ApplicationsAndContracts
         private SupplierList supplierList;
         private ContractList contractList;
         private ApplicationList applicationList;
+        private StateContractList stateContractList;
 
         //private int supplierCode;
         private string supplierName;
@@ -33,6 +34,10 @@ namespace ApplicationsAndContracts
         private string applicationNumber;
         private DateTime applicationDate;
         private byte applicationStatus;
+
+        private int contractId;
+        private string stateContractNumber;
+
         public MainForm()
         {
             this.dataService = new DataService();
@@ -40,6 +45,7 @@ namespace ApplicationsAndContracts
             this.contractNumber = string.Empty;
             this.contractDate = DateTime.MinValue;
             this.applicationNumber = string.Empty;
+            this.stateContractNumber = string.Empty;
 
             InitializeComponent();
 
@@ -60,7 +66,39 @@ namespace ApplicationsAndContracts
 
             this.applicationDateComboBox.TextChanged += new EventHandler(applicationDateComboBox_TextChanged);
             this.applicationDateComboBox.Validating += new CancelEventHandler(applicationDateComboBox_Validating);
+
+            this.gkTextBox.TextChanged += new EventHandler(gkTextBox_TextChanged);
+            this.gkTextBox.Validating += new CancelEventHandler(gkTextBox_Validating);
+
+            this.cancelButton.Click += new EventHandler(cancelButton_Click);
             #endregion
+        }
+
+        private void gkTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            var converter = new StrConverter();
+            try
+            {
+                var stateContractNumber = converter.Parse(this.gkTextBox.Text);
+                this.stateContractList.GetStateContractNumber(stateContractNumber);
+                this.stateContractNumber = stateContractNumber;
+            }
+            catch (ApplicationException ex)
+            {
+                e.Cancel = true;
+                Methods.ShowInfo(this, ex.Message);
+            }
+            finally
+            {
+                this.gkTextBox.Text = converter.Format(stateContractNumber);
+            }
+        }
+
+        private void gkTextBox_TextChanged(object sender, EventArgs e)
+        {
+            var converter = new StrConverter();
+            var stateContractNumber = converter.TryParse(gkTextBox.Text);
+            var currentStateContract = stateContractList.TryGetContract(stateContractNumber);
         }
 
         private void applicationDateComboBox_Validating(object sender, CancelEventArgs e)
@@ -135,9 +173,7 @@ namespace ApplicationsAndContracts
             }
             finally
             {
-
                 this.contractDateComboBox.Text = converter.Format(contractDate);
-
             }
         }
 
@@ -228,11 +264,17 @@ namespace ApplicationsAndContracts
             this.applicationNumberTextBox.AutoCompleteCustomSource.AddRange(this.applicationList.Select(x => x.ApplicationNumber.Trim()).ToArray());
             this.applicationDateComboBox.DataSource = this.applicationList.GetApplicationDateList();
             this.applicationDateComboBox.AutoCompleteCustomSource.AddRange(this.applicationList.Select(x => x.ApplicationDate.ToShortDateString()).ToArray());
-            
+
+            this.stateContractList = StateContractList.GetStateContractList();
+            this.gkTextBox.AutoCompleteCustomSource.AddRange(this.stateContractList.Select(x => x.StateContractNumber.Trim()).ToArray());
 
 
         }
-
+              
+        void cancelButton_Click (object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
 
     }

@@ -399,6 +399,8 @@
             // 
             // gkTextBox
             // 
+            this.gkTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.gkTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.gkTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gkTextBox.Location = new System.Drawing.Point(4, 21);
             this.gkTextBox.Margin = new System.Windows.Forms.Padding(4);

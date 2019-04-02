@@ -13,7 +13,7 @@ namespace ApplicationsAndContracts.Models
         {
             var result = new StateContract();
             result.ContractId = row.Field<int>("ContractId");
-            result.ContractNumber = row.Field<string>("ContractNumber");
+            result.StateContractNumber = row.Field<string>("ContractNumber");
             return result;
         }
 
@@ -24,15 +24,14 @@ namespace ApplicationsAndContracts.Models
         public static StateContract Empty()
         {
             var result = new StateContract();
-            result.ContractNumber = string.Empty;
+            result.StateContractNumber = string.Empty;
             return result;
         }
 
-
-
+        
 
         public int ContractId { get; private set; }
-        public string ContractNumber { get; private set; }
+        public string StateContractNumber { get; private set; }
 
     }
 }
