@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using ApplicationsAndContracts.Helpers;
 
 namespace ApplicationsAndContracts.Converters
@@ -38,7 +39,7 @@ namespace ApplicationsAndContracts.Converters
             if (value == null || value == string.Empty || value == Resources.UnselectedText)
                 return string.Empty;
             else  return value;
-            throw new ApplicationException(Resources.IncorrectValueText);
+            //throw new ApplicationException(Resources.IncorrectValueText);
 
         }
 
@@ -59,6 +60,15 @@ namespace ApplicationsAndContracts.Converters
         {
             if (value == DateTime.MinValue) return Resources.UnselectedText;
             return value.ToShortDateString();
+            //throw new ApplicationException(Resources.IncorrectValueText);
+        }
+
+
+        private bool IsDataTypeRange(string textparameter)
+        {
+            Regex filter = new Regex(@"\d\b\d?");
+            return filter.IsMatch(textparameter);
+
         }
 
     }

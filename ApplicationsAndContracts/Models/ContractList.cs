@@ -33,7 +33,7 @@ namespace ApplicationsAndContracts.Models
             if (contractDate == DateTime.MinValue) return Contract.Empty();
             var result = this.FirstOrDefault(x => x.ContractDate == contractDate);
             if (result!= null) return result;
-            throw new ApplicationException(string.Format(Resources.ContractDateIsOutOfRange, contractDate)); 
+            throw new ApplicationException(string.Format(Resources.ContractDateIsOutOfRangeText, contractDate)); 
         }
 
         public List<DateTime> GetContractDateList()

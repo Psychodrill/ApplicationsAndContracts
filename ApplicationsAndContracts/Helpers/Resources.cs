@@ -38,7 +38,7 @@ namespace ApplicationsAndContracts.Helpers
 
         public const string UnselectedText = "-- (не выбран) --";
 
-        public const string ContractDateIsOutOfRange = "Договор с указанной датой отсутсвует";
+        public const string ContractDateIsOutOfRangeText = "Договор с указанной датой отсутсвует";
 
         public const string ApplicationDateIsOutOfRange = "Заявка с указанной датой отсутствует";
 

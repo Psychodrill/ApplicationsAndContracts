@@ -93,6 +93,8 @@
     <Compile Include="Models\Contract.cs" />
     <Compile Include="Models\ContractList.cs" />
     <Compile Include="Models\SDS.cs" />
+    <Compile Include="Models\StateContract.cs" />
+    <Compile Include="Models\StateContractList.cs" />
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Models\SupplierList.cs" />
     <Compile Include="Views\ApplicationAddingForm.cs">

@@ -21,6 +21,7 @@ namespace ApplicationsAndContracts.DataAccess
                 SELECT [SupplierCode],
                        [SupplierName]
                   FROM [dbo].[ft_ApplicationsAndContracts_GetSupplierList]()";
+
         internal const string GetContractList = @"
                 SELECT [ContractId],
                        [ContractNumber],
@@ -32,6 +33,11 @@ namespace ApplicationsAndContracts.DataAccess
                        [ApplicationDate],
                        [ApplicationStatus]
                   FROM [dbo].[ft_ApplicationsAndContracts_GetApplicationList]()";
+
+        internal const string GetStateContractList = @"
+                SELECT [ContractId],
+                       [ContractNumber]
+                  FROM [dbo].[ft_ApplicationsAndContracts_GetStateContractList]()";
 
 
     }

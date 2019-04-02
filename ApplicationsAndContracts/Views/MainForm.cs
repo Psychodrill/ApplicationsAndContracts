@@ -53,7 +53,7 @@ namespace ApplicationsAndContracts
             this.contractNumberTextBox.Validating += new CancelEventHandler(contractNumberTextBox_Validating);
 
             this.contractDateComboBox.TextChanged += new EventHandler(contractDateComboBox_TextChanged);
-            this.contractDateComboBox.Validating += new CancelEventHandler(contractDatecomboBox_Validating);
+            this.contractDateComboBox.Validating += new CancelEventHandler(contractDateComboBox_Validating);
 
             this.applicationNumberTextBox.TextChanged += new EventHandler(applicationNumberTextBox_TextChanged);
             this.applicationNumberTextBox.Validating += new CancelEventHandler(applicationNumberTextBox_Validating);
@@ -118,7 +118,7 @@ namespace ApplicationsAndContracts
             var currentApplication = applicationList.TryGetApplication(applicationNumber); 
         }
 
-        private void contractDatecomboBox_Validating(object sender, CancelEventArgs e)
+        private void contractDateComboBox_Validating(object sender, CancelEventArgs e)
         {
             var converter = new DateConverter();
             try
@@ -126,6 +126,7 @@ namespace ApplicationsAndContracts
                 var contractDate = converter.Parse(this.contractDateComboBox.Text);
                 this.contractList.GetContractDate(Convert.ToDateTime(contractDate));
                 this.contractDate = Convert.ToDateTime(contractDate);
+
             }
             catch (ApplicationException ex)
             {
@@ -134,7 +135,9 @@ namespace ApplicationsAndContracts
             }
             finally
             {
+
                 this.contractDateComboBox.Text = converter.Format(contractDate);
+
             }
         }
 
@@ -144,8 +147,7 @@ namespace ApplicationsAndContracts
 
             var contractDate = converter.TryParse(contractDateComboBox.Text);
             var currentContract = contractList.TryGetContract(contractNumber);
-            if (IsMatchingDateTypeRange(this.contractDateComboBox.Text)) return;
-            else contractDateComboBox.Text= Resources.UnselectedText;
+
         }
 
         private void contractNumberTextBox_Validating(object sender, CancelEventArgs e)
@@ -165,6 +167,7 @@ namespace ApplicationsAndContracts
             finally
             {
                 this.contractNumberTextBox.Text = converter.Format(contractNumber);
+
             }
         }
 
@@ -203,7 +206,7 @@ namespace ApplicationsAndContracts
             
         }
 
-        private bool IsMatchingDiditRange(string textparameter)
+        private bool IsMatchingDigitRange(string textparameter)
         {
             Regex filter = new Regex(@"\d\b\d?");
             return filter.IsMatch(textparameter);
@@ -214,10 +217,13 @@ namespace ApplicationsAndContracts
         {
             this.supplierList = SupplierList.GetSupplierList();
             this.supplierNameTextBox.AutoCompleteCustomSource.AddRange(this.supplierList.Select(x => x.SupplierName.Trim()).ToArray());
+
             this.contractList = ContractList.GetContractList();
             this.contractNumberTextBox.AutoCompleteCustomSource.AddRange(this.contractList.Select(x => x.ContractNumber.Trim()).ToArray());
             this.contractDateComboBox.DataSource = this.contractList.GetContractDateList();
             this.contractDateComboBox.AutoCompleteCustomSource.AddRange(this.contractList.Select(x => x.ContractDate.ToShortDateString()).ToArray());
+
+
             this.applicationList = ApplicationList.GetApplicationList();
             this.applicationNumberTextBox.AutoCompleteCustomSource.AddRange(this.applicationList.Select(x => x.ApplicationNumber.Trim()).ToArray());
             this.applicationDateComboBox.DataSource = this.applicationList.GetApplicationDateList();
