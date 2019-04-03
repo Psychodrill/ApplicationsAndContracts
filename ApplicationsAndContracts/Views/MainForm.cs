@@ -25,6 +25,8 @@ namespace ApplicationsAndContracts
         private ApplicationList applicationList;
         private StateContractList stateContractList;
         private OrderList orderList;
+        private ProductList productList;
+        private DceList dceList;
         
 
         //private int supplierCode;
@@ -44,6 +46,12 @@ namespace ApplicationsAndContracts
         private int applicationId;
         private int orderNumber;
 
+        private int idInd;
+        private int productNumber;
+        private string productIndex;
+        private string productName;
+        private string productAlias;
+       
 
         public MainForm()
         {
@@ -55,6 +63,10 @@ namespace ApplicationsAndContracts
             this.stateContractNumber = string.Empty;
             this.orderNumber = -1;
             this.department = string.Empty;
+            this.productNumber = -1;
+            this.productIndex = string.Empty;
+            this.productAlias = string.Empty;
+            this.productName = string.Empty;
 
             InitializeComponent();
 
@@ -82,8 +94,79 @@ namespace ApplicationsAndContracts
             this.orderTextBox.TextChanged += new EventHandler(orderTextBox_TextChanged);
             this.orderTextBox.Validating += new CancelEventHandler(orderTextBox_Validating);
 
+            this.productIndexComboBox.TextChanged += new EventHandler(productIndexComboBox_TextChanged);
+            this.productIndexComboBox.Validating += new CancelEventHandler(productIndexComboBox_Validating);
+
+            this.productNumberComboBox.TextChanged += new EventHandler(productNumberComboBox_TextChanged);
+            this.productNumberComboBox.Validating += new CancelEventHandler(productNumberComboBox_Validating);
+
+            this.productAliasTextBox.TextChanged += new EventHandler(productAliasTextBox_TextChanged);
+            this.productAliasTextBox.Validating += new CancelEventHandler(productAliasTextBox_Validating);
+
+            this.productNameTextBox.TextChanged += new EventHandler(productNameTextBox_TextChanged);
+            this.productNameTextBox.Validating += new CancelEventHandler(productNameTextBox_Validating);
+
+
+
             this.cancelButton.Click += new EventHandler(cancelButton_Click);
             #endregion
+        }
+
+        private void productNameTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            var converter = new StrConverter();
+            try
+            {
+                var productName = converter.Parse(this.productNameTextBox.Text);
+                this.productList.GetProductName(productName);
+                this.productName = productName;
+            }
+            catch (ApplicationException ex)
+            {
+                e.Cancel = true;
+                Methods.ShowInfo(this, ex.Message);
+            }
+            finally
+            {
+                this.productNameTextBox.Text = converter.Format(productName);
+            }
+        }
+
+        private void productNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            var converter = new StrConverter();
+            var productName = converter.TryParse(this.productNameTextBox.Text);
+            var currentProduct = this.productList.TryGetProduct(productName);
+        }
+
+        private void productAliasTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void productAliasTextBox_TextChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void productNumberComboBox_Validating(object sender, CancelEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void productNumberComboBox_TextChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void productIndexComboBox_Validating(object sender, CancelEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void productIndexComboBox_TextChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void orderTextBox_Validating(object sender, CancelEventArgs e)
@@ -307,7 +390,7 @@ namespace ApplicationsAndContracts
             this.applicationNumberTextBox.AutoCompleteCustomSource.AddRange(this.applicationList.Select(x => x.ApplicationNumber.Trim()).ToArray());
             this.applicationDateComboBox.DataSource = this.applicationList.GetApplicationDateList();
             this.applicationDateComboBox.AutoCompleteCustomSource.AddRange(this.applicationList.Select(x => x.ApplicationDate.ToShortDateString()).ToArray());
-            
+
 
             this.stateContractList = StateContractList.GetStateContractList();
             this.gkTextBox.AutoCompleteCustomSource.AddRange(this.stateContractList.Select(x => x.StateContractNumber.Trim()).ToArray());
@@ -317,9 +400,18 @@ namespace ApplicationsAndContracts
 
             this.departmentComboBox.DataSource = this.applicationList.GetDepartmentList();
 
+            this.productList = ProductList.GetProductList();
+            this.productNumberComboBox.DataSource = this.productList.GetProductNumberList();
+            this.productNumberComboBox.AutoCompleteCustomSource.AddRange(this.productList.Select(x => x.ProductNumber.ToString()).ToArray());
+            this.productIndexComboBox.DataSource = this.productList.GetProductIndexList();
+            this.productIndexComboBox.AutoCompleteCustomSource.AddRange(this.productList.Select(x => x.ProductIndex.Trim()).ToArray());
+            this.productAliasTextBox.AutoCompleteCustomSource.AddRange(this.productList.Select(x => x.ProductAlias.Trim()).ToArray());
+            this.productNameTextBox.AutoCompleteCustomSource.AddRange(this.productList.Select(x => x.ProductName.Trim()).ToArray());
+
+
 
         }
-              
+
         void cancelButton_Click (object sender, EventArgs e)
         {
             this.Close();

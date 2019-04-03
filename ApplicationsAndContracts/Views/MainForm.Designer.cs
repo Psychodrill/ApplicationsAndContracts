@@ -536,6 +536,8 @@
             // 
             // productNameTextBox
             // 
+            this.productNameTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.productNameTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.tableLayoutPanel3.SetColumnSpan(this.productNameTextBox, 2);
             this.productNameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.productNameTextBox.Location = new System.Drawing.Point(4, 117);

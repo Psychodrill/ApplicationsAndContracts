@@ -72,8 +72,10 @@ namespace ApplicationsAndContracts.Helpers
 
         public static string SupplierIsOutOfRangeText = "Поставщик отсутствует в списке поставщиков";
 
-        public static string ContractIsOutOfRangeText = "Договор отсутствует в списке договоров";
+        public static string ContractIsOutOfRangeText = "Договор {0} отсутствует в списке договоров";
 
-        public static string OrderIsOutOfRangeText = "Заказ отсутствует в списке заказов";
+        public static string OrderIsOutOfRangeText = "Заказ {0} отсутствует в списке заказов";
+
+        public static string ProductIsOutOfRangeText = "Изделие отсутствует в списке изделий";
     }
 }
