@@ -13,7 +13,7 @@ namespace ApplicationsAndContracts.Models
         {
             var result = new Order();
             result.ApplicationId = row.Field<int>("ApplicationId");
-            result.OrderNumber = row.Field<string>("Order");
+            result.OrderNumber = row.Field<int>("Order");
             return result;
         }
 
@@ -27,11 +27,11 @@ namespace ApplicationsAndContracts.Models
         public static Order Empty()
         {
             var result = new Order();
-            result.OrderNumber = string.Empty;
+            result.OrderNumber = -1;
             return result;
         }
 
         public int ApplicationId { get; private set; }
-        public string OrderNumber { get; private set; }
+        public int OrderNumber { get; private set; }
     }
 }

@@ -410,6 +410,8 @@
             // 
             // orderTextBox
             // 
+            this.orderTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.orderTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.orderTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.orderTextBox.Location = new System.Drawing.Point(4, 68);
             this.orderTextBox.Margin = new System.Windows.Forms.Padding(4);

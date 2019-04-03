@@ -60,7 +60,7 @@ namespace ApplicationsAndContracts.DataAccess
         public IEnumerable<DataRow>GetOrderList()
         {
             var parameters = new SqlParameter[0];
-            var rows = SqlHelper.ExecuteSqlCommand(SQL.GetStateContractList, parameters);
+            var rows = SqlHelper.ExecuteSqlCommand(SQL.GetOrderList, parameters);
             var result = rows.AsEnumerable();
             return result;
         }

@@ -24,6 +24,7 @@ namespace ApplicationsAndContracts
         private ContractList contractList;
         private ApplicationList applicationList;
         private StateContractList stateContractList;
+        private OrderList orderList;
 
         //private int supplierCode;
         private string supplierName;
@@ -38,6 +39,10 @@ namespace ApplicationsAndContracts
         private int contractId;
         private string stateContractNumber;
 
+        private int applicationId;
+        private int orderNumber;
+
+
         public MainForm()
         {
             this.dataService = new DataService();
@@ -46,6 +51,7 @@ namespace ApplicationsAndContracts
             this.contractDate = DateTime.MinValue;
             this.applicationNumber = string.Empty;
             this.stateContractNumber = string.Empty;
+            this.orderNumber = -1;
 
             InitializeComponent();
 
@@ -70,8 +76,40 @@ namespace ApplicationsAndContracts
             this.gkTextBox.TextChanged += new EventHandler(gkTextBox_TextChanged);
             this.gkTextBox.Validating += new CancelEventHandler(gkTextBox_Validating);
 
+            this.orderTextBox.TextChanged += new EventHandler(orderTextBox_TextChanged);
+            this.orderTextBox.Validating += new CancelEventHandler(orderTextBox_Validating);
+
             this.cancelButton.Click += new EventHandler(cancelButton_Click);
             #endregion
+        }
+
+        private void orderTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            var converter = new IntConverter();
+
+            try
+            {
+                var orderNumber = converter.Parse(orderTextBox.Text);
+                this.orderList.GetOrder(orderNumber);
+                this.orderNumber = orderNumber;
+                
+            }
+            catch (ApplicationException ex)
+            {
+                e.Cancel = true;
+                Methods.ShowInfo(this, ex.Message); 
+            }
+            finally
+            {
+                this.orderTextBox.Text = converter.Format(this.orderNumber);  
+            }
+        }
+
+        private void orderTextBox_TextChanged(object sender, EventArgs e)
+        {
+            var converter = new IntConverter();
+            var orderNumber = converter.TryParse(orderTextBox.Text);
+            var currentOrder = orderList.TryGetOrder(orderNumber);
         }
 
         private void gkTextBox_Validating(object sender, CancelEventArgs e)
@@ -268,6 +306,8 @@ namespace ApplicationsAndContracts
             this.stateContractList = StateContractList.GetStateContractList();
             this.gkTextBox.AutoCompleteCustomSource.AddRange(this.stateContractList.Select(x => x.StateContractNumber.Trim()).ToArray());
 
+            this.orderList = OrderList.GetOrderList();
+            this.orderTextBox.AutoCompleteCustomSource.AddRange(this.orderList.Select(x => x.OrderNumber.ToString()).ToArray());
 
         }
               

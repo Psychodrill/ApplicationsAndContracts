@@ -19,16 +19,16 @@ namespace ApplicationsAndContracts.Models
             var result = new OrderList(list);
             return result;
         }
-        public Order GetOrder(string orderNumber)
+        public Order GetOrder(int orderNumber)
         {
-            if (orderNumber == string.Empty) return Order.Empty();
+            if (orderNumber == -1) return Order.Empty();
             var result = this.FirstOrDefault(x => x.OrderNumber == orderNumber);
             if (result != null) return result;
             throw new ApplicationException(string.Format(Resources.OrderIsOutOfRangeText, orderNumber));
         }
 
 
-        public Order TryGetOrder(string orderNumber)
+        public Order TryGetOrder(int orderNumber)
         {
             try
             {

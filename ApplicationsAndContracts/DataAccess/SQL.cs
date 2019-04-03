@@ -42,7 +42,7 @@ namespace ApplicationsAndContracts.DataAccess
         internal const string GetOrderList = @"
                 SELECT [ApplicationId],
                        [Order]
-                FROM [dbo].[ft_ApplicationsAndContracts_GetApplicationIdFromOrder]()";
+                FROM [dbo].[ft_ApplicationsAndContracts_GetOrder]()";
 
 
     }
