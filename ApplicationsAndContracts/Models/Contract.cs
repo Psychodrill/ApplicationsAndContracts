@@ -25,6 +25,7 @@ namespace ApplicationsAndContracts.Models
         public static Contract Empty()
         {
             var result = new Contract();
+            result.ContractId = -1;
             result.ContractNumber = string.Empty;
             result.ContractDate = DateTime.MinValue;
             return result;

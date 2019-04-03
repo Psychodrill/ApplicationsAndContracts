@@ -25,6 +25,7 @@ namespace ApplicationsAndContracts
         private ApplicationList applicationList;
         private StateContractList stateContractList;
         private OrderList orderList;
+        
 
         //private int supplierCode;
         private string supplierName;
@@ -35,6 +36,7 @@ namespace ApplicationsAndContracts
         private string applicationNumber;
         private DateTime applicationDate;
         private byte applicationStatus;
+        private string department;
 
         private int contractId;
         private string stateContractNumber;
@@ -52,6 +54,7 @@ namespace ApplicationsAndContracts
             this.applicationNumber = string.Empty;
             this.stateContractNumber = string.Empty;
             this.orderNumber = -1;
+            this.department = string.Empty;
 
             InitializeComponent();
 
@@ -110,6 +113,8 @@ namespace ApplicationsAndContracts
             var converter = new IntConverter();
             var orderNumber = converter.TryParse(orderTextBox.Text);
             var currentOrder = orderList.TryGetOrder(orderNumber);
+            if (IsMatchingDigitRange(this.orderTextBox.Text)) return;
+            else this.orderTextBox.Clear();
         }
 
         private void gkTextBox_Validating(object sender, CancelEventArgs e)
@@ -302,12 +307,16 @@ namespace ApplicationsAndContracts
             this.applicationNumberTextBox.AutoCompleteCustomSource.AddRange(this.applicationList.Select(x => x.ApplicationNumber.Trim()).ToArray());
             this.applicationDateComboBox.DataSource = this.applicationList.GetApplicationDateList();
             this.applicationDateComboBox.AutoCompleteCustomSource.AddRange(this.applicationList.Select(x => x.ApplicationDate.ToShortDateString()).ToArray());
+            
 
             this.stateContractList = StateContractList.GetStateContractList();
             this.gkTextBox.AutoCompleteCustomSource.AddRange(this.stateContractList.Select(x => x.StateContractNumber.Trim()).ToArray());
 
             this.orderList = OrderList.GetOrderList();
             this.orderTextBox.AutoCompleteCustomSource.AddRange(this.orderList.Select(x => x.OrderNumber.ToString()).ToArray());
+
+            this.departmentComboBox.DataSource = this.applicationList.GetDepartmentList();
+
 
         }
               

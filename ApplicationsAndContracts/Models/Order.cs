@@ -27,6 +27,7 @@ namespace ApplicationsAndContracts.Models
         public static Order Empty()
         {
             var result = new Order();
+            result.ApplicationId = -1;
             result.OrderNumber = -1;
             return result;
         }

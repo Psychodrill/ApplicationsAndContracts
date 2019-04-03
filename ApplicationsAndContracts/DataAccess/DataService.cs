@@ -64,5 +64,16 @@ namespace ApplicationsAndContracts.DataAccess
             var result = rows.AsEnumerable();
             return result;
         }
+
+        public IEnumerable<DataRow> GetProductList()
+        {
+            var parameters = new SqlParameter[0];
+            var rows = SqlHelper.ExecuteSqlCommand(SQL.GetProductList, parameters);
+            var result = rows.AsEnumerable();
+            return result;
+        }
+
+
+        
     }
 }

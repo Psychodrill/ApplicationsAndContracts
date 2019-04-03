@@ -17,6 +17,7 @@ namespace ApplicationsAndContracts.Models
             result.ApplicationNumber = row.Field<string>("ApplicationNumber");
             result.ApplicationDate = row.Field<DateTime>("ApplicationDate");
             result.ApplicationStatus = row.Field<byte>("ApplicationStatus");
+            result.Department = row.Field<string>("Department");
             return result;
         }
 
@@ -32,11 +33,14 @@ namespace ApplicationsAndContracts.Models
             result.ApplicationNumber = string.Empty;
             result.ApplicationDate = DateTime.MinValue;
             result.ApplicationStatus = 255;
+            result.Department = string.Empty;
             return result;
         }
                 
         public string ApplicationNumber { get; private set; }
         public DateTime ApplicationDate { get; private set; }
         public byte ApplicationStatus { get; private set; }
+
+        public string Department { get; private set; }
     }
 }

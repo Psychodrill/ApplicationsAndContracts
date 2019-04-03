@@ -41,6 +41,12 @@ namespace ApplicationsAndContracts.Models
             return result;
         }
 
+        public List <string> GetDepartmentList()
+        {
+            var result = this.Select(x => x.Department).Distinct().OrderBy(x => x).ToList();
+            return result;
+        }
+
 
 
         public Applicationmodel TryGetApplication(string applicationNumber)

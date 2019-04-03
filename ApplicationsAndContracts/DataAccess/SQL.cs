@@ -31,7 +31,8 @@ namespace ApplicationsAndContracts.DataAccess
         internal const string GetApplicationList = @"
                 SELECT [ApplicationNumber],
                        [ApplicationDate],
-                       [ApplicationStatus]
+                       [ApplicationStatus],
+                       [Department]
                   FROM [dbo].[ft_ApplicationsAndContracts_GetApplicationList]()";
 
         internal const string GetStateContractList = @"
@@ -42,7 +43,16 @@ namespace ApplicationsAndContracts.DataAccess
         internal const string GetOrderList = @"
                 SELECT [ApplicationId],
                        [Order]
-                FROM [dbo].[ft_ApplicationsAndContracts_GetOrder]()";
+                  FROM [dbo].[ft_ApplicationsAndContracts_GetOrder]()";
+
+        internal const string GetProductList = @"
+                SELECT [IdInd],
+                       [ProductId],
+                       [ProductIndex],
+                       [ProductName],
+                       [ProductAlias],
+                       [ApplicationId]
+                  FROM [dbo].[ft_ApplicationsAndContracts_GetProductList]()";
 
 
     }
