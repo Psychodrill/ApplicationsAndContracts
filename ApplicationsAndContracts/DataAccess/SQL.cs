@@ -59,7 +59,7 @@ namespace ApplicationsAndContracts.DataAccess
                        [DceNumber],
                        [DceAlias],
                        [DceName]
-                  FROM [[dbo].[ft_ApplicationsAndContracts_GetDceList]()]";
+                  FROM [dbo].[ft_ApplicationsAndContracts_GetDceList]()";
 
 
     }

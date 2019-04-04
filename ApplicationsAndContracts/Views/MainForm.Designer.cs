@@ -67,10 +67,10 @@
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.dceNameTextBox = new System.Windows.Forms.TextBox();
             this.dceAliasTextBox = new System.Windows.Forms.TextBox();
-            this.dceNumberTextBox = new System.Windows.Forms.TextBox();
             this.dceNumberLabel = new System.Windows.Forms.Label();
             this.dceAliasLabel = new System.Windows.Forms.Label();
             this.dceNameLabel = new System.Windows.Forms.Label();
+            this.dceNumberComboBox = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.departmentGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
@@ -265,8 +265,10 @@
             this.contractDateComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.contractDateComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.contractDateComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contractDateComboBox.DropDownHeight = 64;
             this.contractDateComboBox.FormatString = "d";
             this.contractDateComboBox.FormattingEnabled = true;
+            this.contractDateComboBox.IntegralHeight = false;
             this.contractDateComboBox.Location = new System.Drawing.Point(196, 67);
             this.contractDateComboBox.Name = "contractDateComboBox";
             this.contractDateComboBox.Size = new System.Drawing.Size(187, 24);
@@ -344,8 +346,10 @@
             this.applicationDateComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.applicationDateComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.applicationDateComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.applicationDateComboBox.DropDownHeight = 64;
             this.applicationDateComboBox.FormatString = "d";
             this.applicationDateComboBox.FormattingEnabled = true;
+            this.applicationDateComboBox.IntegralHeight = false;
             this.applicationDateComboBox.Location = new System.Drawing.Point(3, 67);
             this.applicationDateComboBox.Name = "applicationDateComboBox";
             this.applicationDateComboBox.Size = new System.Drawing.Size(179, 24);
@@ -504,8 +508,12 @@
             // 
             // productNumberComboBox
             // 
+            this.productNumberComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.productNumberComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.productNumberComboBox.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.productNumberComboBox.DropDownHeight = 128;
             this.productNumberComboBox.FormattingEnabled = true;
+            this.productNumberComboBox.IntegralHeight = false;
             this.productNumberComboBox.Location = new System.Drawing.Point(4, 21);
             this.productNumberComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.productNumberComboBox.Name = "productNumberComboBox";
@@ -572,8 +580,12 @@
             // 
             // productIndexComboBox
             // 
+            this.productIndexComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.productIndexComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.productIndexComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.productIndexComboBox.DropDownHeight = 128;
             this.productIndexComboBox.FormattingEnabled = true;
+            this.productIndexComboBox.IntegralHeight = false;
             this.productIndexComboBox.Location = new System.Drawing.Point(197, 21);
             this.productIndexComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.productIndexComboBox.Name = "productIndexComboBox";
@@ -613,10 +625,10 @@
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel7.Controls.Add(this.dceNameTextBox, 0, 5);
             this.tableLayoutPanel7.Controls.Add(this.dceAliasTextBox, 0, 3);
-            this.tableLayoutPanel7.Controls.Add(this.dceNumberTextBox, 0, 1);
             this.tableLayoutPanel7.Controls.Add(this.dceNumberLabel, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.dceAliasLabel, 0, 2);
             this.tableLayoutPanel7.Controls.Add(this.dceNameLabel, 0, 4);
+            this.tableLayoutPanel7.Controls.Add(this.dceNumberComboBox, 0, 1);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(4, 19);
             this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(4);
@@ -633,9 +645,11 @@
             // 
             // dceNameTextBox
             // 
+            this.dceNameTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.dceNameTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.tableLayoutPanel7.SetColumnSpan(this.dceNameTextBox, 3);
             this.dceNameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dceNameTextBox.Location = new System.Drawing.Point(4, 115);
+            this.dceNameTextBox.Location = new System.Drawing.Point(4, 117);
             this.dceNameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.dceNameTextBox.Name = "dceNameTextBox";
             this.dceNameTextBox.Size = new System.Drawing.Size(378, 22);
@@ -643,22 +657,15 @@
             // 
             // dceAliasTextBox
             // 
+            this.dceAliasTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.dceAliasTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.tableLayoutPanel7.SetColumnSpan(this.dceAliasTextBox, 3);
             this.dceAliasTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dceAliasTextBox.Location = new System.Drawing.Point(4, 68);
+            this.dceAliasTextBox.Location = new System.Drawing.Point(4, 70);
             this.dceAliasTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.dceAliasTextBox.Name = "dceAliasTextBox";
             this.dceAliasTextBox.Size = new System.Drawing.Size(378, 22);
             this.dceAliasTextBox.TabIndex = 3;
-            // 
-            // dceNumberTextBox
-            // 
-            this.dceNumberTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dceNumberTextBox.Location = new System.Drawing.Point(4, 21);
-            this.dceNumberTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.dceNumberTextBox.Name = "dceNumberTextBox";
-            this.dceNumberTextBox.Size = new System.Drawing.Size(120, 22);
-            this.dceNumberTextBox.TabIndex = 1;
             // 
             // dceNumberLabel
             // 
@@ -676,7 +683,7 @@
             this.dceAliasLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dceAliasLabel.AutoSize = true;
             this.tableLayoutPanel7.SetColumnSpan(this.dceAliasLabel, 2);
-            this.dceAliasLabel.Location = new System.Drawing.Point(4, 47);
+            this.dceAliasLabel.Location = new System.Drawing.Point(4, 49);
             this.dceAliasLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dceAliasLabel.Name = "dceAliasLabel";
             this.dceAliasLabel.Size = new System.Drawing.Size(131, 17);
@@ -688,12 +695,24 @@
             this.dceNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dceNameLabel.AutoSize = true;
             this.tableLayoutPanel7.SetColumnSpan(this.dceNameLabel, 2);
-            this.dceNameLabel.Location = new System.Drawing.Point(4, 94);
+            this.dceNameLabel.Location = new System.Drawing.Point(4, 96);
             this.dceNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dceNameLabel.Name = "dceNameLabel";
             this.dceNameLabel.Size = new System.Drawing.Size(139, 17);
             this.dceNameLabel.TabIndex = 6;
             this.dceNameLabel.Text = "Наименование ДСЕ";
+            // 
+            // dceNumberComboBox
+            // 
+            this.dceNumberComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.dceNumberComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.dceNumberComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dceNumberComboBox.FormattingEnabled = true;
+            this.dceNumberComboBox.Location = new System.Drawing.Point(4, 21);
+            this.dceNumberComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.dceNumberComboBox.Name = "dceNumberComboBox";
+            this.dceNumberComboBox.Size = new System.Drawing.Size(120, 24);
+            this.dceNumberComboBox.TabIndex = 7;
             // 
             // flowLayoutPanel2
             // 
@@ -938,7 +957,6 @@
         private System.Windows.Forms.TextBox productAliasTextBox;
         private System.Windows.Forms.TextBox dceAliasTextBox;
         private System.Windows.Forms.TextBox dceNameTextBox;
-        private System.Windows.Forms.TextBox dceNumberTextBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TextBox supplierNameTextBox;
         private System.Windows.Forms.TextBox contractNumberTextBox;
@@ -985,6 +1003,7 @@
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.ComboBox contractDateComboBox;
         private System.Windows.Forms.ComboBox applicationDateComboBox;
+        private System.Windows.Forms.ComboBox dceNumberComboBox;
     }
 }
 

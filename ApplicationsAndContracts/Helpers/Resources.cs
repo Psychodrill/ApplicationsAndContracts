@@ -12,7 +12,7 @@ namespace ApplicationsAndContracts.Helpers
 
         //public const string MaterialIsOutOfRangeText = "Материал с атрибутом {0} отсутствует в списке материалов";
 
-        //public const string DceIsOutOfRangeText = "Номер ДСЕ {0} отсутствует в списке номеров ДСЕ";
+        public const string DceIsOutOfRangeText = "Номер ДСЕ {0} отсутствует в списке номеров ДСЕ";
 
         //public const string DceAliasIsOutOfRangeText = "Обозначение ДСЕ {0} отсутствует в списке обозначений ДСЕ";
 

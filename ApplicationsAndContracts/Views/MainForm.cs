@@ -51,6 +51,10 @@ namespace ApplicationsAndContracts
         private string productIndex;
         private string productName;
         private string productAlias;
+
+        private int dceNumber;
+        private string dceAlias;
+        private string dceName;
        
 
         public MainForm()
@@ -106,10 +110,100 @@ namespace ApplicationsAndContracts
             this.productNameTextBox.TextChanged += new EventHandler(productNameTextBox_TextChanged);
             this.productNameTextBox.Validating += new CancelEventHandler(productNameTextBox_Validating);
 
+            this.dceNumberComboBox.TextChanged += new EventHandler(dceNumberComboBox_TextChanged);
+            this.dceNumberComboBox.Validating += new CancelEventHandler(dceNumberComboBox_Validating);
+
+            this.dceAliasTextBox.TextChanged += new EventHandler(dceAliasTextBox_TextChanged);
+            this.dceAliasTextBox.Validating += new CancelEventHandler(dceAliasTextBox_Validating);
+
+            this.dceNameTextBox.TextChanged += new EventHandler(dceNameTextBox_TextChanged);
+            this.dceNameTextBox.Validating += new CancelEventHandler(dceNameTextBox_Validating);
+
 
 
             this.cancelButton.Click += new EventHandler(cancelButton_Click);
             #endregion
+        }
+
+        private void dceNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            var converter = new StrConverter();
+            var dceName = converter.TryParse(this.dceNameTextBox.Text);
+            var currentDce = this.dceList.TryGetDceName(dceName);
+        }
+
+        private void dceNameTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            var converter = new StrConverter();
+            try
+            {
+                var dceName = converter.Parse(this.dceNameTextBox.Text);
+                this.dceList.GetDceName(dceName);
+                this.dceName = dceName;
+            }
+            catch (ApplicationException ex)
+            {
+                e.Cancel = true;
+                Methods.ShowInfo(this, ex.Message);
+            }
+            finally
+            {
+                this.dceNameTextBox.Text = converter.Format(dceName);
+            }
+        }
+
+        private void dceAliasTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            var converter = new StrConverter();
+            try
+            {
+                var dceAlias = converter.Parse(this.dceAliasTextBox.Text);
+                this.dceList.GetDceAlias(dceAlias);
+                this.dceAlias = dceAlias;
+            }
+            catch (ApplicationException ex)
+            {
+                e.Cancel = true;
+                Methods.ShowInfo(this, ex.Message);
+            }
+            finally
+            {
+                this.dceAliasTextBox.Text = converter.Format(dceAlias);
+            }
+        }
+
+        private void dceAliasTextBox_TextChanged(object sender, EventArgs e)
+        {
+            var converter = new StrConverter();
+            var dceName = converter.TryParse(this.dceAliasTextBox.Text);
+            var currentDce = this.dceList.TryGetDceAlias(dceAlias);
+        }
+
+        private void dceNumberComboBox_Validating(object sender, CancelEventArgs e)
+        {
+            var converter = new IntConverter();
+            try
+            {
+                var dceNumber = converter.Parse(this.dceNumberComboBox.Text);
+                this.dceList.GetDceNumber(dceNumber);
+                this.dceNumber = dceNumber;
+            }
+            catch (ApplicationException ex)
+            {
+                e.Cancel = true;
+                Methods.ShowInfo(this, ex.Message);
+            }
+            finally
+            {
+                this.dceNumberComboBox.Text = converter.Format(dceNumber);
+            }
+        }
+
+        private void dceNumberComboBox_TextChanged(object sender, EventArgs e)
+        {
+            var converter = new IntConverter();
+            var dceNumber = converter.TryParse(this.dceNumberComboBox.Text);
+            var currentDce = this.dceList.TryGetDceNumber(dceNumber);
         }
 
         private void productNameTextBox_Validating(object sender, CancelEventArgs e)
@@ -136,7 +230,7 @@ namespace ApplicationsAndContracts
         {
             var converter = new StrConverter();
             var productName = converter.TryParse(this.productNameTextBox.Text);
-            var currentProduct = this.productList.TryGetProduct(productName);
+            var currentProduct = this.productList.TryGetProductName(productName);
         }
 
         private void productAliasTextBox_Validating(object sender, CancelEventArgs e)
@@ -163,7 +257,7 @@ namespace ApplicationsAndContracts
         {
             var converter = new StrConverter();
             var productAlias = converter.TryParse(this.productAliasTextBox.Text);
-            var currentProduct = this.productList.TryGetProduct(productAlias);
+            var currentProduct = this.productList.TryGetProductAlias(productAlias);
         }
 
         private void productNumberComboBox_Validating(object sender, CancelEventArgs e)
@@ -190,7 +284,7 @@ namespace ApplicationsAndContracts
         {
             var converter = new IntConverter();
             var productNumber = converter.TryParse(this.productNumberComboBox.Text);
-            //var currentProduct = this.productList.TryGetProduct(productNumber);
+            var currentProduct = this.productList.TryGetProductNumber(productNumber);
         }
 
         private void productIndexComboBox_Validating(object sender, CancelEventArgs e)
@@ -217,7 +311,7 @@ namespace ApplicationsAndContracts
         {
             var converter = new StrConverter();
             var productIndex = converter.TryParse(this.productIndexComboBox.Text);
-            var currentProduct = this.productList.TryGetProduct(productIndex);
+            var currentProduct = this.productList.TryGetProductIndex(productIndex);
         }
 
         private void orderTextBox_Validating(object sender, CancelEventArgs e)
@@ -459,6 +553,11 @@ namespace ApplicationsAndContracts
             this.productAliasTextBox.AutoCompleteCustomSource.AddRange(this.productList.Select(x => x.ProductAlias.Trim()).ToArray());
             this.productNameTextBox.AutoCompleteCustomSource.AddRange(this.productList.Select(x => x.ProductName.Trim()).ToArray());
 
+            this.dceList = DceList.GetDceList();
+            this.dceNumberComboBox.DataSource = this.dceList.GetDceNumberList();
+            this.dceNumberComboBox.AutoCompleteCustomSource.AddRange(this.dceList.Select(x => x.DceNumber.ToString()).ToArray());
+            this.dceAliasTextBox.AutoCompleteCustomSource.AddRange(this.dceList.Select(x => x.DceAlias.Trim()).ToArray());
+            this.dceNameTextBox.AutoCompleteCustomSource.AddRange(this.dceList.Select(x => x.DceName.Trim()).ToArray());
 
 
         }

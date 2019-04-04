@@ -38,7 +38,7 @@ namespace ApplicationsAndContracts.Models
         public Product GetProductIndex (string productIndex)
         {
             if (productIndex == string.Empty) return Product.Empty();
-            var result = this.FirstOrDefault(x => x.ProductIndex == productIndex);
+            var result = this.FirstOrDefault(x => x.ProductIndex.Trim().ToUpper() == productIndex.ToUpper());
             if (result != null) return result;
             throw new ApplicationException(string.Format(Resources.ProductIsOutOfRangeText, productIndex));
         }
@@ -54,7 +54,7 @@ namespace ApplicationsAndContracts.Models
         public Product GetProductAlias(string productAlias)
         {
             if (productAlias == string.Empty) return Product.Empty();
-            var result = this.FirstOrDefault(x => x.ProductAlias == productAlias);
+            var result = this.FirstOrDefault(x => x.ProductAlias.Trim().ToUpper() == productAlias);
             if (result != null) return result;
             throw new ApplicationException(string.Format(Resources.ProductIsOutOfRangeText, productAlias));
         }
@@ -75,7 +75,7 @@ namespace ApplicationsAndContracts.Models
 
         public List<string> GetProductIndexList()
         {
-            var result = this.Select(x => x.ProductIndex).Distinct().OrderBy(x => x).ToList();
+            var result = this.Select(x => x.ProductIndex.Trim()).Distinct().OrderBy(x => x).ToList();
             return result;
         }
 
@@ -92,7 +92,43 @@ namespace ApplicationsAndContracts.Models
         }
 
 
-        public Product TryGetProduct(string productName)
+        public Product TryGetProductNumber(int productNumber)
+        {
+            try
+            {
+                return GetProductNumber(productNumber);
+            }
+            catch (ApplicationException)
+            {
+                return Product.Empty();
+            }
+        }
+
+        public Product TryGetProductIndex(string productIndex)
+        {
+            try
+            {
+                return GetProductIndex(productIndex);
+            }
+            catch (ApplicationException)
+            {
+                return Product.Empty();
+            }
+        }
+
+        public Product TryGetProductAlias(string productAlias)
+        {
+            try
+            {
+                return GetProductAlias(productAlias);
+            }
+            catch (ApplicationException)
+            {
+                return Product.Empty();
+            }
+        }
+
+        public Product TryGetProductName(string productName)
         {
             try
             {

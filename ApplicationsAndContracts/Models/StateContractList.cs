@@ -19,20 +19,20 @@ namespace ApplicationsAndContracts.Models
             return result;
         }
 
-        public StateContract GetStateContractNumber(string contractNumber)
+        public StateContract GetStateContractNumber(string stateContractNumber)
         {
-            if (contractNumber == string.Empty) return StateContract.Empty();
-            var result = this.FirstOrDefault(x => x.StateContractNumber == contractNumber);
+            if (stateContractNumber == string.Empty) return StateContract.Empty();
+            var result = this.FirstOrDefault(x => x.StateContractNumber.Trim().ToUpper() == stateContractNumber.ToUpper());
             if (result != null) return result;
-            throw new ApplicationException(string.Format(Resources.ContractIsOutOfRangeText, contractNumber));
+            throw new ApplicationException(string.Format(Resources.ContractIsOutOfRangeText, stateContractNumber));
         }
 
 
-        public StateContract TryGetContract(string contractNumber)
+        public StateContract TryGetContract(string stateContractNumber)
         {
             try
             {
-                return GetStateContractNumber(contractNumber);
+                return GetStateContractNumber(stateContractNumber);
             }
             catch (ApplicationException)
             {
