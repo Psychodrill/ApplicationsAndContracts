@@ -141,32 +141,83 @@ namespace ApplicationsAndContracts
 
         private void productAliasTextBox_Validating(object sender, CancelEventArgs e)
         {
-            throw new NotImplementedException();
+            var converter = new StrConverter();
+            try
+            {
+                var productAlias = converter.Parse(this.productAliasTextBox.Text);
+                this.productList.GetProductAlias(productAlias);
+                this.productAlias = productAlias;
+            }
+            catch (ApplicationException ex)
+            {
+                e.Cancel = true;
+                Methods.ShowInfo(this, ex.Message);
+            }
+            finally
+            {
+                this.productAliasTextBox.Text = converter.Format(productAlias);
+            }
         }
 
         private void productAliasTextBox_TextChanged(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var converter = new StrConverter();
+            var productAlias = converter.TryParse(this.productAliasTextBox.Text);
+            var currentProduct = this.productList.TryGetProduct(productAlias);
         }
 
         private void productNumberComboBox_Validating(object sender, CancelEventArgs e)
         {
-            throw new NotImplementedException();
+            var converter = new IntConverter();
+            try
+            {
+                var productNumber = converter.Parse(this.productNumberComboBox.Text);
+                this.productList.GetProductNumber(productNumber);
+                this.productNumber = productNumber;
+            }
+            catch (ApplicationException ex)
+            {
+                e.Cancel = true;
+                Methods.ShowInfo(this, ex.Message);
+            }
+            finally
+            {
+                this.productNumberComboBox.Text = converter.Format(productNumber);
+            }
         }
 
         private void productNumberComboBox_TextChanged(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var converter = new IntConverter();
+            var productNumber = converter.TryParse(this.productNumberComboBox.Text);
+            //var currentProduct = this.productList.TryGetProduct(productNumber);
         }
 
         private void productIndexComboBox_Validating(object sender, CancelEventArgs e)
         {
-            throw new NotImplementedException();
+            var converter = new StrConverter();
+            try
+            {
+                var productIndex = converter.Parse(this.productIndexComboBox.Text);
+                this.productList.GetProductIndex(productIndex);
+                this.productIndex = productIndex;
+            }
+            catch (ApplicationException ex)
+            {
+                e.Cancel = true;
+                Methods.ShowInfo(this, ex.Message);
+            }
+            finally
+            {
+                this.productIndexComboBox.Text = converter.Format(productIndex);
+            };
         }
 
         private void productIndexComboBox_TextChanged(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var converter = new StrConverter();
+            var productIndex = converter.TryParse(this.productIndexComboBox.Text);
+            var currentProduct = this.productList.TryGetProduct(productIndex);
         }
 
         private void orderTextBox_Validating(object sender, CancelEventArgs e)

@@ -73,6 +73,13 @@ namespace ApplicationsAndContracts.DataAccess
             return result;
         }
 
+        public IEnumerable<DataRow> GetDceList()
+        {
+            var parameters = new SqlParameter[0];
+            var rows = SqlHelper.ExecuteSqlCommand(SQL.GetDceList, parameters);
+            var result = rows.AsEnumerable();
+            return result;
+        }
 
         
     }

@@ -54,6 +54,13 @@ namespace ApplicationsAndContracts.DataAccess
                        [ApplicationId]
                   FROM [dbo].[ft_ApplicationsAndContracts_GetProductList]()";
 
+        internal const string GetDceList = @"
+                SELECT [ApplicationId],
+                       [DceNumber],
+                       [DceAlias],
+                       [DceName]
+                  FROM [[dbo].[ft_ApplicationsAndContracts_GetDceList]()]";
+
 
     }
 

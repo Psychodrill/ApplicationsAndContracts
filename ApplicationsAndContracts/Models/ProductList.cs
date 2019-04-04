@@ -46,7 +46,7 @@ namespace ApplicationsAndContracts.Models
         public Product GetProductName(string productName)
         {
             if (productName == string.Empty) return Product.Empty();
-            var result = this.FirstOrDefault(x => x.ProductName == productName);
+            var result = this.FirstOrDefault(x => x.ProductName.Trim().ToUpper() == productName.ToUpper());
             if (result != null) return result;
             throw new ApplicationException(string.Format(Resources.ProductIsOutOfRangeText, productName));
         }
@@ -67,7 +67,7 @@ namespace ApplicationsAndContracts.Models
             throw new ApplicationException(string.Format(Resources.ProductIsOutOfRangeText, applicationId));
         }
 
-        public List<int> GetProductNumberList()
+        public List<int?> GetProductNumberList()
         {
             var result = this.Select(x => x.ProductNumber).Distinct().OrderBy(x => x).ToList();
             return result;
