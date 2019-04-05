@@ -17,6 +17,7 @@ namespace ApplicationsAndContracts.Models
             var rows = new DataService().GetContractList();
             var list = rows.Select(row => Contract.CreateFrom(row)).ToList();
             var result = new ContractList(list);
+            result.Add(Contract.Empty());
             return result;
         }
 
@@ -35,6 +36,8 @@ namespace ApplicationsAndContracts.Models
             if (result != null) return result;
             throw new ApplicationException(string.Format(Resources.ContractDateIsOutOfRangeText, contractDate));
         }
+
+
 
         public List<DateTime> GetContractDateList()
         {

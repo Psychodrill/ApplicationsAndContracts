@@ -16,6 +16,7 @@ namespace ApplicationsAndContracts.Models
             var rows = new DataService().GetProductList();
             var list = rows.Select(row => Product.CreateFrom(row));
             var result = new ProductList(list);
+            result.Add(Product.Empty());
             return result;
         }
 

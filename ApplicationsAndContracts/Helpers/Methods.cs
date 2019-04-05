@@ -126,5 +126,11 @@ namespace ApplicationsAndContracts.Helpers
             return sb.ToString();
         }
 
+        public static void MinValueDateFormat(ConvertEventArgs e)
+        {
+            if (Convert.ToDateTime(e.Value) == DateTime.MinValue)
+                e.Value = Resources.UnselectedText;
+        }
+
     }
 }

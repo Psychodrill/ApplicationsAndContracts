@@ -16,6 +16,7 @@ namespace ApplicationsAndContracts.Models
             var rows = new DataService().GetApplicationList();
             var list = rows.Select(row => Applicationmodel.CreateFrom(row)).ToList();
             var result = new ApplicationList(list);
+            result.Add(Applicationmodel.Empty());
             return result;
         }
 

@@ -16,6 +16,7 @@ namespace ApplicationsAndContracts.Models
             var rows = new DataService().GetDceList();
             var list = rows.Select(row => Dce.CreateFrom(row));
             var result = new DceList(list);
+            result.Add(Dce.Empty());
             return result;
         }
 

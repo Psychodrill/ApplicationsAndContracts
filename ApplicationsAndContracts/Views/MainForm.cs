@@ -75,7 +75,7 @@ namespace ApplicationsAndContracts
             this.dceAlias = string.Empty;
             this.dceName = string.Empty;
 
-        
+
             InitializeComponent();
 
             #region Actions
@@ -89,12 +89,14 @@ namespace ApplicationsAndContracts
 
             this.contractDateComboBox.TextChanged += new EventHandler(contractDateComboBox_TextChanged);
             this.contractDateComboBox.Validating += new CancelEventHandler(contractDateComboBox_Validating);
+            this.contractDateComboBox.Format += new ListControlConvertEventHandler(minValueDate_Format);
 
             this.applicationNumberTextBox.TextChanged += new EventHandler(applicationNumberTextBox_TextChanged);
             this.applicationNumberTextBox.Validating += new CancelEventHandler(applicationNumberTextBox_Validating);
 
             this.applicationDateComboBox.TextChanged += new EventHandler(applicationDateComboBox_TextChanged);
             this.applicationDateComboBox.Validating += new CancelEventHandler(applicationDateComboBox_Validating);
+            this.applicationDateComboBox.Format += new ListControlConvertEventHandler(minValueDate_Format);
 
             this.gkTextBox.TextChanged += new EventHandler(gkTextBox_TextChanged);
             this.gkTextBox.Validating += new CancelEventHandler(gkTextBox_Validating);
@@ -104,9 +106,11 @@ namespace ApplicationsAndContracts
 
             this.productIndexComboBox.TextChanged += new EventHandler(productIndexComboBox_TextChanged);
             this.productIndexComboBox.Validating += new CancelEventHandler(productIndexComboBox_Validating);
-
+            this.productIndexComboBox.Format += new ListControlConvertEventHandler(emptyText_Format);
+            
             this.productNumberComboBox.TextChanged += new EventHandler(productNumberComboBox_TextChanged);
             this.productNumberComboBox.Validating += new CancelEventHandler(productNumberComboBox_Validating);
+            this.productNumberComboBox.Format += new ListControlConvertEventHandler(minusOneValue_Format);
 
             this.productAliasTextBox.TextChanged += new EventHandler(productAliasTextBox_TextChanged);
             this.productAliasTextBox.Validating += new CancelEventHandler(productAliasTextBox_Validating);
@@ -116,13 +120,15 @@ namespace ApplicationsAndContracts
 
             this.dceNumberComboBox.TextChanged += new EventHandler(dceNumberComboBox_TextChanged);
             this.dceNumberComboBox.Validating += new CancelEventHandler(dceNumberComboBox_Validating);
-            //this.dceNumberComboBox.Format += new ListControlConvertEventHandler(minusOneValue_Format);
+            this.dceNumberComboBox.Format += new ListControlConvertEventHandler(minusOneValue_Format);
 
             this.dceAliasTextBox.TextChanged += new EventHandler(dceAliasTextBox_TextChanged);
             this.dceAliasTextBox.Validating += new CancelEventHandler(dceAliasTextBox_Validating);
 
             this.dceNameTextBox.TextChanged += new EventHandler(dceNameTextBox_TextChanged);
             this.dceNameTextBox.Validating += new CancelEventHandler(dceNameTextBox_Validating);
+
+            this.departmentComboBox.Format += new ListControlConvertEventHandler(emptyText_Format);
 
             this.clearButton.Click += new EventHandler(clearButton_Click);
 
@@ -131,6 +137,8 @@ namespace ApplicationsAndContracts
             this.cancelButton.Click += new EventHandler(cancelButton_Click);
             #endregion
         }
+
+
 
         private void dceNameTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -211,6 +219,8 @@ namespace ApplicationsAndContracts
             var converter = new IntConverter();
             var dceNumber = converter.TryParse(this.dceNumberComboBox.Text);
             var currentDce = this.dceList.TryGetDceNumber(dceNumber);
+            if (IsMatchingDigitRange(this.dceNumberComboBox.Text)) return;
+            else this.dceNumberComboBox.SelectedItem = dceList.GetDceNumberList().First();
         }
 
         private void productNameTextBox_Validating(object sender, CancelEventArgs e)
@@ -292,6 +302,8 @@ namespace ApplicationsAndContracts
             var converter = new IntConverter();
             var productNumber = converter.TryParse(this.productNumberComboBox.Text);
             var currentProduct = this.productList.TryGetProductNumber(productNumber);
+            if (IsMatchingDigitRange(this.productNumberComboBox.Text)) return;
+            else this.productNumberComboBox.SelectedItem = productList.GetProductNumberList().First();
         }
 
         private void productIndexComboBox_Validating(object sender, CancelEventArgs e)
@@ -561,7 +573,6 @@ namespace ApplicationsAndContracts
             this.productNameTextBox.AutoCompleteCustomSource.AddRange(this.productList.Select(x => x.ProductName.Trim()).ToArray());
 
             this.dceList = DceList.GetDceList();
-            SettingDefaultValues();
             this.dceNumberComboBox.DataSource = this.dceList.GetDceNumberList();
             this.dceNumberComboBox.AutoCompleteCustomSource.AddRange(this.dceList.Select(x => x.DceNumber.ToString()).ToArray());
             this.dceAliasTextBox.AutoCompleteCustomSource.AddRange(this.dceList.Select(x => x.DceAlias.Trim()).ToArray());
@@ -571,51 +582,50 @@ namespace ApplicationsAndContracts
 
         }
 
-        private void SettingDefaultValues()
-        {
-            var intconverter = new IntConverter();
-            Dce item = dceList.TryGetDceNumber(this.dceNumber);
-            this.dceNumberComboBox.Text=intconverter.Format( item.DceNumber);
-            this.dceList.Insert(0, item);
-            //dceNumberComboBox.Text = "-1";
 
+
+
+
+
+
+
+        private void minValueDate_Format(object sender, ListControlConvertEventArgs e)
+        {
+            Helpers.Methods.MinValueDateFormat(e);
         }
 
-
-
-        void applyButton_Click(object sender, EventArgs e)
+        void minusOneValue_Format(object sender, ConvertEventArgs e)
         {
-
+            Helpers.Methods.MinusOneValueFormat(e);
         }
 
-
-        //void minusOneValue_Format(object sender, ConvertEventArgs e)
-        //{
-        //    Helpers.Methods.MinusOneValueFormat(e);
-        //}
-
-        //void emptyText_Format(object sender, ListControlConvertEventArgs e)
-        //{
-        //    Helpers.Methods.EmptyTextFormat(e);
-        //}
+        void emptyText_Format(object sender, ListControlConvertEventArgs e)
+        {
+            Helpers.Methods.EmptyTextFormat(e);
+        }
 
         void clearButton_Click (object sender,  EventArgs e)
         {
             this.supplierNameTextBox.Clear();
             this.contractNumberTextBox.Clear();
-            this.contractDateComboBox.SelectedItem = 0;
+            this.contractDateComboBox.SelectedItem = this.contractList.GetContractDateList().First();
             this.applicationNumberTextBox.Clear();
-            this.applicationDateComboBox.SelectedItem = 0;
+            this.applicationDateComboBox.SelectedItem = this.applicationList.GetApplicationDateList().First();
             this.gkTextBox.Clear();
             this.orderTextBox.Clear();
-            this.departmentComboBox.SelectedItem = 0;
-            this.productNumberComboBox.SelectedItem = 0;
-            this.productIndexComboBox.SelectedItem = 0;
+            this.departmentComboBox.SelectedItem = this.applicationList.GetDepartmentList().First();
+            this.productNumberComboBox.SelectedItem = this.productList.GetProductNumberList().First();
+            this.productIndexComboBox.SelectedItem = this.productList.GetProductIndexList().First();
             this.productAliasTextBox.Clear();
             this.productNameTextBox.Clear();
-            this.dceNumberComboBox.SelectedItem = 0;
+            this.dceNumberComboBox.SelectedItem=this.dceList.GetDceNumberList().First();
             this.dceAliasTextBox.Clear();
             this.dceNameTextBox.Clear();
+
+        }
+
+        void applyButton_Click(object sender, EventArgs e)
+        {
 
         }
 
