@@ -71,7 +71,11 @@ namespace ApplicationsAndContracts
             this.productIndex = string.Empty;
             this.productAlias = string.Empty;
             this.productName = string.Empty;
+            this.dceNumber = -1;
+            this.dceAlias = string.Empty;
+            this.dceName = string.Empty;
 
+        
             InitializeComponent();
 
             #region Actions
@@ -112,12 +116,15 @@ namespace ApplicationsAndContracts
 
             this.dceNumberComboBox.TextChanged += new EventHandler(dceNumberComboBox_TextChanged);
             this.dceNumberComboBox.Validating += new CancelEventHandler(dceNumberComboBox_Validating);
+            //this.dceNumberComboBox.Format += new ListControlConvertEventHandler(minusOneValue_Format);
 
             this.dceAliasTextBox.TextChanged += new EventHandler(dceAliasTextBox_TextChanged);
             this.dceAliasTextBox.Validating += new CancelEventHandler(dceAliasTextBox_Validating);
 
             this.dceNameTextBox.TextChanged += new EventHandler(dceNameTextBox_TextChanged);
             this.dceNameTextBox.Validating += new CancelEventHandler(dceNameTextBox_Validating);
+
+            this.clearButton.Click += new EventHandler(clearButton_Click);
 
 
 
@@ -554,11 +561,61 @@ namespace ApplicationsAndContracts
             this.productNameTextBox.AutoCompleteCustomSource.AddRange(this.productList.Select(x => x.ProductName.Trim()).ToArray());
 
             this.dceList = DceList.GetDceList();
+            SettingDefaultValues();
             this.dceNumberComboBox.DataSource = this.dceList.GetDceNumberList();
             this.dceNumberComboBox.AutoCompleteCustomSource.AddRange(this.dceList.Select(x => x.DceNumber.ToString()).ToArray());
             this.dceAliasTextBox.AutoCompleteCustomSource.AddRange(this.dceList.Select(x => x.DceAlias.Trim()).ToArray());
             this.dceNameTextBox.AutoCompleteCustomSource.AddRange(this.dceList.Select(x => x.DceName.Trim()).ToArray());
 
+
+
+        }
+
+        private void SettingDefaultValues()
+        {
+            var intconverter = new IntConverter();
+            Dce item = dceList.TryGetDceNumber(this.dceNumber);
+            this.dceNumberComboBox.Text=intconverter.Format( item.DceNumber);
+            this.dceList.Insert(0, item);
+            //dceNumberComboBox.Text = "-1";
+
+        }
+
+
+
+        void applyButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        //void minusOneValue_Format(object sender, ConvertEventArgs e)
+        //{
+        //    Helpers.Methods.MinusOneValueFormat(e);
+        //}
+
+        //void emptyText_Format(object sender, ListControlConvertEventArgs e)
+        //{
+        //    Helpers.Methods.EmptyTextFormat(e);
+        //}
+
+        void clearButton_Click (object sender,  EventArgs e)
+        {
+            this.supplierNameTextBox.Clear();
+            this.contractNumberTextBox.Clear();
+            this.contractDateComboBox.SelectedItem = 0;
+            this.applicationNumberTextBox.Clear();
+            this.applicationDateComboBox.SelectedItem = 0;
+            this.gkTextBox.Clear();
+            this.orderTextBox.Clear();
+            this.departmentComboBox.SelectedItem = 0;
+            this.productNumberComboBox.SelectedItem = 0;
+            this.productIndexComboBox.SelectedItem = 0;
+            this.productAliasTextBox.Clear();
+            this.productNameTextBox.Clear();
+            this.dceNumberComboBox.SelectedItem = 0;
+            this.dceAliasTextBox.Clear();
+            this.dceNameTextBox.Clear();
 
         }
 

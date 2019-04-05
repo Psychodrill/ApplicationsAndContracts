@@ -24,7 +24,7 @@ namespace ApplicationsAndContracts.Models
         public Supplier GetSupplier(string supplierName)
         {
             if (supplierName == string.Empty) return Supplier.Empty();
-            var result = this.FirstOrDefault(x => x.SupplierName == supplierName);
+            var result = this.FirstOrDefault(x => x.SupplierName.Trim().ToUpper() == supplierName.ToUpper());
             if (result!= null) return result;
             throw new ApplicationException(string.Format(Resources.SupplierIsOutOfRangeText, supplierName));
         }

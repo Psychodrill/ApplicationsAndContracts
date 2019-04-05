@@ -23,7 +23,7 @@ namespace ApplicationsAndContracts.Models
         public Contract GetContractNumber (string contractNumber)
         {
             if (contractNumber == string.Empty) return Contract.Empty();
-            var result = this.FirstOrDefault(x => x.ContractNumber == contractNumber);
+            var result = this.FirstOrDefault(x => x.ContractNumber.Trim().ToUpper() == contractNumber.ToUpper());
             if (result != null) return result;
             throw new ApplicationException(string.Format(Resources.ContractIsOutOfRangeText, contractNumber));
         }

@@ -32,7 +32,7 @@ namespace ApplicationsAndContracts.Models
         public Dce GetDceAlias(string dceAlias)
         {
             if (dceAlias == string.Empty|| dceAlias==null) return Dce.Empty();
-            var result = this.FirstOrDefault(x => x.DceAlias.ToUpper() == dceAlias.ToUpper());
+            var result = this.FirstOrDefault(x => x.DceAlias.Trim().ToUpper() == dceAlias.ToUpper());
             if (result != null) return result;
             throw new ApplicationException(string.Format(Resources.DceIsOutOfRangeText, dceAlias));
 
@@ -41,7 +41,7 @@ namespace ApplicationsAndContracts.Models
         public Dce GetDceName(string dceName)
         {
             if (dceName == string.Empty||dceName==null) return Dce.Empty();
-            var result = this.FirstOrDefault(x => x.DceName.ToUpper() == dceName.ToUpper());
+            var result = this.FirstOrDefault(x => x.DceName.Trim().ToUpper() == dceName.ToUpper());
             if (result != null) return result;
             throw new ApplicationException(string.Format(Resources.DceIsOutOfRangeText, dceName));
 
@@ -66,6 +66,8 @@ namespace ApplicationsAndContracts.Models
             var result = this.Select(x => x.DceName).Distinct().OrderBy(x => x).ToList();
             return result;
         }
+
+        
 
 
         public Dce TryGetDceNumber(int dceNumber)

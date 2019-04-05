@@ -31,7 +31,7 @@ namespace ApplicationsAndContracts.Converters
 
         public string Format(int value)
         {
-            if (value == -1) return "";
+            if (value == -1) return Resources.UnselectedText;
             return value.ToString();
         }
     }

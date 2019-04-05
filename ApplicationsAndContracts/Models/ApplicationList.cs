@@ -22,7 +22,7 @@ namespace ApplicationsAndContracts.Models
         public Applicationmodel GetApplication(string applicationNumber)
         {
             if (applicationNumber == string.Empty) return Applicationmodel.Empty();
-            var result = this.FirstOrDefault(x => x.ApplicationNumber == applicationNumber);
+            var result = this.FirstOrDefault(x => x.ApplicationNumber.Trim().ToUpper() == applicationNumber.ToUpper());
             if (result != null) return result;
             throw new ApplicationException(string.Format(Resources.ApplicationIsOutOfRangeText, applicationNumber));
         }
