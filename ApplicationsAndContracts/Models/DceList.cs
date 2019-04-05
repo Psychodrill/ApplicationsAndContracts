@@ -20,14 +20,12 @@ namespace ApplicationsAndContracts.Models
             return result;
         }
 
-
         public Dce GetDceNumber(int dceNumber)
         {
             if (dceNumber == -1) return Dce.Empty();
             var result = this.FirstOrDefault(x => x.DceNumber == dceNumber);
             if (result != null) return result;
             throw new ApplicationException(string.Format(Resources.DceIsOutOfRangeText, dceNumber));
-
         }
 
         public Dce GetDceAlias(string dceAlias)
@@ -55,7 +53,6 @@ namespace ApplicationsAndContracts.Models
         }
 
 
-
         public List<string> GetDceAliasList()
         {
             var result = this.Select(x => x.DceAlias).Distinct().OrderBy(x => x).ToList();
@@ -69,6 +66,70 @@ namespace ApplicationsAndContracts.Models
         }
 
         
+        public List<Dce> GetDce(int? dceNumber, string dceAlias, string dceName)
+        {
+            Dce result;
+            if (dceNumber != -1)
+            {
+                result = this.FirstOrDefault(x => x.DceNumber == dceNumber);
+                if (result != null) dceNumber = result.DceNumber;
+                else result= Dce.Empty();
+                dceNumber = null;
+            }
+            else if (dceAlias != string.Empty)
+            {
+                result = this.FirstOrDefault(x => x.DceAlias.Trim().ToUpper() == dceAlias.ToUpper());
+                if (result != null) dceAlias = result.DceAlias;
+                else result = Dce.Empty();
+            }
+            else if (dceName != string.Empty)
+            {
+                result = this.FirstOrDefault(x => x.DceName.Trim().ToUpper() == dceName.ToUpper());
+                if (result != null) dceName = result.DceName;
+                else result = Dce.Empty();
+            }
+
+            List<Dce> innerlist = DceList.GetDceList().Where(x =>x.DceNumber==dceNumber)
+                                                      .Where(x =>x.DceAlias==dceAlias)
+                                                      .Where(x=>x.DceName==dceName).OrderBy(x=>x.DceNumber).ToList();
+
+            //List<Dce> innerlist1 = DceList.GetDceList().Where(x => x.DceNumber == dceNumber)
+            //                                          .Where(x => x.DceAlias == dceAlias)
+            //                                          .Where(x => x.DceName == dceName).OrderBy(x => x.DceNumber).ToList();
+
+            return innerlist;
+
+            //DceList dceList1 = new DceList(DceList.GetDceList());
+            //List<Dce> dceList2 = new List<Dce>();
+
+            //Dce result;
+            ////if (dceNumber != -1)
+            ////{
+            ////    result = this.FirstOrDefault(x => x.DceNumber == dceNumber);
+            ////    if (result != null) dceNumber=result.DceNumber;
+            ////} 
+            ////else if (dceAlias != string.Empty)
+            ////{
+            ////    result = this.FirstOrDefault(x => x.DceAlias.Trim().ToUpper() == dceAlias.ToUpper());
+            ////    if (result != null) dceAlias=result.DceAlias;
+            ////}
+            ////else if(dceName != string.Empty)
+            ////{
+            ////    result = this.FirstOrDefault(x => x.DceName.Trim().ToUpper() == dceName.ToUpper());
+            ////    if (result != null) dceName=result.DceName;
+            ////}
+
+            //dceList1 = DceList.GetDceList().SelectMany(x =>x.DceNumber==dceNumber).Intersect(DceList.GetDceList().Select(x => x.DceAlias== dceAlias));
+            //    //Where(x => x.DceAlias == dceAlias).Where(x=>x.DceName==dceName).Distinct().ToList();
+            //return dceList;
+
+            //dceList = GetDceNumberList().Select(x=>x.DceNumber==).Distinct().OrderBy(x=>x);
+
+            
+
+            ////if (result != null) return result;
+            ////throw new ApplicationException(string.Format(Resources.DceIsOutOfRangeText, dceNumber));
+        }
 
 
         public Dce TryGetDceNumber(int dceNumber)

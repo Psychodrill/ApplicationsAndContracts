@@ -153,7 +153,7 @@ namespace ApplicationsAndContracts
             try
             {
                 var dceName = converter.Parse(this.dceNameTextBox.Text);
-                this.dceList.GetDceName(dceName);
+                this.dceList.GetDce(dceNumber,dceAlias,dceName);
                 this.dceName = dceName;
             }
             catch (ApplicationException ex)
@@ -578,16 +578,8 @@ namespace ApplicationsAndContracts
             this.dceAliasTextBox.AutoCompleteCustomSource.AddRange(this.dceList.Select(x => x.DceAlias.Trim()).ToArray());
             this.dceNameTextBox.AutoCompleteCustomSource.AddRange(this.dceList.Select(x => x.DceName.Trim()).ToArray());
 
-
-
         }
-
-
-
-
-
-
-
+        
 
         private void minValueDate_Format(object sender, ListControlConvertEventArgs e)
         {
@@ -633,7 +625,6 @@ namespace ApplicationsAndContracts
         {
             this.Close();
         }
-
 
     }
 }
