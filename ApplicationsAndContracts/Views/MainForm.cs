@@ -153,7 +153,7 @@ namespace ApplicationsAndContracts
             try
             {
                 var dceName = converter.Parse(this.dceNameTextBox.Text);
-                this.dceList.GetDce(dceNumber,dceAlias,dceName);
+                this.dceList.GetDceNumber(dceNumber);
                 this.dceName = dceName;
             }
             catch (ApplicationException ex)
@@ -618,7 +618,74 @@ namespace ApplicationsAndContracts
 
         void applyButton_Click(object sender, EventArgs e)
         {
+            if (!IsAnyFieldFilled(
+                          this.supplierName,
+                          this.contractNumber,
+                          this.contractDate,
+                          this.applicationNumber,
+                          this.applicationDate,
+                          this.department,
+                          this.stateContractNumber,
+                          this.orderNumber,
+                          this.productNumber,
+                          this.productIndex,
+                          this.productAlias,
+                          this.productName,
+                          this.dceNumber,
+                          this.dceAlias,
+                          this.dceName))
+            {
+                var messageText = Methods.SearchingCriteriaIsEmpty();
+                Methods.ShowInfo(messageText);
+                return;
+            }
+            else
+                this.Criteria = this.CreateCriteria();
 
+            var rows = SplashScreenForm.ExecuteAsync<IEnumerable<DataRow>>(this, this.GetCatalogRowsFromDB);
+            if (!this.IsExistedInDB(rows)) return;
+            this.Catalog = Catalog.CreateFrom(rows);
+            var handler = this.GoToWorkWithDceForm;
+            if (handler != null) handler(this, EventArgs.Empty);
+
+        }
+
+        private bool IsAnyFieldFilled(string supplierName,
+                          string contractNumber,
+                          DateTime contractDate,
+                          string applicationNumber,
+                          DateTime applicationDate,
+                          string department,
+                          string stateContractNumber,
+                          int orderNumber,
+                          int productNumber,
+                          string productIndex,
+                          string productAlias,
+                          string productName,
+                          int dceNumber,
+                          string dceAlias,
+                          string dceName)
+        {
+            if (this.supplierName==string.Empty&&
+                          this.contractNumber==string.Empty&&
+                          this.contractDate==DateTime.MinValue&&
+                          this.applicationNumber == string.Empty&&
+                          this.applicationDate==DateTime.MinValue&&
+                          this.stateContractNumber==string.Empty&&
+                          this.orderNumber==-1&&
+                          this.productNumber==-1&&
+                          this.productIndex==string.Empty&&
+                          this.productAlias==string.Empty&&
+                          this.productName==string.Empty&&
+                          this.dceNumber==-1&&
+                          this.dceAlias==string.Empty&&
+                          this.dceName==string.Empty&&
+                          this.department == string.Empty)
+            {
+
+                return false;
+            }
+            else return true;
         }
 
         void cancelButton_Click (object sender, EventArgs e)

@@ -13,7 +13,7 @@ namespace ApplicationsAndContracts.Models
         {
             var result = new StateContract();
             result.ContractId = row.Field<int>("ContractId");
-            result.StateContractNumber = row.Field<string>("ContractNumber");
+            result.StateContractNumber = row.Field<string>("StateContractNumber");
             return result;
         }
 

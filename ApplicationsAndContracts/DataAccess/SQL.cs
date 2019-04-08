@@ -37,7 +37,7 @@ namespace ApplicationsAndContracts.DataAccess
 
         internal const string GetStateContractList = @"
                 SELECT [ContractId],
-                       [ContractNumber]
+                       [StateContractNumber]
                   FROM [dbo].[ft_ApplicationsAndContracts_GetStateContractList]()";
 
         internal const string GetOrderList = @"
@@ -60,6 +60,38 @@ namespace ApplicationsAndContracts.DataAccess
                        [DceAlias],
                        [DceName]
                   FROM [dbo].[ft_ApplicationsAndContracts_GetDceList]()";
+
+        internal const string GetCatalog = @"
+                SELECT [SupplierName]
+                       [ContractNumber]
+                       [ContractDate]
+                       [ApplicationNumber]
+                       [ApplicationDate]
+                       [Department]
+                       [StateContractNumber]
+                       [Order],
+                       [ProductId],
+                       [ProductIndex],
+                       [ProductName],
+                       [ProductAlias],
+                       [DceNumber],
+                       [DceAlias],
+                       [DceName]
+                  FROM [dbo].[ft_ApplicationsAndContracts_GetCatalog](@supplierName,
+                                                                      @contractNumber,
+                                                                      @contractDate,
+                                                                      @applicationNumber,
+                                                                      @applicationDate,
+                                                                      @department
+                                                                      @stateContractNumber,
+                                                                      @orderNumber,
+                                                                      @productNumber,
+                                                                      @productIndex,
+                                                                      @productAlias,
+                                                                      @productName,
+                                                                      @dceNumber,
+                                                                      @dceAlias,
+                                                                      @dceName)";
 
 
     }
