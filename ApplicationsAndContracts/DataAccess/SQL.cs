@@ -82,7 +82,7 @@ namespace ApplicationsAndContracts.DataAccess
                                                                       @contractDate,
                                                                       @applicationNumber,
                                                                       @applicationDate,
-                                                                      @department
+                                                                      @department,
                                                                       @stateContractNumber,
                                                                       @orderNumber,
                                                                       @productNumber,
