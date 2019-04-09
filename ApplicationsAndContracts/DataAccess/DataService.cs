@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using ApplicationsAndContracts.Models;
 
 namespace ApplicationsAndContracts.DataAccess
 {
@@ -81,6 +82,29 @@ namespace ApplicationsAndContracts.DataAccess
             return result;
         }
 
-        
+        public IEnumerable<DataRow> GetCatalog(Criteria criteria)
+        {
+            var parameters = new SqlParameter[15];
+            parameters[0] = new SqlParameter("supplierName", criteria.SupplierName);
+            parameters[1] = new SqlParameter("contractNumber", criteria.ContractNumber);
+            parameters[2] = new SqlParameter("contractDate", criteria.ContractDate);
+            parameters[3] = new SqlParameter("applicationNumber", criteria.ApplicationNumber);
+            parameters[4] = new SqlParameter("applicationDate", criteria.ApplicationDate);
+            parameters[5] = new SqlParameter("department", criteria.Department);
+            parameters[6] = new SqlParameter("stateContractNumber", criteria.StateContractNumber);
+            parameters[7] = new SqlParameter("order", criteria.OrderNumber);
+            parameters[8] = new SqlParameter("productId", criteria.ProductNumber);
+            parameters[9] = new SqlParameter("productIndex", criteria.ProductIndex);
+            parameters[10] = new SqlParameter("productAlias", criteria.ProductAlias);
+            parameters[11] = new SqlParameter("productName", criteria.ProductName);
+            parameters[12] = new SqlParameter("dceNumber", criteria.DceNumber);
+            parameters[13] = new SqlParameter("dceAlias", criteria.DceAlias);
+            parameters[14] = new SqlParameter("dceName", criteria.DceName);
+            var rows = SqlHelper.ExecuteSqlCommand(SQL.GetCatalog, parameters);
+            var result =rows.AsEnumerable();
+            return result;
+        }
+
+
     }
 }

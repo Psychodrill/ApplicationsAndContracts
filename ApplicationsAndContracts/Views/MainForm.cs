@@ -12,6 +12,7 @@ using ApplicationsAndContracts.Models;
 using ApplicationsAndContracts.Converters;
 using ApplicationsAndContracts.Helpers;
 using System.Text.RegularExpressions;
+using ApplicationsAndContracts.Views;
 
 
 namespace ApplicationsAndContracts
@@ -712,6 +713,11 @@ namespace ApplicationsAndContracts
                                       this.dceNumber,
                                       this.dceAlias,
                                       this.dceName);
+        }
+
+        private IEnumerable<DataRow> GetCatalogRowsFromDB()
+        {
+            return this.dataService.GetCatalog(this.Criteria);
         }
 
         void cancelButton_Click (object sender, EventArgs e)

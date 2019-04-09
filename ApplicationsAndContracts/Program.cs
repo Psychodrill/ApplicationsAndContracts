@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ApplicationsAndContracts.Helpers;
 using ApplicationsAndContracts.Models;
+using ApplicationsAndContracts.Contexts;
+using ApplicationsAndContracts.DataAccess;
 
 
 namespace ApplicationsAndContracts
@@ -18,10 +20,11 @@ namespace ApplicationsAndContracts
         [STAThread]
         static void Main()
         {
+            SDS = SDS.CreateFrom(new DataService().GetSDS());
             Application.CurrentInputLanguage = Methods.SetRussianLanguage();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new Context());
 
         }
     }

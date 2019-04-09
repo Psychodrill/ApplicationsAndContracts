@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using ApplicationsAndContracts.Models.Abstract;
+
 
 namespace ApplicationsAndContracts.Models
 {
-    public class Catalog
+    public class Catalog:SupportSortingList<CatalogItem>
     {
         public static Catalog (IEnumerable<DataRow> rows)
         {
@@ -21,21 +23,19 @@ namespace ApplicationsAndContracts.Models
             this.innerList = new List<CatalogItem>();
         }
 
-        private List<CatalogItem> innerlist;
+        private List<CatalogItem> innerList;
 
         public void RefreshFrom (IEnumerable<DataRow> rows)
         {
-            this.Clear()
+            this.Clear();
                 foreach (var row in rows)
                 this.Add(CatalogItem.CreateFrom(row));
         }
 
         public void Add(CatalogItem item)
         {
-            this.innerlist.Add(item);
+            this.innerList.Add(item);
             base.Add(item);
         }
     }
-
-
 }

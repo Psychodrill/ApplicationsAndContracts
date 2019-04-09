@@ -62,18 +62,18 @@ namespace ApplicationsAndContracts.DataAccess
                   FROM [dbo].[ft_ApplicationsAndContracts_GetDceList]()";
 
         internal const string GetCatalog = @"
-                SELECT [SupplierName]
-                       [ContractNumber]
-                       [ContractDate]
-                       [ApplicationNumber]
-                       [ApplicationDate]
-                       [Department]
-                       [StateContractNumber]
+                SELECT [SupplierName],
+                       [ContractNumber],
+                       [ContractDate],
+                       [ApplicationNumber],
+                       [ApplicationDate],
+                       [Department],
+                       [StateContractNumber],
                        [Order],
                        [ProductId],
                        [ProductIndex],
-                       [ProductName],
                        [ProductAlias],
+                       [ProductName],
                        [DceNumber],
                        [DceAlias],
                        [DceName]
