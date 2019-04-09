@@ -12,7 +12,7 @@ namespace ApplicationsAndContracts.Models
         public static StateContract CreateFrom(DataRow row)
         {
             var result = new StateContract();
-            result.ContractId = row.Field<int>("ContractId");
+            result.StateContractId = row.Field<int>("StateContractId");
             result.StateContractNumber = row.Field<string>("StateContractNumber");
             return result;
         }
@@ -30,7 +30,7 @@ namespace ApplicationsAndContracts.Models
 
         
 
-        public int ContractId { get; private set; }
+        public int StateContractId { get; private set; }
         public string StateContractNumber { get; private set; }
 
     }

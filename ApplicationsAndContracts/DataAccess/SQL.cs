@@ -36,7 +36,7 @@ namespace ApplicationsAndContracts.DataAccess
                   FROM [dbo].[ft_ApplicationsAndContracts_GetApplicationList]()";
 
         internal const string GetStateContractList = @"
-                SELECT [ContractId],
+                SELECT [StateContractId],
                        [StateContractNumber]
                   FROM [dbo].[ft_ApplicationsAndContracts_GetStateContractList]()";
 

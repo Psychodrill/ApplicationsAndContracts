@@ -88,10 +88,13 @@
     <Compile Include="DataAccess\SqlHelper.cs" />
     <Compile Include="Helpers\Methods.cs" />
     <Compile Include="Helpers\Resources.cs" />
+    <Compile Include="Models\Abstract\SupportSortingList.cs" />
     <Compile Include="Models\ApplicationList.cs" />
     <Compile Include="Models\Applicationmodel.cs" />
+    <Compile Include="Models\Catalog.cs" />
     <Compile Include="Models\Contract.cs" />
     <Compile Include="Models\ContractList.cs" />
+    <Compile Include="Models\Criteria.cs" />
     <Compile Include="Models\Dce.cs" />
     <Compile Include="Models\DceList.cs" />
     <Compile Include="Models\Order.cs" />

@@ -12,7 +12,13 @@ namespace ApplicationsAndContracts.Contexts
         public Context()
         {
             var mainForm = new MainForm();
+            mainForm.GoToApplicationsAndContractsForm += new EventHandler(mainForm_GoToApplicationsAndContractsForm);
             this.MainForm = mainForm;
+        }
+
+        private void mainForm_GoToApplicationsAndContractsForm(object sender, EventArgs e)
+        {
+            var mainForm = (MainForm)sender;
         }
     }
 }

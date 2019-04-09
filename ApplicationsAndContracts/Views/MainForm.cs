@@ -19,7 +19,6 @@ namespace ApplicationsAndContracts
     public partial class MainForm : Form
     {
         private DataService dataService;
-
         private SupplierList supplierList;
         private ContractList contractList;
         private ApplicationList applicationList;
@@ -28,6 +27,8 @@ namespace ApplicationsAndContracts
         private ProductList productList;
         private DceList dceList;
         
+
+
 
         //private int supplierCode;
         private string supplierName;
@@ -40,7 +41,7 @@ namespace ApplicationsAndContracts
         private byte applicationStatus;
         private string department;
 
-        private int contractId;
+        private int stateContractId;
         private string stateContractNumber;
 
         private int applicationId;
@@ -55,7 +56,12 @@ namespace ApplicationsAndContracts
         private int dceNumber;
         private string dceAlias;
         private string dceName;
-       
+
+
+        public Criteria Criteria { get; private set; }
+        public Catalog Catalog { get; private set; }
+
+        public event EventHandler GoToApplicationsAndContractsForm;
 
         public MainForm()
         {
@@ -64,6 +70,7 @@ namespace ApplicationsAndContracts
             this.contractNumber = string.Empty;
             this.contractDate = DateTime.MinValue;
             this.applicationNumber = string.Empty;
+            this.applicationDate = DateTime.MinValue;
             this.stateContractNumber = string.Empty;
             this.orderNumber = -1;
             this.department = string.Empty;
@@ -619,21 +626,21 @@ namespace ApplicationsAndContracts
         void applyButton_Click(object sender, EventArgs e)
         {
             if (!IsAnyFieldFilled(
-                          this.supplierName,
-                          this.contractNumber,
-                          this.contractDate,
-                          this.applicationNumber,
-                          this.applicationDate,
-                          this.department,
-                          this.stateContractNumber,
-                          this.orderNumber,
-                          this.productNumber,
-                          this.productIndex,
-                          this.productAlias,
-                          this.productName,
-                          this.dceNumber,
-                          this.dceAlias,
-                          this.dceName))
+                                  this.supplierName,
+                                  this.contractNumber,
+                                  this.contractDate,
+                                  this.applicationNumber,
+                                  this.applicationDate,
+                                  this.department,
+                                  this.stateContractNumber,
+                                  this.orderNumber,
+                                  this.productNumber,
+                                  this.productIndex,
+                                  this.productAlias,
+                                  this.productName,
+                                  this.dceNumber,
+                                  this.dceAlias,
+                                  this.dceName))
             {
                 var messageText = Methods.SearchingCriteriaIsEmpty();
                 Methods.ShowInfo(messageText);
@@ -651,41 +658,60 @@ namespace ApplicationsAndContracts
         }
 
         private bool IsAnyFieldFilled(string supplierName,
-                          string contractNumber,
-                          DateTime contractDate,
-                          string applicationNumber,
-                          DateTime applicationDate,
-                          string department,
-                          string stateContractNumber,
-                          int orderNumber,
-                          int productNumber,
-                          string productIndex,
-                          string productAlias,
-                          string productName,
-                          int dceNumber,
-                          string dceAlias,
-                          string dceName)
+                                      string contractNumber,
+                                      DateTime contractDate,
+                                      string applicationNumber,
+                                      DateTime applicationDate,
+                                      string department,
+                                      string stateContractNumber,
+                                      int orderNumber,
+                                      int productNumber,
+                                      string productIndex,
+                                      string productAlias,
+                                      string productName,
+                                      int dceNumber,
+                                      string dceAlias,
+                                      string dceName)
         {
-            if (this.supplierName==string.Empty&&
-                          this.contractNumber==string.Empty&&
-                          this.contractDate==DateTime.MinValue&&
-                          this.applicationNumber == string.Empty&&
-                          this.applicationDate==DateTime.MinValue&&
-                          this.stateContractNumber==string.Empty&&
-                          this.orderNumber==-1&&
-                          this.productNumber==-1&&
-                          this.productIndex==string.Empty&&
-                          this.productAlias==string.Empty&&
-                          this.productName==string.Empty&&
-                          this.dceNumber==-1&&
-                          this.dceAlias==string.Empty&&
-                          this.dceName==string.Empty&&
-                          this.department == string.Empty)
+            if (this.supplierName == string.Empty &&
+                this.contractNumber == string.Empty &&
+                this.contractDate == DateTime.MinValue &&
+                this.applicationNumber == string.Empty &&
+                this.applicationDate == DateTime.MinValue &&
+                this.stateContractNumber == string.Empty &&
+                this.orderNumber == -1 &&
+                this.productNumber == -1 &&
+                this.productIndex == string.Empty &&
+                this.productAlias == string.Empty &&
+                this.productName == string.Empty &&
+                this.dceNumber == -1 &&
+                this.dceAlias == string.Empty &&
+                this.dceName == string.Empty &&
+                this.department == string.Empty)
             {
 
                 return false;
             }
             else return true;
+        }
+
+        private Criteria CreateCriteria()
+        {
+            return Criteria.CreateFrom(this.supplierName,
+                                      this.contractNumber,
+                                      this.contractDate,
+                                      this.applicationNumber,
+                                      this.applicationDate,
+                                      this.department,
+                                      this.stateContractNumber,
+                                      this.orderNumber,
+                                      this.productNumber,
+                                      this.productIndex,
+                                      this.productAlias,
+                                      this.productName,
+                                      this.dceNumber,
+                                      this.dceAlias,
+                                      this.dceName);
         }
 
         void cancelButton_Click (object sender, EventArgs e)
