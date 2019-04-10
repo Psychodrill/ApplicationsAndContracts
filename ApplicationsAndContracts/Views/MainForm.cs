@@ -653,8 +653,7 @@ namespace ApplicationsAndContracts
             var rows = SplashScreenForm.ExecuteAsync<IEnumerable<DataRow>>(this, this.GetCatalogRowsFromDB);
             if (!this.IsExistedInDB(rows)) return;
             this.Catalog = Catalog.CreateFrom(rows);
-            var handler = this.GoToApplicationsAndContractsForm;
-            if (handler != null) handler(this, EventArgs.Empty);
+            this.GoToApplicationsAndContractsForm?.Invoke(this, EventArgs.Empty);
 
         }
 
