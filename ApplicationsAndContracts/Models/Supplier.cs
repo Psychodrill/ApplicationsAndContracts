@@ -13,7 +13,7 @@ namespace ApplicationsAndContracts.Models
         public static Supplier CreateFrom (DataRow row)
         {
             var result = new Supplier();
-            result.SupplierCode = row.Field<int>("SupplierCode");
+            //result.SupplierCode = row.Field<int>("SupplierCode");
             result.SupplierName = row.Field<string>("SupplierName");
             return result;
         }

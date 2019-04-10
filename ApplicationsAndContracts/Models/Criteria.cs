@@ -15,6 +15,7 @@ namespace ApplicationsAndContracts.Models
                                           string applicationNumber,
                                           DateTime applicationDate,
                                           string department,
+                                          byte applicationStatus,
                                           string stateContractNumber,
                                           int orderNumber,
                                           int productNumber,
@@ -32,6 +33,7 @@ namespace ApplicationsAndContracts.Models
             result.ApplicationNumber = applicationNumber;
             result.ApplicationDate = applicationDate;
             result.Department = stateContractNumber;
+            result.ApplicationStatus = applicationStatus;
             result.StateContractNumber = stateContractNumber;
             result.OrderNumber = orderNumber;
             result.ProductNumber = productNumber;
@@ -58,6 +60,7 @@ namespace ApplicationsAndContracts.Models
         public string ApplicationNumber { get; private set; }
         public DateTime ApplicationDate { get; private set; }
         public string Department { get; private set; } 
+        public byte ApplicationStatus { get; private set; }
         public string StateContractNumber { get; private set; }
         public int OrderNumber { get; private set; }
         public int ProductNumber { get; private set; }

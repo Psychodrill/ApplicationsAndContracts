@@ -12,7 +12,7 @@ namespace ApplicationsAndContracts.Models
         public static Contract CreateFrom(DataRow row)
         {
             var result = new Contract();
-            result.ContractId = row.Field<int>("ContractId");
+            //result.ContractId = row.Field<int>("ContractId");
             result.ContractNumber = row.Field<string>("ContractNumber");
             result.ContractDate = row.Field<DateTime>("ContractDate");
             return result;

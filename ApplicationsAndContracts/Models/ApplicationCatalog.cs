@@ -10,6 +10,9 @@ namespace ApplicationsAndContracts.Models
 {
     public class ApplicationCatalog:SupportSortingList<ApplicationCatalogItem>
     {
+        public static ApplicationCatalog CreateFrom(Catalog catalog)
+        {
 
+        }
     }
 }

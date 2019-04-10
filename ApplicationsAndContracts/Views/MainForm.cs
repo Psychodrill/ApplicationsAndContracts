@@ -711,6 +711,7 @@ namespace ApplicationsAndContracts
                                       this.applicationNumber,
                                       this.applicationDate,
                                       this.department,
+                                      this.applicationStatus,
                                       this.stateContractNumber,
                                       this.orderNumber,
                                       this.productNumber,
