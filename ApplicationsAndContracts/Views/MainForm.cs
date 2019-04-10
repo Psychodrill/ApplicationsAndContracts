@@ -69,9 +69,9 @@ namespace ApplicationsAndContracts
             this.dataService = new DataService();
             this.supplierName = string.Empty;
             this.contractNumber = string.Empty;
-            this.contractDate = DateTime.MinValue;
+            this.contractDate = DateTime.Today; 
             this.applicationNumber = string.Empty;
-            this.applicationDate = DateTime.MinValue;
+            this.applicationDate = DateTime.Today;
             this.stateContractNumber = string.Empty;
             this.orderNumber = -1;
             this.department = string.Empty;
@@ -139,7 +139,7 @@ namespace ApplicationsAndContracts
             this.departmentComboBox.Format += new ListControlConvertEventHandler(emptyText_Format);
 
             this.clearButton.Click += new EventHandler(clearButton_Click);
-
+            this.applyButton.Click += new EventHandler(applyButton_Click);
 
 
             this.cancelButton.Click += new EventHandler(cancelButton_Click);
@@ -653,9 +653,17 @@ namespace ApplicationsAndContracts
             var rows = SplashScreenForm.ExecuteAsync<IEnumerable<DataRow>>(this, this.GetCatalogRowsFromDB);
             if (!this.IsExistedInDB(rows)) return;
             this.Catalog = Catalog.CreateFrom(rows);
-            var handler = this.GoToWorkWithDceForm;
+            var handler = this.GoToApplicationsAndContractsForm;
             if (handler != null) handler(this, EventArgs.Empty);
 
+        }
+
+        private bool IsExistedInDB(IEnumerable<DataRow> rows)
+        {
+            if (rows.Count() > 0) return true;
+            var messageText = Methods.QueryIsOutOfRangeMessage();
+            Methods.ShowInfo(messageText);
+            return false;
         }
 
         private bool IsAnyFieldFilled(string supplierName,

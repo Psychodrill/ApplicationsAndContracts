@@ -13,7 +13,7 @@ namespace ApplicationsAndContracts.Models
         {
             var result = new Order();
             result.ApplicationId = row.Field<int>("ApplicationId");
-            result.OrderNumber = row.Field<int>("Order");
+            result.OrderNumber = row.Field<int>("OrderNumber");
             return result;
         }
 

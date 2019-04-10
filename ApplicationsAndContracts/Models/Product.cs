@@ -13,7 +13,7 @@ namespace ApplicationsAndContracts.Models
         {
             var result = new Product();
             result.IdInd = row.Field<int?>("IdInd");
-            result.ProductNumber = row.Field<int?>("ProductId");
+            result.ProductNumber = row.Field<int?>("ProductNumber");
             result.ProductIndex = row.Field<string>("ProductIndex");
             result.ProductName = row.Field<string>("ProductName");
             result.ProductAlias = row.Field<string>("ProductAlias");

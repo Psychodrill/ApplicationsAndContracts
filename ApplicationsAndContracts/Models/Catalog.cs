@@ -11,7 +11,7 @@ namespace ApplicationsAndContracts.Models
 {
     public class Catalog:SupportSortingList<CatalogItem>
     {
-        public static Catalog (IEnumerable<DataRow> rows)
+        public static Catalog CreateFrom(IEnumerable<DataRow> rows)
         {
             var result = new Catalog();
             result.RefreshFrom(rows);
