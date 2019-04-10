@@ -89,6 +89,8 @@
     <Compile Include="Helpers\Methods.cs" />
     <Compile Include="Helpers\Resources.cs" />
     <Compile Include="Models\Abstract\SupportSortingList.cs" />
+    <Compile Include="Models\ApplicationCatalog.cs" />
+    <Compile Include="Models\ApplicationCatalogItem.cs" />
     <Compile Include="Models\ApplicationList.cs" />
     <Compile Include="Models\Applicationmodel.cs" />
     <Compile Include="Models\Catalog.cs" />

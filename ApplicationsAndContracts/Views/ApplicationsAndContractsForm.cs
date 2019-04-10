@@ -25,8 +25,13 @@ namespace ApplicationsAndContracts.Views
             this.catalog = catalog;
 
             InitializeComponent();
+
+            this.Load += new EventHandler(ApplicationsAndContractsForm_Load);
         }
 
-
+        private void ApplicationsAndContractsForm_Load(object sender, EventArgs e)
+        {
+            this.applicationsBindingSource.DataSource= this.catalog;
+        }
     }
 }
