@@ -41,7 +41,7 @@ namespace ApplicationsAndContracts.Models
 
         public List<DateTime> GetContractDateList()
         {
-            var result = this.Select(x => x.ContractDate).Distinct().OrderBy(x => x).ToList();
+            var result = this.Select(x => x.ContractDate).Distinct().OrderByDescending(x => x).ToList();
             return result;
         }
 

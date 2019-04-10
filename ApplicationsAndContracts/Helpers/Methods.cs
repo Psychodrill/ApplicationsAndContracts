@@ -126,9 +126,9 @@ namespace ApplicationsAndContracts.Helpers
             return sb.ToString();
         }
 
-        public static void MinValueDateFormat(ConvertEventArgs e)
+        public static void MaxValueDateFormat(ConvertEventArgs e)
         {
-            if (Convert.ToDateTime(e.Value) == DateTime.MinValue)
+            if (Convert.ToDateTime(e.Value) == DateTime.MaxValue)
                 e.Value = Resources.UnselectedText;
         }
 

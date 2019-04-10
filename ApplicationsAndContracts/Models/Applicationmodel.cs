@@ -31,7 +31,7 @@ namespace ApplicationsAndContracts.Models
         {
             var result = new Applicationmodel();
             result.ApplicationNumber = string.Empty;
-            result.ApplicationDate = DateTime.MinValue;
+            result.ApplicationDate = DateTime.MaxValue;
             result.ApplicationStatus = 255;
             result.Department = string.Empty;
             return result;

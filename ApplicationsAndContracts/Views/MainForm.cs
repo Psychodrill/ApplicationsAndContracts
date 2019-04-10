@@ -69,9 +69,9 @@ namespace ApplicationsAndContracts
             this.dataService = new DataService();
             this.supplierName = string.Empty;
             this.contractNumber = string.Empty;
-            this.contractDate = DateTime.Today; 
+            this.contractDate = DateTime.MaxValue; 
             this.applicationNumber = string.Empty;
-            this.applicationDate = DateTime.Today;
+            this.applicationDate = DateTime.MaxValue;
             this.stateContractNumber = string.Empty;
             this.orderNumber = -1;
             this.department = string.Empty;
@@ -97,14 +97,14 @@ namespace ApplicationsAndContracts
 
             this.contractDateComboBox.TextChanged += new EventHandler(contractDateComboBox_TextChanged);
             this.contractDateComboBox.Validating += new CancelEventHandler(contractDateComboBox_Validating);
-            this.contractDateComboBox.Format += new ListControlConvertEventHandler(minValueDate_Format);
+            this.contractDateComboBox.Format += new ListControlConvertEventHandler(maxValueDate_Format);
 
             this.applicationNumberTextBox.TextChanged += new EventHandler(applicationNumberTextBox_TextChanged);
             this.applicationNumberTextBox.Validating += new CancelEventHandler(applicationNumberTextBox_Validating);
 
             this.applicationDateComboBox.TextChanged += new EventHandler(applicationDateComboBox_TextChanged);
             this.applicationDateComboBox.Validating += new CancelEventHandler(applicationDateComboBox_Validating);
-            this.applicationDateComboBox.Format += new ListControlConvertEventHandler(minValueDate_Format);
+            this.applicationDateComboBox.Format += new ListControlConvertEventHandler(maxValueDate_Format);
 
             this.gkTextBox.TextChanged += new EventHandler(gkTextBox_TextChanged);
             this.gkTextBox.Validating += new CancelEventHandler(gkTextBox_Validating);
@@ -589,9 +589,9 @@ namespace ApplicationsAndContracts
         }
         
 
-        private void minValueDate_Format(object sender, ListControlConvertEventArgs e)
+        private void maxValueDate_Format(object sender, ListControlConvertEventArgs e)
         {
-            Helpers.Methods.MinValueDateFormat(e);
+            Helpers.Methods.MaxValueDateFormat(e);
         }
 
         void minusOneValue_Format(object sender, ConvertEventArgs e)

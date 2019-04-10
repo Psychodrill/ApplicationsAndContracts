@@ -27,7 +27,7 @@ namespace ApplicationsAndContracts.Models
             var result = new Contract();
             result.ContractId = -1;
             result.ContractNumber = string.Empty;
-            result.ContractDate = DateTime.MinValue;
+            result.ContractDate = DateTime.MaxValue;
             return result;
         }
 

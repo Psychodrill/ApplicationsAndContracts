@@ -38,7 +38,7 @@ namespace ApplicationsAndContracts.Models
 
         public List<DateTime> GetApplicationDateList()
         {
-            var result = this.Select(x => x.ApplicationDate).Distinct().OrderBy(x => x).ToList();
+            var result = this.Select(x => x.ApplicationDate).Distinct().OrderByDescending(x => x).ToList();
             return result;
         }
 

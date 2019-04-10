@@ -36,6 +36,14 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.recordCountValueLabel = new System.Windows.Forms.Label();
             this.applicationsDataGridView = new System.Windows.Forms.DataGridView();
+            this.Status = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.applicationNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.applicationDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.supplierColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contractNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contractDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gkColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.applicationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.colorPanel = new System.Windows.Forms.Panel();
             this.gkLabel = new System.Windows.Forms.Label();
@@ -100,14 +108,6 @@
             this.phoneNumber2ValueToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.faxNumberToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.faxNumberValueToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.Status = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.applicationNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.applicationDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.supplierColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contractNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contractDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gkColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ApplicationsAndContractsTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -140,7 +140,7 @@
             this.ApplicationsAndContractsTabControl.Controls.Add(this.tabPage2);
             this.ApplicationsAndContractsTabControl.ItemSize = new System.Drawing.Size(200, 18);
             this.ApplicationsAndContractsTabControl.Location = new System.Drawing.Point(0, 0);
-            this.ApplicationsAndContractsTabControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ApplicationsAndContractsTabControl.Margin = new System.Windows.Forms.Padding(4);
             this.ApplicationsAndContractsTabControl.Name = "ApplicationsAndContractsTabControl";
             this.ApplicationsAndContractsTabControl.SelectedIndex = 0;
             this.ApplicationsAndContractsTabControl.Size = new System.Drawing.Size(1345, 815);
@@ -152,9 +152,9 @@
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage1.Controls.Add(this.tableLayoutPanel1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage1.Size = new System.Drawing.Size(1337, 789);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Заявки";
@@ -168,7 +168,7 @@
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -182,9 +182,9 @@
             this.applicationsGroupBox.Controls.Add(this.tableLayoutPanel2);
             this.applicationsGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.applicationsGroupBox.Location = new System.Drawing.Point(4, 4);
-            this.applicationsGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.applicationsGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.applicationsGroupBox.Name = "applicationsGroupBox";
-            this.applicationsGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.applicationsGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.applicationsGroupBox.Size = new System.Drawing.Size(1321, 345);
             this.applicationsGroupBox.TabIndex = 0;
             this.applicationsGroupBox.TabStop = false;
@@ -210,7 +210,7 @@
             this.tableLayoutPanel2.Controls.Add(this.recordCountLabel, 2, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 19);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -248,18 +248,83 @@
             this.applicationsDataGridView.DataSource = this.applicationsBindingSource;
             this.applicationsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.applicationsDataGridView.Location = new System.Drawing.Point(4, 4);
-            this.applicationsDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.applicationsDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.applicationsDataGridView.Name = "applicationsDataGridView";
             this.applicationsDataGridView.ReadOnly = true;
             this.applicationsDataGridView.RowHeadersVisible = false;
             this.applicationsDataGridView.Size = new System.Drawing.Size(1305, 281);
             this.applicationsDataGridView.TabIndex = 0;
             // 
+            // Status
+            // 
+            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Status.HeaderText = "";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            // 
+            // applicationNumberColumn
+            // 
+            this.applicationNumberColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.applicationNumberColumn.DataPropertyName = "ApplicationNumber";
+            this.applicationNumberColumn.HeaderText = "№ заявки";
+            this.applicationNumberColumn.Name = "applicationNumberColumn";
+            this.applicationNumberColumn.ReadOnly = true;
+            // 
+            // applicationDateColumn
+            // 
+            this.applicationDateColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.applicationDateColumn.DataPropertyName = "ApplicationDate";
+            this.applicationDateColumn.HeaderText = "Дата заявки";
+            this.applicationDateColumn.Name = "applicationDateColumn";
+            this.applicationDateColumn.ReadOnly = true;
+            // 
+            // supplierColumn
+            // 
+            this.supplierColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.supplierColumn.DataPropertyName = "Supplier";
+            this.supplierColumn.HeaderText = "Поставщик";
+            this.supplierColumn.Name = "supplierColumn";
+            this.supplierColumn.ReadOnly = true;
+            // 
+            // contractNumberColumn
+            // 
+            this.contractNumberColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.contractNumberColumn.DataPropertyName = "ContractNumber";
+            this.contractNumberColumn.HeaderText = "№ договора";
+            this.contractNumberColumn.Name = "contractNumberColumn";
+            this.contractNumberColumn.ReadOnly = true;
+            // 
+            // contractDateColumn
+            // 
+            this.contractDateColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.contractDateColumn.DataPropertyName = "ContractDate";
+            this.contractDateColumn.HeaderText = "Дата договора";
+            this.contractDateColumn.Name = "contractDateColumn";
+            this.contractDateColumn.ReadOnly = true;
+            // 
+            // gkColumn
+            // 
+            this.gkColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.gkColumn.DataPropertyName = "GK";
+            this.gkColumn.HeaderText = "ГК";
+            this.gkColumn.Name = "gkColumn";
+            this.gkColumn.ReadOnly = true;
+            // 
+            // statusColumn
+            // 
+            this.statusColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.statusColumn.DataPropertyName = "Status";
+            this.statusColumn.HeaderText = "Статус";
+            this.statusColumn.Name = "statusColumn";
+            this.statusColumn.ReadOnly = true;
+            this.statusColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
             // colorPanel
             // 
             this.colorPanel.BackColor = System.Drawing.Color.Moccasin;
+            this.colorPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.colorPanel.Location = new System.Drawing.Point(4, 293);
-            this.colorPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.colorPanel.Margin = new System.Windows.Forms.Padding(4);
             this.colorPanel.Name = "colorPanel";
             this.colorPanel.Size = new System.Drawing.Size(53, 25);
             this.colorPanel.TabIndex = 1;
@@ -313,9 +378,9 @@
             this.dceGroupBox.Controls.Add(this.tableLayoutPanel3);
             this.dceGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dceGroupBox.Location = new System.Drawing.Point(4, 357);
-            this.dceGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dceGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.dceGroupBox.Name = "dceGroupBox";
-            this.dceGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dceGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.dceGroupBox.Size = new System.Drawing.Size(1321, 345);
             this.dceGroupBox.TabIndex = 1;
             this.dceGroupBox.TabStop = false;
@@ -341,7 +406,7 @@
             this.tableLayoutPanel3.Controls.Add(this.currentRecordNumberValueLabel1, 5, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 19);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -364,7 +429,7 @@
             this.dceListDataGridView.DataSource = this.dceListBindingSource;
             this.dceListDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dceListDataGridView.Location = new System.Drawing.Point(4, 4);
-            this.dceListDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dceListDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.dceListDataGridView.Name = "dceListDataGridView";
             this.dceListDataGridView.ReadOnly = true;
             this.dceListDataGridView.RowHeadersVisible = false;
@@ -406,8 +471,9 @@
             // colorPanel1
             // 
             this.colorPanel1.BackColor = System.Drawing.Color.Moccasin;
+            this.colorPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.colorPanel1.Location = new System.Drawing.Point(4, 293);
-            this.colorPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.colorPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.colorPanel1.Name = "colorPanel1";
             this.colorPanel1.Size = new System.Drawing.Size(53, 25);
             this.colorPanel1.TabIndex = 2;
@@ -476,7 +542,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 710);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1321, 67);
             this.flowLayoutPanel1.TabIndex = 2;
@@ -526,9 +592,9 @@
             this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage2.Controls.Add(this.tableLayoutPanel4);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage2.Size = new System.Drawing.Size(1337, 789);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Договоры";
@@ -542,7 +608,7 @@
             this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel2, 0, 2);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 3;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -556,9 +622,9 @@
             this.suppliersGroupBox.Controls.Add(this.tableLayoutPanel5);
             this.suppliersGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.suppliersGroupBox.Location = new System.Drawing.Point(4, 4);
-            this.suppliersGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.suppliersGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.suppliersGroupBox.Name = "suppliersGroupBox";
-            this.suppliersGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.suppliersGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.suppliersGroupBox.Size = new System.Drawing.Size(1321, 345);
             this.suppliersGroupBox.TabIndex = 1;
             this.suppliersGroupBox.TabStop = false;
@@ -584,7 +650,7 @@
             this.tableLayoutPanel5.Controls.Add(this.suppliersDataGridView, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(4, 19);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -651,7 +717,7 @@
             // 
             this.colorPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(254)))), ((int)(((byte)(214)))));
             this.colorPanel2.Location = new System.Drawing.Point(4, 293);
-            this.colorPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.colorPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.colorPanel2.Name = "colorPanel2";
             this.colorPanel2.Size = new System.Drawing.Size(53, 25);
             this.colorPanel2.TabIndex = 2;
@@ -670,7 +736,7 @@
             this.suppliersDataGridView.DataSource = this.suppliersBindingSource;
             this.suppliersDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.suppliersDataGridView.Location = new System.Drawing.Point(4, 4);
-            this.suppliersDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.suppliersDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.suppliersDataGridView.Name = "suppliersDataGridView";
             this.suppliersDataGridView.ReadOnly = true;
             this.suppliersDataGridView.RowHeadersVisible = false;
@@ -706,9 +772,9 @@
             this.groupBox1.Controls.Add(this.tableLayoutPanel6);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(4, 357);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1321, 345);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
@@ -728,7 +794,7 @@
             this.tableLayoutPanel6.Controls.Add(this.currentContractsDataGridView, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(4, 19);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 2;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -751,7 +817,7 @@
             this.currentContractsDataGridView.DataSource = this.contractsBindingSource;
             this.currentContractsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.currentContractsDataGridView.Location = new System.Drawing.Point(4, 4);
-            this.currentContractsDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.currentContractsDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.currentContractsDataGridView.Name = "currentContractsDataGridView";
             this.currentContractsDataGridView.ReadOnly = true;
             this.currentContractsDataGridView.RowHeadersVisible = false;
@@ -795,7 +861,7 @@
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(4, 710);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(1321, 67);
             this.flowLayoutPanel2.TabIndex = 4;
@@ -926,70 +992,6 @@
             this.faxNumberValueToolStripStatusLabel.Size = new System.Drawing.Size(76, 24);
             this.faxNumberValueToolStripStatusLabel.Text = "#######";
             // 
-            // Status
-            // 
-            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Status.HeaderText = "";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            // 
-            // applicationNumberColumn
-            // 
-            this.applicationNumberColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.applicationNumberColumn.DataPropertyName = "ApplicationNumber";
-            this.applicationNumberColumn.HeaderText = "№ заявки";
-            this.applicationNumberColumn.Name = "applicationNumberColumn";
-            this.applicationNumberColumn.ReadOnly = true;
-            // 
-            // applicationDateColumn
-            // 
-            this.applicationDateColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.applicationDateColumn.DataPropertyName = "ApplicationDate";
-            this.applicationDateColumn.HeaderText = "Дата заявки";
-            this.applicationDateColumn.Name = "applicationDateColumn";
-            this.applicationDateColumn.ReadOnly = true;
-            // 
-            // supplierColumn
-            // 
-            this.supplierColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.supplierColumn.DataPropertyName = "Supplier";
-            this.supplierColumn.HeaderText = "Поставщик";
-            this.supplierColumn.Name = "supplierColumn";
-            this.supplierColumn.ReadOnly = true;
-            // 
-            // contractNumberColumn
-            // 
-            this.contractNumberColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.contractNumberColumn.DataPropertyName = "ContractNumber";
-            this.contractNumberColumn.HeaderText = "№ договора";
-            this.contractNumberColumn.Name = "contractNumberColumn";
-            this.contractNumberColumn.ReadOnly = true;
-            // 
-            // contractDateColumn
-            // 
-            this.contractDateColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.contractDateColumn.DataPropertyName = "ContractDate";
-            this.contractDateColumn.HeaderText = "Дата договора";
-            this.contractDateColumn.Name = "contractDateColumn";
-            this.contractDateColumn.ReadOnly = true;
-            // 
-            // gkColumn
-            // 
-            this.gkColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.gkColumn.DataPropertyName = "GK";
-            this.gkColumn.HeaderText = "ГК";
-            this.gkColumn.Name = "gkColumn";
-            this.gkColumn.ReadOnly = true;
-            // 
-            // statusColumn
-            // 
-            this.statusColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.statusColumn.DataPropertyName = "Status";
-            this.statusColumn.HeaderText = "Статус";
-            this.statusColumn.Name = "statusColumn";
-            this.statusColumn.ReadOnly = true;
-            this.statusColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
             // ApplicationsAndContractsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -997,8 +999,9 @@
             this.ClientSize = new System.Drawing.Size(1344, 815);
             this.Controls.Add(this.userModifyStatusStrip);
             this.Controls.Add(this.ApplicationsAndContractsTabControl);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ApplicationsAndContractsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Заявки и договоры";
             this.ApplicationsAndContractsTabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

@@ -13,7 +13,7 @@ namespace ApplicationsAndContracts.Converters
         public DateTime Parse(string value)
         {
             if (value == null || value == string.Empty || value == Resources.UnselectedText)
-                return DateTime.MinValue;
+                return DateTime.MaxValue;
             else
             {
                 try
@@ -22,13 +22,11 @@ namespace ApplicationsAndContracts.Converters
                 }
                 catch (Exception)
                 {
-                   return DateTime.MinValue;
+                   return DateTime.MaxValue;
                 }
             }
 
         }
-
-
 
         public DateTime TryParse(string value)
         {
@@ -38,46 +36,19 @@ namespace ApplicationsAndContracts.Converters
             }
             catch (ApplicationException)
             {
-                return DateTime.MinValue;
+                return DateTime.MaxValue;
             }
         }
 
-        //public string Parse(string value)
-        //{
-        //    if (value == null || value == string.Empty || value == Resources.UnselectedText)
-        //        return string.Empty;
-        //    else  return value;
-        //    //throw new ApplicationException(Resources.IncorrectValueText);
-
-        //}
-
-
-        //public string TryParse(string value)
-        //{
-        //    try
-        //    {
-        //        return Parse(value);
-        //    }
-        //    catch (ApplicationException)
-        //    {
-        //        return string.Empty;
-        //    }
-        //}
 
         public string Format(DateTime value)
         {
-            if (value == DateTime.MinValue) return Resources.UnselectedText;
+            if (value == DateTime.MaxValue) return Resources.UnselectedText;
             return value.ToShortDateString();
             //throw new ApplicationException(Resources.IncorrectValueText);
         }
 
 
-        private bool IsDataTypeRange(string textparameter)
-        {
-            Regex filter = new Regex(@"\d\b\d?");
-            return filter.IsMatch(textparameter);
-
-        }
 
     }
 }
