@@ -18,6 +18,22 @@ namespace ApplicationsAndContracts.Models
             return result;
         }
 
+        public static Contract CreateFrom(ApplicationCatalogItem applicationCatalogItem)
+        {
+            var result = new Contract();
+            result.ContractNumber = applicationCatalogItem.ContractNumber;
+            result.ContractDate = applicationCatalogItem.ContractDate;
+            return result;
+        }
+
+        public static Contract CreateFrom(CatalogItem catalogItem)
+        {
+            var result = new Contract();
+            result.ContractNumber = catalogItem.ContractNumber;
+            result.ContractDate = catalogItem.ContractDate;
+            return result;
+        }
+
         public Contract()
         {
         }

@@ -30,7 +30,26 @@ namespace ApplicationsAndContracts.Models
 
 
 
+
+
         public ApplicationCatalogItem ApplicationCatalogItem { get; private set; }
+        
+
+
+
+
+
+
+
+        public string ApplicationNumber { get { return this.ApplicationCatalogItem.ApplicationNumber; } }
+        public DateTime ApplicationDate { get { return this.ApplicationCatalogItem.ApplicationDate; } }
+        public byte ApplicationStatus { get {return this.ApplicationCatalogItem.ApplicationStatus; } }
+
+        public string Department { get { return this.ApplicationCatalogItem.Department; } }
+        public string SupplierName { get { return this.ApplicationCatalogItem.SupplierName; } }
+        public string ContractNumber { get { return this.ApplicationCatalogItem.ContractNumber; } }
+        public DateTime ContractDate { get { return this.ApplicationCatalogItem.ContractDate; } }
+        public string StateContractNumber { get { return this.ApplicationCatalogItem.StateContractNumber; } }
     }
 
 }

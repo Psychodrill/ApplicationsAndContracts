@@ -12,7 +12,13 @@ namespace ApplicationsAndContracts.Models
     {
         public static ApplicationCatalog CreateFrom(Catalog catalog)
         {
+            var list = catalog.Select(catalogItem => ApplicationCatalogItem.CreateFrom(catalogItem)).Distinct().OrderBy(x => x.ApplicationNumber).ToList();
+            var result = new ApplicationCatalog(list);
+            return result;
+        }
 
+        private ApplicationCatalog(List<ApplicationCatalogItem> items) : base(items)
+        {
         }
     }
 }

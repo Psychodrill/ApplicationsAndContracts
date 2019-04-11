@@ -21,6 +21,26 @@ namespace ApplicationsAndContracts.Models
             return result;
         }
 
+        public static Applicationmodel CreateFrom(ApplicationCatalogItem applicationCatalogItem)
+        {
+            var result = new Applicationmodel();
+            result.ApplicationNumber = applicationCatalogItem.ApplicationNumber;
+            result.ApplicationDate = applicationCatalogItem.ApplicationDate;
+            result.ApplicationStatus = applicationCatalogItem.ApplicationStatus;
+            result.Department = applicationCatalogItem.Department;
+            return result;
+        }
+
+        public static Applicationmodel CreateFrom(CatalogItem catalogItem)
+        {
+            var result = new Applicationmodel();
+            result.ApplicationNumber = catalogItem.ApplicationNumber;
+            result.ApplicationDate = catalogItem.ApplicationDate;
+            result.ApplicationStatus = catalogItem.ApplicationStatus;
+            result.Department = catalogItem.Department;
+            return result;
+        }
+
 
         Applicationmodel()
         {

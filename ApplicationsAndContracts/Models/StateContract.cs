@@ -17,6 +17,20 @@ namespace ApplicationsAndContracts.Models
             return result;
         }
 
+        public static StateContract CreateFrom(ApplicationCatalogItem applicationCatalogItem)
+        {
+            var result = new StateContract();
+            result.StateContractNumber = result.StateContractNumber;
+            return result;
+        }
+
+        public static StateContract CreateFrom(CatalogItem catalogItem)
+        {
+            var result = new StateContract();
+            result.StateContractNumber = result.StateContractNumber;
+            return result;
+        }
+
         public StateContract()
         {
         }

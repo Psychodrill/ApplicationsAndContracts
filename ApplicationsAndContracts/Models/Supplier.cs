@@ -18,6 +18,19 @@ namespace ApplicationsAndContracts.Models
             return result;
         }
 
+        public static Supplier CreateFrom (ApplicationCatalogItem applicationCatalogItem)
+        {
+            var result = new Supplier();
+            result.SupplierName = applicationCatalogItem.SupplierName;
+            return result;
+        }
+
+        public static Supplier CreateFrom(CatalogItem catalogItem)
+        {
+            var result = new Supplier();
+            result.SupplierName = catalogItem.SupplierName;
+            return result;
+        }
 
 
         public Supplier()
