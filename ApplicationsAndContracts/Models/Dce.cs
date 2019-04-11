@@ -25,6 +25,16 @@ namespace ApplicationsAndContracts.Models
             return result;
         }
 
+        internal static Dce CreateFrom(CatalogItem catalogItem)
+        {
+            var result = new Dce();
+            result.ApplicationId = catalogItem.ApplicationId;
+            result.DceNumber = catalogItem.DceNumber;
+            result.DceAlias = catalogItem.DceAlias;
+            result.DceName   = result.DceName;
+            return result;
+        }
+
         Dce()
         {
 

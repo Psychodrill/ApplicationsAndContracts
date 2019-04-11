@@ -18,6 +18,20 @@ namespace ApplicationsAndContracts.Views
         private DataService dataService;
         private Criteria criteria;
         private Catalog catalog;
+        private ApplicationCatalog applicationCatalog;
+        private DceCatalog dceCatalog;
+
+
+
+        private ApplicationCatalogItem applicationCatalogItem
+        {
+            get
+            {
+                if (this.applicationsBindingSource.Position < 0) return null;
+                return this.applicationCatalog[this.applicationsBindingSource.Position];
+            }
+        }
+        
         public ApplicationsAndContractsForm(Criteria criteria, Catalog catalog)
         {
             this.dataService = new DataService();
@@ -27,12 +41,31 @@ namespace ApplicationsAndContracts.Views
             InitializeComponent();
 
             this.Load += new EventHandler(ApplicationsAndContractsForm_Load);
+            this.applicationsBindingSource.PositionChanged += new EventHandler(applicationBindingSource_PositionChanged);
+        }
+
+        private void applicationBindingSource_PositionChanged(object sender, EventArgs e)
+        {
+            this.GetDceCatalog();
         }
 
         private void ApplicationsAndContractsForm_Load(object sender, EventArgs e)
         {
+
+            this.applicationCatalog = ApplicationCatalog.CreateFrom(catalog);
             this.applicationsBindingSource.DataSource= this.catalog;
-            this.dceListBindingSource.DataSource = this.catalog;
+
+
+ 
         }
+
+
+        private void GetDceCatalog() 
+         {
+            if (this.catalog == null || this.applicationCatalog == null) return;
+            this.dceCatalog = DceCatalog.CreateFrom(this.catalog, this.applicationCatalogItem);
+            this.dceBindingSource.DataSource = this.dceCatalog;
+        }
+
     }
 }

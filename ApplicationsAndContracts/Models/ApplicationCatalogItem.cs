@@ -64,6 +64,7 @@ namespace ApplicationsAndContracts.Models
         public StateContract StateContract { get; private set; }
 
 
+        public int ApplicationId { get { return this.Applicationmodel.ApplicationId; } }
         public string ApplicationNumber { get { return this.Applicationmodel.ApplicationNumber; } }
         public DateTime ApplicationDate { get { return this.Applicationmodel.ApplicationDate; } }
         public byte ApplicationStatus { get { return this.Applicationmodel.ApplicationStatus; } }

@@ -14,6 +14,7 @@ namespace ApplicationsAndContracts.Models
         public static Applicationmodel CreateFrom(DataRow row)
         {
             var result = new Applicationmodel();
+            result.ApplicationId = row.Field<int>("ApplicationId");
             result.ApplicationNumber = row.Field<string>("ApplicationNumber");
             result.ApplicationDate = row.Field<DateTime>("ApplicationDate");
             result.ApplicationStatus = row.Field<byte>("ApplicationStatus");
@@ -24,6 +25,7 @@ namespace ApplicationsAndContracts.Models
         public static Applicationmodel CreateFrom(ApplicationCatalogItem applicationCatalogItem)
         {
             var result = new Applicationmodel();
+            result.ApplicationId = applicationCatalogItem.ApplicationId;
             result.ApplicationNumber = applicationCatalogItem.ApplicationNumber;
             result.ApplicationDate = applicationCatalogItem.ApplicationDate;
             result.ApplicationStatus = applicationCatalogItem.ApplicationStatus;
@@ -50,13 +52,15 @@ namespace ApplicationsAndContracts.Models
         public static Applicationmodel Empty()
         {
             var result = new Applicationmodel();
+            result.ApplicationId = -1;
             result.ApplicationNumber = string.Empty;
             result.ApplicationDate = DateTime.MaxValue;
             result.ApplicationStatus = 255;
             result.Department = string.Empty;
             return result;
         }
-                
+        
+        public int ApplicationId { get; private set; }        
         public string ApplicationNumber { get; private set; }
         public DateTime ApplicationDate { get; private set; }
         public byte ApplicationStatus { get; private set; }

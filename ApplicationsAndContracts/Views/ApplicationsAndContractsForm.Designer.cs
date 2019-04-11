@@ -51,8 +51,8 @@
             this.recordCountLabel = new System.Windows.Forms.Label();
             this.dceGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.dceListDataGridView = new System.Windows.Forms.DataGridView();
-            this.dceListBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dceDataGridView = new System.Windows.Forms.DataGridView();
+            this.dceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.colorPanel1 = new System.Windows.Forms.Panel();
             this.gkLabel1 = new System.Windows.Forms.Label();
             this.recordCountValueLabel1 = new System.Windows.Forms.Label();
@@ -116,8 +116,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.applicationsBindingSource)).BeginInit();
             this.dceGroupBox.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dceListDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dceListBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dceDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dceBindingSource)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -250,6 +250,7 @@
             this.applicationsDataGridView.Name = "applicationsDataGridView";
             this.applicationsDataGridView.ReadOnly = true;
             this.applicationsDataGridView.RowHeadersVisible = false;
+            this.applicationsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.applicationsDataGridView.Size = new System.Drawing.Size(1305, 281);
             this.applicationsDataGridView.TabIndex = 0;
             // 
@@ -398,7 +399,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.dceListDataGridView, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.dceDataGridView, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.colorPanel1, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.gkLabel1, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.recordCountValueLabel1, 3, 1);
@@ -415,27 +416,27 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1313, 322);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
-            // dceListDataGridView
+            // dceDataGridView
             // 
-            this.dceListDataGridView.AllowUserToAddRows = false;
-            this.dceListDataGridView.AllowUserToDeleteRows = false;
-            this.dceListDataGridView.AutoGenerateColumns = false;
-            this.dceListDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dceListDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dceDataGridView.AllowUserToAddRows = false;
+            this.dceDataGridView.AllowUserToDeleteRows = false;
+            this.dceDataGridView.AutoGenerateColumns = false;
+            this.dceDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dceDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DceNumberColumn,
             this.DceAliasColumn,
             this.DceNameColumn,
             this.QuantityColumn});
-            this.tableLayoutPanel3.SetColumnSpan(this.dceListDataGridView, 8);
-            this.dceListDataGridView.DataSource = this.dceListBindingSource;
-            this.dceListDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dceListDataGridView.Location = new System.Drawing.Point(4, 4);
-            this.dceListDataGridView.Margin = new System.Windows.Forms.Padding(4);
-            this.dceListDataGridView.Name = "dceListDataGridView";
-            this.dceListDataGridView.ReadOnly = true;
-            this.dceListDataGridView.RowHeadersVisible = false;
-            this.dceListDataGridView.Size = new System.Drawing.Size(1305, 281);
-            this.dceListDataGridView.TabIndex = 0;
+            this.tableLayoutPanel3.SetColumnSpan(this.dceDataGridView, 8);
+            this.dceDataGridView.DataSource = this.dceBindingSource;
+            this.dceDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dceDataGridView.Location = new System.Drawing.Point(4, 4);
+            this.dceDataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.dceDataGridView.Name = "dceDataGridView";
+            this.dceDataGridView.ReadOnly = true;
+            this.dceDataGridView.RowHeadersVisible = false;
+            this.dceDataGridView.Size = new System.Drawing.Size(1305, 281);
+            this.dceDataGridView.TabIndex = 0;
             // 
             // colorPanel1
             // 
@@ -1018,8 +1019,8 @@
             this.dceGroupBox.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dceListDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dceListBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dceDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dceBindingSource)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -1064,13 +1065,13 @@
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button detailedButton;
         private System.Windows.Forms.Panel colorPanel1;
-        private System.Windows.Forms.DataGridView dceListDataGridView;
+        private System.Windows.Forms.DataGridView dceDataGridView;
         private System.Windows.Forms.Label gkLabel1;
         private System.Windows.Forms.Label recordCountValueLabel1;
         private System.Windows.Forms.Label recordCountLabel1;
         private System.Windows.Forms.Label currentRecordNumberLabel1;
         private System.Windows.Forms.Label currentRecordNumberValueLabel1;
-        private System.Windows.Forms.BindingSource dceListBindingSource;
+        private System.Windows.Forms.BindingSource dceBindingSource;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.ToolStripStatusLabel userModifyToolStripStatusLabel;
         private System.Windows.Forms.ToolStripStatusLabel userModifyValueToolStripStatusLabel;

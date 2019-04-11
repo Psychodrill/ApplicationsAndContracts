@@ -37,7 +37,7 @@
             // 
             // panel
             // 
-            this.panel.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel.Controls.Add(this.progressBar);
             this.panel.Controls.Add(this.pictureBox);
