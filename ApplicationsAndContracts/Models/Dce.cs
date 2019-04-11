@@ -16,10 +16,12 @@ namespace ApplicationsAndContracts.Models
             result.DceNumber = row.Field<int>("DceNumber");
             result.DceAlias = row.Field<string>("DceAlias");
             result.DceName = row.Field<string>("DceName");
+            result.Quantity = row.Field<decimal>("Quantity");
             if (result.ApplicationId == null) result.ApplicationId=-1;
             if (result.DceNumber == null) result.DceNumber = -1;
             if (result.DceAlias == null) result.DceAlias = string.Empty;
             if (result.DceName == null) result.DceName = string.Empty;
+
             return result;
         }
 
@@ -35,6 +37,7 @@ namespace ApplicationsAndContracts.Models
             result.DceNumber = -1;
             result.DceAlias = string.Empty;
             result.DceName = string.Empty;
+            result.Quantity = decimal.MinusOne;
             return result;
         }
         
@@ -47,6 +50,7 @@ namespace ApplicationsAndContracts.Models
         public string DceAlias { get; private set; }
 
         public string DceName { get; private set; }
+        public decimal Quantity { get; private set; }
     }
        
     

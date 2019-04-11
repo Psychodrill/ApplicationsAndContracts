@@ -32,6 +32,7 @@ namespace ApplicationsAndContracts.Views
         private void ApplicationsAndContractsForm_Load(object sender, EventArgs e)
         {
             this.applicationsBindingSource.DataSource= this.catalog;
+            this.dceListBindingSource.DataSource = this.catalog;
         }
     }
 }

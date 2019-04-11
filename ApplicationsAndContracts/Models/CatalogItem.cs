@@ -15,27 +15,20 @@ namespace ApplicationsAndContracts.Models
             var result = new CatalogItem();
 
             result.ApplicationCatalogItem = ApplicationCatalogItem.CreateFrom(row);
+            result.Dce = Dce.CreateFrom(row);
             return result;
         }
 
 
 
 
-
-
-
-
-
-
-
-
+        
 
 
 
         public ApplicationCatalogItem ApplicationCatalogItem { get; private set; }
-        
-
-
+        //public DceQuantityCatalogItem DceQuantityCatalogItem { get; private set; }
+        public Dce Dce { get; private set; }
 
 
 
@@ -50,6 +43,11 @@ namespace ApplicationsAndContracts.Models
         public string ContractNumber { get { return this.ApplicationCatalogItem.ContractNumber; } }
         public DateTime ContractDate { get { return this.ApplicationCatalogItem.ContractDate; } }
         public string StateContractNumber { get { return this.ApplicationCatalogItem.StateContractNumber; } }
+        public int ApplicationId { get { return this.Dce.ApplicationId; } }
+        public int DceNumber { get { return this.Dce.DceNumber; } }
+        public string DceAlias { get { return this.Dce.DceAlias; } }
+        public string DceName { get { return this.Dce.DceName; } }
+        public decimal Quantity { get { return this.Dce.Quantity; } }
     }
 
 }
