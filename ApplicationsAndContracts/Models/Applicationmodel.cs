@@ -36,6 +36,7 @@ namespace ApplicationsAndContracts.Models
         public static Applicationmodel CreateFrom(CatalogItem catalogItem)
         {
             var result = new Applicationmodel();
+            result.ApplicationId = catalogItem.ApplicationId;
             result.ApplicationNumber = catalogItem.ApplicationNumber;
             result.ApplicationDate = catalogItem.ApplicationDate;
             result.ApplicationStatus = catalogItem.ApplicationStatus;

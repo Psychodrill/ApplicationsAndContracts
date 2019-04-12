@@ -28,7 +28,9 @@ namespace ApplicationsAndContracts.Views
             get
             {
                 if (this.applicationsBindingSource.Position < 0) return null;
+
                 return this.applicationCatalog[this.applicationsBindingSource.Position];
+                
             }
         }
         

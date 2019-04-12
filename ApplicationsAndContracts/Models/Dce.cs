@@ -31,7 +31,8 @@ namespace ApplicationsAndContracts.Models
             result.ApplicationId = catalogItem.ApplicationId;
             result.DceNumber = catalogItem.DceNumber;
             result.DceAlias = catalogItem.DceAlias;
-            result.DceName   = result.DceName;
+            result.DceName   = catalogItem.DceName;
+            result.Quantity = catalogItem.Quantity;
             return result;
         }
 

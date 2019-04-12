@@ -52,6 +52,10 @@
             this.dceGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.dceDataGridView = new System.Windows.Forms.DataGridView();
+            this.DceNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DceAliasColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DceNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QuantityColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.colorPanel1 = new System.Windows.Forms.Panel();
             this.gkLabel1 = new System.Windows.Forms.Label();
@@ -103,10 +107,6 @@
             this.phoneNumber2ValueToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.faxNumberToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.faxNumberValueToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.DceNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DceAliasColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DceNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QuantityColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ApplicationsAndContractsTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -232,6 +232,8 @@
             // 
             this.applicationsDataGridView.AllowUserToAddRows = false;
             this.applicationsDataGridView.AllowUserToDeleteRows = false;
+            this.applicationsDataGridView.AllowUserToResizeColumns = false;
+            this.applicationsDataGridView.AllowUserToResizeRows = false;
             this.applicationsDataGridView.AutoGenerateColumns = false;
             this.applicationsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.applicationsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -420,6 +422,8 @@
             // 
             this.dceDataGridView.AllowUserToAddRows = false;
             this.dceDataGridView.AllowUserToDeleteRows = false;
+            this.dceDataGridView.AllowUserToResizeColumns = false;
+            this.dceDataGridView.AllowUserToResizeRows = false;
             this.dceDataGridView.AutoGenerateColumns = false;
             this.dceDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dceDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -435,8 +439,44 @@
             this.dceDataGridView.Name = "dceDataGridView";
             this.dceDataGridView.ReadOnly = true;
             this.dceDataGridView.RowHeadersVisible = false;
+            this.dceDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dceDataGridView.Size = new System.Drawing.Size(1305, 281);
             this.dceDataGridView.TabIndex = 0;
+            // 
+            // DceNumberColumn
+            // 
+            this.DceNumberColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DceNumberColumn.DataPropertyName = "DceNumber";
+            this.DceNumberColumn.FillWeight = 20F;
+            this.DceNumberColumn.HeaderText = "№ ДСЕ";
+            this.DceNumberColumn.Name = "DceNumberColumn";
+            this.DceNumberColumn.ReadOnly = true;
+            // 
+            // DceAliasColumn
+            // 
+            this.DceAliasColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DceAliasColumn.DataPropertyName = "DceAlias";
+            this.DceAliasColumn.FillWeight = 70F;
+            this.DceAliasColumn.HeaderText = "Обозначение ДСЕ";
+            this.DceAliasColumn.Name = "DceAliasColumn";
+            this.DceAliasColumn.ReadOnly = true;
+            // 
+            // DceNameColumn
+            // 
+            this.DceNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DceNameColumn.DataPropertyName = "DceName";
+            this.DceNameColumn.HeaderText = "Наименование ДСЕ";
+            this.DceNameColumn.Name = "DceNameColumn";
+            this.DceNameColumn.ReadOnly = true;
+            // 
+            // QuantityColumn
+            // 
+            this.QuantityColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.QuantityColumn.DataPropertyName = "Quantity";
+            this.QuantityColumn.FillWeight = 20F;
+            this.QuantityColumn.HeaderText = "Количество заказано";
+            this.QuantityColumn.Name = "QuantityColumn";
+            this.QuantityColumn.ReadOnly = true;
             // 
             // colorPanel1
             // 
@@ -961,41 +1001,6 @@
             this.faxNumberValueToolStripStatusLabel.Name = "faxNumberValueToolStripStatusLabel";
             this.faxNumberValueToolStripStatusLabel.Size = new System.Drawing.Size(76, 24);
             this.faxNumberValueToolStripStatusLabel.Text = "#######";
-            // 
-            // DceNumberColumn
-            // 
-            this.DceNumberColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DceNumberColumn.DataPropertyName = "DceNumber";
-            this.DceNumberColumn.FillWeight = 20F;
-            this.DceNumberColumn.HeaderText = "№ ДСЕ";
-            this.DceNumberColumn.Name = "DceNumberColumn";
-            this.DceNumberColumn.ReadOnly = true;
-            // 
-            // DceAliasColumn
-            // 
-            this.DceAliasColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DceAliasColumn.DataPropertyName = "DceAlias";
-            this.DceAliasColumn.FillWeight = 70F;
-            this.DceAliasColumn.HeaderText = "Обозначение ДСЕ";
-            this.DceAliasColumn.Name = "DceAliasColumn";
-            this.DceAliasColumn.ReadOnly = true;
-            // 
-            // DceNameColumn
-            // 
-            this.DceNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DceNameColumn.DataPropertyName = "DceName";
-            this.DceNameColumn.HeaderText = "Наименование ДСЕ";
-            this.DceNameColumn.Name = "DceNameColumn";
-            this.DceNameColumn.ReadOnly = true;
-            // 
-            // QuantityColumn
-            // 
-            this.QuantityColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.QuantityColumn.DataPropertyName = "Quantity";
-            this.QuantityColumn.FillWeight = 20F;
-            this.QuantityColumn.HeaderText = "Количество заказано";
-            this.QuantityColumn.Name = "QuantityColumn";
-            this.QuantityColumn.ReadOnly = true;
             // 
             // ApplicationsAndContractsForm
             // 

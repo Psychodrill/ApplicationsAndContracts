@@ -85,6 +85,7 @@ namespace ApplicationsAndContracts.DataAccess
         public IEnumerable<DataRow> GetCatalog(Criteria criteria)
         {
             var parameters = new SqlParameter[16];
+            //parameters = new SqlParameter("applicationId");
             parameters[0] = new SqlParameter("supplierName", criteria.SupplierName);
             parameters[1] = new SqlParameter("contractNumber", criteria.ContractNumber);
             parameters[2] = new SqlParameter("contractDate", criteria.ContractDate);

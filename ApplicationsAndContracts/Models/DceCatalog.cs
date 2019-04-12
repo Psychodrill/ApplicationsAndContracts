@@ -10,7 +10,7 @@ namespace ApplicationsAndContracts.Models
     public class DceCatalog:SupportSortingList<Dce>
     {
         public static DceCatalog CreateFrom(Catalog catalog, ApplicationCatalogItem applicationCatalogItem)
-        {
+       {
             var list = catalog.Where(catalogItem => catalogItem.ApplicationId == applicationCatalogItem.ApplicationId)
                                .Select(catalogItem => Dce.CreateFrom(catalogItem))
                                .Distinct()
