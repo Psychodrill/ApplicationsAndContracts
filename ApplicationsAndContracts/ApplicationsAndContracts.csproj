@@ -98,6 +98,8 @@
     <Compile Include="Models\Contract.cs" />
     <Compile Include="Models\ContractList.cs" />
     <Compile Include="Models\Criteria.cs" />
+    <Compile Include="Models\CurrentContractCatalog.cs" />
+    <Compile Include="Models\CurrentContractCatalogItem.cs" />
     <Compile Include="Models\Dce.cs" />
     <Compile Include="Models\DceCatalog.cs" />
     <Compile Include="Models\DceList.cs" />
@@ -109,6 +111,8 @@
     <Compile Include="Models\StateContract.cs" />
     <Compile Include="Models\StateContractList.cs" />
     <Compile Include="Models\Supplier.cs" />
+    <Compile Include="Models\SupplierCatalog.cs" />
+    <Compile Include="Models\SupplierCatalogItem.cs" />
     <Compile Include="Models\SupplierList.cs" />
     <Compile Include="Views\ApplicationAddingForm.cs">
       <SubType>Form</SubType>

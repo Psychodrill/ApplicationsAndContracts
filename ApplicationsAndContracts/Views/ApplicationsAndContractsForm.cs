@@ -44,6 +44,7 @@ namespace ApplicationsAndContracts.Views
 
             this.Load += new EventHandler(ApplicationsAndContractsForm_Load);
             this.applicationsBindingSource.PositionChanged += new EventHandler(applicationBindingSource_PositionChanged);
+            
         }
 
         private void applicationBindingSource_PositionChanged(object sender, EventArgs e)
