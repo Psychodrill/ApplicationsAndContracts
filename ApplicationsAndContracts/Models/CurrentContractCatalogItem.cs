@@ -19,7 +19,7 @@ namespace ApplicationsAndContracts.Models
         public static CurrentContractCatalogItem CreateFrom(CurrentContractCatalogItem currentContractCatalogItem)
         {
             var result = new CurrentContractCatalogItem();
-            result.Refresh(currentContractCatalogItem);
+            //result.Refresh(currentContractCatalogItem);
             return result;
         }
 
@@ -68,9 +68,9 @@ namespace ApplicationsAndContracts.Models
         public DateTime ApplicationDate { get { return this.Applicationmodel.ApplicationDate; } }
         public byte ApplicationStatus { get { return this.Applicationmodel.ApplicationStatus; } }
         public string Department { get { return this.Applicationmodel.Department; } }
-        public string SupplierName { get { return this.Supplier.SupplierName; } }
-        public string ContractNumber { get { return this.Contract.ContractNumber; } }
-        public DateTime ContractDate { get { return this.Contract.ContractDate; } }
+        //public string SupplierName { get { return this.Supplier.SupplierName; } }
+        //public string ContractNumber { get { return this.Contract.ContractNumber; } }
+        //public DateTime ContractDate { get { return this.Contract.ContractDate; } }
         public string StateContractNumber { get { return this.StateContract.StateContractNumber; } }
 
     }

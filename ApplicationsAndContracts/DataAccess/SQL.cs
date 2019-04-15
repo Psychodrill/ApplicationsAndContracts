@@ -32,6 +32,7 @@ namespace ApplicationsAndContracts.DataAccess
                 SELECT [ApplicationId],
                        [ApplicationNumber],
                        [ApplicationDate],
+                       [StateContractId],
                        [ApplicationStatus],
                        [Department]
                   FROM [dbo].[ft_ApplicationsAndContracts_GetApplicationList]()";
@@ -70,6 +71,7 @@ namespace ApplicationsAndContracts.DataAccess
                        [ContractDate],
                        [ApplicationNumber],
                        [ApplicationDate],
+                       [StateContractId],
                        [ApplicationStatus],
                        [Department],
                        [StateContractNumber],

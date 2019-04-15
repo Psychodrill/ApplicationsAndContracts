@@ -16,6 +16,9 @@ namespace ApplicationsAndContracts.Models
 
             result.ApplicationCatalogItem = ApplicationCatalogItem.CreateFrom(row);
             result.Dce = Dce.CreateFrom(row);
+            result.SupplierCatalogItem = SupplierCatalogItem.CreateFrom(row);
+            result.CurrentContractCatalogItem = CurrentContractCatalogItem.CreateFrom(row);
+
             return result;
         }
 
@@ -29,6 +32,8 @@ namespace ApplicationsAndContracts.Models
         public ApplicationCatalogItem ApplicationCatalogItem { get; private set; }
         //public DceQuantityCatalogItem DceQuantityCatalogItem { get; private set; }
         public Dce Dce { get; private set; }
+        public SupplierCatalogItem SupplierCatalogItem { get; private set; }
+        public CurrentContractCatalogItem CurrentContractCatalogItem { get; private set; }
 
 
 
@@ -37,6 +42,7 @@ namespace ApplicationsAndContracts.Models
         public string ApplicationNumber { get { return this.ApplicationCatalogItem.ApplicationNumber; } }
         public DateTime ApplicationDate { get { return this.ApplicationCatalogItem.ApplicationDate; } }
         public byte ApplicationStatus { get {return this.ApplicationCatalogItem.ApplicationStatus; } }
+        public int StateContractId { get  { return this.ApplicationCatalogItem.StateContractId; } }
 
         public string Department { get { return this.ApplicationCatalogItem.Department; } }
         public string SupplierName { get { return this.ApplicationCatalogItem.SupplierName; } }
