@@ -20,6 +20,7 @@ namespace ApplicationsAndContracts.Views
         private Catalog catalog;
         private ApplicationCatalog applicationCatalog;
         private DceCatalog dceCatalog;
+        private SupplierCatalog supplierCatalog;
 
 
 
@@ -56,7 +57,9 @@ namespace ApplicationsAndContracts.Views
         {
 
             this.applicationCatalog = ApplicationCatalog.CreateFrom(catalog);
-            this.applicationsBindingSource.DataSource= this.catalog;
+            this.applicationsBindingSource.DataSource= this.applicationCatalog;
+            this.supplierCatalog = SupplierCatalog.CreateFrom(catalog);
+            this.suppliersBindingSource.DataSource = this.supplierCatalog;
 
 
  

@@ -26,6 +26,14 @@ namespace ApplicationsAndContracts.Models
             return result;
         }
 
+        public static Contract CreateFrom(SupplierCatalogItem suppliercatalogItem)
+        {
+            var result = new Contract();
+            result.ContractNumber = suppliercatalogItem.ContractNumber;
+            result.ContractDate = suppliercatalogItem.ContractDate;
+            return result;
+        }
+
         public static Contract CreateFrom(CatalogItem catalogItem)
         {
             var result = new Contract();
