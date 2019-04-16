@@ -12,8 +12,9 @@ namespace ApplicationsAndContracts.Models
         public static StateContract CreateFrom(DataRow row)
         {
             var result = new StateContract();
-            //result.StateContractId = row.Field<int>("StateContractId");
+            result.StateContractId = row.Field<int>("StateContractId");
             result.StateContractNumber = row.Field<string>("StateContractNumber");
+            //if (result.StateContractId == null) result.StateContractId = -1;
             return result;
         }
 
@@ -27,9 +28,19 @@ namespace ApplicationsAndContracts.Models
         public static StateContract CreateFrom(CatalogItem catalogItem)
         {
             var result = new StateContract();
+            result.StateContractId = result.StateContractId;
             result.StateContractNumber = result.StateContractNumber;
             return result;
         }
+
+        public static StateContract CreateFrom(SupplierCatalogItem supplierCatalogItem)
+        {
+            var result = new StateContract();
+            result.StateContractId = result.StateContractId;
+            result.StateContractNumber = result.StateContractNumber;
+            return result;
+        }
+
 
         public StateContract()
         {
@@ -38,6 +49,7 @@ namespace ApplicationsAndContracts.Models
         public static StateContract Empty()
         {
             var result = new StateContract();
+            result.StateContractId = -1;
             result.StateContractNumber = string.Empty;
             return result;
         }

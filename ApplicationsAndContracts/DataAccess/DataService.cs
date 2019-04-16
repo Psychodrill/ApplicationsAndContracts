@@ -93,6 +93,7 @@ namespace ApplicationsAndContracts.DataAccess
             parameters[4] = new SqlParameter("applicationDate", criteria.ApplicationDate);
             parameters[5] = new SqlParameter("applicationStatus", criteria.ApplicationStatus);
             parameters[6] = new SqlParameter("department", criteria.Department);
+
             parameters[7] = new SqlParameter("stateContractNumber", criteria.StateContractNumber);
             parameters[8] = new SqlParameter("orderNumber", criteria.OrderNumber);
             parameters[9] = new SqlParameter("productNumber", criteria.ProductNumber);

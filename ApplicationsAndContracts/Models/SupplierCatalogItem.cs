@@ -35,7 +35,7 @@ namespace ApplicationsAndContracts.Models
             //this.Applicationmodel = Applicationmodel.CreateFrom(row);
             this.Supplier = Supplier.CreateFrom(row);
             this.Contract = Contract.CreateFrom(row);
-            //this.StateContract = StateContract.CreateFrom(row);
+            this.StateContract = StateContract.CreateFrom(row);
         }
 
         public void Refresh(SupplierCatalogItem supplierCatalogItem)
@@ -43,7 +43,7 @@ namespace ApplicationsAndContracts.Models
             //this.Applicationmodel = Applicationmodel.CreateFrom(applicationCatalogItem);
             this.Supplier = Supplier.CreateFrom(supplierCatalogItem);
             this.Contract = Contract.CreateFrom(supplierCatalogItem);
-            //this.StateContract = StateContract.CreateFrom(applicationCatalogItem);
+            this.StateContract = StateContract.CreateFrom(supplierCatalogItem);
 
         }
 
@@ -52,7 +52,7 @@ namespace ApplicationsAndContracts.Models
             //this.Applicationmodel = Applicationmodel.CreateFrom(catalogItem);
             this.Supplier = Supplier.CreateFrom(catalogItem);
             this.Contract = Contract.CreateFrom(catalogItem);
-            //this.StateContract = StateContract.CreateFrom(catalogItem);
+            this.StateContract = StateContract.CreateFrom(catalogItem);
 
         }
 
@@ -60,7 +60,7 @@ namespace ApplicationsAndContracts.Models
         //public Applicationmodel Applicationmodel { get; private set; }
         public Supplier Supplier { get; private set; }
         public Contract Contract { get; private set; }
-        //public StateContract StateContract { get; private set; }
+        public StateContract StateContract { get; private set; }
 
 
         //public int ApplicationId { get { return this.Applicationmodel.ApplicationId; } }
@@ -71,6 +71,7 @@ namespace ApplicationsAndContracts.Models
         public string SupplierName { get { return this.Supplier.SupplierName; } }
         public string ContractNumber { get { return this.Contract.ContractNumber; } }
         public DateTime ContractDate { get { return this.Contract.ContractDate; } }
+        public int StateContractId { get { return this.StateContract.StateContractId; } }
         //public string StateContractNumber { get { return this.StateContract.StateContractNumber; } }
 
     }

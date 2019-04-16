@@ -21,6 +21,7 @@ namespace ApplicationsAndContracts.Views
         private ApplicationCatalog applicationCatalog;
         private DceCatalog dceCatalog;
         private SupplierCatalog supplierCatalog;
+        private CurrentContractCatalog currentContractCatalog;
 
 
 
@@ -34,6 +35,15 @@ namespace ApplicationsAndContracts.Views
                 
             }
         }
+
+        private SupplierCatalogItem supplierCatalogItem
+        {
+            get
+            {
+                if (this.suppliersBindingSource.Position < 0) return null;
+                return this.supplierCatalog[this.suppliersBindingSource.Position];
+            }
+        }
         
         public ApplicationsAndContractsForm(Criteria criteria, Catalog catalog)
         {
@@ -45,7 +55,13 @@ namespace ApplicationsAndContracts.Views
 
             this.Load += new EventHandler(ApplicationsAndContractsForm_Load);
             this.applicationsBindingSource.PositionChanged += new EventHandler(applicationBindingSource_PositionChanged);
+            this.contractsBindingSource.PositionChanged += new EventHandler(contractsBindingSource_PositionChanged);
             
+        }
+
+        private void contractsBindingSource_PositionChanged(object sender, EventArgs e)
+        {
+            this.GetContractCatalog();
         }
 
         private void applicationBindingSource_PositionChanged(object sender, EventArgs e)
@@ -63,6 +79,13 @@ namespace ApplicationsAndContracts.Views
 
 
  
+        }
+
+        private void GetContractCatalog()
+        {
+            if (this.catalog == null || this.supplierCatalog == null) return;
+            this.currentContractCatalog = CurrentContractCatalog.CreateFrom(this.catalog, this.supplierCatalogItem);
+            this.contractsBindingSource.DataSource = this.currentContractCatalog;
         }
 
 

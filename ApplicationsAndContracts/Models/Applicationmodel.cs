@@ -17,7 +17,7 @@ namespace ApplicationsAndContracts.Models
             result.ApplicationId = row.Field<int>("ApplicationId");
             result.ApplicationNumber = row.Field<string>("ApplicationNumber");
             result.ApplicationDate = row.Field<DateTime>("ApplicationDate");
-            result.StateContractId = row.Field<int>("StateContractId");
+            //result.StateContractId = row.Field<int>("StateContractId");
             result.ApplicationStatus = row.Field<byte>("ApplicationStatus");
             result.Department = row.Field<string>("Department");
             return result;
@@ -57,7 +57,7 @@ namespace ApplicationsAndContracts.Models
             result.ApplicationId = -1;
             result.ApplicationNumber = string.Empty;
             result.ApplicationDate = DateTime.MaxValue;
-            result.StateContractId = -1;
+            //result.StateContractId = -1;
             result.ApplicationStatus = 255;
             result.Department = string.Empty;
             return result;
@@ -66,7 +66,7 @@ namespace ApplicationsAndContracts.Models
         public int ApplicationId { get; private set; }        
         public string ApplicationNumber { get; private set; }
         public DateTime ApplicationDate { get; private set; }
-        public int StateContractId { get; private set; }
+        //public int StateContractId { get; private set; }
         public byte ApplicationStatus { get; private set; }
 
         public string Department { get; private set; }

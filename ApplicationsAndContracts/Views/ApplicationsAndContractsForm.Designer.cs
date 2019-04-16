@@ -41,7 +41,7 @@
             this.supplierNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contractNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contractDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stateContractNemberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stateContractNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.applicationStatusColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.applicationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.colorPanel = new System.Windows.Forms.Panel();
@@ -79,14 +79,13 @@
             this.performedComtractLabel = new System.Windows.Forms.Label();
             this.colorPanel2 = new System.Windows.Forms.Panel();
             this.suppliersDataGridView = new System.Windows.Forms.DataGridView();
+            this.SupplierNameContractsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ContractNumberContractsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ContractDateContractsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.suppliersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.currentContractsDataGridView = new System.Windows.Forms.DataGridView();
-            this.ApplicationNumberContractsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ApplicationDateContractsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GKContractsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StatusContractsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contractsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.exitContractsButton = new System.Windows.Forms.Button();
@@ -104,9 +103,10 @@
             this.phoneNumber2ValueToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.faxNumberToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.faxNumberValueToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.SupplierNameContractsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ContractNumberContractsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ContractDateContractsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ApplicationNumberContractsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ApplicationDateContractsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GKContractsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StatusContractsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ApplicationsAndContractsTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -242,7 +242,7 @@
             this.supplierNameColumn,
             this.contractNumberColumn,
             this.contractDateColumn,
-            this.stateContractNemberColumn,
+            this.stateContractNumberColumn,
             this.applicationStatusColumn});
             this.tableLayoutPanel2.SetColumnSpan(this.applicationsDataGridView, 8);
             this.applicationsDataGridView.DataSource = this.applicationsBindingSource;
@@ -300,14 +300,14 @@
             this.contractDateColumn.Name = "contractDateColumn";
             this.contractDateColumn.ReadOnly = true;
             // 
-            // stateContractNemberColumn
+            // stateContractNumberColumn
             // 
-            this.stateContractNemberColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.stateContractNemberColumn.DataPropertyName = "StateContractNumber";
-            this.stateContractNemberColumn.FillWeight = 75F;
-            this.stateContractNemberColumn.HeaderText = "ГК";
-            this.stateContractNemberColumn.Name = "stateContractNemberColumn";
-            this.stateContractNemberColumn.ReadOnly = true;
+            this.stateContractNumberColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.stateContractNumberColumn.DataPropertyName = "StateContractNumber";
+            this.stateContractNumberColumn.FillWeight = 75F;
+            this.stateContractNumberColumn.HeaderText = "ГК";
+            this.stateContractNumberColumn.Name = "stateContractNumberColumn";
+            this.stateContractNumberColumn.ReadOnly = true;
             // 
             // applicationStatusColumn
             // 
@@ -756,6 +756,32 @@
             this.suppliersDataGridView.Size = new System.Drawing.Size(1305, 281);
             this.suppliersDataGridView.TabIndex = 0;
             // 
+            // SupplierNameContractsColumn
+            // 
+            this.SupplierNameContractsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SupplierNameContractsColumn.DataPropertyName = "SupplierName";
+            this.SupplierNameContractsColumn.HeaderText = "Поставщик";
+            this.SupplierNameContractsColumn.Name = "SupplierNameContractsColumn";
+            this.SupplierNameContractsColumn.ReadOnly = true;
+            // 
+            // ContractNumberContractsColumn
+            // 
+            this.ContractNumberContractsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ContractNumberContractsColumn.DataPropertyName = "ContractNumber";
+            this.ContractNumberContractsColumn.FillWeight = 80F;
+            this.ContractNumberContractsColumn.HeaderText = "№ Договора";
+            this.ContractNumberContractsColumn.Name = "ContractNumberContractsColumn";
+            this.ContractNumberContractsColumn.ReadOnly = true;
+            // 
+            // ContractDateContractsColumn
+            // 
+            this.ContractDateContractsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ContractDateContractsColumn.DataPropertyName = "ContractDate";
+            this.ContractDateContractsColumn.FillWeight = 80F;
+            this.ContractDateContractsColumn.HeaderText = "Дата договора";
+            this.ContractDateContractsColumn.Name = "ContractDateContractsColumn";
+            this.ContractDateContractsColumn.ReadOnly = true;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.tableLayoutPanel6);
@@ -812,34 +838,6 @@
             this.currentContractsDataGridView.RowHeadersVisible = false;
             this.currentContractsDataGridView.Size = new System.Drawing.Size(1305, 277);
             this.currentContractsDataGridView.TabIndex = 2;
-            // 
-            // ApplicationNumberContractsColumn
-            // 
-            this.ApplicationNumberContractsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ApplicationNumberContractsColumn.HeaderText = "Номер заявки";
-            this.ApplicationNumberContractsColumn.Name = "ApplicationNumberContractsColumn";
-            this.ApplicationNumberContractsColumn.ReadOnly = true;
-            // 
-            // ApplicationDateContractsColumn
-            // 
-            this.ApplicationDateContractsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ApplicationDateContractsColumn.HeaderText = "Дата заявки";
-            this.ApplicationDateContractsColumn.Name = "ApplicationDateContractsColumn";
-            this.ApplicationDateContractsColumn.ReadOnly = true;
-            // 
-            // GKContractsColumn
-            // 
-            this.GKContractsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.GKContractsColumn.HeaderText = "ГК";
-            this.GKContractsColumn.Name = "GKContractsColumn";
-            this.GKContractsColumn.ReadOnly = true;
-            // 
-            // StatusContractsColumn
-            // 
-            this.StatusContractsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.StatusContractsColumn.HeaderText = "Статус";
-            this.StatusContractsColumn.Name = "StatusContractsColumn";
-            this.StatusContractsColumn.ReadOnly = true;
             // 
             // flowLayoutPanel2
             // 
@@ -981,31 +979,37 @@
             this.faxNumberValueToolStripStatusLabel.Size = new System.Drawing.Size(76, 24);
             this.faxNumberValueToolStripStatusLabel.Text = "#######";
             // 
-            // SupplierNameContractsColumn
+            // ApplicationNumberContractsColumn
             // 
-            this.SupplierNameContractsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SupplierNameContractsColumn.DataPropertyName = "SupplierName";
-            this.SupplierNameContractsColumn.HeaderText = "Поставщик";
-            this.SupplierNameContractsColumn.Name = "SupplierNameContractsColumn";
-            this.SupplierNameContractsColumn.ReadOnly = true;
+            this.ApplicationNumberContractsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ApplicationNumberContractsColumn.DataPropertyName = "ApplicationNumber";
+            this.ApplicationNumberContractsColumn.HeaderText = "Номер заявки";
+            this.ApplicationNumberContractsColumn.Name = "ApplicationNumberContractsColumn";
+            this.ApplicationNumberContractsColumn.ReadOnly = true;
             // 
-            // ContractNumberContractsColumn
+            // ApplicationDateContractsColumn
             // 
-            this.ContractNumberContractsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ContractNumberContractsColumn.DataPropertyName = "ContractNumber";
-            this.ContractNumberContractsColumn.FillWeight = 80F;
-            this.ContractNumberContractsColumn.HeaderText = "№ Договора";
-            this.ContractNumberContractsColumn.Name = "ContractNumberContractsColumn";
-            this.ContractNumberContractsColumn.ReadOnly = true;
+            this.ApplicationDateContractsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ApplicationDateContractsColumn.DataPropertyName = "ApplicationDate";
+            this.ApplicationDateContractsColumn.HeaderText = "Дата заявки";
+            this.ApplicationDateContractsColumn.Name = "ApplicationDateContractsColumn";
+            this.ApplicationDateContractsColumn.ReadOnly = true;
             // 
-            // ContractDateContractsColumn
+            // GKContractsColumn
             // 
-            this.ContractDateContractsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ContractDateContractsColumn.DataPropertyName = "ContractDate";
-            this.ContractDateContractsColumn.FillWeight = 80F;
-            this.ContractDateContractsColumn.HeaderText = "Дата договора";
-            this.ContractDateContractsColumn.Name = "ContractDateContractsColumn";
-            this.ContractDateContractsColumn.ReadOnly = true;
+            this.GKContractsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.GKContractsColumn.DataPropertyName = "StateContractNumber";
+            this.GKContractsColumn.HeaderText = "ГК";
+            this.GKContractsColumn.Name = "GKContractsColumn";
+            this.GKContractsColumn.ReadOnly = true;
+            // 
+            // StatusContractsColumn
+            // 
+            this.StatusContractsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.StatusContractsColumn.DataPropertyName = "Status";
+            this.StatusContractsColumn.HeaderText = "Статус";
+            this.StatusContractsColumn.Name = "StatusContractsColumn";
+            this.StatusContractsColumn.ReadOnly = true;
             // 
             // ApplicationsAndContractsForm
             // 
@@ -1106,10 +1110,6 @@
         private System.Windows.Forms.DataGridView suppliersDataGridView;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ApplicationNumberContractsColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ApplicationDateContractsColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GKContractsColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StatusContractsColumn;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Button exitContractsButton;
         private System.Windows.Forms.Button deleteContractsButton;
@@ -1117,13 +1117,6 @@
         private System.Windows.Forms.Button detailedContractsButton;
         private System.Windows.Forms.BindingSource suppliersBindingSource;
         private System.Windows.Forms.BindingSource contractsBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn applicationNumberColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn applicationDateColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn supplierNameColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn contractNumberColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn contractDateColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stateContractNemberColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn applicationStatusColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn DceNumberColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn DceAliasColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn DceNameColumn;
@@ -1131,5 +1124,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SupplierNameContractsColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ContractNumberContractsColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ContractDateContractsColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn applicationNumberColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn applicationDateColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn supplierNameColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contractNumberColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contractDateColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stateContractNumberColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn applicationStatusColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ApplicationNumberContractsColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ApplicationDateContractsColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GKContractsColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StatusContractsColumn;
     }
 }
