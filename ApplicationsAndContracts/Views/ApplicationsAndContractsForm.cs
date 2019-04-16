@@ -55,11 +55,11 @@ namespace ApplicationsAndContracts.Views
 
             this.Load += new EventHandler(ApplicationsAndContractsForm_Load);
             this.applicationsBindingSource.PositionChanged += new EventHandler(applicationBindingSource_PositionChanged);
-            this.contractsBindingSource.PositionChanged += new EventHandler(contractsBindingSource_PositionChanged);
+            this.suppliersBindingSource.PositionChanged += new EventHandler(suppliersBindingSource_PositionChanged);
             
         }
 
-        private void contractsBindingSource_PositionChanged(object sender, EventArgs e)
+        private void suppliersBindingSource_PositionChanged(object sender, EventArgs e)
         {
             this.GetContractCatalog();
         }

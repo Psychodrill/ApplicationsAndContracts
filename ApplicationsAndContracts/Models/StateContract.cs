@@ -21,23 +21,23 @@ namespace ApplicationsAndContracts.Models
         public static StateContract CreateFrom(ApplicationCatalogItem applicationCatalogItem)
         {
             var result = new StateContract();
-            result.StateContractNumber = result.StateContractNumber;
+            result.StateContractNumber = applicationCatalogItem.StateContractNumber;
             return result;
         }
 
         public static StateContract CreateFrom(CatalogItem catalogItem)
         {
             var result = new StateContract();
-            result.StateContractId = result.StateContractId;
-            result.StateContractNumber = result.StateContractNumber;
+            result.StateContractId = catalogItem.StateContractId;
+            result.StateContractNumber = catalogItem.StateContractNumber;
             return result;
         }
 
         public static StateContract CreateFrom(SupplierCatalogItem supplierCatalogItem)
         {
             var result = new StateContract();
-            result.StateContractId = result.StateContractId;
-            result.StateContractNumber = result.StateContractNumber;
+            result.StateContractId = supplierCatalogItem.StateContractId;
+            //result.StateContractNumber = supplierCatalogItem.StateContractNumber;
             return result;
         }
 

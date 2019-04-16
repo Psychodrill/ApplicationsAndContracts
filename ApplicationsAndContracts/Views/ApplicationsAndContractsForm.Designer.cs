@@ -106,7 +106,7 @@
             this.ApplicationNumberContractsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ApplicationDateContractsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GKContractsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StatusContractsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StatusContractsColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ApplicationsAndContractsTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -1007,9 +1007,13 @@
             // 
             this.StatusContractsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.StatusContractsColumn.DataPropertyName = "Status";
+            this.StatusContractsColumn.FalseValue = "0";
             this.StatusContractsColumn.HeaderText = "Статус";
             this.StatusContractsColumn.Name = "StatusContractsColumn";
             this.StatusContractsColumn.ReadOnly = true;
+            this.StatusContractsColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.StatusContractsColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.StatusContractsColumn.TrueValue = "1";
             // 
             // ApplicationsAndContractsForm
             // 
@@ -1134,6 +1138,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ApplicationNumberContractsColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ApplicationDateContractsColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn GKContractsColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StatusContractsColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn StatusContractsColumn;
     }
 }
