@@ -840,6 +840,7 @@
             this.currentContractsDataGridView.Name = "currentContractsDataGridView";
             this.currentContractsDataGridView.ReadOnly = true;
             this.currentContractsDataGridView.RowHeadersVisible = false;
+            this.currentContractsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.currentContractsDataGridView.Size = new System.Drawing.Size(1305, 277);
             this.currentContractsDataGridView.TabIndex = 2;
             // 
