@@ -249,6 +249,7 @@
             this.applicationsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.applicationsDataGridView.Location = new System.Drawing.Point(4, 4);
             this.applicationsDataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.applicationsDataGridView.MultiSelect = false;
             this.applicationsDataGridView.Name = "applicationsDataGridView";
             this.applicationsDataGridView.ReadOnly = true;
             this.applicationsDataGridView.RowHeadersVisible = false;
@@ -436,6 +437,7 @@
             this.dceDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dceDataGridView.Location = new System.Drawing.Point(4, 4);
             this.dceDataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.dceDataGridView.MultiSelect = false;
             this.dceDataGridView.Name = "dceDataGridView";
             this.dceDataGridView.ReadOnly = true;
             this.dceDataGridView.RowHeadersVisible = false;
@@ -749,6 +751,7 @@
             this.suppliersDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.suppliersDataGridView.Location = new System.Drawing.Point(4, 4);
             this.suppliersDataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.suppliersDataGridView.MultiSelect = false;
             this.suppliersDataGridView.Name = "suppliersDataGridView";
             this.suppliersDataGridView.ReadOnly = true;
             this.suppliersDataGridView.RowHeadersVisible = false;
@@ -833,6 +836,7 @@
             this.currentContractsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.currentContractsDataGridView.Location = new System.Drawing.Point(4, 4);
             this.currentContractsDataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.currentContractsDataGridView.MultiSelect = false;
             this.currentContractsDataGridView.Name = "currentContractsDataGridView";
             this.currentContractsDataGridView.ReadOnly = true;
             this.currentContractsDataGridView.RowHeadersVisible = false;
@@ -1006,8 +1010,9 @@
             // StatusContractsColumn
             // 
             this.StatusContractsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.StatusContractsColumn.DataPropertyName = "Status";
+            this.StatusContractsColumn.DataPropertyName = "ApplicationStatus";
             this.StatusContractsColumn.FalseValue = "0";
+            this.StatusContractsColumn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.StatusContractsColumn.HeaderText = "Статус";
             this.StatusContractsColumn.Name = "StatusContractsColumn";
             this.StatusContractsColumn.ReadOnly = true;

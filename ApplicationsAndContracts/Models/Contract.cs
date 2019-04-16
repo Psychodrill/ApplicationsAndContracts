@@ -37,7 +37,7 @@ namespace ApplicationsAndContracts.Models
         public static Contract CreateFrom(CatalogItem catalogItem)
         {
             var result = new Contract();
-            result.ContractNumber = catalogItem.ContractNumber;
+            result.ContractNumber = catalogItem.ContractNumber==string.Empty?result.ContractNumber="В счёт будущего контракта": result.ContractNumber = catalogItem.ContractNumber;
             result.ContractDate = catalogItem.ContractDate;
             return result;
         }
