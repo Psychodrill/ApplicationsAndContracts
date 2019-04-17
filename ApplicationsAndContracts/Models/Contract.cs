@@ -9,18 +9,26 @@ namespace ApplicationsAndContracts.Models
 {
     public class Contract
     {
+        
         public static Contract CreateFrom(DataRow row)
         {
+
             var result = new Contract();
-            //result.ContractId = row.Field<int>("ContractId");
+            result.ContractId = row.Field<int>("ContractId");
+            if (result.ContractId == -1) return Contract.InFutureTime();
+                //return Contract.Empty();
             result.ContractNumber = row.Field<string>("ContractNumber");
             result.ContractDate = row.Field<DateTime>("ContractDate");
             return result;
+       
+
+
         }
 
         public static Contract CreateFrom(ApplicationCatalogItem applicationCatalogItem)
         {
             var result = new Contract();
+            result.ContractId = applicationCatalogItem.ContractId;
             result.ContractNumber = applicationCatalogItem.ContractNumber;
             result.ContractDate = applicationCatalogItem.ContractDate;
             return result;
@@ -29,6 +37,7 @@ namespace ApplicationsAndContracts.Models
         public static Contract CreateFrom(SupplierCatalogItem suppliercatalogItem)
         {
             var result = new Contract();
+            result.ContractId = suppliercatalogItem.ContractId;
             result.ContractNumber = suppliercatalogItem.ContractNumber;
             result.ContractDate = suppliercatalogItem.ContractDate;
             return result;
@@ -37,7 +46,8 @@ namespace ApplicationsAndContracts.Models
         public static Contract CreateFrom(CatalogItem catalogItem)
         {
             var result = new Contract();
-            result.ContractNumber = catalogItem.ContractNumber==string.Empty?result.ContractNumber="В счёт будущего контракта": result.ContractNumber = catalogItem.ContractNumber;
+            result.ContractId = catalogItem.ContractId;
+            result.ContractNumber = catalogItem.ContractNumber; /*==string.Empty?result.ContractNumber="В счёт будущего контракта": result.ContractNumber = catalogItem.ContractNumber;*/
             result.ContractDate = catalogItem.ContractDate;
             return result;
         }
@@ -55,6 +65,14 @@ namespace ApplicationsAndContracts.Models
             return result;
         }
 
+        public static Contract InFutureTime()
+        {
+            var result = new Contract();
+            result.ContractId = -1;
+            result.ContractNumber = "В счёт будущего договора";
+            result.ContractDate = DateTime.MinValue;
+            return result;
+        }
 
 
 

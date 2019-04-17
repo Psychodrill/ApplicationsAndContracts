@@ -67,6 +67,7 @@ namespace ApplicationsAndContracts.DataAccess
         internal const string GetCatalog = @"
                 SELECT [ApplicationId],
                        [SupplierName],
+                       [ContractId],
                        [ContractNumber],
                        [ContractDate],
                        [ApplicationNumber],

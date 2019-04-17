@@ -86,6 +86,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.currentContractsDataGridView = new System.Windows.Forms.DataGridView();
+            this.ApplicationNumberContractsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ApplicationDateContractsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GKContractsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StatusContractsColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.contractsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.exitContractsButton = new System.Windows.Forms.Button();
@@ -103,10 +107,6 @@
             this.phoneNumber2ValueToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.faxNumberToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.faxNumberValueToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ApplicationNumberContractsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ApplicationDateContractsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GKContractsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StatusContractsColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ApplicationsAndContractsTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -728,6 +728,7 @@
             // colorPanel2
             // 
             this.colorPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(254)))), ((int)(((byte)(214)))));
+            this.colorPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.colorPanel2.Location = new System.Drawing.Point(4, 293);
             this.colorPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.colorPanel2.Name = "colorPanel2";
@@ -824,6 +825,8 @@
             // 
             this.currentContractsDataGridView.AllowUserToAddRows = false;
             this.currentContractsDataGridView.AllowUserToDeleteRows = false;
+            this.currentContractsDataGridView.AllowUserToResizeColumns = false;
+            this.currentContractsDataGridView.AllowUserToResizeRows = false;
             this.currentContractsDataGridView.AutoGenerateColumns = false;
             this.currentContractsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.currentContractsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -843,6 +846,43 @@
             this.currentContractsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.currentContractsDataGridView.Size = new System.Drawing.Size(1305, 277);
             this.currentContractsDataGridView.TabIndex = 2;
+            // 
+            // ApplicationNumberContractsColumn
+            // 
+            this.ApplicationNumberContractsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ApplicationNumberContractsColumn.DataPropertyName = "ApplicationNumber";
+            this.ApplicationNumberContractsColumn.HeaderText = "Номер заявки";
+            this.ApplicationNumberContractsColumn.Name = "ApplicationNumberContractsColumn";
+            this.ApplicationNumberContractsColumn.ReadOnly = true;
+            // 
+            // ApplicationDateContractsColumn
+            // 
+            this.ApplicationDateContractsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ApplicationDateContractsColumn.DataPropertyName = "ApplicationDate";
+            this.ApplicationDateContractsColumn.HeaderText = "Дата заявки";
+            this.ApplicationDateContractsColumn.Name = "ApplicationDateContractsColumn";
+            this.ApplicationDateContractsColumn.ReadOnly = true;
+            // 
+            // GKContractsColumn
+            // 
+            this.GKContractsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.GKContractsColumn.DataPropertyName = "StateContractNumber";
+            this.GKContractsColumn.HeaderText = "ГК";
+            this.GKContractsColumn.Name = "GKContractsColumn";
+            this.GKContractsColumn.ReadOnly = true;
+            // 
+            // StatusContractsColumn
+            // 
+            this.StatusContractsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.StatusContractsColumn.DataPropertyName = "ApplicationStatus";
+            this.StatusContractsColumn.FalseValue = "0";
+            this.StatusContractsColumn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StatusContractsColumn.HeaderText = "Статус";
+            this.StatusContractsColumn.Name = "StatusContractsColumn";
+            this.StatusContractsColumn.ReadOnly = true;
+            this.StatusContractsColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.StatusContractsColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.StatusContractsColumn.TrueValue = "1";
             // 
             // flowLayoutPanel2
             // 
@@ -983,43 +1023,6 @@
             this.faxNumberValueToolStripStatusLabel.Name = "faxNumberValueToolStripStatusLabel";
             this.faxNumberValueToolStripStatusLabel.Size = new System.Drawing.Size(76, 24);
             this.faxNumberValueToolStripStatusLabel.Text = "#######";
-            // 
-            // ApplicationNumberContractsColumn
-            // 
-            this.ApplicationNumberContractsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ApplicationNumberContractsColumn.DataPropertyName = "ApplicationNumber";
-            this.ApplicationNumberContractsColumn.HeaderText = "Номер заявки";
-            this.ApplicationNumberContractsColumn.Name = "ApplicationNumberContractsColumn";
-            this.ApplicationNumberContractsColumn.ReadOnly = true;
-            // 
-            // ApplicationDateContractsColumn
-            // 
-            this.ApplicationDateContractsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ApplicationDateContractsColumn.DataPropertyName = "ApplicationDate";
-            this.ApplicationDateContractsColumn.HeaderText = "Дата заявки";
-            this.ApplicationDateContractsColumn.Name = "ApplicationDateContractsColumn";
-            this.ApplicationDateContractsColumn.ReadOnly = true;
-            // 
-            // GKContractsColumn
-            // 
-            this.GKContractsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.GKContractsColumn.DataPropertyName = "StateContractNumber";
-            this.GKContractsColumn.HeaderText = "ГК";
-            this.GKContractsColumn.Name = "GKContractsColumn";
-            this.GKContractsColumn.ReadOnly = true;
-            // 
-            // StatusContractsColumn
-            // 
-            this.StatusContractsColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.StatusContractsColumn.DataPropertyName = "ApplicationStatus";
-            this.StatusContractsColumn.FalseValue = "0";
-            this.StatusContractsColumn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StatusContractsColumn.HeaderText = "Статус";
-            this.StatusContractsColumn.Name = "StatusContractsColumn";
-            this.StatusContractsColumn.ReadOnly = true;
-            this.StatusContractsColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.StatusContractsColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.StatusContractsColumn.TrueValue = "1";
             // 
             // ApplicationsAndContractsForm
             // 
