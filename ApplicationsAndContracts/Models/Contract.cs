@@ -69,7 +69,7 @@ namespace ApplicationsAndContracts.Models
         {
             var result = new Contract();
             result.ContractId = -1;
-            result.ContractNumber = "В счёт будущего договора";
+            result.ContractNumber = "в счёт будущего договора";
             result.ContractDate = DateTime.MinValue;
             return result;
         }

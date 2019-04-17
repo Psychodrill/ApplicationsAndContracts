@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -56,7 +57,16 @@ namespace ApplicationsAndContracts.Views
             this.Load += new EventHandler(ApplicationsAndContractsForm_Load);
             this.applicationsBindingSource.PositionChanged += new EventHandler(applicationBindingSource_PositionChanged);
             this.suppliersBindingSource.PositionChanged += new EventHandler(suppliersBindingSource_PositionChanged);
+            this.applicationsDataGridView.CellFormatting += new DataGridViewCellFormattingEventHandler(applicationsDataGridView_CellFormating);
             
+        }
+
+        private void applicationsDataGridView_CellFormating(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.RowIndex<0) return;
+
+
+            this.FormatAndPaintRows(e);
         }
 
         private void suppliersBindingSource_PositionChanged(object sender, EventArgs e)
@@ -76,9 +86,7 @@ namespace ApplicationsAndContracts.Views
             this.applicationsBindingSource.DataSource= this.applicationCatalog;
             this.supplierCatalog = SupplierCatalog.CreateFrom(catalog);
             this.suppliersBindingSource.DataSource = this.supplierCatalog;
-
-
- 
+             
         }
 
         private void GetContractCatalog()
@@ -95,6 +103,19 @@ namespace ApplicationsAndContracts.Views
             this.dceCatalog = DceCatalog.CreateFrom(this.catalog, this.applicationCatalogItem);
             this.dceBindingSource.DataSource = this.dceCatalog;
         }
+
+        private void FormatAndPaintRows (DataGridViewCellFormattingEventArgs e)
+        {
+            var catalogItem = this.applicationCatalog[e.RowIndex];
+            if (catalogItem == null) return;
+            if (catalogItem.StateContract.ReasonId == 8 /*||
+                catalogItem.StateContract.IdGoz == string.Empty ||
+                catalogItem.StateContract.IdKazn == string.Empty*/) e.CellStyle.BackColor = this.colorPanel.BackColor;
+            if (catalogItem.ApplicationStatus == 1) e.CellStyle.Font.Italic = true;/* = new Font (e.CellStyle.Font, e.CellStyle.Font.Italic==t); /*this.applicationsDataGridView.RowsDefaultCellStyle.Font=*/
+
+        }
+
+
 
     }
 }

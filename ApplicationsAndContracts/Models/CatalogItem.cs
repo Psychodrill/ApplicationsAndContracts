@@ -51,6 +51,10 @@ namespace ApplicationsAndContracts.Models
         public DateTime ContractDate { get { return this.ApplicationCatalogItem.ContractDate; } }
         public int StateContractId { get { return this.ApplicationCatalogItem.StateContractId; } }
         public string StateContractNumber { get { return this.ApplicationCatalogItem.StateContractNumber; } }
+        public int ReasonId { get { return this.ApplicationCatalogItem.StateContract.ReasonId; } }
+        public string IdGoz { get { return this.ApplicationCatalogItem.StateContract.IdGoz; } }
+        public string IdKazn { get { return this.ApplicationCatalogItem.StateContract.IdKazn; } }
+
         public int ApplicationId { get { return this.Dce.ApplicationId; } }
         public int DceNumber { get { return this.Dce.DceNumber; } }
         public string DceAlias { get { return this.Dce.DceAlias; } }

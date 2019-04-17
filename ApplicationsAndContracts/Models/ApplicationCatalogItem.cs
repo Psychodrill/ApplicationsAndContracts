@@ -77,6 +77,9 @@ namespace ApplicationsAndContracts.Models
         public DateTime ContractDate { get { return this.Contract.ContractDate; } }
         public int StateContractId { get { return this.StateContract.StateContractId; } }
         public string StateContractNumber { get { return this.StateContract.StateContractNumber; } }
+        public int ReasonId { get { return this.StateContract.ReasonId; } }
+        public string IdGoz { get { return this.StateContract.IdGoz; } }
+        public string IdKazn { get { return this.StateContract.IdKazn; } }
 
     }
 }

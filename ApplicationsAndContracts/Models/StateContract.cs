@@ -14,6 +14,9 @@ namespace ApplicationsAndContracts.Models
             var result = new StateContract();
             result.StateContractId = row.Field<int>("StateContractId");
             result.StateContractNumber = row.Field<string>("StateContractNumber");
+            result.ReasonId = row.Field<int>("ReasonId");
+            result.IdGoz = row.Field<string>("IdGoz");
+            result.IdKazn = row.Field<string>("IdKazn");
             //if (result.StateContractId == null) result.StateContractId = -1;
             return result;
         }
@@ -30,6 +33,9 @@ namespace ApplicationsAndContracts.Models
             var result = new StateContract();
             result.StateContractId = catalogItem.StateContractId;
             result.StateContractNumber = catalogItem.StateContractNumber;
+            result.ReasonId = catalogItem.ReasonId;
+            result.IdGoz = catalogItem.IdGoz;
+            result.IdGoz = catalogItem.IdKazn;
             return result;
         }
 
@@ -58,6 +64,8 @@ namespace ApplicationsAndContracts.Models
 
         public int StateContractId { get; private set; }
         public string StateContractNumber { get; private set; }
-
+        public int ReasonId { get; private set; }
+        public string IdGoz { get; private set; }
+        public string IdKazn { get; private set; }
     }
 }
