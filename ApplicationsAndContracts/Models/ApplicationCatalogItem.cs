@@ -58,6 +58,36 @@ namespace ApplicationsAndContracts.Models
 
         }
 
+        public override bool Equals(object obj)
+        {
+            if (obj == null) return false;
+            var item = (ApplicationCatalogItem)obj;
+            if (this.ApplicationNumber!=item.ApplicationNumber) return false;
+            if (this.ApplicationDate != item.ApplicationDate) return false;
+            if (this.SupplierName != item.SupplierName) return false;
+            if (this.ContractNumber != item.ContractNumber) return false;
+            if (this.ContractDate != item.ContractDate) return false;
+            if (this.StateContractNumber != item.StateContractNumber) return false;
+            if (this.ApplicationStatus != item.ApplicationStatus) return false;
+            return true;
+        }
+
+        public override int GetHashCode()
+        {
+            var sb = new StringBuilder();
+
+            sb.Append(this.ApplicationNumber);
+            sb.Append(this.ApplicationDate);
+            sb.Append(this.SupplierName);
+            sb.Append(this.ContractNumber);
+            sb.Append(this.ContractDate);
+            sb.Append(this.StateContractNumber);
+            sb.Append(this.ApplicationStatus);
+            return sb.ToString().GetHashCode();
+        }
+
+
+
 
         public Applicationmodel Applicationmodel { get; private set; }
         public Supplier Supplier { get; private set; }

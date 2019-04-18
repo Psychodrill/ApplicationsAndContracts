@@ -13,7 +13,7 @@ namespace ApplicationsAndContracts.Models
         public static Supplier CreateFrom (DataRow row)
         {
             var result = new Supplier();
-            //result.SupplierCode = row.Field<int>("SupplierCode");
+            result.SupplierCode = row.Field<int>("SupplierCode");
             result.SupplierName = row.Field<string>("SupplierName");
             return result;
         }
@@ -35,6 +35,7 @@ namespace ApplicationsAndContracts.Models
         public static Supplier CreateFrom(CatalogItem catalogItem)
         {
             var result = new Supplier();
+            result.SupplierCode = catalogItem.SupplierCode;
             result.SupplierName = catalogItem.SupplierName;
             return result;
         }
@@ -48,6 +49,7 @@ namespace ApplicationsAndContracts.Models
         public static Supplier Empty()
         {
             var result = new Supplier();
+            result.SupplierCode = -1;
             result.SupplierName = string.Empty;
             return result; 
         }
