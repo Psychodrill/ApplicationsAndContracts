@@ -56,9 +56,17 @@ namespace ApplicationsAndContracts.Views
 
             this.Load += new EventHandler(ApplicationsAndContractsForm_Load);
             this.applicationsBindingSource.PositionChanged += new EventHandler(applicationBindingSource_PositionChanged);
+            this.dceBindingSource.PositionChanged += new EventHandler(dceBindingSource_PositionChanged);
             this.suppliersBindingSource.PositionChanged += new EventHandler(suppliersBindingSource_PositionChanged);
             this.applicationsDataGridView.CellFormatting += new DataGridViewCellFormattingEventHandler(applicationsDataGridView_CellFormating);
+            this.suppliersDataGridView.CellFormatting += new DataGridViewCellFormattingEventHandler(suppliersDataGridView_CellFormatting);
             
+        }
+
+        private void suppliersDataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.RowIndex<0) return;
+            this.FormatAndPaintRowsSupplier(e);
         }
 
         private void applicationsDataGridView_CellFormating(object sender, DataGridViewCellFormattingEventArgs e)
@@ -66,7 +74,7 @@ namespace ApplicationsAndContracts.Views
             if (e.RowIndex<0) return;
 
 
-            this.FormatAndPaintRows(e);
+            this.FormatAndPaintRowsApplications(e);
         }
 
         private void suppliersBindingSource_PositionChanged(object sender, EventArgs e)
@@ -76,8 +84,23 @@ namespace ApplicationsAndContracts.Views
 
         private void applicationBindingSource_PositionChanged(object sender, EventArgs e)
         {
+
             this.GetDceCatalog();
+            this.currentRecordNumberValueLabel.Text = (this.applicationsBindingSource.Position + 1).ToString();
+            this.recordCountValueLabel1.Text = this.dceCatalog.Count.ToString();
+
+
         }
+
+        private void dceBindingSource_PositionChanged(object sender, EventArgs e)
+        {
+
+            //this.GetDceCatalog();
+                       
+            this.currentRecordNumberValueLabel1.Text = (this.dceBindingSource.Position + 1).ToString();
+
+        }
+
 
         private void ApplicationsAndContractsForm_Load(object sender, EventArgs e)
         {
@@ -86,7 +109,13 @@ namespace ApplicationsAndContracts.Views
             this.applicationsBindingSource.DataSource= this.applicationCatalog;
             this.supplierCatalog = SupplierCatalog.CreateFrom(catalog);
             this.suppliersBindingSource.DataSource = this.supplierCatalog;
-             
+
+            this.recordCountValueLabel.Text = this.applicationCatalog.Count.ToString();
+            this.currentRecordNumberValueLabel.Text = (this.applicationsBindingSource.Position + 1).ToString();
+
+            this.recordCountValueLabel1.Text = this.dceCatalog.Count.ToString();
+            this.currentRecordNumberValueLabel1.Text = (this.dceBindingSource.Position + 1).ToString();
+
         }
 
         private void GetContractCatalog()
@@ -104,18 +133,27 @@ namespace ApplicationsAndContracts.Views
             this.dceBindingSource.DataSource = this.dceCatalog;
         }
 
-        private void FormatAndPaintRows (DataGridViewCellFormattingEventArgs e)
+        private void FormatAndPaintRowsApplications(DataGridViewCellFormattingEventArgs e)
         {
             var catalogItem = this.applicationCatalog[e.RowIndex];
             if (catalogItem == null) return;
             if (catalogItem.StateContract.ReasonId == 8 /*||
                 catalogItem.StateContract.IdGoz == string.Empty ||
                 catalogItem.StateContract.IdKazn == string.Empty*/) e.CellStyle.BackColor = this.colorPanel.BackColor;
-            if (catalogItem.ApplicationStatus == 1) e.CellStyle.Font.Italic = true;/* = new Font (e.CellStyle.Font, e.CellStyle.Font.Italic==t); /*this.applicationsDataGridView.RowsDefaultCellStyle.Font=*/
+            if (catalogItem.ApplicationStatus == 1) e.CellStyle.Font = new Font(e.CellStyle.Font, FontStyle.Italic);
+
+        }
+
+        private void FormatAndPaintRowsSupplier(DataGridViewCellFormattingEventArgs e)
+        {
+            var catalogItem = this.supplierCatalog[e.RowIndex];
+            if (catalogItem == null) return;
+            //if (catalogItem.ApplicationStatus == 1) e.CellStyle.BackColor = this.colorPanel2.BackColor;
 
         }
 
 
-
     }
+
+
 }

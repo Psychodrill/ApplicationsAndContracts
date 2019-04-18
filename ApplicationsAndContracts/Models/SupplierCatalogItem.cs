@@ -32,7 +32,7 @@ namespace ApplicationsAndContracts.Models
 
         public void Refresh(DataRow row)
         {
-            //this.Applicationmodel = Applicationmodel.CreateFrom(row);
+            this.Applicationmodel = Applicationmodel.CreateFrom(row);
             this.Supplier = Supplier.CreateFrom(row);
             this.Contract = Contract.CreateFrom(row);
             this.StateContract = StateContract.CreateFrom(row);
@@ -49,7 +49,7 @@ namespace ApplicationsAndContracts.Models
 
         public void Refresh(CatalogItem catalogItem)
         {
-            //this.Applicationmodel = Applicationmodel.CreateFrom(catalogItem);
+            this.Applicationmodel = Applicationmodel.CreateFrom(catalogItem);
             this.Supplier = Supplier.CreateFrom(catalogItem);
             this.Contract = Contract.CreateFrom(catalogItem);
             this.StateContract = StateContract.CreateFrom(catalogItem);
@@ -57,7 +57,7 @@ namespace ApplicationsAndContracts.Models
         }
 
 
-        //public Applicationmodel Applicationmodel { get; private set; }
+        public Applicationmodel Applicationmodel { get; private set; }
         public Supplier Supplier { get; private set; }
         public Contract Contract { get; private set; }
         public StateContract StateContract { get; private set; }
