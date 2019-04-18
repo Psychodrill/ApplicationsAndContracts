@@ -10,14 +10,27 @@ namespace ApplicationsAndContracts.Models
 {
     public class CatalogItem
     {
+        //public static CatalogItem CreateFrom(DataRow row)
+        //{
+        //    var result = new CatalogItem();
+
+        //    result.ApplicationCatalogItem = ApplicationCatalogItem.CreateFrom(row);
+        //    result.Dce = Dce.CreateFrom(row);
+        //    result.SupplierCatalogItem = SupplierCatalogItem.CreateFrom(row);
+        //    result.CurrentContractCatalogItem = CurrentContractCatalogItem.CreateFrom(row);
+
+        //    return result;
+        //}
+
         public static CatalogItem CreateFrom(DataRow row)
         {
             var result = new CatalogItem();
 
-            result.ApplicationCatalogItem = ApplicationCatalogItem.CreateFrom(row);
+            result.Applicationmodel = Applicationmodel.CreateFrom(row);
             result.Dce = Dce.CreateFrom(row);
-            result.SupplierCatalogItem = SupplierCatalogItem.CreateFrom(row);
-            result.CurrentContractCatalogItem = CurrentContractCatalogItem.CreateFrom(row);
+            result.Supplier = Supplier.CreateFrom(row);
+            result.Contract = Contract.CreateFrom(row);
+            result.StateContract = StateContract.CreateFrom(row);
 
             return result;
         }
@@ -25,37 +38,42 @@ namespace ApplicationsAndContracts.Models
 
 
 
-        
 
 
 
-        public ApplicationCatalogItem ApplicationCatalogItem { get; private set; }
+
+        public Applicationmodel Applicationmodel { get; private set; }
         //public DceQuantityCatalogItem DceQuantityCatalogItem { get; private set; }
         public Dce Dce { get; private set; }
-        public SupplierCatalogItem SupplierCatalogItem { get; private set; }
-        public CurrentContractCatalogItem CurrentContractCatalogItem { get; private set; }
+        public Supplier Supplier { get; private set; }
+        public Contract Contract { get; private set; }
+        public StateContract StateContract { get; private set; }
+        //public CurrentContractCatalogItem CurrentContractCatalogItem { get; private set; }
 
 
 
 
 
+        public int ApplicationId { get { return this.Applicationmodel.ApplicationId; } }
+        public string ApplicationNumber { get { return this.Applicationmodel.ApplicationNumber; } }
+        public DateTime ApplicationDate { get { return this.Applicationmodel.ApplicationDate; } }
+        public byte ApplicationStatus { get {return this.Applicationmodel.ApplicationStatus; } }
+        public string Department { get { return this.Applicationmodel.Department; } }
 
-        public string ApplicationNumber { get { return this.ApplicationCatalogItem.ApplicationNumber; } }
-        public DateTime ApplicationDate { get { return this.ApplicationCatalogItem.ApplicationDate; } }
-        public byte ApplicationStatus { get {return this.ApplicationCatalogItem.ApplicationStatus; } }
+        public int SupplierCode { get { return this.Supplier.SupplierCode; } }
+        public string SupplierName { get { return this.Supplier.SupplierName; } }
 
-        public string Department { get { return this.ApplicationCatalogItem.Department; } }
-        public string SupplierName { get { return this.ApplicationCatalogItem.SupplierName; } }
-        public int ContractId { get { return this.ApplicationCatalogItem.ContractId; } }
-        public string ContractNumber { get { return this.ApplicationCatalogItem.ContractNumber; } }
-        public DateTime ContractDate { get { return this.ApplicationCatalogItem.ContractDate; } }
-        public int StateContractId { get { return this.ApplicationCatalogItem.StateContractId; } }
-        public string StateContractNumber { get { return this.ApplicationCatalogItem.StateContractNumber; } }
-        public int ReasonId { get { return this.ApplicationCatalogItem.StateContract.ReasonId; } }
-        public string IdGoz { get { return this.ApplicationCatalogItem.StateContract.IdGoz; } }
-        public string IdKazn { get { return this.ApplicationCatalogItem.StateContract.IdKazn; } }
+        public int ContractId { get { return this.Contract.ContractId; } }
+        public string ContractNumber { get { return this.Contract.ContractNumber; } }
+        public DateTime ContractDate { get { return this.Contract.ContractDate; } }
 
-        public int ApplicationId { get { return this.Dce.ApplicationId; } }
+        public int StateContractId { get { return this.StateContract.StateContractId; } }
+        public string StateContractNumber { get { return this.StateContract.StateContractNumber; } }
+        public int ReasonId { get { return this.StateContract.ReasonId; } }
+        public string IdGoz { get { return this.StateContract.IdGoz; } }
+        public string IdKazn { get { return this.StateContract.IdKazn; } }
+
+
         public int DceNumber { get { return this.Dce.DceNumber; } }
         public string DceAlias { get { return this.Dce.DceAlias; } }
         public string DceName { get { return this.Dce.DceName; } }

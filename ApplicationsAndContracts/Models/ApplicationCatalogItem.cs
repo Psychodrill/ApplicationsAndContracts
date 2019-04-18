@@ -10,19 +10,19 @@ namespace ApplicationsAndContracts.Models
 {
     public class ApplicationCatalogItem
     {
-        public static ApplicationCatalogItem CreateFrom(DataRow row)
-        {
-            var result = new ApplicationCatalogItem();
-            result.Refresh(row);
-            return result;
-        }
+        //public static ApplicationCatalogItem CreateFrom(DataRow row)
+        //{
+        //    var result = new ApplicationCatalogItem();
+        //    result.Refresh(row);
+        //    return result;
+        //}
 
-        public static ApplicationCatalogItem CreateFrom (ApplicationCatalogItem applicationCatalogItem)
-        {
-            var result = new ApplicationCatalogItem();
-            result.Refresh(applicationCatalogItem);
-            return result;
-        }
+        //public static ApplicationCatalogItem CreateFrom (ApplicationCatalogItem applicationCatalogItem)
+        //{
+        //    var result = new ApplicationCatalogItem();
+        //    result.Refresh(applicationCatalogItem);
+        //    return result;
+        //}
 
         public static ApplicationCatalogItem CreateFrom(CatalogItem catalogItem)
         {
@@ -31,23 +31,23 @@ namespace ApplicationsAndContracts.Models
             return result;
         }
 
-        public void Refresh(DataRow row)
-        {
-            this.Applicationmodel = Applicationmodel.CreateFrom(row);
-            this.Supplier = Supplier.CreateFrom(row);
-            this.Contract = Contract.CreateFrom(row);
-            this.StateContract = StateContract.CreateFrom(row);
+        //public void Refresh(DataRow row)
+        //{
+        //    this.Applicationmodel = Applicationmodel.CreateFrom(row);
+        //    this.Supplier = Supplier.CreateFrom(row);
+        //    this.Contract = Contract.CreateFrom(row);
+        //    this.StateContract = StateContract.CreateFrom(row);
 
-        }
+        //}
 
-        public void Refresh (ApplicationCatalogItem applicationCatalogItem)
-        {
-            this.Applicationmodel = Applicationmodel.CreateFrom(applicationCatalogItem);
-            this.Supplier = Supplier.CreateFrom(applicationCatalogItem);
-            this.Contract = Contract.CreateFrom(applicationCatalogItem);
-            this.StateContract = StateContract.CreateFrom(applicationCatalogItem);
+        //public void Refresh (ApplicationCatalogItem applicationCatalogItem)
+        //{
+        //    this.Applicationmodel = Applicationmodel.CreateFrom(applicationCatalogItem);
+        //    this.Supplier = Supplier.CreateFrom(applicationCatalogItem);
+        //    this.Contract = Contract.CreateFrom(applicationCatalogItem);
+        //    this.StateContract = StateContract.CreateFrom(applicationCatalogItem);
 
-        }
+        //}
 
         public void Refresh (CatalogItem catalogItem)
         {
