@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ApplicationsAndContracts.Models.Abstract;
+using ApplicationsAndContracts.Models;
 
 namespace ApplicationsAndContracts.Models
 {
-    public class CurrentContractCatalog: SupportSortingList<CurrentContractCatalogItem>
+    public class ContractCatalog: SupportSortingList<ContractCatalogItem>
     {
         //public static CurrentContractCatalog CreateFrom(Catalog catalog)
         //{
@@ -15,19 +16,19 @@ namespace ApplicationsAndContracts.Models
         //    var result = new CurrentContractCatalog(list);
         //    return result;
         //}
-        public static CurrentContractCatalog CreateFrom(Catalog catalog, SupplierCatalogItem supplierCatalogItem)
+        public static ContractCatalog CreateFrom(Catalog catalog, SupplierCatalogItem supplierCatalogItem)
         {
             var list = catalog.Where(catalogItem => catalogItem.StateContractId == supplierCatalogItem.StateContractId)
-                               .Select(catalogItem => CurrentContractCatalogItem.CreateFrom(catalogItem))
+                               .Select(catalogItem => ContractCatalogItem.CreateFrom(catalogItem))
                                .Distinct()
                                .OrderBy(catalogItem => catalogItem.StateContractNumber)
                                .ToList();
-            var result = new CurrentContractCatalog(list);
+            var result = new ContractCatalog(list);
             return result;
         }
 
 
-        private  CurrentContractCatalog(List<CurrentContractCatalogItem>items): base(items)
+        private  ContractCatalog(List<ContractCatalogItem>items): base(items)
         {
 
         }

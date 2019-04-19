@@ -22,7 +22,7 @@ namespace ApplicationsAndContracts.Views
         private ApplicationCatalog applicationCatalog;
         private DceCatalog dceCatalog;
         private SupplierCatalog supplierCatalog;
-        private CurrentContractCatalog currentContractCatalog;
+        private ContractCatalog contractCatalog;
 
 
 
@@ -121,8 +121,8 @@ namespace ApplicationsAndContracts.Views
         private void GetContractCatalog()
         {
             if (this.catalog == null || this.supplierCatalog == null) return;
-            this.currentContractCatalog = CurrentContractCatalog.CreateFrom(this.catalog, this.supplierCatalogItem);
-            this.contractsBindingSource.DataSource = this.currentContractCatalog;
+            this.contractCatalog = ContractCatalog.CreateFrom(this.catalog, this.supplierCatalogItem);
+            this.contractsBindingSource.DataSource = this.contractCatalog;
         }
 
 

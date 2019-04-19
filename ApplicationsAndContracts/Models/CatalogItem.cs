@@ -42,7 +42,6 @@ namespace ApplicationsAndContracts.Models
 
 
 
-
         public Applicationmodel Applicationmodel { get; private set; }
         //public DceQuantityCatalogItem DceQuantityCatalogItem { get; private set; }
         public Dce Dce { get; private set; }

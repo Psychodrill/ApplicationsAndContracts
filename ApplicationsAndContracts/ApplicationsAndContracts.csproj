@@ -98,8 +98,8 @@
     <Compile Include="Models\Contract.cs" />
     <Compile Include="Models\ContractList.cs" />
     <Compile Include="Models\Criteria.cs" />
-    <Compile Include="Models\CurrentContractCatalog.cs" />
-    <Compile Include="Models\CurrentContractCatalogItem.cs" />
+    <Compile Include="Models\ContractCatalog.cs" />
+    <Compile Include="Models\ContractCatalogItem.cs" />
     <Compile Include="Models\Dce.cs" />
     <Compile Include="Models\DceCatalog.cs" />
     <Compile Include="Models\DceCatalogItem.cs" />
