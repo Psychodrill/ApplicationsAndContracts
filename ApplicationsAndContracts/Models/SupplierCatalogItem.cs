@@ -49,7 +49,7 @@ namespace ApplicationsAndContracts.Models
 
         public void Refresh(CatalogItem catalogItem)
         {
-            //this.Applicationmodel = Applicationmodel.CreateFrom(catalogItem);
+            this.Applicationmodel = Applicationmodel.CreateFrom(catalogItem);
             this.Supplier = Supplier.CreateFrom(catalogItem);
             this.Contract = Contract.CreateFrom(catalogItem);
             this.StateContract = StateContract.CreateFrom(catalogItem);
@@ -81,7 +81,7 @@ namespace ApplicationsAndContracts.Models
         }
 
 
-        //public Applicationmodel Applicationmodel { get; private set; }
+        public Applicationmodel Applicationmodel { get; private set; }
         public Supplier Supplier { get; private set; }
         public Contract Contract { get; private set; }
         public StateContract StateContract { get; private set; }
@@ -90,7 +90,7 @@ namespace ApplicationsAndContracts.Models
         //public int ApplicationId { get { return this.Applicationmodel.ApplicationId; } }
         //public string ApplicationNumber { get { return this.Applicationmodel.ApplicationNumber; } }
         //public DateTime ApplicationDate { get { return this.Applicationmodel.ApplicationDate; } }
-        //public byte ApplicationStatus { get { return this.Applicationmodel.ApplicationStatus; } }
+        public byte ApplicationStatus { get { return this.Applicationmodel.ApplicationStatus; } }
         //public string Department { get { return this.Applicationmodel.Department; } }
         //public int SupplierCode { get { return this.Supplier.SupplierCode; } }
         public string SupplierName { get { return this.Supplier.SupplierName; } }

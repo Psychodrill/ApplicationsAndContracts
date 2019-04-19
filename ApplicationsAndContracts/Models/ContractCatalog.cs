@@ -18,7 +18,7 @@ namespace ApplicationsAndContracts.Models
         //}
         public static ContractCatalog CreateFrom(Catalog catalog, SupplierCatalogItem supplierCatalogItem)
         {
-            var list = catalog.Where(catalogItem => catalogItem.StateContractId == supplierCatalogItem.StateContractId)
+            var list = catalog.Where(catalogItem => (catalogItem.SupplierName == supplierCatalogItem.SupplierName)&&(catalogItem.StateContractId == supplierCatalogItem.StateContractId))
                                .Select(catalogItem => ContractCatalogItem.CreateFrom(catalogItem))
                                .Distinct()
                                .OrderBy(catalogItem => catalogItem.StateContractNumber)
@@ -26,6 +26,18 @@ namespace ApplicationsAndContracts.Models
             var result = new ContractCatalog(list);
             return result;
         }
+
+        //private bool IsApplicationsExecuted(Catalog catalog, SupplierCatalogItem supplierCatalogItem)
+        //{
+        //    var list = catalog.Where(catalogItem => (catalogItem.SupplierName == supplierCatalogItem.SupplierName) && (catalogItem.StateContractId == supplierCatalogItem.StateContractId))
+        //                       .Select(catalogItem => ContractCatalogItem.CreateFrom(catalogItem))
+        //                       .Distinct()
+        //                       .OrderBy(catalogItem => catalogItem.StateContractNumber)
+        //                       .ToList();
+        //    var result = new ContractCatalog(list);
+        //    result.
+        //    return result;
+        //}
 
 
         private  ContractCatalog(List<ContractCatalogItem>items): base(items)
