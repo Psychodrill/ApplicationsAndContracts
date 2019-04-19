@@ -82,6 +82,14 @@ namespace ApplicationsAndContracts.DataAccess
             return result;
         }
 
+        public IEnumerable<DataRow> GetDceQuantityList()
+        {
+            var parameters = new SqlParameter[0];
+            var rows = SqlHelper.ExecuteSqlCommand(SQL.GetDceQuantityList, parameters);
+            var result = rows.AsEnumerable();
+            return result;
+        }
+
         public IEnumerable<DataRow> GetCatalog(Criteria criteria)
         {
             var parameters = new SqlParameter[16];

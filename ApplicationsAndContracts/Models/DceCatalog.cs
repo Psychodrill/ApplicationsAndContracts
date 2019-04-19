@@ -7,12 +7,12 @@ using ApplicationsAndContracts.Models.Abstract;
 
 namespace ApplicationsAndContracts.Models
 {
-    public class DceCatalog:SupportSortingList<Dce>
+    public class DceCatalog:SupportSortingList<DceCatalogItem>
     {
         public static DceCatalog CreateFrom(Catalog catalog, ApplicationCatalogItem applicationCatalogItem)
-       {
+        {
             var list = catalog.Where(catalogItem => catalogItem.ApplicationId == applicationCatalogItem.ApplicationId)
-                               .Select(catalogItem => Dce.CreateFrom(catalogItem))
+                               .Select(catalogItem => DceCatalogItem.CreateFrom(catalogItem))
                                .Distinct()
                                .OrderBy(catalogItem => catalogItem.DceNumber)
                                .ToList();
@@ -20,9 +20,11 @@ namespace ApplicationsAndContracts.Models
             return result;
         }
 
-        private DceCatalog(List<Dce> items) : base(items)
+        private DceCatalog(List<DceCatalogItem> items) : base(items)
         {
 
         }
+
+
     }
 }

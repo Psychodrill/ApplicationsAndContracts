@@ -67,6 +67,11 @@ namespace ApplicationsAndContracts.DataAccess
                        [Quantity]
                   FROM [dbo].[ft_ApplicationsAndContracts_GetDceList]()";
 
+        internal const string GetDceQuantityList = @"
+                SELECT [ApplicationId],
+                       [Quantity]
+                  FROM [dbo].[ft_ApplicationsAndContracts_GetDceList]()";
+
         internal const string GetCatalog = @"
                 SELECT [ApplicationId],
                        [SupplierCode],

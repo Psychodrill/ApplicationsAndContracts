@@ -28,6 +28,7 @@ namespace ApplicationsAndContracts.Models
 
             result.Applicationmodel = Applicationmodel.CreateFrom(row);
             result.Dce = Dce.CreateFrom(row);
+            result.DceQuantity = DceQuantity.CreateFrom(row);
             result.Supplier = Supplier.CreateFrom(row);
             result.Contract = Contract.CreateFrom(row);
             result.StateContract = StateContract.CreateFrom(row);
@@ -45,6 +46,7 @@ namespace ApplicationsAndContracts.Models
         public Applicationmodel Applicationmodel { get; private set; }
         //public DceQuantityCatalogItem DceQuantityCatalogItem { get; private set; }
         public Dce Dce { get; private set; }
+        public DceQuantity DceQuantity{ get; private set; }
         public Supplier Supplier { get; private set; }
         public Contract Contract { get; private set; }
         public StateContract StateContract { get; private set; }
@@ -77,7 +79,7 @@ namespace ApplicationsAndContracts.Models
         public int DceNumber { get { return this.Dce.DceNumber; } }
         public string DceAlias { get { return this.Dce.DceAlias; } }
         public string DceName { get { return this.Dce.DceName; } }
-        public decimal Quantity { get { return this.Dce.Quantity; } }
+        public decimal Quantity { get { return this.DceQuantity.Quantity; } }
 
     }
 

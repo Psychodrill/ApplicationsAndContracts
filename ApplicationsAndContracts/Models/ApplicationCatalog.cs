@@ -14,9 +14,7 @@ namespace ApplicationsAndContracts.Models
         public static ApplicationCatalog CreateFrom(Catalog catalog)
         {
             var list = catalog.Select(catalogItem => ApplicationCatalogItem.CreateFrom(catalogItem)).Distinct().OrderBy(x => x.ApplicationNumber).ToList();
-            //var list = catalog.
             var result = new ApplicationCatalog(list);
-            //var result = new ApplicationCatalog()
             return result;
         }
 
