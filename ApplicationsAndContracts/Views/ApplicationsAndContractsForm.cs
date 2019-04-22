@@ -66,14 +66,13 @@ namespace ApplicationsAndContracts.Views
         private void suppliersDataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (e.RowIndex<0) return;
-            this.PaintRowsSupplier(e, this.contractCatalog);
+            this.PaintRowsSupplier(e);
         }
 
         private void applicationsDataGridView_CellFormating(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (e.RowIndex<0) return;
-
-
+            
             this.FormatAndPaintRowsApplications(e);
         }
 
@@ -144,32 +143,11 @@ namespace ApplicationsAndContracts.Views
 
         }
 
-        private void PaintRowsSupplier(DataGridViewCellFormattingEventArgs e, ContractCatalog contractCatalog)
+        private void PaintRowsSupplier(DataGridViewCellFormattingEventArgs e)
         {
             var catalogItem = this.supplierCatalog[e.RowIndex];
             if (catalogItem == null) return;
-            //if (catalogItem.ApplicationStatus == 1) e.CellStyle.BackColor = this.colorPanel2.BackColor;
-            if (IsApplicationsExecuted(contractCatalog)) e.CellStyle.BackColor = this.colorPanel2.BackColor;
-        }
-
-        public bool IsApplicationsExecuted(ContractCatalog contractCatalog)
-        {
-            //if( contractCatalog.Where(catalogItem => (catalogItem.StateContract.StateContractId == supplierCatalogItem.StateContractId))
-            //     .Select(catalogItem => catalogItem.ApplicationStatus).Contains(1)) return true;
-
-            if (contractCatalog.All(catalogItem =>catalogItem.ApplicationStatus==1)) return true;
-            return false;
-
-            //foreach (ContractCatalogItem contractCatalogItem in contractCatalog)
-
-            //    if (contractCatalogItem.StateContract.StateContractId == supplierCatalogItem.StateContractId)
-            //        if (contractCatalogItem.ApplicationStatus == 1) return true;
-            //        else return false;
-            //    else return false;
-            //return true;
-
-
-
+            if (SupplierCatalog.IsApplicationsExecuted(catalogItem, this.catalog)) e.CellStyle.BackColor = this.colorPanel2.BackColor;
         }
 
 

@@ -16,6 +16,19 @@ namespace ApplicationsAndContracts.Models
             return result;
         }
 
+        public static bool IsApplicationsExecuted(SupplierCatalogItem supplierCatalogItem, Catalog catalog)
+        {
+            
+
+            var innerlist = catalog.Where(catalogItem => (supplierCatalogItem.SupplierName == catalogItem.SupplierName) &&
+                                                          supplierCatalogItem.ContractNumber == catalogItem.ContractNumber)
+                                   .ToList();
+            var result = innerlist.All(catalogItem => catalogItem.ApplicationStatus == 1);
+            return result;
+
+
+        }
+
         private SupplierCatalog (List<SupplierCatalogItem> items): base(items)
         {
 
