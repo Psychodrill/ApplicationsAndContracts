@@ -11,9 +11,9 @@ namespace ApplicationsAndContracts.Models
 {
      public class ProductCatalog:SupportSortingList<ProductCatalogItem>
     {
-        public  ProductCatalog ()
+        public static  ProductCatalog (ApplicationCatalogItem applicationCatalogItem)
         {
-            ProductList innerList =  ProductList.GetProductList();
+           var innerList =  ;
 
            
         }
