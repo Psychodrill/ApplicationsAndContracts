@@ -108,6 +108,8 @@
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderList.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductCatalog.cs" />
+    <Compile Include="Models\ProductCatalogItem.cs" />
     <Compile Include="Models\ProductList.cs" />
     <Compile Include="Models\SDS.cs" />
     <Compile Include="Models\StateContract.cs" />

@@ -38,12 +38,12 @@
             this.supplierLabel = new System.Windows.Forms.Label();
             this.contractNumberLlabel = new System.Windows.Forms.Label();
             this.customerContractLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.applicationNumberTextBox = new System.Windows.Forms.TextBox();
+            this.applicationDateTextBox = new System.Windows.Forms.TextBox();
+            this.supplierNameTextBox = new System.Windows.Forms.TextBox();
+            this.contractNumberTextBox = new System.Windows.Forms.TextBox();
+            this.contractDateTextBox = new System.Windows.Forms.TextBox();
+            this.stateContractNumberTextBox = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.exitButton = new System.Windows.Forms.Button();
             this.changeButton = new System.Windows.Forms.Button();
@@ -159,12 +159,12 @@
             this.tableLayoutPanel2.Controls.Add(this.supplierLabel, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.contractNumberLlabel, 3, 1);
             this.tableLayoutPanel2.Controls.Add(this.customerContractLabel, 5, 1);
-            this.tableLayoutPanel2.Controls.Add(this.textBox1, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.textBox2, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.textBox3, 2, 2);
-            this.tableLayoutPanel2.Controls.Add(this.textBox4, 3, 2);
-            this.tableLayoutPanel2.Controls.Add(this.textBox5, 4, 2);
-            this.tableLayoutPanel2.Controls.Add(this.textBox6, 5, 2);
+            this.tableLayoutPanel2.Controls.Add(this.applicationNumberTextBox, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.applicationDateTextBox, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.supplierNameTextBox, 2, 2);
+            this.tableLayoutPanel2.Controls.Add(this.contractNumberTextBox, 3, 2);
+            this.tableLayoutPanel2.Controls.Add(this.contractDateTextBox, 4, 2);
+            this.tableLayoutPanel2.Controls.Add(this.stateContractNumberTextBox, 5, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 19);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
@@ -236,61 +236,61 @@
             this.customerContractLabel.TabIndex = 5;
             this.customerContractLabel.Text = "Договор с заказчиком";
             // 
-            // textBox1
+            // applicationNumberTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(4, 51);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(123, 22);
-            this.textBox1.TabIndex = 6;
+            this.applicationNumberTextBox.Location = new System.Drawing.Point(4, 51);
+            this.applicationNumberTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.applicationNumberTextBox.Name = "applicationNumberTextBox";
+            this.applicationNumberTextBox.ReadOnly = true;
+            this.applicationNumberTextBox.Size = new System.Drawing.Size(123, 22);
+            this.applicationNumberTextBox.TabIndex = 6;
             // 
-            // textBox2
+            // applicationDateTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(136, 51);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(123, 22);
-            this.textBox2.TabIndex = 7;
+            this.applicationDateTextBox.Location = new System.Drawing.Point(136, 51);
+            this.applicationDateTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.applicationDateTextBox.Name = "applicationDateTextBox";
+            this.applicationDateTextBox.ReadOnly = true;
+            this.applicationDateTextBox.Size = new System.Drawing.Size(123, 22);
+            this.applicationDateTextBox.TabIndex = 7;
             // 
-            // textBox3
+            // supplierNameTextBox
             // 
-            this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox3.Location = new System.Drawing.Point(268, 51);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(589, 22);
-            this.textBox3.TabIndex = 8;
+            this.supplierNameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.supplierNameTextBox.Location = new System.Drawing.Point(268, 51);
+            this.supplierNameTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.supplierNameTextBox.Name = "supplierNameTextBox";
+            this.supplierNameTextBox.ReadOnly = true;
+            this.supplierNameTextBox.Size = new System.Drawing.Size(589, 22);
+            this.supplierNameTextBox.TabIndex = 8;
             // 
-            // textBox4
+            // contractNumberTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(865, 51);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(123, 22);
-            this.textBox4.TabIndex = 9;
+            this.contractNumberTextBox.Location = new System.Drawing.Point(865, 51);
+            this.contractNumberTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.contractNumberTextBox.Name = "contractNumberTextBox";
+            this.contractNumberTextBox.ReadOnly = true;
+            this.contractNumberTextBox.Size = new System.Drawing.Size(123, 22);
+            this.contractNumberTextBox.TabIndex = 9;
             // 
-            // textBox5
+            // contractDateTextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(997, 51);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(123, 22);
-            this.textBox5.TabIndex = 10;
+            this.contractDateTextBox.Location = new System.Drawing.Point(997, 51);
+            this.contractDateTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.contractDateTextBox.Name = "contractDateTextBox";
+            this.contractDateTextBox.ReadOnly = true;
+            this.contractDateTextBox.Size = new System.Drawing.Size(123, 22);
+            this.contractDateTextBox.TabIndex = 10;
             // 
-            // textBox6
+            // stateContractNumberTextBox
             // 
-            this.textBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox6.Location = new System.Drawing.Point(1129, 51);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(195, 22);
-            this.textBox6.TabIndex = 11;
+            this.stateContractNumberTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.stateContractNumberTextBox.Location = new System.Drawing.Point(1129, 51);
+            this.stateContractNumberTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.stateContractNumberTextBox.Name = "stateContractNumberTextBox";
+            this.stateContractNumberTextBox.ReadOnly = true;
+            this.stateContractNumberTextBox.Size = new System.Drawing.Size(195, 22);
+            this.stateContractNumberTextBox.TabIndex = 11;
             // 
             // flowLayoutPanel1
             // 
@@ -801,6 +801,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DetailedApplicationForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Подробный просмотр заявки";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.applicationGroupBox.ResumeLayout(false);
@@ -837,12 +838,12 @@
         private System.Windows.Forms.Label supplierLabel;
         private System.Windows.Forms.Label contractNumberLlabel;
         private System.Windows.Forms.Label customerContractLabel;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox applicationNumberTextBox;
+        private System.Windows.Forms.TextBox applicationDateTextBox;
+        private System.Windows.Forms.TextBox supplierNameTextBox;
+        private System.Windows.Forms.TextBox contractNumberTextBox;
+        private System.Windows.Forms.TextBox contractDateTextBox;
+        private System.Windows.Forms.TextBox stateContractNumberTextBox;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Button changeButton;

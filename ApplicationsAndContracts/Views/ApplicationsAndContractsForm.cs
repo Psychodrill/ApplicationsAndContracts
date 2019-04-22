@@ -25,7 +25,6 @@ namespace ApplicationsAndContracts.Views
         private ContractCatalog contractCatalog;
 
 
-
         private ApplicationCatalogItem applicationCatalogItem
         {
             get
@@ -45,7 +44,11 @@ namespace ApplicationsAndContracts.Views
                 return this.supplierCatalog[this.suppliersBindingSource.Position];
             }
         }
+
         
+        
+
+
         public ApplicationsAndContractsForm(Criteria criteria, Catalog catalog)
         {
             this.dataService = new DataService();
@@ -58,9 +61,11 @@ namespace ApplicationsAndContracts.Views
             this.applicationsBindingSource.PositionChanged += new EventHandler(applicationBindingSource_PositionChanged);
             this.dceBindingSource.PositionChanged += new EventHandler(dceBindingSource_PositionChanged);
             this.suppliersBindingSource.PositionChanged += new EventHandler(suppliersBindingSource_PositionChanged);
+
             this.applicationsDataGridView.CellFormatting += new DataGridViewCellFormattingEventHandler(applicationsDataGridView_CellFormating);
             this.suppliersDataGridView.CellFormatting += new DataGridViewCellFormattingEventHandler(suppliersDataGridView_CellFormatting);
-            
+
+            this.detailedButton.Click += new EventHandler(detailedButton_Click);
         }
 
         private void suppliersDataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -148,6 +153,25 @@ namespace ApplicationsAndContracts.Views
             var catalogItem = this.supplierCatalog[e.RowIndex];
             if (catalogItem == null) return;
             if (SupplierCatalog.IsApplicationsExecuted(catalogItem, this.catalog)) e.CellStyle.BackColor = this.colorPanel2.BackColor;
+        }
+
+
+        void detailedButton_Click(object sender, EventArgs e)
+        {
+            //var rows = SplashScreenForm.ExecuteAsync<IEnumerable<ApplicationCatalogItem>>(this, this.GetProductList);
+            var detailedApplicationForm = new DetailedApplicationForm(this.applicationCatalogItem);
+            detailedApplicationForm.Show();
+
+        }
+
+        //private IEnumerable<ApplicationCatalogItem> GetProductList()
+        //{
+        //    ;
+        //}
+
+        void cancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
 

@@ -28,6 +28,12 @@ namespace ApplicationsAndContracts.Contexts
             
         }
 
+        //private void applicationsAndContractsForm_GoToDetailedApplicationForm(object sender, EventArgs e)
+        //{
+        //    var applicationsAndContractsForm = (ApplicationsAndContractsForm)sender;
+        //    var DetailedApplicationForm = new DetailedApplicationForm(applicationsAndContractsForm)
+        //}
+
         private void ApplicationsAndContractsForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             var ApplicationsAndContractsForm = (ApplicationsAndContractsForm)sender;
