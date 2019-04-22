@@ -39,7 +39,7 @@ namespace ApplicationsAndContracts.Views
             this.stateContractNumberTextBox.Text = applicationCatalogItem.StateContractNumber;
 
 
-            this.productCatalog = new ProductCatalog(applicationCatalogItem);
+            //this.productCatalog = new ProductCatalog(applicationCatalogItem);
 
 
 

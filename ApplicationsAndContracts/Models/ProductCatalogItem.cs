@@ -9,12 +9,12 @@ namespace ApplicationsAndContracts.Models
 {
     public class ProductCatalogItem
     {
-        public static ProductCatalogItem CreateFrom(Product product)
-        {
-            var result = new ProductCatalogItem();
-            result.Refresh(catalogItem);
-            return result;
-        }
+        //public static ProductCatalogItem CreateFrom(Product product)
+        //{
+        //    var result = new ProductCatalogItem();
+        //    result.Refresh(catalogItem);
+        //    return result;
+        //}
 
 
 
@@ -82,4 +82,4 @@ namespace ApplicationsAndContracts.Models
 
     }
 }
-}
+
