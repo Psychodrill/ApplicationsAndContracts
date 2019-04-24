@@ -40,8 +40,15 @@ namespace ApplicationsAndContracts.Models
             var orderList = OrderList.GetOrderList();
             //ProductCatalog productCatalog = new ProductCatalog();
             //var  productCatalog = productList.Select(x => x.ApplicationId).ToList();
-            //ProductCatalog productCatalog = productList.Join<Product, Order, int?, ProductCatalogItem>(orderList, productList.Select(x => x.ApplicationId), orderList.Select(x => x.ApplicationId), productCatalog.Select()).ToList();
+            ProductCatalog productCatalog = productList.Join<Product, Order, int?, ProductCatalogItem>(orderList, productList.Select(x => x.ApplicationId), orderList.Select(x => x.ApplicationId), ProductCatalogItem.CreateFrom(product, order)).ToList();
             //var productCatalog = productList.Where(listItem =>listItem.ApplicationId==orderList.);
+
+            var result = from p in productList
+                         join o in orderList
+                         on p.ApplicationId equals o.ApplicationId
+                         select ProductCatalogItem.CreateFrom(p, o);
+
+
 
 
             foreach ( var product in productList)
