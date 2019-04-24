@@ -38,13 +38,20 @@ namespace ApplicationsAndContracts.Models
         {
             var productList = ProductList.GetProductList();
             var orderList = OrderList.GetOrderList();
-            ProductCatalog productCatalog = new ProductCatalog();
+            //ProductCatalog productCatalog = new ProductCatalog();
             //var  productCatalog = productList.Select(x => x.ApplicationId).ToList();
-            //var productCatalog = productList. .Join<Product,Order,Order,ProductCatalogItem>(orderList, productList.Select(x=>x.ApplicationId), orderList.Select(x=>x.ApplicationId),productList.Select(x=>x.ApplicationId).ToList();
+            //ProductCatalog productCatalog = productList.Join<Product, Order, int?, ProductCatalogItem>(orderList, productList.Select(x => x.ApplicationId), orderList.Select(x => x.ApplicationId), productCatalog.Select()).ToList();
             //var productCatalog = productList.Where(listItem =>listItem.ApplicationId==orderList.);
 
-            foreach ( var item in productCatalog)
-                this.Add(ProductCatalogItem.CreateFrom(item));
+
+            foreach ( var product in productList)
+                foreach (var order in orderList)
+                    if (product.ApplicationId == order.ApplicationId)
+                    {
+                        this.Add(ProductCatalogItem.CreateFrom(product, order));
+                    }
+
+                        
 
 
 

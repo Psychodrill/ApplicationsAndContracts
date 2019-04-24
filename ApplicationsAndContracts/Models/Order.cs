@@ -12,7 +12,7 @@ namespace ApplicationsAndContracts.Models
         public static Order CreateFrom(DataRow row)
         {
             var result = new Order();
-            result.ApplicationId = row.Field<int>("ApplicationId");
+            result.ApplicationId = row.Field<int?>("ApplicationId");
             result.OrderNumber = row.Field<int>("OrderNumber");
             result.SetFrom = row.Field<int>("SetFrom");
             result.SetTo = row.Field<int>("SetTo");
@@ -42,10 +42,12 @@ namespace ApplicationsAndContracts.Models
             var result = new Order();
             result.ApplicationId = -1;
             result.OrderNumber = -1;
+            result.SetFrom = -1;
+            result.SetTo = -1;
             return result;
         }
 
-        public int ApplicationId { get; private set; }
+        public int? ApplicationId { get; private set; }
         public int OrderNumber { get; private set; }
         public int SetFrom { get; private set; }
         public int SetTo { get; private set; }
