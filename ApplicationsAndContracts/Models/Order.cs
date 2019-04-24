@@ -20,6 +20,17 @@ namespace ApplicationsAndContracts.Models
         }
 
 
+        public static Order CreateFrom(Order order)
+        {
+            Order result = new Order();
+            result.ApplicationId = order.ApplicationId;
+            result.OrderNumber = order.OrderNumber;
+            result.SetFrom = order.SetFrom;
+            result.SetTo = order.SetTo;
+            return result;
+        }
+
+
 
         public Order()
         {

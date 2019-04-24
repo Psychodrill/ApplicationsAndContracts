@@ -21,10 +21,33 @@ namespace ApplicationsAndContracts.Models
             if (result.ProductIndex == null) result.ProductIndex = string.Empty;
             if (result.ProductName == null) result.ProductName = string.Empty;
             if (result.ProductAlias == null) result.ProductAlias = string.Empty;
+            if (result.ApplicationId == null) result.ApplicationId = -1;
             return result;
         }
 
-        
+        public static Product CreateFrom (ProductCatalogItem productCatalogItem)
+        {
+            Product result = new Product();
+            result.ApplicationId = productCatalogItem.ApplicationId;
+            result.ProductNumber = productCatalogItem.ProductNumber;
+            result.ProductIndex = productCatalogItem.ProductIndex;
+            result.ProductAlias = productCatalogItem.ProductAlias;
+            result.ProductName = productCatalogItem.ProductName;
+            return result;
+        }
+
+        public static Product CreateFrom(Product product)
+        {
+            Product result = new Product();
+            result.ApplicationId = product.ApplicationId;
+            result.ProductNumber = product.ProductNumber;
+            result.ProductIndex = product.ProductIndex;
+            result.ProductAlias = product.ProductAlias;
+            result.ProductName = product.ProductName;
+            return result;
+        }
+
+
         Product() 
         {
 

@@ -16,14 +16,49 @@ namespace ApplicationsAndContracts.Models
             return result;
         }
 
+        public static ProductCatalogItem CreateFrom(Product product)
+        {
+            var result = new ProductCatalogItem();
+            result.Refresh(product);
+            //result.Refresh(order);
+            return result;
+        }
+
+        public static ProductCatalogItem CreateFrom(Product product, Order order)
+        {
+            var result = new ProductCatalogItem();
+            result.Refresh(product);
+            result.Refresh(order);
+            return result;
+
+        }
+
+        //public static ProductCatalogItem Create()
+        //{
+        //    var result = new ProductCatalogItem();
+        //    result.Product = Product.CreateFrom()
+        //}
+
 
 
         public void Refresh(ProductCatalogItem productCatalogItem)
         {
-            //this.Product = Product.CreateFrom(productCatalogItem);
+            this.Product = Product.CreateFrom(productCatalogItem);
             //this.Order = Order.CreateFrom(productCatalogItem);
 
 
+        }
+
+        public void Refresh(Product product)
+        {
+            this.Product = Product.CreateFrom(product);
+            //this.Order = Order.CreateFrom(product);
+        }
+
+        public void Refresh(Order order)
+        {
+            this.Order = Order.CreateFrom(order);
+            //this.Order = Order.CreateFrom(product);
         }
 
         //public override bool Equals(object obj)
