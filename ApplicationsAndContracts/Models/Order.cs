@@ -30,6 +30,16 @@ namespace ApplicationsAndContracts.Models
             return result;
         }
 
+        public static Order CreateFrom(ProductCatalogItem productCatalogItem)
+        {
+            Order result = new Order();
+            result.ApplicationId = productCatalogItem.ApplicationId;
+            result.OrderNumber = productCatalogItem.OrderNumber;
+            result.SetFrom = productCatalogItem.SetFrom;
+            result.SetTo = productCatalogItem.SetTo;
+            return result;
+        }
+
 
 
         public Order()

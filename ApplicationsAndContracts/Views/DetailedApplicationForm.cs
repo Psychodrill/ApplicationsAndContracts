@@ -40,6 +40,7 @@ namespace ApplicationsAndContracts.Views
 
 
             this.productCatalog = ProductCatalog.CreateFrom(applicationCatalogItem);
+            this.productsBindingSource.DataSource = this.productCatalog;
 
 
 

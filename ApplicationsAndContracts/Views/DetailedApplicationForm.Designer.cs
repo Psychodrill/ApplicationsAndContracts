@@ -149,8 +149,8 @@
             this.tableLayoutPanel2.ColumnCount = 6;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel2.Controls.Add(this.contractDateLlabel, 4, 1);
@@ -179,7 +179,7 @@
             // contractDateLlabel
             // 
             this.contractDateLlabel.AutoSize = true;
-            this.contractDateLlabel.Location = new System.Drawing.Point(997, 30);
+            this.contractDateLlabel.Location = new System.Drawing.Point(998, 30);
             this.contractDateLlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.contractDateLlabel.Name = "contractDateLlabel";
             this.contractDateLlabel.Size = new System.Drawing.Size(106, 17);
@@ -219,7 +219,7 @@
             // contractNumberLlabel
             // 
             this.contractNumberLlabel.AutoSize = true;
-            this.contractNumberLlabel.Location = new System.Drawing.Point(865, 30);
+            this.contractNumberLlabel.Location = new System.Drawing.Point(799, 30);
             this.contractNumberLlabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.contractNumberLlabel.Name = "contractNumberLlabel";
             this.contractNumberLlabel.Size = new System.Drawing.Size(89, 17);
@@ -229,7 +229,7 @@
             // customerContractLabel
             // 
             this.customerContractLabel.AutoSize = true;
-            this.customerContractLabel.Location = new System.Drawing.Point(1129, 30);
+            this.customerContractLabel.Location = new System.Drawing.Point(1130, 30);
             this.customerContractLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.customerContractLabel.Name = "customerContractLabel";
             this.customerContractLabel.Size = new System.Drawing.Size(155, 17);
@@ -238,20 +238,22 @@
             // 
             // applicationNumberTextBox
             // 
+            this.applicationNumberTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.applicationNumberTextBox.Location = new System.Drawing.Point(4, 51);
             this.applicationNumberTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.applicationNumberTextBox.Name = "applicationNumberTextBox";
             this.applicationNumberTextBox.ReadOnly = true;
-            this.applicationNumberTextBox.Size = new System.Drawing.Size(123, 22);
+            this.applicationNumberTextBox.Size = new System.Drawing.Size(124, 22);
             this.applicationNumberTextBox.TabIndex = 6;
             // 
             // applicationDateTextBox
             // 
+            this.applicationDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.applicationDateTextBox.Location = new System.Drawing.Point(136, 51);
             this.applicationDateTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.applicationDateTextBox.Name = "applicationDateTextBox";
             this.applicationDateTextBox.ReadOnly = true;
-            this.applicationDateTextBox.Size = new System.Drawing.Size(123, 22);
+            this.applicationDateTextBox.Size = new System.Drawing.Size(124, 22);
             this.applicationDateTextBox.TabIndex = 7;
             // 
             // supplierNameTextBox
@@ -261,35 +263,37 @@
             this.supplierNameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.supplierNameTextBox.Name = "supplierNameTextBox";
             this.supplierNameTextBox.ReadOnly = true;
-            this.supplierNameTextBox.Size = new System.Drawing.Size(589, 22);
+            this.supplierNameTextBox.Size = new System.Drawing.Size(523, 22);
             this.supplierNameTextBox.TabIndex = 8;
             // 
             // contractNumberTextBox
             // 
-            this.contractNumberTextBox.Location = new System.Drawing.Point(865, 51);
+            this.contractNumberTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contractNumberTextBox.Location = new System.Drawing.Point(799, 51);
             this.contractNumberTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.contractNumberTextBox.Name = "contractNumberTextBox";
             this.contractNumberTextBox.ReadOnly = true;
-            this.contractNumberTextBox.Size = new System.Drawing.Size(123, 22);
+            this.contractNumberTextBox.Size = new System.Drawing.Size(191, 22);
             this.contractNumberTextBox.TabIndex = 9;
             // 
             // contractDateTextBox
             // 
-            this.contractDateTextBox.Location = new System.Drawing.Point(997, 51);
+            this.contractDateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contractDateTextBox.Location = new System.Drawing.Point(998, 51);
             this.contractDateTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.contractDateTextBox.Name = "contractDateTextBox";
             this.contractDateTextBox.ReadOnly = true;
-            this.contractDateTextBox.Size = new System.Drawing.Size(123, 22);
+            this.contractDateTextBox.Size = new System.Drawing.Size(124, 22);
             this.contractDateTextBox.TabIndex = 10;
             // 
             // stateContractNumberTextBox
             // 
             this.stateContractNumberTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.stateContractNumberTextBox.Location = new System.Drawing.Point(1129, 51);
+            this.stateContractNumberTextBox.Location = new System.Drawing.Point(1130, 51);
             this.stateContractNumberTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.stateContractNumberTextBox.Name = "stateContractNumberTextBox";
             this.stateContractNumberTextBox.ReadOnly = true;
-            this.stateContractNumberTextBox.Size = new System.Drawing.Size(195, 22);
+            this.stateContractNumberTextBox.Size = new System.Drawing.Size(194, 22);
             this.stateContractNumberTextBox.TabIndex = 11;
             // 
             // flowLayoutPanel1
@@ -433,7 +437,7 @@
             // OrderColumn
             // 
             this.OrderColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.OrderColumn.DataPropertyName = "Order";
+            this.OrderColumn.DataPropertyName = "OrderNumber";
             this.OrderColumn.FillWeight = 70F;
             this.OrderColumn.HeaderText = "Заказ";
             this.OrderColumn.Name = "OrderColumn";
@@ -466,7 +470,7 @@
             // SetSinceColumn
             // 
             this.SetSinceColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SetSinceColumn.DataPropertyName = "SetSince";
+            this.SetSinceColumn.DataPropertyName = "SetFrom";
             this.SetSinceColumn.FillWeight = 70F;
             this.SetSinceColumn.HeaderText = "Комплект С";
             this.SetSinceColumn.Name = "SetSinceColumn";
@@ -475,7 +479,7 @@
             // SetBeforeColumn
             // 
             this.SetBeforeColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SetBeforeColumn.DataPropertyName = "SetBefore";
+            this.SetBeforeColumn.DataPropertyName = "SetTo";
             this.SetBeforeColumn.FillWeight = 70F;
             this.SetBeforeColumn.HeaderText = "Комплект ПО";
             this.SetBeforeColumn.Name = "SetBeforeColumn";
@@ -849,12 +853,6 @@
         private System.Windows.Forms.Button changeButton;
         private System.Windows.Forms.DataGridView productsDataGridView;
         private System.Windows.Forms.GroupBox productsGroupBox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OrderColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductNumberColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductIndexColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductAliasColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SetSinceColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SetBeforeColumn;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label recordCountLabel;
         private System.Windows.Forms.Label recordCountValuelabel;
@@ -892,5 +890,11 @@
         private System.Windows.Forms.ToolStripStatusLabel phoneNumber2ValueToolStripStatusLabel;
         private System.Windows.Forms.ToolStripStatusLabel faxNumberToolStripStatusLabel;
         private System.Windows.Forms.ToolStripStatusLabel faxNumberValueToolStripStatusLabel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OrderColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductNumberColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductIndexColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductAliasColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SetSinceColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SetBeforeColumn;
     }
 }

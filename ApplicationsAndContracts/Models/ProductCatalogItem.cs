@@ -44,7 +44,7 @@ namespace ApplicationsAndContracts.Models
         public void Refresh(ProductCatalogItem productCatalogItem)
         {
             this.Product = Product.CreateFrom(productCatalogItem);
-            //this.Order = Order.CreateFrom(productCatalogItem);
+            this.Order = Order.CreateFrom(productCatalogItem);
 
 
         }
