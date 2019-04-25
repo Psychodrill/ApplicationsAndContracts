@@ -27,7 +27,17 @@ namespace ApplicationsAndContracts.Models
             result.Quantity = catalogItem.Quantity;
             return result;
         }
-        
+
+        internal static DceQuantity CreateFrom(DceQuantity dceQuantity)
+        {
+            var result = new DceQuantity();
+            result.ApplicationId = dceQuantity.ApplicationId;
+            result.Quantity = dceQuantity.Quantity;
+            return result;
+
+        }
+
+
 
 
         public int ApplicationId { get; private set; }

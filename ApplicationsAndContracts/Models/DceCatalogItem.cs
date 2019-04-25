@@ -18,6 +18,19 @@ namespace ApplicationsAndContracts.Models
             return result;
         }
 
+        public static DceCatalogItem CreateFrom(Dce dce, DceQuantity dceQuantity)
+        {
+            var result = new DceCatalogItem();
+            result.Refresh(dce, dceQuantity);
+            return result;
+        }
+
+        private void Refresh(Dce dce, DceQuantity dceQuantity)
+        {
+            
+            this.Dce = Dce.CreateFrom(dce);
+            this.DceQuantity=DceQuantity.CreateFrom(dceQuantity);
+        }
 
         public void Refresh(CatalogItem catalogItem)
         {

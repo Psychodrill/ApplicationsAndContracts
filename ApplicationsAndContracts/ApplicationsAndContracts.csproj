@@ -111,6 +111,7 @@
     <Compile Include="Models\ProductCatalog.cs" />
     <Compile Include="Models\ProductCatalogItem.cs" />
     <Compile Include="Models\ProductList.cs" />
+    <Compile Include="Models\DceQuantityList.cs" />
     <Compile Include="Models\SDS.cs" />
     <Compile Include="Models\StateContract.cs" />
     <Compile Include="Models\StateContractList.cs" />

@@ -20,6 +20,30 @@ namespace ApplicationsAndContracts.Models
             return result;
         }
 
+        
+        public static DceCatalog CreateFrom(ApplicationCatalogItem applicationCatalogItem)
+        {
+
+            DceCatalog innerlist = Create();
+            var list = innerlist.Where(catalogItem => (applicationCatalogItem.ApplicationId == catalogItem.ApplicationId)).Distinct().OrderBy(x => x.ApplicationId).ToList();
+            var result = new DceCatalog(list);
+            return result;
+
+        }
+
+        public static DceCatalog Create()
+        {
+            var dceList = DceList.GetDceList();
+            var quantityList = DceQuantityList.GetDceQuantityList();
+
+            var innerList = dceList.Join(quantityList, d => d.ApplicationId, q => q.ApplicationId, (d, q) => DceCatalogItem.CreateFrom(d, q)).ToList();
+            DceCatalog dceCatalog = new DceCatalog(innerList);
+            return dceCatalog;
+
+        }
+
+
+
         private DceCatalog(List<DceCatalogItem> items) : base(items)
         {
 
