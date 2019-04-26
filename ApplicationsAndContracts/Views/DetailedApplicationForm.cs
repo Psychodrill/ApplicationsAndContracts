@@ -59,8 +59,8 @@ namespace ApplicationsAndContracts.Views
 
         private void GetDceCatalog()
         {
-            if (this.applicationCatalogItem == null) return;
-            this.dceCatalog = DceCatalog.CreateFrom(this.applicationCatalogItem);
+            if (this.catalog==null||this.applicationCatalogItem == null) return;
+            this.dceCatalog = DceCatalog.CreateFrom(this.catalog, this.applicationCatalogItem);
             this.dceBindingSource.DataSource = this.dceCatalog;
         }
     }

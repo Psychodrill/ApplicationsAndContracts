@@ -40,6 +40,8 @@ namespace ApplicationsAndContracts.Models
 
         }
 
+        //public void Refresh (CatalogItem catalogItem, )
+
 
 
 

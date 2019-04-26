@@ -12,15 +12,26 @@ namespace ApplicationsAndContracts.Models
         public static DceCatalog CreateFrom(Catalog catalog, ApplicationCatalogItem applicationCatalogItem)
         {
             var list = catalog.Where(catalogItem => catalogItem.ApplicationId == applicationCatalogItem.ApplicationId)
-                               .Select(catalogItem => DceCatalogItem.CreateFrom(catalogItem))
-                               .Distinct()
-                               .OrderBy(catalogItem => catalogItem.DceNumber)
-                               .ToList();
+                              .Select(catalogItem => DceCatalogItem.CreateFrom(catalogItem))
+                              .Distinct()
+                              .OrderBy(catalogItem => catalogItem.DceNumber)
+                              .ToList();
             var result = new DceCatalog(list);
             return result;
         }
 
-        
+        public static DceCatalog CreateFrom(Catalog catalog, ApplicationCatalogItem applicationCatalogItem,)
+        {
+            var list = catalog.Where(catalogItem => catalogItem.ApplicationId == applicationCatalogItem.ApplicationId)
+                              .Select(catalogItem => DceCatalogItem.CreateFrom(catalogItem))
+                              .Distinct()
+                              .OrderBy(catalogItem => catalogItem.DceNumber)
+                              .ToList();
+            var result = new DceCatalog(list);
+            return result;
+        }
+
+
         public static DceCatalog CreateFrom(ApplicationCatalogItem applicationCatalogItem)
         {
 

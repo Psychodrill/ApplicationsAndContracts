@@ -104,6 +104,7 @@
     <Compile Include="Models\DceCatalog.cs" />
     <Compile Include="Models\DceCatalogItem.cs" />
     <Compile Include="Models\DceList.cs" />
+    <Compile Include="Models\DceProductQuantity.cs" />
     <Compile Include="Models\DceQuantity.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderList.cs" />
