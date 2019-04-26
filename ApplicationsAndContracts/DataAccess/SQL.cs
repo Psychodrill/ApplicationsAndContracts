@@ -91,6 +91,8 @@ namespace ApplicationsAndContracts.DataAccess
                        [Department],
                        [StateContractNumber],
                        [OrderNumber],
+                       [SetFrom],
+                       [SetTo],
                        [ProductNumber],
                        [ProductIndex],
                        [ProductAlias],

@@ -17,12 +17,12 @@ namespace ApplicationsAndContracts.Views
         private DataService dataService;
         private ProductCatalog productCatalog;
         private DceCatalog dceCatalog;
+        private Catalog catalog;
         private ApplicationCatalogItem applicationCatalogItem;
-        public DetailedApplicationForm(ApplicationCatalogItem applicationCatalogItem)
+        public DetailedApplicationForm(ApplicationCatalogItem applicationCatalogItem, Catalog catalog, DceCatalog dceCatalog)
         {
             this.applicationCatalogItem = applicationCatalogItem;
-            //this.productCatalog = new ProductCatalog();
-            //this.dceCatalog = new DceCatalog();
+            this.catalog = catalog;
 
             InitializeComponent();
             this.Load += new EventHandler(DetailedApplicationForm_Load);
@@ -42,8 +42,9 @@ namespace ApplicationsAndContracts.Views
             this.contractDateTextBox.Text = applicationCatalogItem.ContractDate.ToShortDateString();
             this.stateContractNumberTextBox.Text = applicationCatalogItem.StateContractNumber;
 
+            this.productCatalog = ProductCatalog.CreateFrom(catalog, applicationCatalogItem);
 
-            this.productCatalog = ProductCatalog.CreateFrom(applicationCatalogItem);
+            //this.productCatalog = ProductCatalog.CreateFrom(applicationCatalogItem);
             this.productsBindingSource.DataSource = this.productCatalog;
 
 

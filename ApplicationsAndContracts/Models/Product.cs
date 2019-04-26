@@ -12,7 +12,7 @@ namespace ApplicationsAndContracts.Models
         public static Product CreateFrom (DataRow row)
         {
             var result = new Product();
-            result.IdInd = row.Field<int?>("IdInd");
+            //result.IdInd = row.Field<int?>("IdInd");
             result.ProductNumber = row.Field<int?>("ProductNumber");
             result.ProductIndex = row.Field<string>("ProductIndex");
             result.ProductName = row.Field<string>("ProductName");
@@ -24,6 +24,18 @@ namespace ApplicationsAndContracts.Models
             if (result.ApplicationId == null) result.ApplicationId = -1;
             return result;
         }
+
+        public static Product CreateFrom(CatalogItem catalogItem)
+        {
+            Product result = new Product();
+            result.ApplicationId = catalogItem.ApplicationId;
+            result.ProductNumber = catalogItem.ProductNumber;
+            result.ProductIndex = catalogItem.ProductIndex;
+            result.ProductAlias = catalogItem.ProductAlias;
+            result.ProductName = catalogItem.ProductName;
+            return result;
+        }
+
 
         public static Product CreateFrom (ProductCatalogItem productCatalogItem)
         {

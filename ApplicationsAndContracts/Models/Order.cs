@@ -13,9 +13,9 @@ namespace ApplicationsAndContracts.Models
         {
             var result = new Order();
             result.ApplicationId = row.Field<int?>("ApplicationId");
-            result.OrderNumber = row.Field<int>("OrderNumber");
-            result.SetFrom = row.Field<int>("SetFrom");
-            result.SetTo = row.Field<int>("SetTo");
+            result.OrderNumber = row.Field<int?>("OrderNumber");
+            result.SetFrom = row.Field<int?>("SetFrom");
+            result.SetTo = row.Field<int?>("SetTo");
             return result;
         }
 
@@ -41,6 +41,16 @@ namespace ApplicationsAndContracts.Models
         }
 
 
+        public static Order CreateFrom(CatalogItem catalogItem)
+        {
+            Order result = new Order();
+            result.ApplicationId = catalogItem.ApplicationId;
+            result.OrderNumber = catalogItem.OrderNumber;
+            result.SetFrom = catalogItem.SetFrom;
+            result.SetTo = catalogItem.SetTo;
+            return result;
+        }
+
 
         public Order()
         {
@@ -58,8 +68,8 @@ namespace ApplicationsAndContracts.Models
         }
 
         public int? ApplicationId { get; private set; }
-        public int OrderNumber { get; private set; }
-        public int SetFrom { get; private set; }
-        public int SetTo { get; private set; }
+        public int? OrderNumber { get; private set; }
+        public int? SetFrom { get; private set; }
+        public int? SetTo { get; private set; }
     }
 }

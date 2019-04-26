@@ -24,6 +24,14 @@ namespace ApplicationsAndContracts.Models
             return result;
         }
 
+        public static ProductCatalogItem CreateFrom(CatalogItem catalogItem)
+        {
+            var result = new ProductCatalogItem();
+            result.Refresh(catalogItem);
+            return result;
+
+        }
+
         public static ProductCatalogItem CreateFrom(Product product, Order order)
         {
             var result = new ProductCatalogItem();
@@ -33,10 +41,10 @@ namespace ApplicationsAndContracts.Models
 
         }
 
-        //public static ProductCatalogItem Create()
+        //public static ProductCatalogItem CreateFrom (CatalogItem catalogItem)
         //{
         //    var result = new ProductCatalogItem();
-        //    result.Product = Product.CreateFrom()
+        //    result.
         //}
 
 
@@ -61,33 +69,35 @@ namespace ApplicationsAndContracts.Models
             //this.Order = Order.CreateFrom(product);
         }
 
-        //public override bool Equals(object obj)
-        //{
-        //    if (obj == null) return false;
-        //    var item = (ApplicationCatalogItem)obj;
-        //    if (this.ApplicationNumber != item.ApplicationNumber) return false;
-        //    if (this.ApplicationDate != item.ApplicationDate) return false;
-        //    if (this.SupplierName != item.SupplierName) return false;
-        //    if (this.ContractNumber != item.ContractNumber) return false;
-        //    if (this.ContractDate != item.ContractDate) return false;
-        //    if (this.StateContractNumber != item.StateContractNumber) return false;
-        //    if (this.ApplicationStatus != item.ApplicationStatus) return false;
-        //    return true;
-        //}
+        public void Refresh (CatalogItem catalogItem)
+        {
+            this.Product = Product.CreateFrom(catalogItem);
+            this.Order = Order.CreateFrom(catalogItem);
+        }
 
-        //public override int GetHashCode()
-        //{
-        //    var sb = new StringBuilder();
+        public override bool Equals(object obj)
+        {
+            if (obj == null) return false;
+            var item = (ProductCatalogItem)obj;
+            if (this.ProductNumber != item.ProductNumber) return false;
+            if (this.ProductIndex != item.ProductIndex) return false;
+            if (this.ProductAlias != item.ProductAlias) return false;
+            if (this.ProductName != item.ProductName) return false;
+            if (this.ApplicationId != item.ApplicationId) return false;
+            return true;
+        }
 
-        //    sb.Append(this.ApplicationNumber);
-        //    sb.Append(this.ApplicationDate);
-        //    sb.Append(this.SupplierName);
-        //    sb.Append(this.ContractNumber);
-        //    sb.Append(this.ContractDate);
-        //    sb.Append(this.StateContractNumber);
-        //    sb.Append(this.ApplicationStatus);
-        //    return sb.ToString().GetHashCode();
-        //}
+        public override int GetHashCode()
+        {
+            var sb = new StringBuilder();
+
+            sb.Append(this.ProductNumber);
+            sb.Append(this.ProductIndex);
+            sb.Append(this.ProductAlias);
+            sb.Append(this.ProductName);
+            sb.Append(this.ApplicationId);
+            return sb.ToString().GetHashCode();
+        }
 
 
 
@@ -104,9 +114,9 @@ namespace ApplicationsAndContracts.Models
         public string ProductAlias { get { return this.Product.ProductAlias; } }
         public string ProductName { get { return this.Product.ProductName; } }
         public int? ApplicationId { get { return this.Product.ApplicationId; } }
-        public int OrderNumber { get { return this.Order.OrderNumber; } }
-        public int SetFrom { get { return this.Order.SetFrom; } }
-        public int SetTo { get { return this.Order.SetTo; } }
+        public int? OrderNumber { get { return this.Order.OrderNumber; } }
+        public int? SetFrom { get { return this.Order.SetFrom; } }
+        public int? SetTo { get { return this.Order.SetTo; } }
         //public int ApplicationId { get { return this.Order.ApplicationId; } }
 
 

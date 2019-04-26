@@ -13,53 +13,66 @@ namespace ApplicationsAndContracts.Models
     {
         public ProductCatalog productCatalog;
 
-        public static ProductCatalog CreateFrom (ApplicationCatalogItem applicationCatalogItem)
-        {
-                        
-            ProductCatalog innerlist = Create();
-            var list = innerlist.Where(catalogItem => (applicationCatalogItem.ApplicationId==catalogItem.ApplicationId)).Distinct().OrderBy(x => x.ApplicationId).ToList();
-            var result = new ProductCatalog(list);
-            return result;
-            
-        }
-
-        //public static ProductCatalog CreateFrom(List<ProductCatalogItem> catalog)
+        //public static ProductCatalog CreateFrom (ApplicationCatalogItem applicationCatalogItem)
         //{
-            
-        //    var list = catalog.Select(catalogItem => ProductCatalogItem.CreateFrom(catalogItem)).Distinct().OrderBy(x => x.ProductName).ToList();
+                        
+        //    ProductCatalog innerlist = Create();
+        //    var list = innerlist.Where(catalogItem => (applicationCatalogItem.ApplicationId==catalogItem.ApplicationId)).Distinct().OrderBy(x => x.ApplicationId).ToList();
         //    var result = new ProductCatalog(list);
         //    return result;
             
         //}
-        
-        public static  ProductCatalog Create()
+
+        public static ProductCatalog CreateFrom(Catalog catalog, ApplicationCatalogItem applicationCatalogItem)
         {
-            var productList = ProductList.GetProductList();
-            var orderList = OrderList.GetOrderList();
-            //ProductCatalog productCatalog = new ProductCatalog();
-            //var  productCatalog = productList.Select(x => x.ApplicationId).ToList();
-            var innerList = productList.Join(orderList, p => p.ApplicationId, o => o.ApplicationId, (p, o) => ProductCatalogItem.CreateFrom(p, o)).ToList();
-            ProductCatalog productCatalog = new ProductCatalog(innerList);
-            return productCatalog;
 
-            //var productCatalog = productList.Where(listItem =>listItem.ApplicationId==orderList.);
+            //productCatalog innerList = Create();
 
-            /// Cool way, but not public elements 
-            ////var result = from p in productList
-            ////             join o in orderList
-            ////             on p.ApplicationId equals o.ApplicationId
-            ////             select ProductCatalogItem.CreateFrom(p, o);
-
-
-
-            //foreach (var product in productList)
-            //    foreach (var order in orderList)
-            //        if (product.ApplicationId == order.ApplicationId)
-            //        {
-            //            this.Add(ProductCatalogItem.CreateFrom(product, order));
-            //        }
+            var list = catalog.Select(catalogItem => ProductCatalogItem.CreateFrom(catalogItem))
+                              .Where(catalogItem => (applicationCatalogItem.ApplicationId == catalogItem.ApplicationId))
+                              .Distinct().OrderBy(x => x.OrderNumber).ToList();
+            var result = new ProductCatalog(list);
+            return result;
 
         }
+
+        //public static ProductCatalog CreateFrom(List<ProductCatalogItem> catalog)
+        //{
+
+        //    var list = catalog.Select(catalogItem => ProductCatalogItem.CreateFrom(catalogItem)).Distinct().OrderBy(x => x.ProductName).ToList();
+        //    var result = new ProductCatalog(list);
+        //    return result;
+
+        //}
+
+        //public static  ProductCatalog Create()
+        //{
+        //    var productList = ProductList.GetProductList();
+        //    var orderList = OrderList.GetOrderList();
+        //    //ProductCatalog productCatalog = new ProductCatalog();
+        //    //var  productCatalog = productList.Select(x => x.ApplicationId).ToList();
+        //    var innerList = productList.Join(orderList, p => p.ApplicationId, o => o.ApplicationId, (p, o) => ProductCatalogItem.CreateFrom(p, o)).ToList();
+        //    ProductCatalog productCatalog = new ProductCatalog(innerList);
+        //    return productCatalog;
+
+        //    //var productCatalog = productList.Where(listItem =>listItem.ApplicationId==orderList.);
+
+        //    /// Cool way, but not public elements 
+        //    ////var result = from p in productList
+        //    ////             join o in orderList
+        //    ////             on p.ApplicationId equals o.ApplicationId
+        //    ////             select ProductCatalogItem.CreateFrom(p, o);
+
+
+
+        //    //foreach (var product in productList)
+        //    //    foreach (var order in orderList)
+        //    //        if (product.ApplicationId == order.ApplicationId)
+        //    //        {
+        //    //            this.Add(ProductCatalogItem.CreateFrom(product, order));
+        //    //        }
+
+        //}
 
         //public void RefreshFrom(IEnumerable<DataRow> rows)
         //{

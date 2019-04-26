@@ -32,6 +32,8 @@ namespace ApplicationsAndContracts.Models
             result.Supplier = Supplier.CreateFrom(row);
             result.Contract = Contract.CreateFrom(row);
             result.StateContract = StateContract.CreateFrom(row);
+            result.Product = Product.CreateFrom(row);
+            result.Order = Order.CreateFrom(row);
 
             return result;
         }
@@ -49,6 +51,8 @@ namespace ApplicationsAndContracts.Models
         public Supplier Supplier { get; private set; }
         public Contract Contract { get; private set; }
         public StateContract StateContract { get; private set; }
+        public Product Product { get; private set; }
+        public Order Order { get;  private set;}
         //public CurrentContractCatalogItem CurrentContractCatalogItem { get; private set; }
 
 
@@ -79,6 +83,15 @@ namespace ApplicationsAndContracts.Models
         public string DceAlias { get { return this.Dce.DceAlias; } }
         public string DceName { get { return this.Dce.DceName; } }
         public decimal Quantity { get { return this.DceQuantity.Quantity; } }
+
+        public int? ProductNumber { get { return this.Product.ProductNumber; } }
+        public string ProductIndex { get { return this.Product.ProductIndex; } }
+        public string ProductAlias { get { return this.Product.ProductAlias; } }
+        public string ProductName { get { return this.Product.ProductName; } }
+
+        public int? OrderNumber { get { return this.Order.OrderNumber; } }
+        public int? SetFrom { get { return this.Order.SetFrom; } }
+        public int? SetTo { get { return this.Order.SetTo; } }
 
     }
 

@@ -159,7 +159,7 @@ namespace ApplicationsAndContracts.Views
         void detailedButton_Click(object sender, EventArgs e)
         {
             //var rows = SplashScreenForm.ExecuteAsync<IEnumerable<ApplicationCatalogItem>>(this, this.GetProductList);
-            var detailedApplicationForm = new DetailedApplicationForm(this.applicationCatalogItem);
+            var detailedApplicationForm = new DetailedApplicationForm(this.applicationCatalogItem, this.catalog, this.dceCatalog);
             detailedApplicationForm.Show();
 
         }
