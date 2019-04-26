@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ApplicationsAndContracts.Models
 {
-    class DceProductQuantity
+    public class DceProductQuantity
     {
 
     }
