@@ -19,6 +19,18 @@ namespace ApplicationsAndContracts.Views
         private DceCatalog dceCatalog;
         private Catalog catalog;
         private ApplicationCatalogItem applicationCatalogItem;
+
+        private ProductCatalogItem productCatalogItem
+        {
+            get
+            {
+                if (this.productsBindingSource.Position < 0) return null;
+
+                return this.productCatalog[this.productsBindingSource.Position];
+
+            }
+        }
+
         public DetailedApplicationForm(ApplicationCatalogItem applicationCatalogItem, Catalog catalog, DceCatalog dceCatalog)
         {
             this.applicationCatalogItem = applicationCatalogItem;
@@ -60,7 +72,7 @@ namespace ApplicationsAndContracts.Views
         private void GetDceCatalog()
         {
             if (this.catalog==null||this.applicationCatalogItem == null) return;
-            this.dceCatalog = DceCatalog.CreateFrom(this.catalog, this.applicationCatalogItem);
+            this.dceCatalog = DceCatalog.CreateFrom(this.catalog, this.applicationCatalogItem, this.productCatalogItem);
             this.dceBindingSource.DataSource = this.dceCatalog;
         }
     }

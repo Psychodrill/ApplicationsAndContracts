@@ -20,9 +20,10 @@ namespace ApplicationsAndContracts.Models
             return result;
         }
 
-        public static DceCatalog CreateFrom(Catalog catalog, ApplicationCatalogItem applicationCatalogItem,)
+        public static DceCatalog CreateFrom(Catalog catalog, ApplicationCatalogItem applicationCatalogItem, ProductCatalogItem productCatalogItem)
         {
-            var list = catalog.Where(catalogItem => catalogItem.ApplicationId == applicationCatalogItem.ApplicationId)
+            var list = catalog.Where(catalogItem => (catalogItem.ApplicationId == applicationCatalogItem.ApplicationId&&
+                                                     catalogItem.ProductNumber==productCatalogItem.ProductNumber))
                               .Select(catalogItem => DceCatalogItem.CreateFrom(catalogItem))
                               .Distinct()
                               .OrderBy(catalogItem => catalogItem.DceNumber)

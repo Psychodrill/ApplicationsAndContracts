@@ -93,6 +93,10 @@ namespace ApplicationsAndContracts.Models
         public int? SetFrom { get { return this.Order.SetFrom; } }
         public int? SetTo { get { return this.Order.SetTo; } }
 
+        public int? DceStructureId { get { return this.Dce.DceStructureId; } }
+
+        public int? ProductStructureId { get { return this.Product.ProductStructureId; } }
+
     }
 
 }

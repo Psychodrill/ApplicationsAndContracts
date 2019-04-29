@@ -58,11 +58,13 @@ namespace ApplicationsAndContracts.DataAccess
                        [ProductIndex],
                        [ProductName],
                        [ProductAlias],
-                       [ApplicationId]
+                       [ApplicationId],
+                       [ProductStructureId]
                   FROM [dbo].[ft_ApplicationsAndContracts_GetProductList]()";
 
         internal const string GetDceList = @"
                 SELECT [ApplicationId],
+                       [DceStructureId],
                        [DceNumber],
                        [DceAlias],
                        [DceName],
@@ -100,7 +102,10 @@ namespace ApplicationsAndContracts.DataAccess
                        [DceNumber],
                        [DceAlias],
                        [DceName],
-                       [Quantity]
+                       [Quantity],
+                       [ProductStructureId],
+                       [DceStructureId],
+                       [DceProductQuantity]
                   FROM [dbo].[ft_ApplicationsAndContracts_GetCatalog](@supplierName,
                                                                       @contractNumber,
                                                                       @contractDate,

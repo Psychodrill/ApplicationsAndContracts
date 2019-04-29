@@ -18,10 +18,12 @@ namespace ApplicationsAndContracts.Models
             result.ProductName = row.Field<string>("ProductName");
             result.ProductAlias = row.Field<string>("ProductAlias");
             result.ApplicationId = row.Field<int?>("ApplicationId");
+            result.ProductStructureId = row.Field<int?>("ProductStructureId");
             if (result.ProductIndex == null) result.ProductIndex = string.Empty;
             if (result.ProductName == null) result.ProductName = string.Empty;
             if (result.ProductAlias == null) result.ProductAlias = string.Empty;
             if (result.ApplicationId == null) result.ApplicationId = -1;
+            if (result.ProductStructureId == null) result.ProductStructureId = -1;
             return result;
         }
 
@@ -29,6 +31,7 @@ namespace ApplicationsAndContracts.Models
         {
             Product result = new Product();
             result.ApplicationId = catalogItem.ApplicationId;
+            result.ProductStructureId = catalogItem.ProductStructureId;
             result.ProductNumber = catalogItem.ProductNumber;
             result.ProductIndex = catalogItem.ProductIndex;
             result.ProductAlias = catalogItem.ProductAlias;
@@ -41,6 +44,7 @@ namespace ApplicationsAndContracts.Models
         {
             Product result = new Product();
             result.ApplicationId = productCatalogItem.ApplicationId;
+            result.ProductStructureId = productCatalogItem.ProductStructureId;
             result.ProductNumber = productCatalogItem.ProductNumber;
             result.ProductIndex = productCatalogItem.ProductIndex;
             result.ProductAlias = productCatalogItem.ProductAlias;
@@ -52,6 +56,7 @@ namespace ApplicationsAndContracts.Models
         {
             Product result = new Product();
             result.ApplicationId = product.ApplicationId;
+            result.ProductStructureId = product.ProductStructureId;
             result.ProductNumber = product.ProductNumber;
             result.ProductIndex = product.ProductIndex;
             result.ProductAlias = product.ProductAlias;
@@ -74,6 +79,7 @@ namespace ApplicationsAndContracts.Models
             result.ProductName = string.Empty;
             result.ProductAlias = string.Empty;
             result.ApplicationId = -1;
+            result.ProductStructureId = -1;
             return result;
         }
         
@@ -84,6 +90,7 @@ namespace ApplicationsAndContracts.Models
         public string ProductName { get; private set; }
         public string ProductAlias { get; private set; }
         public int? ApplicationId { get; private set; }
+        public int? ProductStructureId { get; private set; }
 
 
     }

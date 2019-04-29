@@ -13,11 +13,13 @@ namespace ApplicationsAndContracts.Models
         {
             var result = new Dce();
             result.ApplicationId = row.Field<int>("ApplicationId");
+            result.DceStructureId = row.Field<int?>("DceStructureId");
             result.DceNumber = row.Field<int>("DceNumber");
             result.DceAlias = row.Field<string>("DceAlias");
             result.DceName = row.Field<string>("DceName");
             result.Quantity = row.Field<decimal>("Quantity");
             if (result.ApplicationId == null) result.ApplicationId=-1;
+            if (result.DceStructureId == null) result.DceStructureId = -1;
             if (result.DceNumber == null) result.DceNumber = -1;
             if (result.DceAlias == null) result.DceAlias = string.Empty;
             if (result.DceName == null) result.DceName = string.Empty;
@@ -29,6 +31,7 @@ namespace ApplicationsAndContracts.Models
         {
             var result = new Dce();
             result.ApplicationId = catalogItem.ApplicationId;
+            result.DceStructureId = catalogItem.DceStructureId;
             result.DceNumber = catalogItem.DceNumber;
             result.DceAlias = catalogItem.DceAlias;
             result.DceName   = catalogItem.DceName;
@@ -40,6 +43,7 @@ namespace ApplicationsAndContracts.Models
         {
             var result = new Dce();
             result.ApplicationId = dce.ApplicationId;
+            result.DceStructureId = dce.DceStructureId;
             result.DceNumber = dce.DceNumber;
             result.DceAlias = dce.DceAlias;
             result.DceName = dce.DceName;
@@ -56,6 +60,7 @@ namespace ApplicationsAndContracts.Models
         {
             var result = new Dce();
             result.ApplicationId = -1;
+            result.DceStructureId = -1;
             result.DceNumber = -1;
             result.DceAlias = string.Empty;
             result.DceName = string.Empty;
@@ -66,6 +71,8 @@ namespace ApplicationsAndContracts.Models
         
 
         public int ApplicationId { get; private set; }
+
+        public int? DceStructureId { get; private set; }
 
         public int DceNumber { get; private set; }
 

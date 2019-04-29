@@ -117,6 +117,7 @@ namespace ApplicationsAndContracts.Models
         public int? OrderNumber { get { return this.Order.OrderNumber; } }
         public int? SetFrom { get { return this.Order.SetFrom; } }
         public int? SetTo { get { return this.Order.SetTo; } }
+        public int? ProductStructureId { get { return this.Product.ProductStructureId; } }
         //public int ApplicationId { get { return this.Order.ApplicationId; } }
 
 
