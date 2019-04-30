@@ -91,12 +91,19 @@ namespace ApplicationsAndContracts.Models
 
 
         public int ApplicationId { get { return Dce.ApplicationId; } }
+        //public int? DceStructureId { get { return Dce.DceStructureId; } }
 
         public int DceNumber { get {return Dce.DceNumber; } }
 
         public string DceAlias { get { return Dce.DceAlias; } }
 
         public string DceName { get { return Dce.DceName; } }
-        public decimal Quantity { get { return DceQuantity.Quantity; } }
+        public decimal Quantity { get { return Dce.Quantity; } }
+        public int? DceStructureId { get { return this.DceQuantity.DceStructureId; } }
+
+        public int? ProductStructureId { get { return this.DceQuantity.ProductStructureId; } }
+        public int StructureQuantityId { get { return this.DceQuantity.StructureQuantityId; } }
+        public decimal ProductDceQuantity { get { return this.DceQuantity.ProductDceQuantity; } }
+
     }
 }

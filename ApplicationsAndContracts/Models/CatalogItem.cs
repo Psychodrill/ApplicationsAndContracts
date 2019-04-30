@@ -82,7 +82,7 @@ namespace ApplicationsAndContracts.Models
         public int DceNumber { get { return this.Dce.DceNumber; } }
         public string DceAlias { get { return this.Dce.DceAlias; } }
         public string DceName { get { return this.Dce.DceName; } }
-        public decimal Quantity { get { return this.DceQuantity.Quantity; } }
+        public decimal Quantity { get { return this.Dce.Quantity; } }
 
         public int? ProductNumber { get { return this.Product.ProductNumber; } }
         public string ProductIndex { get { return this.Product.ProductIndex; } }
@@ -93,9 +93,11 @@ namespace ApplicationsAndContracts.Models
         public int? SetFrom { get { return this.Order.SetFrom; } }
         public int? SetTo { get { return this.Order.SetTo; } }
 
-        public int? DceStructureId { get { return this.Dce.DceStructureId; } }
+        public int? DceStructureId { get { return this.DceQuantity.DceStructureId; } }
 
-        public int? ProductStructureId { get { return this.Product.ProductStructureId; } }
+        public int? ProductStructureId { get { return this.DceQuantity.ProductStructureId; } }
+        public int StructureQuantityId { get { return this.DceQuantity.StructureQuantityId; } }
+        public decimal ProductDceQuantity { get { return this.DceQuantity.ProductDceQuantity; } }
 
     }
 

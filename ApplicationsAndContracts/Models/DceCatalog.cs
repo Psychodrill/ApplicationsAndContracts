@@ -23,7 +23,7 @@ namespace ApplicationsAndContracts.Models
         public static DceCatalog CreateFrom(Catalog catalog, ApplicationCatalogItem applicationCatalogItem, ProductCatalogItem productCatalogItem)
         {
             var list = catalog.Where(catalogItem => (catalogItem.ApplicationId == applicationCatalogItem.ApplicationId&&
-                                                     catalogItem.ProductNumber==productCatalogItem.ProductNumber))
+                                                     catalogItem.ProductStructureId==productCatalogItem.ProductStructureId))
                               .Select(catalogItem => DceCatalogItem.CreateFrom(catalogItem))
                               .Distinct()
                               .OrderBy(catalogItem => catalogItem.DceNumber)
