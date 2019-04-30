@@ -67,10 +67,6 @@
             this.dceGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.dceDataGridView = new System.Windows.Forms.DataGridView();
-            this.DceNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DceAliasColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DceNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OrderedCountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gkLabel1 = new System.Windows.Forms.Label();
             this.colorPanel = new System.Windows.Forms.Panel();
@@ -92,6 +88,10 @@
             this.phoneNumber2ValueToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.faxNumberToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.faxNumberValueToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.DceNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DceAliasColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DceNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrderedCountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.applicationGroupBox.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -567,6 +567,8 @@
             // 
             this.dceDataGridView.AllowUserToAddRows = false;
             this.dceDataGridView.AllowUserToDeleteRows = false;
+            this.dceDataGridView.AllowUserToResizeColumns = false;
+            this.dceDataGridView.AllowUserToResizeRows = false;
             this.dceDataGridView.AutoGenerateColumns = false;
             this.dceDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dceDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -582,40 +584,9 @@
             this.dceDataGridView.Name = "dceDataGridView";
             this.dceDataGridView.ReadOnly = true;
             this.dceDataGridView.RowHeadersVisible = false;
+            this.dceDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dceDataGridView.Size = new System.Drawing.Size(1320, 216);
             this.dceDataGridView.TabIndex = 1;
-            // 
-            // DceNumberColumn
-            // 
-            this.DceNumberColumn.DataPropertyName = "DceNumber";
-            this.DceNumberColumn.HeaderText = "№ ДСЕ";
-            this.DceNumberColumn.Name = "DceNumberColumn";
-            this.DceNumberColumn.ReadOnly = true;
-            // 
-            // DceAliasColumn
-            // 
-            this.DceAliasColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DceAliasColumn.DataPropertyName = "DceAlias";
-            this.DceAliasColumn.FillWeight = 70F;
-            this.DceAliasColumn.HeaderText = "Обозначение ДСЕ";
-            this.DceAliasColumn.Name = "DceAliasColumn";
-            this.DceAliasColumn.ReadOnly = true;
-            // 
-            // DceNameColumn
-            // 
-            this.DceNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DceNameColumn.DataPropertyName = "DceName";
-            this.DceNameColumn.HeaderText = "Наименование ДСЕ";
-            this.DceNameColumn.Name = "DceNameColumn";
-            this.DceNameColumn.ReadOnly = true;
-            // 
-            // OrderedCountColumn
-            // 
-            this.OrderedCountColumn.DataPropertyName = "OrderedCount";
-            this.OrderedCountColumn.HeaderText = "Количество заказано";
-            this.OrderedCountColumn.Name = "OrderedCountColumn";
-            this.OrderedCountColumn.ReadOnly = true;
-            this.OrderedCountColumn.Width = 140;
             // 
             // gkLabel1
             // 
@@ -800,6 +771,38 @@
             this.faxNumberValueToolStripStatusLabel.Size = new System.Drawing.Size(76, 24);
             this.faxNumberValueToolStripStatusLabel.Text = "#######";
             // 
+            // DceNumberColumn
+            // 
+            this.DceNumberColumn.DataPropertyName = "DceNumber";
+            this.DceNumberColumn.HeaderText = "№ ДСЕ";
+            this.DceNumberColumn.Name = "DceNumberColumn";
+            this.DceNumberColumn.ReadOnly = true;
+            // 
+            // DceAliasColumn
+            // 
+            this.DceAliasColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DceAliasColumn.DataPropertyName = "DceAlias";
+            this.DceAliasColumn.FillWeight = 70F;
+            this.DceAliasColumn.HeaderText = "Обозначение ДСЕ";
+            this.DceAliasColumn.Name = "DceAliasColumn";
+            this.DceAliasColumn.ReadOnly = true;
+            // 
+            // DceNameColumn
+            // 
+            this.DceNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DceNameColumn.DataPropertyName = "DceName";
+            this.DceNameColumn.HeaderText = "Наименование ДСЕ";
+            this.DceNameColumn.Name = "DceNameColumn";
+            this.DceNameColumn.ReadOnly = true;
+            // 
+            // OrderedCountColumn
+            // 
+            this.OrderedCountColumn.DataPropertyName = "ProductDceQuantity";
+            this.OrderedCountColumn.HeaderText = "Количество заказано";
+            this.OrderedCountColumn.Name = "OrderedCountColumn";
+            this.OrderedCountColumn.ReadOnly = true;
+            this.OrderedCountColumn.Width = 140;
+            // 
             // DetailedApplicationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -868,10 +871,6 @@
         private System.Windows.Forms.GroupBox dceGroupBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.DataGridView dceDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DceNumberColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DceAliasColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DceNameColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OrderedCountColumn;
         private System.Windows.Forms.Panel colorPanel;
         private System.Windows.Forms.Label gkLabel1;
         private System.Windows.Forms.Label recordCountLabel1;
@@ -900,5 +899,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductAliasColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn SetSinceColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn SetBeforeColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DceNumberColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DceAliasColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DceNameColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OrderedCountColumn;
     }
 }
