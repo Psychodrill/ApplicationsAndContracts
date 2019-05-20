@@ -14,6 +14,8 @@ namespace ApplicationsAndContracts.Views
 {
 
     //test string change1
+
+        //test string change2
     public partial class DetailedApplicationForm : Form
     {
         private DataService dataService;
