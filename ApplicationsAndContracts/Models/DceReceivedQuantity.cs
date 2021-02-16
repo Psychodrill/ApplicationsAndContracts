@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace ApplicationsAndContracts.Models
 {
-    public class DceProductQuantity
+    public class DceReceivedQuantity
     {
+
+
 
     }
 }

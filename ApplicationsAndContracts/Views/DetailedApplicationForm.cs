@@ -12,11 +12,8 @@ using ApplicationsAndContracts.DataAccess;
 
 namespace ApplicationsAndContracts.Views
 {
-
-    //test string change1
     
-        //test string change2
-        //test strint change3
+
     public partial class DetailedApplicationForm : Form
     {
         private DataService dataService;
