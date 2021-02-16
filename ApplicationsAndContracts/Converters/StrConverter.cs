@@ -13,7 +13,7 @@ namespace ApplicationsAndContracts.Converters
         {
             if (value == null || value == "" || value == Resources.UnselectedText) return "";// Resources.unselectedText;
             else return value.Trim();
-            throw new ApplicationException(Resources.IncorrectValueText);
+            //throw new ApplicationException(Resources.IncorrectValueText);
         }
 
         public string TryParse(string value)

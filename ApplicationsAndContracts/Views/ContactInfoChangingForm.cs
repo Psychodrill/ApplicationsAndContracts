@@ -8,15 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-namespace ApplicationsAndContracts
+namespace ApplicationsAndContracts.Views
 {
-    public partial class MainForm : Form
+    public partial class ContactInfoChangingForm : Form
     {
-        public MainForm()
+        public ContactInfoChangingForm()
         {
             InitializeComponent();
-
         }
     }
 }
